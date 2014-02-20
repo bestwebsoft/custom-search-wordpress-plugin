@@ -1,9 +1,16 @@
-Custom Search Wordpress Plugin
+<a href="http://bestwebsoft.com/plugin/custom-search-plugin/" target=_blank>Custom Search Wordpress Plugin</a>
 ==============================
 
-This plugin allows you implementation of the search feature according to the custom types on your website.
+This plugin allows you to extend search functionality of your website by adding a custom post type. 
 
-Official plugin page: http://bestwebsoft.com/plugin/custom-search-plugin/
+<img src="http://bestwebsoft.com/wp-content/uploads/2012/02/custom-search-plugin.jpg" />
+
+<a href="http://bestwebsoft.com/plugin/custom-search-plugin/#description" target=_blank>Description</a> | 
+<a href="http://bestwebsoft.com/plugin/custom-search-plugin/#installation" target=_blank>Installation</a> | 
+<a href="http://bestwebsoft.com/plugin/custom-search-plugin/#faq" target=_blank>FAQ</a> | 
+<a href="http://bestwebsoft.com/plugin/custom-search-plugin/#screenshots" target=_blank>Screenshots</a> | 
+<a href="http://bestwebsoft.com/plugin/custom-search-plugin/#changelog" target=_blank>Changelog</a> | 
+<a href="http://bestwebsoft.com/plugin/custom-search-plugin/#download" target=_blank>Download</a>
 
 
 Features
@@ -13,11 +20,10 @@ Features
 
 Translation
 -----------------------------
-* Dutch (nl_NL)
-* Hebrew (he_IL) (thanks to Sagive SEO)
 * Russian (ru_RU)
-* Spanish (es_ES)(thanks to <a href="mailto:mrjosefernando@gmail.com">Fernando De León</a>)
+* Spanish (es_ES)(thanks to Fernando De León)
 * Ukrainian (uk)
+If you create your own language pack or update the existing one, you can send the text in PO and MO files for BestWebSoft and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO files Poedit.
 
 If you create your own language pack or update the existing one, you can send <a href="http://codex.wordpress.org/Translating_WordPress" target="_blank">the text in PO and MO files</a> for <a href="http://support.bestwebsoft.com" target="_blank">BestWebSoft</a> and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO files <a href="http://www.poedit.net/download.php" target="_blank">Poedit</a>.
 
