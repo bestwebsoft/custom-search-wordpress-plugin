@@ -1,10 +1,10 @@
-=== Custom Search Plugin ===
+=== Custom Search ===
 Contributors: bestwebsoft
 Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=10&product_id=13
 Tags: custom, type, search, better search, custom type, custom post, custom search, custom search plugin, custom post types search, custom content types, custom post types.
 Requires at least: 3.0
-Tested up to: 3.6.1
-Stable tag: 1.15
+Tested up to: 3.8.1
+Stable tag: 1.19
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -14,17 +14,22 @@ This plugin allows searching by custom post types on your website.
 
 This plugin allows you to extend search functionality of your website by adding a custom post type.
 
-<a href="http://wordpress.org/extend/plugins/custom-search-plugin/faq/" target="_blank">FAQ</a>
+<a href="http://wordpress.org/plugins/custom-search-plugin/faq/" target="_blank">FAQ</a>
 <a href="http://support.bestwebsoft.com" target="_blank">Support</a>
 
 = Features =
 
 * Actions: Add selected custom post types to the search.
 
+= Recommended Plugins =
+
+The author of the Custom Search also recommends the following plugins:
+
+* <a href="http://wordpress.org/plugins/updater/">Updater</a> - This plugin updates WordPress core and the plugins to the recent versions. You can also use the auto mode or manual mode for updating and set email notifications.
+There is also a premium version of the plugin <a href="http://bestwebsoft.com/plugin/updater-pro/?k=7b42404bbc8ad8cb8745f8704cba3c9a">Updater Pro</a> with more useful features available. It can make backup of all your files and database before updating. Also it can forbid some plugins or WordPress Core update.
+
 = Translation =
 
-* Dutch (nl_NL)
-* Hebrew (he_IL) (thanks to Sagive SEO)
 * Russian (ru_RU)
 * Spanish (es_ES)(thanks to <a href="mailto:mrjosefernando@gmail.com">Fernando De León</a>)
 * Ukrainian (uk)
@@ -43,9 +48,17 @@ We can fix some things for free for the users who provide translation of our plu
 
 1. Upload the folder `custom-search-plugin` to the directory `/wp-content/plugins/`.
 2. Activate the plugin via the 'Plugins' menu in WordPress.
-3. The site settings are available in "BWS Plugins"->"Custom Search".
+3. Plugin settings are available in "BWS Plugins"->"Custom Search".
 
 == Frequently Asked Questions ==
+
+= I have some problems with the plugin's work. What Information should I provide to receive proper support? =
+
+Please make sure that the problem hasn't been discussed yet on our forum (<a href="http://support.bestwebsoft.com" target="_blank">http://support.bestwebsoft.com</a>). If no, please provide the following data along with your problem's description:
+1. the link to the page where the problem occurs
+2. the name of the plugin and its version. If you are using a pro version - your order number.
+3. the version of your WordPress installation
+4. copy and paste into the message your system status report. Please read more here: <a href="http://bestwebsoft.com/wp-content/uploads/manual/wp_plugin/general/System_Status.pdf" target="_blank">System_Status.pdf</a>
 
 = Usage =
 
@@ -56,6 +69,25 @@ Go to the Settings page and select custom types that you would like to add to th
 1. Custom Search Settings page.
 
 == Changelog ==
+
+= V1.19 - 07.02.2014 =
+* Update : Screenshots are updated.
+* Update : BWS plugins section is updated.
+* Update : We updated all functionality for wordpress 3.8.1.
+* Budfix : Problem with search results in back-end is fixed. 
+
+= V1.18 - 26.12.2013 =
+* Update : BWS plugins section is updated.
+* Update : We updated all functionality for wordpress 3.8.
+
+= V1.17 - 25.11.2013 =
+* Update : BWS plugins section is updated.
+* Bugfix : The error with argument 2 in function array_merge() is fixed.
+
+= V1.16 - 31.10.2013 =
+* Update : We updated all functionality for wordpress 3.7.1.
+* Update : Activation of radio button or checkbox by clicking on its label.
+* NEW : Add checking installed wordpress version.
 
 = V1.15 - 02.10.2013 =
 * Update : We updated all functionality for wordpress 3.6.1.
@@ -110,6 +142,18 @@ Go to the Settings page and select custom types that you would like to add to th
 * NEW : Language files are added to the plugin.
 
 == Upgrade Notice ==
+
+= V1.19 =
+Screenshots are updated. BWS plugins section is updated. We updated all functionality for wordpress 3.8.1. Problem with search results in back-end is fixed.
+
+= V1.18 =
+BWS plugins section is updated. We updated all functionality for wordpress 3.8.
+
+= V1.17 =
+BWS plugins section is updated. The error with argument 2 in function array_merge() is fixed.
+
+= V1.16 =
+We updated all functionality for wordpress 3.7.1. Activation of radio button or checkbox by clicking on its label. Add checking installed wordpress version.
 
 = V1.15 =
 We updated all functionality for wordpress 3.6.1. The Ukrainian language file is added to the plugin.
