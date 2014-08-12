@@ -4,7 +4,7 @@ Plugin Name: Custom Search
 Plugin URI: http://bestwebsoft.com/plugin/
 Description: Custom Search Plugin designed to search for site custom types.
 Author: BestWebSoft
-Version: 1.21
+Version: 1.22
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -154,10 +154,7 @@ if ( ! function_exists( 'register_cstmsrch_settings' ) ) {
 if ( ! function_exists( 'cstmsrch_options' ) ) {
 	function cstmsrch_options() {
 		global $wpmu, $cstmsrch_options;
-		if ( 1 == $wpmu )
-			$cstmsrch_options = get_site_option( 'cstmsrch_options' );
-		else
-			$cstmsrch_options = get_option( 'cstmsrch_options' );
+		$cstmsrch_options = ( 1 == $wpmu ) ? get_site_option( 'cstmsrch_options' ) : get_option( 'cstmsrch_options' );
 	}
 }
 
@@ -192,58 +189,55 @@ if ( ! function_exists( 'cstmsrch_searchfilter' ) ) {
 /* Function is forming page of the settings of this plugin */
 if ( ! function_exists( 'cstmsrch_settings_page' ) ) {
 	function  cstmsrch_settings_page() {
-	global $wpdb, $cstmsrch_options, $cstmsrch_plugin_info, $cstmsrch_result;
-	if ( isset( $_REQUEST['cstmsrch_submit'] ) && check_admin_referer( plugin_basename( __FILE__ ), 'cstmsrch_nonce_name' ) ) {
-		$cstmsrch_options = isset( $_REQUEST['cstmsrch_options'] ) ? $_REQUEST['cstmsrch_options'] : array();
-		$cstmsrch_options['plugin_option_version'] = $cstmsrch_plugin_info["Version"];
-		update_option( 'cstmsrch_options', $cstmsrch_options );
-		$message = __( "Settings saved" , 'custom-search' );
-	}
-	?>
-	<div class="wrap">
-		<div class="icon32 icon32-bws" id="icon-options-general"></div>
-		<h2><?php _e( 'Custom Search Settings', 'custom-search' ); ?></h2>
-		<h2 class="nav-tab-wrapper">
-			<a class="nav-tab nav-tab-active" href="admin.php?page=custom_search.php"><?php _e( 'Settings', 'custom-search' ); ?></a>
-			<a class="nav-tab" href="http://bestwebsoft.com/plugin/custom-search-plugin/#faq" target="_blank"><?php _e( 'FAQ', 'custom-search' ); ?></a>
-		</h2>
-		<div class="updated fade" <?php if ( ! isset( $_REQUEST['cstmsrch_submit'] ) ) echo "style=\"display:none\""; ?>><p><strong><?php echo $message; ?></strong></p></div>
-		<div id="cstmsrch_settings_notice" class="updated fade" style="display:none"><p><strong><?php _e( "Notice:", 'custom-search' ); ?></strong> <?php _e( "The plugin's settings have been changed. In order to save them please don't forget to click the 'Save Changes' button.", 'custom-search' ); ?></p></div>
-		<?php if ( 0 < count( $cstmsrch_result ) ) { ?>
-			<form method="post" action="" style="margin-top: 10px;" id="cstmsrch_settings_form">
-				<table class="form-table">
-					<tr valign="top">
-						<th scope="row"><?php _e( 'Enable Custom search for:', 'custom-search' ); ?> </th>
-						<td>
-							<?php
-							foreach ( $cstmsrch_result as $value ) { ?>
-								<label><input type="checkbox" <?php echo ( in_array( $value, $cstmsrch_options ) ?  'checked="checked"' : "" ); ?> name="cstmsrch_options[]" value="<?php echo $value; ?>"/><span style="text-transform: capitalize; padding-left: 5px;"><?php echo $value; ?></span></label><br />
-							<?php } ?>
-						</td>
-					</tr>
-				</table>
-				<input type="hidden" name="cstmsrch_submit" value="submit" />
-				<p class="submit">
-					<input type="submit" class="button-primary" value="<?php _e( 'Save Changes' , 'custom-search' ) ?>" />
-				</p>
-				<?php wp_nonce_field( plugin_basename( __FILE__ ), 'cstmsrch_nonce_name' ); ?>
-			</form>
-		<?php } else { ?>
-			<p><?php _e( 'No custom post type found.', 'custom-search' ); ?></p>
-		<?php } ?>
-		<div class="bws-plugin-reviews">
-			<div class="bws-plugin-reviews-rate">
-			<?php _e( 'If you enjoy our plugin, please give it 5 stars on WordPress', 'custom-search' ); ?>: 
-			<a href="http://wordpress.org/support/view/plugin-reviews/custom-search-plugin" target="_blank" title="Custom Search reviews"><?php _e( 'Rate the plugin', 'custom-search' ); ?></a><br/>
-			</div>
-			<div class="bws-plugin-reviews-support">
-			<?php _e( 'If there is something wrong about it, please contact us', 'custom-search' ); ?>: 
-			<a href="http://support.bestwebsoft.com">http://support.bestwebsoft.com</a>
+		global $wpdb, $cstmsrch_options, $cstmsrch_plugin_info, $cstmsrch_result;
+		if ( isset( $_REQUEST['cstmsrch_submit'] ) && check_admin_referer( plugin_basename( __FILE__ ), 'cstmsrch_nonce_name' ) ) {
+			$cstmsrch_options = isset( $_REQUEST['cstmsrch_options'] ) ? $_REQUEST['cstmsrch_options'] : array();
+			$cstmsrch_options['plugin_option_version'] = $cstmsrch_plugin_info["Version"];
+			update_option( 'cstmsrch_options', $cstmsrch_options );
+			$message = __( "Settings saved" , 'custom-search' );
+		} ?>
+		<div class="wrap">
+			<div class="icon32 icon32-bws" id="icon-options-general"></div>
+			<h2><?php _e( 'Custom Search Settings', 'custom-search' ); ?></h2>
+			<h2 class="nav-tab-wrapper">
+				<a class="nav-tab nav-tab-active" href="admin.php?page=custom_search.php"><?php _e( 'Settings', 'custom-search' ); ?></a>
+				<a class="nav-tab" href="http://bestwebsoft.com/plugin/custom-search-plugin/#faq" target="_blank"><?php _e( 'FAQ', 'custom-search' ); ?></a>
+			</h2>
+			<div class="updated fade" <?php if ( ! isset( $_REQUEST['cstmsrch_submit'] ) ) echo "style=\"display:none\""; ?>><p><strong><?php echo $message; ?></strong></p></div>
+			<div id="cstmsrch_settings_notice" class="updated fade" style="display:none"><p><strong><?php _e( "Notice:", 'custom-search' ); ?></strong> <?php _e( "The plugin's settings have been changed. In order to save them please don't forget to click the 'Save Changes' button.", 'custom-search' ); ?></p></div>
+			<?php if ( 0 < count( $cstmsrch_result ) ) { ?>
+				<form method="post" action="" style="margin-top: 10px;" id="cstmsrch_settings_form">
+					<table class="form-table">
+						<tr valign="top">
+							<th scope="row"><?php _e( 'Enable Custom search for:', 'custom-search' ); ?> </th>
+							<td>
+								<?php foreach ( $cstmsrch_result as $value ) { ?>
+									<label><input type="checkbox" <?php echo ( in_array( $value, $cstmsrch_options ) ?  'checked="checked"' : "" ); ?> name="cstmsrch_options[]" value="<?php echo $value; ?>"/><span style="text-transform: capitalize; padding-left: 5px;"><?php echo $value; ?></span></label><br />
+								<?php } ?>
+							</td>
+						</tr>
+					</table>
+					<input type="hidden" name="cstmsrch_submit" value="submit" />
+					<p class="submit">
+						<input type="submit" class="button-primary" value="<?php _e( 'Save Changes' , 'custom-search' ) ?>" />
+					</p>
+					<?php wp_nonce_field( plugin_basename( __FILE__ ), 'cstmsrch_nonce_name' ); ?>
+				</form>
+			<?php } else { ?>
+				<p><?php _e( 'No custom post type found.', 'custom-search' ); ?></p>
+			<?php } ?>
+			<div class="bws-plugin-reviews">
+				<div class="bws-plugin-reviews-rate">
+					<?php _e( 'If you enjoy our plugin, please give it 5 stars on WordPress', 'custom-search' ); ?>: 
+					<a href="http://wordpress.org/support/view/plugin-reviews/custom-search-plugin" target="_blank" title="Custom Search reviews"><?php _e( 'Rate the plugin', 'custom-search' ); ?></a><br/>
+				</div>
+				<div class="bws-plugin-reviews-support">
+					<?php _e( 'If there is something wrong about it, please contact us', 'custom-search' ); ?>: 
+					<a href="http://support.bestwebsoft.com">http://support.bestwebsoft.com</a>
+				</div>
 			</div>
 		</div>
-		</div>
-	<?php
-	}
+	<?php }
 }
 
 /* Positioning in the page. End. */
