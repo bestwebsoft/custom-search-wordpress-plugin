@@ -5,12 +5,12 @@ This plugin allows you to extend search functionality of your website by adding 
 
 <img src="http://bestwebsoft.com/wp-content/uploads/2012/02/custom-search-plugin.jpg" />
 
-<a href="http://bestwebsoft.com/products/custom-search-plugin/description" target=_blank>Description</a> | 
-<a href="http://bestwebsoft.com/products/custom-search-plugin/installation" target=_blank>Installation</a> | 
-<a href="http://bestwebsoft.com/products/custom-search-plugin/faq" target=_blank>FAQ</a> | 
-<a href="http://bestwebsoft.com/products/custom-search-plugin/screenshots" target=_blank>Screenshots</a> | 
-<a href="http://bestwebsoft.com/products/custom-search-plugin/changelog" target=_blank>Changelog</a> | 
-<a href="http://bestwebsoft.com/products/custom-search-plugin/download" target=_blank>Download</a>
+<a href="http://bestwebsoft.com/products/custom-search/description" target=_blank>Description</a> | 
+<a href="http://bestwebsoft.com/products/custom-search/installation" target=_blank>Installation</a> | 
+<a href="http://bestwebsoft.com/products/custom-search/faq" target=_blank>FAQ</a> | 
+<a href="http://bestwebsoft.com/products/custom-search/screenshots" target=_blank>Screenshots</a> | 
+<a href="http://bestwebsoft.com/products/custom-search/changelog" target=_blank>Changelog</a> | 
+<a href="http://bestwebsoft.com/products/custom-search/download" target=_blank>Download</a>
 
 
 Features
