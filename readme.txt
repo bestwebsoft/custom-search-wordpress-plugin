@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=1&product_id=94
 Tags: add custom posts to search, better search, custom, custom content types, custom post, custom post types, custom post types search, castom search, castom serch, castom serach, custom search, cutom search, custom serach, custom surch, custom search plugin, custom type, extra search options, improved search, post type, search, search by custom posts, type
 Requires at least: 3.0
-Tested up to: 4.0
-Stable tag: 1.22
+Tested up to: 4.1
+Stable tag: 1.23
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -28,7 +28,7 @@ http://www.youtube.com/watch?v=qF2-pFM_ESw
 The author of the Custom Search also recommends the following plugins:
 
 * <a href="http://wordpress.org/plugins/updater/">Updater</a> - This plugin updates WordPress core and the plugins to the recent versions. You can also use the auto mode or manual mode for updating and set email notifications.
-There is also a premium version of the plugin <a href="http://bestwebsoft.com/plugin/updater-pro/?k=7b42404bbc8ad8cb8745f8704cba3c9a">Updater Pro</a> with more useful features available. It can make backup of all your files and database before updating. Also it can forbid some plugins or WordPress Core update.
+There is also a premium version of the plugin <a href="http://bestwebsoft.com/products/updater-pro/?k=7b42404bbc8ad8cb8745f8704cba3c9a">Updater Pro</a> with more useful features available. It can make backup of all your files and database before updating. Also it can forbid some plugins or WordPress Core update.
 
 = Translation =
 
@@ -71,6 +71,10 @@ Go to the Settings page and select custom types that you would like to add to th
 1. Custom Search Settings page.
 
 == Changelog ==
+
+= V1.23 - 26.12.2014 =
+* Update : BWS plugins section is updated.
+* Update : We updated all functionality for wordpress 4.1.
 
 = V1.22 - 12.08.2014 =
 * Update : We updated all functionality for wordpress 4.0-beta3.
@@ -159,6 +163,9 @@ Go to the Settings page and select custom types that you would like to add to th
 * NEW : Language files are added to the plugin.
 
 == Upgrade Notice ==
+
+= V1.23 =
+BWS plugins section is updated. We updated all functionality for wordpress 4.1.
 
 = V1.22 =
 Security Exploit was fixed. We updated all functionality for wordpress 4.0-beta3.
