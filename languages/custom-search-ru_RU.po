@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Custom Search\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-12-26 16:35+0300\n"
-"PO-Revision-Date: 2014-12-26 16:35+0300\n"
+"POT-Creation-Date: 2015-03-05 11:37+0300\n"
+"PO-Revision-Date: 2015-03-05 11:42+0300\n"
 "Last-Translator: bestwebsoft.com <plugins@bestwebsoft.com>\n"
 "Language-Team: BestWebSoft <plugin@bestwebsoft.com>\n"
 "Language: \n"
@@ -19,96 +19,56 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 
 # @ custom-search
-#: custom-search-plugin.php:80
-#: custom-search-plugin.php:200
+#: custom-search-plugin.php:32
+#: custom-search-plugin.php:134
 msgid "Custom Search Settings"
 msgstr "Настройки Custom Search"
 
 # @ custom-search
-#: custom-search-plugin.php:80
-msgid "Custom search"
-msgstr "Custom Search"
-
-# @ custom-search
-#: custom-search-plugin.php:169
-msgid "requires"
-msgstr "требует"
-
-# @ custom-search
-#: custom-search-plugin.php:169
-msgid "or higher, that is why it has been deactivated! Please upgrade WordPress and try again."
-msgstr "или выше, поэтому он был деактивирован! Пожалуйста, обновите WordPress и попробуйте еще раз."
-
-# @ custom-search
-#: custom-search-plugin.php:169
-msgid "Back to the WordPress"
-msgstr "Вернуться к WordPress на"
-
-# @ custom-search
-#: custom-search-plugin.php:169
-msgid "Plugins page"
-msgstr "Страницу плагинов"
-
-# @ custom-search
-#: custom-search-plugin.php:196
+#: custom-search-plugin.php:130
 msgid "Settings saved"
 msgstr "Настройки сохранены"
 
 # @ custom-search
-#: custom-search-plugin.php:202
-#: custom-search-plugin.php:250
-#: custom-search-plugin.php:262
+#: custom-search-plugin.php:136
+#: custom-search-plugin.php:176
+#: custom-search-plugin.php:190
 msgid "Settings"
 msgstr "Настройки"
 
 # @ custom-search
-#: custom-search-plugin.php:203
-#: custom-search-plugin.php:263
+#: custom-search-plugin.php:137
+#: custom-search-plugin.php:191
 msgid "FAQ"
 msgstr "FAQ"
 
 # @ custom-search
-#: custom-search-plugin.php:206
+#: custom-search-plugin.php:140
 msgid "Notice:"
 msgstr "Внимание:"
 
 # @ custom-search
-#: custom-search-plugin.php:206
+#: custom-search-plugin.php:140
 msgid "The plugin's settings have been changed. In order to save them please don't forget to click the 'Save Changes' button."
 msgstr "Настройки плагина были изменены. Для того, чтобы сохранить их, пожалуйста, не забудьте нажать кнопку \"Сохранить\"."
 
 # @ custom-search
-#: custom-search-plugin.php:211
+#: custom-search-plugin.php:145
 msgid "Enable Custom search for:"
 msgstr "Отображать Кастомный поиск для:"
 
 # @ custom-search
-#: custom-search-plugin.php:221
+#: custom-search-plugin.php:155
 msgid "Save Changes"
 msgstr "Сохранить изменения"
 
 # @ custom-search
-#: custom-search-plugin.php:226
+#: custom-search-plugin.php:160
 msgid "No custom post type found."
-msgstr "Не найдено ни одного пользовательского типа сообщения."
+msgstr "Не найдено ни одного кастомного поста."
 
 # @ custom-search
-#: custom-search-plugin.php:230
-msgid "If you enjoy our plugin, please give it 5 stars on WordPress"
-msgstr " Если вам понравился плагин то поставте нам 5 звезд на WordPress"
-
-# @ custom-search
-#: custom-search-plugin.php:231
-msgid "Rate the plugin"
-msgstr "Оценить плагин"
-
-# @ custom-search
-#: custom-search-plugin.php:234
-msgid "If there is something wrong about it, please contact us"
-msgstr "Если у вас есть какие-то вопросы, обращайтесь"
-
-# @ custom-search
-#: custom-search-plugin.php:264
+#: custom-search-plugin.php:192
 msgid "Support"
 msgstr "Тех.поддержка"
 
