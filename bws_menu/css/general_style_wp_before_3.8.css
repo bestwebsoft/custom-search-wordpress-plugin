@@ -14,6 +14,10 @@
 #toplevel_page_bws_plugins .wp-submenu .wp-first-item {
     display: none;
 }
+.bws_info {
+    color: #888888;
+    font-size: 10px;
+}
 /*
 * styles for rate-support div on the settings page
 */
