@@ -4,7 +4,7 @@ Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=1&
 Tags: add custom posts to search, better search, custom, custom content types, custom post, custom post types, custom post types search, castom search, castom serch, castom serach, custom search, cutom search, custom serach, custom surch, custom search plugin, custom type, extra search options, improved search, post type, search, search by custom posts, type
 Requires at least: 3.0
 Tested up to: 4.1.1
-Stable tag: 1.25
+Stable tag: 1.26
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -74,6 +74,9 @@ Go to the Settings page and select custom types that you would like to add to th
 1. Custom Search Settings page.
 
 == Changelog ==
+
+= V1.26 - 06.03.2015 =
+* Bugfix : Bugs with syntax error and undefined function were fixed.
 
 = V1.25 - 05.03.2015 =
 * Update : BWS plugins section is updated.
@@ -174,6 +177,9 @@ Go to the Settings page and select custom types that you would like to add to th
 * NEW : Language files are added to the plugin.
 
 == Upgrade Notice ==
+
+= V1.26 =
+Bugs with syntax error and undefined function were fixed.
 
 = V1.25 =
 BWS plugins section is updated.
