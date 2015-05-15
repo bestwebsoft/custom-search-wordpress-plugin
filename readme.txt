@@ -1,10 +1,10 @@
-=== Custom Search ===
+=== Custom Search by BestWebSoft ===
 Contributors: bestwebsoft
-Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=1&product_id=94
+Donate link: http://bestwebsoft.com/donate/
 Tags: add custom posts to search, better search, custom, custom content types, custom post, custom post types, custom post types search, castom search, castom serch, castom serach, custom search, cutom search, custom serach, custom surch, custom search plugin, custom type, extra search options, improved search, post type, search, search by custom posts, type
 Requires at least: 3.0
-Tested up to: 4.1.1
-Stable tag: 1.26
+Tested up to: 4.2.2
+Stable tag: 1.27
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -16,7 +16,10 @@ Simple and useful tool for the people who want to to extend search functionality
 
 http://www.youtube.com/watch?v=qF2-pFM_ESw
 
+<a href="http://www.youtube.com/watch?v=2tuQNyfXZ-I" target="_blank">Video instruction on Installation</a>
+
 <a href="http://wordpress.org/plugins/custom-search-plugin/faq/" target="_blank">FAQ</a>
+
 <a href="http://support.bestwebsoft.com" target="_blank">Support</a>
 
 = Features =
@@ -60,6 +63,7 @@ We can fix some things for free for the users who provide translation of our plu
 = I have some problems with the plugin's work. What Information should I provide to receive proper support? =
 
 Please make sure that the problem hasn't been discussed yet on our forum (<a href="http://support.bestwebsoft.com" target="_blank">http://support.bestwebsoft.com</a>). If no, please provide the following data along with your problem's description:
+
 1. the link to the page where the problem occurs
 2. the name of the plugin and its version. If you are using a pro version - your order number.
 3. the version of your WordPress installation
@@ -74,6 +78,11 @@ Go to the Settings page and select custom types that you would like to add to th
 1. Custom Search Settings page.
 
 == Changelog ==
+
+= V1.27 - 15.05.2015 =
+* NEW : We added checkbox to mark all custom post types in the settings page.
+* Update : BWS plugins section is updated.
+* Update : We updated all functionality for wordpress 4.2.2.
 
 = V1.26 - 06.03.2015 =
 * Bugfix : Bugs with syntax error and undefined function were fixed.
@@ -177,6 +186,9 @@ Go to the Settings page and select custom types that you would like to add to th
 * NEW : Language files are added to the plugin.
 
 == Upgrade Notice ==
+
+= V1.27 =
+We added checkbox to mark all custom post types in the settings page. BWS plugins section is updated. We updated all functionality for wordpress 4.2.2.
 
 = V1.26 =
 Bugs with syntax error and undefined function were fixed.

@@ -1,10 +1,10 @@
 <?php
 /*
-Plugin Name: Custom Search
+Plugin Name: Custom Search by BestWebSoft
 Plugin URI: http://bestwebsoft.com/products/
 Description: Custom Search Plugin designed to search for site custom types.
 Author: BestWebSoft
-Version: 1.26
+Version: 1.27
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -50,12 +50,16 @@ if ( ! function_exists ( 'cstmsrch_init' ) ) {
 
 		/* Function check if plugin is compatible with current WP version  */
 		bws_wp_version_check( plugin_basename( __FILE__ ), $cstmsrch_plugin_info, "3.0" );
+
+		/* Call register settings function */
+		if ( ! is_admin() || ( isset( $_GET['page'] ) && "custom_search.php" == $_GET['page'] ) )
+			register_cstmsrch_settings();
 	}
 }
 
 if ( ! function_exists( 'cstmsrch_admin_init' ) ) {
 	function cstmsrch_admin_init() {
-		global $bws_plugin_info, $cstmsrch_plugin_info, $cstmsrch_result, $cstmsrch_options,  $cstmsrch_result;
+		global $bws_plugin_info, $cstmsrch_plugin_info, $cstmsrch_result, $cstmsrch_options, $cstmsrch_result;
 
 		if ( ! isset( $bws_plugin_info ) || empty( $bws_plugin_info ) )			
 			$bws_plugin_info = array( 'id' => '81', 'version' => $cstmsrch_plugin_info["Version"] );		
@@ -64,14 +68,11 @@ if ( ! function_exists( 'cstmsrch_admin_init' ) ) {
 		$cstmsrch_result = get_post_types( $args );
 		if ( empty( $cstmsrch_result ) ) {
 			$cstmsrch_options = array(
-				'plugin_option_version'	=>	$cstmsrch_plugin_info["Version"]
+				'plugin_option_version'	=>	$cstmsrch_plugin_info["Version"],
+				'post_types'            => array()
 			);
 			update_option( 'cstmsrch_options', $cstmsrch_options );
 		}
-		
-		/* Call register settings function */
-		if ( isset( $_GET['page'] ) && "custom_search.php" == $_GET['page'] )
-			register_cstmsrch_settings();	
 	}
 }
 
@@ -81,7 +82,8 @@ if ( ! function_exists( 'register_cstmsrch_settings' ) ) {
 		global $cstmsrch_options, $bws_plugin_info, $cstmsrch_plugin_info, $cstmsrch_options_default;
 
 		$cstmsrch_options_default = array(
-			'plugin_option_version'	=>	$cstmsrch_plugin_info["Version"]
+			'plugin_option_version'	=> $cstmsrch_plugin_info["Version"],
+			'post_types'            => array()
 		);
 
 		/* Install the option defaults */
@@ -96,6 +98,11 @@ if ( ! function_exists( 'register_cstmsrch_settings' ) ) {
 
 		/* Array merge incase this version has added new options */
 		if ( ! isset( $cstmsrch_options['plugin_option_version'] ) || $cstmsrch_options['plugin_option_version'] != $cstmsrch_plugin_info["Version"] ) {
+			if ( ! isset( $cstmsrch_options['post_types'] ) ) {
+				unset( $cstmsrch_options['plugin_option_version'] );
+				$cstmsrch_options_default['post_types'] = $cstmsrch_options;
+				$cstmsrch_options = array();
+			}
 			$cstmsrch_options = array_merge( $cstmsrch_options_default, $cstmsrch_options );
 			$cstmsrch_options['plugin_option_version'] = $cstmsrch_plugin_info["Version"];
 			update_option( 'cstmsrch_options', $cstmsrch_options );
@@ -111,7 +118,7 @@ if ( ! function_exists( 'cstmsrch_searchfilter' ) ) {
 
 		if ( $query->is_search && ! empty( $query->query['s'] ) && ! is_admin() ) {
 			$cstmsrch_post_standart_types	=	array( 'post', 'page', 'attachment' );
-			$cstmsrch_result_merge			=	array_merge( $cstmsrch_post_standart_types, $cstmsrch_options );
+			$cstmsrch_result_merge			=	array_merge( $cstmsrch_post_standart_types, $cstmsrch_options['post_types'] );
 			$query->set( 'post_type', $cstmsrch_result_merge );
 		}
 		return $query;
@@ -124,7 +131,7 @@ if ( ! function_exists( 'cstmsrch_settings_page' ) ) {
 		global $wpdb, $cstmsrch_options, $cstmsrch_plugin_info, $cstmsrch_result;
 		$message = '';
 		if ( isset( $_REQUEST['cstmsrch_submit'] ) && check_admin_referer( plugin_basename( __FILE__ ), 'cstmsrch_nonce_name' ) ) {
-			$cstmsrch_options = isset( $_REQUEST['cstmsrch_options'] ) ? $_REQUEST['cstmsrch_options'] : array();
+			$cstmsrch_options['post_types'] = isset( $_REQUEST['cstmsrch_options'] ) ? $_REQUEST['cstmsrch_options'] : array();
 			$cstmsrch_options['plugin_option_version'] = $cstmsrch_plugin_info["Version"];
 			update_option( 'cstmsrch_options', $cstmsrch_options );
 			$message = __( "Settings saved" , 'custom-search' );
@@ -142,10 +149,16 @@ if ( ! function_exists( 'cstmsrch_settings_page' ) ) {
 				<form method="post" action="" style="margin-top: 10px;" id="cstmsrch_settings_form">
 					<table class="form-table">
 						<tr valign="top">
-							<th scope="row"><?php _e( 'Enable Custom search for:', 'custom-search' ); ?> </th>
+							<th scope="row"><?php _e( 'Enable Custom search for:', 'custom-search' ); ?></th>
 							<td>
+								<?php $cstmsrch_new_result = array_values( $cstmsrch_result );
+								 	$cstmsrch_select_all = '';
+									if ( ! array_diff( $cstmsrch_new_result, $cstmsrch_options['post_types'] ) )
+										$cstmsrch_select_all = 'checked="checked"';
+								?>
+								<div id="cstmsrch_div_select_all" style="display:none;"><label ><input id="cstmsrch_select_all" type="checkbox" <?php echo $cstmsrch_select_all; ?> /><span style="text-transform: capitalize; padding-left: 5px;"><strong><?php _e( 'All', 'custom-search' ); ?></strong></span></label></div>
 								<?php foreach ( $cstmsrch_result as $value ) { ?>
-									<label><input type="checkbox" <?php echo ( in_array( $value, $cstmsrch_options ) ?  'checked="checked"' : "" ); ?> name="cstmsrch_options[]" value="<?php echo $value; ?>"/><span style="text-transform: capitalize; padding-left: 5px;"><?php echo $value; ?></span></label><br />
+									<label><input type="checkbox" <?php echo ( in_array( $value, $cstmsrch_options['post_types'] ) ?  'checked="checked"' : "" ); ?> name="cstmsrch_options[]" value="<?php echo $value; ?>"/><span style="text-transform: capitalize; padding-left: 5px;"><?php echo $value; ?></span></label><br />
 								<?php } ?>
 							</td>
 						</tr>
@@ -189,7 +202,7 @@ if ( !function_exists( 'cstmsrch_links' ) ) {
 			if ( ! is_network_admin() )
 				$links[]	=	'<a href="admin.php?page=custom_search.php">' . __( 'Settings','custom-search' ) . '</a>';
 			$links[]	=	'<a href="http://wordpress.org/plugins/custom-search-plugin/faq/" target="_blank">' . __( 'FAQ','custom-search' ) . '</a>';
-			$links[]	=	'<a href="http://support.bestwebsoft.com">' . __( 'Support','custom-search' ) . '</a>';
+			$links[]	=	'<a href="http://support.bestwebsoft.com">' . __( 'Support', 'custom-search' ) . '</a>';
 		}
 		return $links;
 	}
