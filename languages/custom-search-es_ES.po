@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: custom-search\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-03-05 11:37+0300\n"
-"PO-Revision-Date: 2015-03-05 11:37+0300\n"
+"POT-Creation-Date: 2015-06-05 17:00+0300\n"
+"PO-Revision-Date: 2015-06-05 17:00+0300\n"
 "Last-Translator: bestwebsoft.com <plugins@bestwebsoft.com>\n"
 "Language-Team: Fernando De Le&oacute;n <mrjosefernando@gmail.com>\n"
 "Language: he_IL\n"
@@ -20,51 +20,84 @@ msgstr ""
 
 # @ custom-search
 #: custom-search-plugin.php:32
-#: custom-search-plugin.php:134
+#: custom-search-plugin.php:145
 msgid "Custom Search Settings"
 msgstr "Configuraci&oacute;n de B&uacute;squeda personalizada"
 
 # @ captcha
-#: custom-search-plugin.php:130
+#: custom-search-plugin.php:128
 msgid "Settings saved"
 msgstr "Configuraci&oacute;n"
 
 # @ captcha
-#: custom-search-plugin.php:136
-#: custom-search-plugin.php:176
-#: custom-search-plugin.php:190
+#: custom-search-plugin.php:147
+#: custom-search-plugin.php:234
+#: custom-search-plugin.php:248
 msgid "Settings"
 msgstr "Configuraci&oacute;n"
 
-#: custom-search-plugin.php:137
-#: custom-search-plugin.php:191
+#: custom-search-plugin.php:148
+#: custom-search-plugin.php:249
 msgid "FAQ"
 msgstr ""
 
-#: custom-search-plugin.php:140
+#: custom-search-plugin.php:149
+msgid "Go PRO"
+msgstr ""
+
+#: custom-search-plugin.php:154
 msgid "Notice:"
 msgstr ""
 
-#: custom-search-plugin.php:140
+#: custom-search-plugin.php:154
 msgid "The plugin's settings have been changed. In order to save them please don't forget to click the 'Save Changes' button."
 msgstr ""
 
 # @ custom-search
-#: custom-search-plugin.php:145
+#: custom-search-plugin.php:161
+#: custom-search-plugin.php:179
 msgid "Enable Custom search for:"
 msgstr "Activar la b&uacute;squeda personalizada en:"
 
+#: custom-search-plugin.php:167
+msgid "All"
+msgstr ""
+
+#: custom-search-plugin.php:185
+msgid "When you drag post types, you affect the order of their display in the frontend on the search page."
+msgstr ""
+
+#: custom-search-plugin.php:189
+msgid "Search only by type of the current post"
+msgstr ""
+
+#: custom-search-plugin.php:192
+msgid "This option is used when you search on a single page/post/post type."
+msgstr ""
+
+#: custom-search-plugin.php:199
+msgid "Unlock premium options by upgrading to a PRO version."
+msgstr ""
+
+#: custom-search-plugin.php:200
+msgid "Learn More"
+msgstr ""
+
+#: custom-search-plugin.php:203
+msgid "Go"
+msgstr ""
+
 # @ default
-#: custom-search-plugin.php:155
+#: custom-search-plugin.php:210
 msgid "Save Changes"
 msgstr "Guardar Cambios"
 
 # @ custom-search
-#: custom-search-plugin.php:160
+#: custom-search-plugin.php:215
 msgid "No custom post type found."
 msgstr "No ha producido ning&uacute;n tipo de mensaje personalizado."
 
-#: custom-search-plugin.php:192
+#: custom-search-plugin.php:250
 msgid "Support"
 msgstr ""
 

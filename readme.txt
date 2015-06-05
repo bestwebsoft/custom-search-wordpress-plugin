@@ -2,9 +2,9 @@
 Contributors: bestwebsoft
 Donate link: http://bestwebsoft.com/donate/
 Tags: add custom posts to search, better search, custom, custom content types, custom post, custom post types, custom post types search, castom search, castom serch, castom serach, custom search, cutom search, custom serach, custom surch, custom search plugin, custom type, extra search options, improved search, post type, search, search by custom posts, type
-Requires at least: 3.0
+Requires at least: 3.1
 Tested up to: 4.2.2
-Stable tag: 1.27
+Stable tag: 1.28
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -22,6 +22,8 @@ http://www.youtube.com/watch?v=qF2-pFM_ESw
 
 <a href="http://support.bestwebsoft.com" target="_blank">Support</a>
 
+<a href="http://bestwebsoft.com/products/custom-search/?k=b67e3e538cdb8bb841b81467655eb0f7" target="_blank">Upgrade to Pro Version</a>
+
 = Features =
 
 * Actions: Add selected custom post types to the search.
@@ -37,7 +39,7 @@ There is also a premium version of the plugin <a href="http://bestwebsoft.com/pr
 = Translation =
 
 * Russian (ru_RU)
-* Spanish (es_ES)(thanks to <a href="mailto:mrjosefernando@gmail.com">Fernando De León</a>)
+* Spanish (es_ES) (thanks to <a href="mailto:mrjosefernando@gmail.com">Fernando De León</a>)
 * Ukrainian (uk)
 
 If you create your own language pack or update the existing one, you can send <a href="http://codex.wordpress.org/Translating_WordPress" target="_blank">the text in PO and MO files</a> for <a href="http://support.bestwebsoft.com" target="_blank">BestWebSoft</a> and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO files <a href="http://www.poedit.net/download.php" target="_blank">Poedit</a>.
@@ -78,6 +80,10 @@ Go to the Settings page and select custom types that you would like to add to th
 1. Custom Search Settings page.
 
 == Changelog ==
+
+= V1.28 - 05.06.2015 =
+* Update : BWS plugins section is updated.
+* Update : The Ukrainian and Russian languages are updated in the plugin.
 
 = V1.27 - 15.05.2015 =
 * NEW : We added checkbox to mark all custom post types in the settings page.
@@ -186,6 +192,9 @@ Go to the Settings page and select custom types that you would like to add to th
 * NEW : Language files are added to the plugin.
 
 == Upgrade Notice ==
+
+= V1.28 =
+BWS plugins section is updated. The Ukrainian and Russian languages are updated in the plugin.
 
 = V1.27 =
 We added checkbox to mark all custom post types in the settings page. BWS plugins section is updated. We updated all functionality for wordpress 4.2.2.
