@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: custom-search\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-06-05 17:00+0300\n"
-"PO-Revision-Date: 2015-06-05 17:00+0300\n"
+"POT-Creation-Date: 2015-07-06 14:24+0300\n"
+"PO-Revision-Date: 2015-07-06 14:24+0300\n"
 "Last-Translator: bestwebsoft.com <plugins@bestwebsoft.com>\n"
 "Language-Team: Fernando De Le&oacute;n <mrjosefernando@gmail.com>\n"
 "Language: he_IL\n"
@@ -19,91 +19,96 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 
 # @ custom-search
-#: custom-search-plugin.php:32
-#: custom-search-plugin.php:145
+#: custom-search-plugin.php:32 custom-search-plugin.php:151
 msgid "Custom Search Settings"
 msgstr "Configuraci&oacute;n de B&uacute;squeda personalizada"
 
 # @ captcha
-#: custom-search-plugin.php:128
+#: custom-search-plugin.php:129
 msgid "Settings saved"
 msgstr "Configuraci&oacute;n"
 
+#: custom-search-plugin.php:141
+msgid "All plugin settings were restored."
+msgstr ""
+
 # @ captcha
-#: custom-search-plugin.php:147
-#: custom-search-plugin.php:234
-#: custom-search-plugin.php:248
+#: custom-search-plugin.php:153 custom-search-plugin.php:242
+#: custom-search-plugin.php:256
 msgid "Settings"
 msgstr "Configuraci&oacute;n"
 
-#: custom-search-plugin.php:148
-#: custom-search-plugin.php:249
+#: custom-search-plugin.php:154 custom-search-plugin.php:257
 msgid "FAQ"
 msgstr ""
 
-#: custom-search-plugin.php:149
+#: custom-search-plugin.php:155
 msgid "Go PRO"
 msgstr ""
 
-#: custom-search-plugin.php:154
+#: custom-search-plugin.php:160
 msgid "Notice:"
 msgstr ""
 
-#: custom-search-plugin.php:154
-msgid "The plugin's settings have been changed. In order to save them please don't forget to click the 'Save Changes' button."
+#: custom-search-plugin.php:160
+msgid ""
+"The plugin's settings have been changed. In order to save them please don't "
+"forget to click the 'Save Changes' button."
 msgstr ""
 
 # @ custom-search
-#: custom-search-plugin.php:161
-#: custom-search-plugin.php:179
+#: custom-search-plugin.php:168 custom-search-plugin.php:186
 msgid "Enable Custom search for:"
 msgstr "Activar la b&uacute;squeda personalizada en:"
 
-#: custom-search-plugin.php:167
+#: custom-search-plugin.php:174
 msgid "All"
 msgstr ""
 
-#: custom-search-plugin.php:185
-msgid "When you drag post types, you affect the order of their display in the frontend on the search page."
+#: custom-search-plugin.php:192
+msgid ""
+"When you drag post types, you affect the order of their display in the "
+"frontend on the search page."
 msgstr ""
 
-#: custom-search-plugin.php:189
+#: custom-search-plugin.php:196
 msgid "Search only by type of the current post"
 msgstr ""
 
-#: custom-search-plugin.php:192
+#: custom-search-plugin.php:199
 msgid "This option is used when you search on a single page/post/post type."
 msgstr ""
 
-#: custom-search-plugin.php:199
+#: custom-search-plugin.php:206
 msgid "Unlock premium options by upgrading to a PRO version."
 msgstr ""
 
-#: custom-search-plugin.php:200
+#: custom-search-plugin.php:207
 msgid "Learn More"
 msgstr ""
 
-#: custom-search-plugin.php:203
+#: custom-search-plugin.php:210
 msgid "Go"
 msgstr ""
 
 # @ default
-#: custom-search-plugin.php:210
+#: custom-search-plugin.php:217
 msgid "Save Changes"
 msgstr "Guardar Cambios"
 
 # @ custom-search
-#: custom-search-plugin.php:215
+#: custom-search-plugin.php:222
 msgid "No custom post type found."
 msgstr "No ha producido ning&uacute;n tipo de mensaje personalizado."
 
-#: custom-search-plugin.php:250
+#: custom-search-plugin.php:258
 msgid "Support"
 msgstr ""
 
 # @ custom-search
 #~ msgid "Custom search"
 #~ msgstr " B&uacute;squeda personalizada"
+
 # @ captcha
 #, fuzzy
 #~ msgid "Plugins page"
@@ -117,24 +122,31 @@ msgstr ""
 # @ captcha
 #~ msgid "Activated plugins"
 #~ msgstr "Plugins activados"
+
 # @ captcha
 #~ msgid "Read more"
 #~ msgstr "Leer m&aacute;s"
+
 # @ captcha
 #~ msgid "Installed plugins"
 #~ msgstr "Plugins instalados"
+
 # @ captcha
 #~ msgid "Recommended plugins"
 #~ msgstr "Plugins recomendados"
+
 # @ captcha
 #~ msgid "Download"
 #~ msgstr "Descargar"
+
 # @ default
 #~ msgid "Install %s"
 #~ msgstr "Instalar %s"
+
 # @ captcha
 #~ msgid "Install now from wordpress.org"
 #~ msgstr "Instalar ahora desde wordpress.org"
+
 # @ captcha
 #, fuzzy
 #~ msgid "Active Plugins"

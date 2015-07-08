@@ -2,106 +2,117 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Custom Search\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-06-05 17:00+0300\n"
-"PO-Revision-Date: 2015-06-05 17:02+0300\n"
+"POT-Creation-Date: 2015-07-06 14:24+0300\n"
+"PO-Revision-Date: 2015-07-06 14:24+0300\n"
 "Last-Translator: bestwebsoft.com <plugins@bestwebsoft.com>\n"
 "Language-Team: BestWebSoft <plugin@bestwebsoft.com>\n"
 "Language: ru_RU\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%100/10==1 ? 2 : n%10==1 ? 0 : (n+9)%10>3 ? 2 : 1;\n"
+"Plural-Forms: nplurals=3; plural=n%100/10==1 ? 2 : n%10==1 ? 0 : (n"
+"+9)%10>3 ? 2 : 1;\n"
 "X-Generator: Poedit 1.5.4\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
 "X-Poedit-Basepath: ..\n"
 "X-Textdomain-Support: yes\n"
 "X-Poedit-SearchPath-0: .\n"
 
 # @ custom-search
-#: custom-search-plugin.php:32
-#: custom-search-plugin.php:145
+#: custom-search-plugin.php:32 custom-search-plugin.php:151
 msgid "Custom Search Settings"
 msgstr "Настройки Custom Search"
 
 # @ custom-search
-#: custom-search-plugin.php:128
+#: custom-search-plugin.php:129
 msgid "Settings saved"
 msgstr "Настройки сохранены"
 
+#: custom-search-plugin.php:141
+msgid "All plugin settings were restored."
+msgstr "Настройки плагина были восстановлены."
+
 # @ custom-search
-#: custom-search-plugin.php:147
-#: custom-search-plugin.php:234
-#: custom-search-plugin.php:248
+#: custom-search-plugin.php:153 custom-search-plugin.php:242
+#: custom-search-plugin.php:256
 msgid "Settings"
 msgstr "Настройки"
 
 # @ custom-search
-#: custom-search-plugin.php:148
-#: custom-search-plugin.php:249
+#: custom-search-plugin.php:154 custom-search-plugin.php:257
 msgid "FAQ"
 msgstr "FAQ"
 
-#: custom-search-plugin.php:149
+#: custom-search-plugin.php:155
 msgid "Go PRO"
 msgstr "Перейти на PRO версию"
 
 # @ custom-search
-#: custom-search-plugin.php:154
+#: custom-search-plugin.php:160
 msgid "Notice:"
 msgstr "Внимание:"
 
 # @ custom-search
-#: custom-search-plugin.php:154
-msgid "The plugin's settings have been changed. In order to save them please don't forget to click the 'Save Changes' button."
-msgstr "Настройки плагина были изменены. Для того, чтобы сохранить их, пожалуйста, не забудьте нажать кнопку \"Сохранить\"."
+#: custom-search-plugin.php:160
+msgid ""
+"The plugin's settings have been changed. In order to save them please don't "
+"forget to click the 'Save Changes' button."
+msgstr ""
+"Настройки плагина были изменены. Для того, чтобы сохранить их, пожалуйста, "
+"не забудьте нажать кнопку \"Сохранить\"."
 
 # @ custom-search
-#: custom-search-plugin.php:161
-#: custom-search-plugin.php:179
+#: custom-search-plugin.php:168 custom-search-plugin.php:186
 msgid "Enable Custom search for:"
 msgstr "Отображать Кастомный поиск для:"
 
-#: custom-search-plugin.php:167
+#: custom-search-plugin.php:174
 msgid "All"
 msgstr "Всех"
 
-#: custom-search-plugin.php:185
-msgid "When you drag post types, you affect the order of their display in the frontend on the search page."
-msgstr "При перетаскивании типов постов вы влияете на порядок их вывода во фронтенде на странице поиска."
+#: custom-search-plugin.php:192
+msgid ""
+"When you drag post types, you affect the order of their display in the "
+"frontend on the search page."
+msgstr ""
+"При перетаскивании типов постов вы влияете на порядок их вывода во фронтенде "
+"на странице поиска."
 
-#: custom-search-plugin.php:189
+#: custom-search-plugin.php:196
 msgid "Search only by type of the current post"
 msgstr "Искать только по типу текущей страницы"
 
-#: custom-search-plugin.php:192
-msgid "This option is used when you search on a single page/post/post type."
-msgstr "Эта опция используется, когда Вы находитесь на странице записи/страницы/пост типа."
-
 #: custom-search-plugin.php:199
+msgid "This option is used when you search on a single page/post/post type."
+msgstr ""
+"Эта опция используется, когда Вы находитесь на странице записи/страницы/пост "
+"типа."
+
+#: custom-search-plugin.php:206
 msgid "Unlock premium options by upgrading to a PRO version."
 msgstr "Активируйте премиум опции обновившись до PRO версии."
 
-#: custom-search-plugin.php:200
+#: custom-search-plugin.php:207
 msgid "Learn More"
 msgstr "Подробнее"
 
-#: custom-search-plugin.php:203
+#: custom-search-plugin.php:210
 msgid "Go"
 msgstr "Перейти на"
 
 # @ custom-search
-#: custom-search-plugin.php:210
+#: custom-search-plugin.php:217
 msgid "Save Changes"
 msgstr "Сохранить изменения"
 
 # @ custom-search
-#: custom-search-plugin.php:215
+#: custom-search-plugin.php:222
 msgid "No custom post type found."
 msgstr "Не найдено ни одного кастомного поста."
 
 # @ custom-search
-#: custom-search-plugin.php:250
+#: custom-search-plugin.php:258
 msgid "Support"
 msgstr "Тех.поддержка"
-

@@ -4,7 +4,7 @@ Plugin Name: Custom Search by BestWebSoft
 Plugin URI: http://bestwebsoft.com/products/
 Description: Custom Search Plugin designed to search for site custom types.
 Author: BestWebSoft
-Version: 1.28
+Version: 1.29
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -117,7 +117,8 @@ if ( ! function_exists( 'cstmsrch_searchfilter' ) ) {
 /* Function is forming page of the settings of this plugin */
 if ( ! function_exists( 'cstmsrch_settings_page' ) ) {
 	function cstmsrch_settings_page() {
-		global $wpdb, $cstmsrch_options, $cstmsrch_plugin_info, $wp_version;
+		global $wpdb, $cstmsrch_options, $cstmsrch_plugin_info, $wp_version, $cstmsrch_options_default;
+
 		$message = $error = '';
 		$plugin_basename  = plugin_basename( __FILE__ );
 		$args             = array( '_builtin' => false );
@@ -133,6 +134,11 @@ if ( ! function_exists( 'cstmsrch_settings_page' ) ) {
 				$cstmsrch_options['post_types'] = array();
 				update_option( 'cstmsrch_options', $cstmsrch_options );
 			}
+		}
+		if ( isset( $_POST['bws_restore_confirm'] ) && check_admin_referer( plugin_basename( __FILE__ ), 'bws_settings_nonce_name' ) ) {
+			$cstmsrch_options = $cstmsrch_options_default;
+			update_option( 'cstmsrch_options', $cstmsrch_options );
+			$message =  __( 'All plugin settings were restored.', 'custom-search' );
 		}
 		/* GO PRO */
 		if ( isset( $_GET['action'] ) && 'go_pro' == $_GET['action'] ) {
@@ -152,8 +158,9 @@ if ( ! function_exists( 'cstmsrch_settings_page' ) ) {
 			<div class="updated fade" <?php if ( ! isset( $_REQUEST['cstmsrch_submit'] ) ) echo "style=\"display:none\""; ?>><p><strong><?php echo $message; ?></strong></p></div>
 			<div class="error" <?php if ( "" == $error ) echo 'style="display:none"'; ?>><p><strong><?php echo $error; ?></strong></p></div>
 			<div id="cstmsrch_settings_notice" class="updated fade" style="display:none"><p><strong><?php _e( "Notice:", 'custom-search' ); ?></strong> <?php _e( "The plugin's settings have been changed. In order to save them please don't forget to click the 'Save Changes' button.", 'custom-search' ); ?></p></div>
-			
-			<?php if ( ! ( isset( $_GET['action'] ) && 'go_pro' == $_GET['action'] ) ) {
+			<?php if ( isset( $_POST['bws_restore_default'] ) && check_admin_referer( plugin_basename( __FILE__ ), 'bws_settings_nonce_name' ) ) {
+				bws_form_restore_default_confirm( plugin_basename( __FILE__ ) );
+			} else if ( ! ( isset( $_GET['action'] ) && 'go_pro' == $_GET['action'] ) ) {
 				if ( 0 < count( $cstmsrch_result ) ) { ?>
 					<form method="post" action="" style="margin-top: 10px;" id="cstmsrch_settings_form">
 						<table class="form-table">
@@ -214,6 +221,7 @@ if ( ! function_exists( 'cstmsrch_settings_page' ) ) {
 				<?php } else { ?>
 					<p><?php _e( 'No custom post type found.', 'custom-search' ); ?></p>
 				<?php }
+				bws_form_restore_default_settings( plugin_basename( __FILE__ ) );
 				bws_plugin_reviews_block( $cstmsrch_plugin_info['Name'], 'custom-search-plugin' );
 			} elseif ( 'go_pro' == $_GET['action'] ) {
 				bws_go_pro_tab( $cstmsrch_plugin_info, $plugin_basename, 'custom_search.php', 'custom_search_pro.php', 'custom-search-pro/custom-search-pro.php', 'custom-search', 'f9558d294313c75b964f5f6fa1e5fd3c', '214', isset( $go_pro_result['pro_plugin_is_activated'] ) );
