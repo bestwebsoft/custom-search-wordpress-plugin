@@ -2,9 +2,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Custom Search\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-06 14:23+0300\n"
-"PO-Revision-Date: 2015-07-06 14:23+0300\n"
-"Last-Translator: bestwebsoft.com <plugins@bestwebsoft.com>\n"
+"POT-Creation-Date: 2015-09-25 20:12+0300\n"
+"PO-Revision-Date: 2015-09-25 20:12+0300\n"
+"Last-Translator: plugin@bestwebsoft.com <plugin@bestwebsoft.com>\n"
 "Language-Team: BestWebSoft <plugin@bestwebsoft.com>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
@@ -16,36 +16,40 @@ msgstr ""
 "X-Generator: Poedit 1.5.4\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: custom-search-plugin.php:32 custom-search-plugin.php:151
+#: custom-search-plugin.php:34 custom-search-plugin.php:159
 msgid "Custom Search Settings"
 msgstr "Установки Custom Search"
 
-#: custom-search-plugin.php:129
+#: custom-search-plugin.php:137
 msgid "Settings saved"
 msgstr "Установки збережено"
 
-#: custom-search-plugin.php:141
+#: custom-search-plugin.php:149
 msgid "All plugin settings were restored."
 msgstr "Всі налаштування плагіну були відновлені."
 
-#: custom-search-plugin.php:153 custom-search-plugin.php:242
-#: custom-search-plugin.php:256
+#: custom-search-plugin.php:161 custom-search-plugin.php:288
+#: custom-search-plugin.php:302
 msgid "Settings"
 msgstr "Установки"
 
-#: custom-search-plugin.php:154 custom-search-plugin.php:257
+#: custom-search-plugin.php:162
+msgid "Appearance"
+msgstr "Відображення"
+
+#: custom-search-plugin.php:163 custom-search-plugin.php:303
 msgid "FAQ"
 msgstr "FAQ"
 
-#: custom-search-plugin.php:155
+#: custom-search-plugin.php:164
 msgid "Go PRO"
-msgstr "Перейти на Pro версію"
+msgstr "Перейти на PRO версію"
 
-#: custom-search-plugin.php:160
+#: custom-search-plugin.php:169
 msgid "Notice:"
 msgstr "Попередження:"
 
-#: custom-search-plugin.php:160
+#: custom-search-plugin.php:169
 msgid ""
 "The plugin's settings have been changed. In order to save them please don't "
 "forget to click the 'Save Changes' button."
@@ -53,15 +57,15 @@ msgstr ""
 "Налаштування плагіну було змінено. Щоб зберегти їх, не забудьте натиснути "
 "кнопку \"Зберегти зміни\"."
 
-#: custom-search-plugin.php:168 custom-search-plugin.php:186
+#: custom-search-plugin.php:178 custom-search-plugin.php:196
 msgid "Enable Custom search for:"
 msgstr "Дозволити Кастомний пошук для:"
 
-#: custom-search-plugin.php:174
+#: custom-search-plugin.php:184
 msgid "All"
 msgstr "Всіх"
 
-#: custom-search-plugin.php:192
+#: custom-search-plugin.php:202
 msgid ""
 "When you drag post types, you affect the order of their display in the "
 "frontend on the search page."
@@ -69,36 +73,80 @@ msgstr ""
 "При перетягуванні типів постів, ви впливаєте на їх відображення у фронтенді "
 "на сторінці пошуку."
 
-#: custom-search-plugin.php:196
+#: custom-search-plugin.php:206
 msgid "Search only by type of the current post"
 msgstr "Шукати тільки по типу поточного запису"
 
-#: custom-search-plugin.php:199
+#: custom-search-plugin.php:209
 msgid "This option is used when you search on a single page/post/post type."
 msgstr ""
-"Ця опція використовується, коли Ви знаходитесь на сторінці запису/сторінці/"
+"Ця опція використовується, коли Ви знаходитесь на сторінці запису/сторінки/"
 "пост типу."
 
-#: custom-search-plugin.php:206
-msgid "Unlock premium options by upgrading to a PRO version."
-msgstr "Зробити доступними преміум-опції, перейшовши на PRO версію."
+#: custom-search-plugin.php:216 custom-search-plugin.php:265
+msgid "Unlock premium options by upgrading to Pro version"
+msgstr "Зробити доступними преміум-опції, перейшовши на Pro версію"
 
-#: custom-search-plugin.php:207
+#: custom-search-plugin.php:218 custom-search-plugin.php:267
 msgid "Learn More"
 msgstr "Докладніше"
 
-#: custom-search-plugin.php:210
-msgid "Go"
-msgstr "Перейти на"
-
-#: custom-search-plugin.php:217
+#: custom-search-plugin.php:224
 msgid "Save Changes"
 msgstr "Зберегти зміни"
 
-#: custom-search-plugin.php:222
+#: custom-search-plugin.php:230
 msgid "No custom post type found."
 msgstr "Не знайдено жодного типу кастомного посту."
 
+#: custom-search-plugin.php:239
+msgid "Change displaying of post content on search pages"
+msgstr "Змінити відображення контенту записів на сторінках пошуку"
+
+#: custom-search-plugin.php:243
+msgid "Display featured image with post content"
+msgstr "Відобразити головне зображення для контенту запису"
+
+#: custom-search-plugin.php:247
+msgid "Featured image size"
+msgstr "Розмір головного зображення"
+
+#: custom-search-plugin.php:251
+msgid "Featured image align"
+msgstr "Розташування головного зображення"
+
+#: custom-search-plugin.php:253
+msgid "Left"
+msgstr "Ліворуч"
+
+#: custom-search-plugin.php:254
+msgid "Right"
+msgstr "Праворуч"
+
 #: custom-search-plugin.php:258
+msgid "Change excerpt length"
+msgstr "Змінити довжину витягу"
+
+#: custom-search-plugin.php:259
+msgid "to"
+msgstr "на"
+
+#: custom-search-plugin.php:259
+msgid "words"
+msgstr "слів"
+
+#: custom-search-plugin.php:304
 msgid "Support"
 msgstr "Підтримка"
+
+#~ msgid "Post"
+#~ msgstr "Записи"
+
+#~ msgid "Page"
+#~ msgstr "Сторiнки"
+
+#~ msgid "Unlock premium options by upgrading to PRO version"
+#~ msgstr "Зробити доступними преміум-опції, перейшовши на PRO версію"
+
+#~ msgid "Go"
+#~ msgstr "Перейти на"

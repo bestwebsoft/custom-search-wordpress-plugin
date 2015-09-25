@@ -1,10 +1,10 @@
 === Custom Search by BestWebSoft ===
 Contributors: bestwebsoft
 Donate link: http://bestwebsoft.com/donate/
-Tags: add custom posts to search, better search, custom, custom content types, custom post, custom post types, custom post types search, castom search, castom serch, castom serach, custom search, cutom search, custom serach, custom surch, custom search plugin, custom type, extra search options, improved search, post type, search, search by custom posts, type
+Tags: add additional search options, additional search options, add extra search options, add custom posts to search, add custom search plugin, add custom search wp plugin, advanced search, better search, best custom search plugin, castom search, castom serach, castom serch, custom, custom content types, custom post, custom posts, custom post types, custom post types search, custom search, custom search plugin, custom serach, custom surch, custom type, cutom search, extra search options, free, free plugin, free custom search plugin, free custom search wp plugin, free extra search options, free additional search options, improved search, post, post type, posts, search, search by custom posts, simple custom search plugin, search results, type, wp plugin, wp custom search plugin, wordpress plugin, wordpress custom search plugin 
 Requires at least: 3.1
-Tested up to: 4.2.2
-Stable tag: 1.29
+Tested up to: 4.3.1
+Stable tag: 1.30
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -69,7 +69,7 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 1. the link to the page where the problem occurs
 2. the name of the plugin and its version. If you are using a pro version - your order number.
 3. the version of your WordPress installation
-4. copy and paste into the message your system status report. Please read more here: <a href="https://docs.google.com/document/d/1Wi2X8RdRGXk9kMszQy1xItJrpN0ncXgioH935MaBKtc/edit" target="_blank">Instuction on System Status</a>
+4. copy and paste into the message your system status report. Please read more here: <a href="https://docs.google.com/document/d/1Wi2X8RdRGXk9kMszQy1xItJrpN0ncXgioH935MaBKtc/edit" target="_blank">Instruction on System Status</a>
 
 = Usage =
 
@@ -78,11 +78,16 @@ Go to the Settings page and select custom types that you would like to add to th
 == Screenshots ==
 
 1. Custom Search Settings page.
+2. Custom Search Appearance page.
 
 == Changelog ==
 
-= V1.29 - 08.07.2015 =
-* NEW : Ability to restore settings to defaults.
+= V1.30 - 25.09.2015 =
+* Update : We updated all functionality for wordpress 4.3.1.
+
+= V1.29 - 06.07.2015 =
+* New : Ability to restore settings to defaults.
+* Update : BWS plugins section is updated.
 
 = V1.28 - 05.06.2015 =
 * Update : BWS plugins section is updated.
@@ -195,6 +200,9 @@ Go to the Settings page and select custom types that you would like to add to th
 * NEW : Language files are added to the plugin.
 
 == Upgrade Notice ==
+
+= V1.30 =
+We updated all functionality for wordpress 4.3.1.
 
 = V1.29 =
 Ability to restore settings to defaults.

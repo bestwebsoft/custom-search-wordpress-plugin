@@ -2,9 +2,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: custom-search\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-06 14:24+0300\n"
-"PO-Revision-Date: 2015-07-06 14:24+0300\n"
-"Last-Translator: bestwebsoft.com <plugins@bestwebsoft.com>\n"
+"POT-Creation-Date: 2015-09-25 20:12+0300\n"
+"PO-Revision-Date: 2015-09-25 20:12+0300\n"
+"Last-Translator: plugin@bestwebsoft.com <plugin@bestwebsoft.com>\n"
 "Language-Team: Fernando De Le&oacute;n <mrjosefernando@gmail.com>\n"
 "Language: he_IL\n"
 "MIME-Version: 1.0\n"
@@ -19,89 +19,125 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 
 # @ custom-search
-#: custom-search-plugin.php:32 custom-search-plugin.php:151
+#: custom-search-plugin.php:34 custom-search-plugin.php:159
 msgid "Custom Search Settings"
 msgstr "Configuraci&oacute;n de B&uacute;squeda personalizada"
 
 # @ captcha
-#: custom-search-plugin.php:129
+#: custom-search-plugin.php:137
 msgid "Settings saved"
 msgstr "Configuraci&oacute;n"
 
-#: custom-search-plugin.php:141
+#: custom-search-plugin.php:149
 msgid "All plugin settings were restored."
 msgstr ""
 
 # @ captcha
-#: custom-search-plugin.php:153 custom-search-plugin.php:242
-#: custom-search-plugin.php:256
+#: custom-search-plugin.php:161 custom-search-plugin.php:288
+#: custom-search-plugin.php:302
 msgid "Settings"
 msgstr "Configuraci&oacute;n"
 
-#: custom-search-plugin.php:154 custom-search-plugin.php:257
+#: custom-search-plugin.php:162
+msgid "Appearance"
+msgstr ""
+
+#: custom-search-plugin.php:163 custom-search-plugin.php:303
 msgid "FAQ"
 msgstr ""
 
-#: custom-search-plugin.php:155
+#: custom-search-plugin.php:164
 msgid "Go PRO"
 msgstr ""
 
-#: custom-search-plugin.php:160
+#: custom-search-plugin.php:169
 msgid "Notice:"
 msgstr ""
 
-#: custom-search-plugin.php:160
+#: custom-search-plugin.php:169
 msgid ""
 "The plugin's settings have been changed. In order to save them please don't "
 "forget to click the 'Save Changes' button."
 msgstr ""
 
 # @ custom-search
-#: custom-search-plugin.php:168 custom-search-plugin.php:186
+#: custom-search-plugin.php:178 custom-search-plugin.php:196
 msgid "Enable Custom search for:"
 msgstr "Activar la b&uacute;squeda personalizada en:"
 
-#: custom-search-plugin.php:174
+#: custom-search-plugin.php:184
 msgid "All"
 msgstr ""
 
-#: custom-search-plugin.php:192
+#: custom-search-plugin.php:202
 msgid ""
 "When you drag post types, you affect the order of their display in the "
 "frontend on the search page."
 msgstr ""
 
-#: custom-search-plugin.php:196
+#: custom-search-plugin.php:206
 msgid "Search only by type of the current post"
 msgstr ""
 
-#: custom-search-plugin.php:199
+#: custom-search-plugin.php:209
 msgid "This option is used when you search on a single page/post/post type."
 msgstr ""
 
-#: custom-search-plugin.php:206
-msgid "Unlock premium options by upgrading to a PRO version."
+#: custom-search-plugin.php:216 custom-search-plugin.php:265
+msgid "Unlock premium options by upgrading to Pro version"
 msgstr ""
 
-#: custom-search-plugin.php:207
+#: custom-search-plugin.php:218 custom-search-plugin.php:267
 msgid "Learn More"
 msgstr ""
 
-#: custom-search-plugin.php:210
-msgid "Go"
-msgstr ""
-
 # @ default
-#: custom-search-plugin.php:217
+#: custom-search-plugin.php:224
 msgid "Save Changes"
 msgstr "Guardar Cambios"
 
 # @ custom-search
-#: custom-search-plugin.php:222
+#: custom-search-plugin.php:230
 msgid "No custom post type found."
 msgstr "No ha producido ning&uacute;n tipo de mensaje personalizado."
 
+#: custom-search-plugin.php:239
+msgid "Change displaying of post content on search pages"
+msgstr ""
+
+#: custom-search-plugin.php:243
+msgid "Display featured image with post content"
+msgstr ""
+
+#: custom-search-plugin.php:247
+msgid "Featured image size"
+msgstr ""
+
+#: custom-search-plugin.php:251
+msgid "Featured image align"
+msgstr ""
+
+#: custom-search-plugin.php:253
+msgid "Left"
+msgstr ""
+
+#: custom-search-plugin.php:254
+msgid "Right"
+msgstr ""
+
 #: custom-search-plugin.php:258
+msgid "Change excerpt length"
+msgstr ""
+
+#: custom-search-plugin.php:259
+msgid "to"
+msgstr ""
+
+#: custom-search-plugin.php:259
+msgid "words"
+msgstr ""
+
+#: custom-search-plugin.php:304
 msgid "Support"
 msgstr ""
 

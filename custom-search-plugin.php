@@ -4,7 +4,9 @@ Plugin Name: Custom Search by BestWebSoft
 Plugin URI: http://bestwebsoft.com/products/
 Description: Custom Search Plugin designed to search for site custom types.
 Author: BestWebSoft
-Version: 1.29
+Text Domain: custom-search
+Domain Path: /languages
+Version: 1.30
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -33,14 +35,19 @@ if ( ! function_exists( 'add_cstmsrch_admin_menu' ) ) {
 	}
 }
 
+if ( ! function_exists( 'cstmsrch_plugins_loaded' ) ) {
+	function cstmsrch_plugins_loaded() {
+		/* Function adds translations in this plugin */
+		load_plugin_textdomain( 'custom-search', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+	}
+}
+
 if ( ! function_exists ( 'cstmsrch_init' ) ) {
 	function cstmsrch_init() {
 		global $cstmsrch_options, $cstmsrch_plugin_info;
 
-		/* Function adds translations in this plugin */
-		load_plugin_textdomain( 'custom-search', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
-
-		require_once( dirname( __FILE__ ) . '/bws_menu/bws_functions.php' );
+		require_once( dirname( __FILE__ ) . '/bws_menu/bws_include.php' );
+		bws_include_init( plugin_basename( __FILE__ ) );
 
 		if ( empty( $cstmsrch_plugin_info ) ) {
 			if ( ! function_exists( 'get_plugin_data' ) )
@@ -72,7 +79,8 @@ if ( ! function_exists( 'register_cstmsrch_settings' ) ) {
 
 		$cstmsrch_options_default = array(
 			'plugin_option_version'	=> $cstmsrch_plugin_info["Version"],
-			'post_types'			=> array()
+			'post_types'			=> array(),
+			'first_install'			=> strtotime( "now" ),
 		);
 
 		/* Install the option defaults */
@@ -135,7 +143,7 @@ if ( ! function_exists( 'cstmsrch_settings_page' ) ) {
 				update_option( 'cstmsrch_options', $cstmsrch_options );
 			}
 		}
-		if ( isset( $_POST['bws_restore_confirm'] ) && check_admin_referer( plugin_basename( __FILE__ ), 'bws_settings_nonce_name' ) ) {
+		if ( isset( $_POST['bws_restore_confirm'] ) && check_admin_referer( $plugin_basename, 'bws_settings_nonce_name' ) ) {
 			$cstmsrch_options = $cstmsrch_options_default;
 			update_option( 'cstmsrch_options', $cstmsrch_options );
 			$message =  __( 'All plugin settings were restored.', 'custom-search' );
@@ -151,81 +159,119 @@ if ( ! function_exists( 'cstmsrch_settings_page' ) ) {
 			<h2><?php _e( 'Custom Search Settings', 'custom-search' ); ?></h2>
 			<h2 class="nav-tab-wrapper">
 				<a class="nav-tab<?php echo ! isset( $_GET['action'] ) ? ' nav-tab-active': ''; ?>" href="admin.php?page=custom_search.php"><?php _e( 'Settings', 'custom-search' ); ?></a>
+				<a class="nav-tab<?php if ( isset( $_GET['action'] ) && 'appearance' == $_GET['action'] ) echo ' nav-tab-active'; ?>" href="admin.php?page=custom_search.php&amp;action=appearance"><?php _e( 'Appearance', 'custom-search' ); ?></a>
 				<a class="nav-tab" href="http://bestwebsoft.com/products/custom-search/faq" target="_blank"><?php _e( 'FAQ', 'custom-search' ); ?></a>
 				<a class="nav-tab bws_go_pro_tab<?php if ( isset( $_GET['action'] ) && 'go_pro' == $_GET['action'] ) echo ' nav-tab-active'; ?>" href="admin.php?page=custom_search.php&amp;action=go_pro"><?php _e( 'Go PRO', 'custom-search' ); ?></a>
 
 			</h2>
-			<div class="updated fade" <?php if ( ! isset( $_REQUEST['cstmsrch_submit'] ) ) echo "style=\"display:none\""; ?>><p><strong><?php echo $message; ?></strong></p></div>
+			<div class="updated fade" <?php if ( empty( $message ) ) echo "style=\"display:none\""; ?>><p><strong><?php echo $message; ?></strong></p></div>
 			<div class="error" <?php if ( "" == $error ) echo 'style="display:none"'; ?>><p><strong><?php echo $error; ?></strong></p></div>
 			<div id="cstmsrch_settings_notice" class="updated fade" style="display:none"><p><strong><?php _e( "Notice:", 'custom-search' ); ?></strong> <?php _e( "The plugin's settings have been changed. In order to save them please don't forget to click the 'Save Changes' button.", 'custom-search' ); ?></p></div>
-			<?php if ( isset( $_POST['bws_restore_default'] ) && check_admin_referer( plugin_basename( __FILE__ ), 'bws_settings_nonce_name' ) ) {
-				bws_form_restore_default_confirm( plugin_basename( __FILE__ ) );
-			} else if ( ! ( isset( $_GET['action'] ) && 'go_pro' == $_GET['action'] ) ) {
-				if ( 0 < count( $cstmsrch_result ) ) { ?>
-					<form method="post" action="" style="margin-top: 10px;" id="cstmsrch_settings_form">
-						<table class="form-table">
+			<?php if ( ! isset( $_GET['action'] ) ) {
+				if ( isset( $_POST['bws_restore_default'] ) && check_admin_referer( $plugin_basename, 'bws_settings_nonce_name' ) ) {
+					bws_form_restore_default_confirm( $plugin_basename );
+				} else {
+					if ( 0 < count( $cstmsrch_result ) ) { ?>
+						<form method="post" action="" style="margin-top: 10px;" id="cstmsrch_settings_form">
+							<table class="form-table">
+								<tr valign="top">
+									<th scope="row"><?php _e( 'Enable Custom search for:', 'custom-search' ); ?></th>
+									<td>
+										<?php $cstmsrch_new_result = array_values( $cstmsrch_result );
+										 	$cstmsrch_select_all = '';
+											if ( ! array_diff( $cstmsrch_new_result, $cstmsrch_options['post_types'] ) )
+												$cstmsrch_select_all = 'checked="checked"'; ?>
+										<div id="cstmsrch_div_select_all" style="display:none;"><label ><input id="cstmsrch_select_all" type="checkbox" <?php echo $cstmsrch_select_all; ?> /><span style="text-transform: capitalize; padding-left: 5px;"><strong><?php _e( 'All', 'custom-search' ); ?></strong></span></label></div>
+										<?php foreach ( $cstmsrch_result as $value ) { ?>
+											<label><input type="checkbox" <?php echo ( in_array( $value, $cstmsrch_options['post_types'] ) ?  'checked="checked"' : "" ); ?> name="cstmsrch_options[]" value="<?php echo $value; ?>"/><span style="text-transform: capitalize; padding-left: 5px;"><?php echo $value; ?></span></label><br />
+										<?php } ?>
+									</td>
+								</tr>
+							</table>
+							<div class="bws_pro_version_bloc">
+								<div class="bws_pro_version_table_bloc">
+									<div class="bws_table_bg"></div>
+									<table class="form-table bws_pro_version">
+										<tr valign="top">
+											<th style="width: 190px !important;" scope="row"><?php _e( 'Enable Custom search for:', 'custom-search' ); ?></th>
+											<td width="350">
+												<img title="" src="<?php echo plugins_url( 'images/dragging-arrow.png', __FILE__ ); ?>" alt="" />
+												<label><input type="checkbox" checked="checked" name="cstmsrchpr_options[]" value="post" disabled="disabled" />&nbsp;<span>Post</span></label><br />
+												<img title="" src="<?php echo plugins_url( 'images/dragging-arrow.png', __FILE__ ); ?>" alt="" />
+												<label><input type="checkbox" checked="checked" name="cstmsrchpr_options[]" value="page" disabled="disabled" />&nbsp;<span>Page</span></label><br />
+												<span class="bws_info"><?php _e( 'When you drag post types, you affect the order of their display in the frontend on the search page.', 'custom-search' ); ?></span>
+											</td>
+										</tr>
+										<tr valign="top">
+											<th style="width: 190px !important;" scope="row"><?php _e( 'Search only by type of the current post', 'custom-search' ); ?></th>
+											<td width="350">
+												<input type="checkbox" value="1" name="by_current_post_type" disabled="disabled" /><br />
+												<span class="bws_info"><?php _e( 'This option is used when you search on a single page/post/post type.', 'custom-search' ); ?></span>	
+											</td>
+										</tr>
+									</table>
+								</div>
+								<div class="bws_pro_version_tooltip">
+									<div class="bws_info">
+										<?php _e( 'Unlock premium options by upgrading to Pro version', 'custom-search' ); ?>
+									</div>
+									<a class="bws_button" href="http://bestwebsoft.com/products/custom-search/?k=f9558d294313c75b964f5f6fa1e5fd3c&pn=214&v=<?php echo $cstmsrch_plugin_info["Version"]; ?>&wp_v=<?php echo $wp_version; ?>" target="_blank" title="custom-search Pro"><?php _e( 'Learn More', 'custom-search' ); ?></a>
+									<div class="clear"></div>
+								</div>
+							</div>
+							<p class="submit">
+								<input type="hidden" name="cstmsrch_submit" value="submit" />
+								<input type="submit" class="button-primary" value="<?php _e( 'Save Changes' , 'custom-search' ) ?>" />
+								<?php wp_nonce_field( $plugin_basename, 'cstmsrch_nonce_name' ); ?>
+							</p>
+						</form>
+					<?php bws_form_restore_default_settings( $plugin_basename );
+					} else { ?>
+						<p><?php _e( 'No custom post type found.', 'custom-search' ); ?></p>
+					<?php }
+				}
+			} elseif ( 'appearance' == $_GET['action'] ) { ?>
+				<div class="bws_pro_version_bloc" style="margin: 10px 0;">
+					<div class="bws_pro_version_table_bloc">
+						<div class="bws_table_bg"></div>
+						<table class="form-table  bws_pro_version">
 							<tr valign="top">
-								<th scope="row"><?php _e( 'Enable Custom search for:', 'custom-search' ); ?></th>
+								<th scope="row"><?php _e( 'Change displaying of post content on search pages', 'custom-search' ); ?></th>
+								<td><input type="checkbox" disabled="disabled" /></td>
+							</tr>
+							<tr valign="top">
+								<th scope="row"><?php _e( 'Display featured image with post content', 'custom-search' ); ?></th>
+								<td><input type="checkbox" disabled="disabled" /></td>
+							</tr>
+							<tr valign="top">
+								<th scope="row"><?php _e( 'Featured image size', 'custom-search' ); ?></th>
+								<td><select disabled="disabled"><option>thumbnail (150x150)</option></select></td>
+							</tr>
+							<tr valign="top">
+								<th scope="row"><?php _e( 'Featured image align', 'custom-search' ); ?></th>
 								<td>
-									<?php $cstmsrch_new_result = array_values( $cstmsrch_result );
-									 	$cstmsrch_select_all = '';
-										if ( ! array_diff( $cstmsrch_new_result, $cstmsrch_options['post_types'] ) )
-											$cstmsrch_select_all = 'checked="checked"'; ?>
-									<div id="cstmsrch_div_select_all" style="display:none;"><label ><input id="cstmsrch_select_all" type="checkbox" <?php echo $cstmsrch_select_all; ?> /><span style="text-transform: capitalize; padding-left: 5px;"><strong><?php _e( 'All', 'custom-search' ); ?></strong></span></label></div>
-									<?php foreach ( $cstmsrch_result as $value ) { ?>
-										<label><input type="checkbox" <?php echo ( in_array( $value, $cstmsrch_options['post_types'] ) ?  'checked="checked"' : "" ); ?> name="cstmsrch_options[]" value="<?php echo $value; ?>"/><span style="text-transform: capitalize; padding-left: 5px;"><?php echo $value; ?></span></label><br />
-									<?php } ?>
+									<label><input type="radio" disabled="disabled" /><?php _e( 'Left', 'custom-search' ); ?></label><br />
+									<label><input type="radio" disabled="disabled" /><?php _e( 'Right', 'custom-search' ); ?></label><br />
 								</td>
 							</tr>
+							<tr valign="top">
+								<th scope="row"><?php _e( 'Change excerpt length', 'custom-search' ); ?></th>
+								<td><input type="checkbox" disabled="disabled" />&nbsp;<?php _e( 'to', 'custom-search' ); ?>&nbsp;<input type="number" value="10" disabled="disabled" style="width: 50px;" />&nbsp;<span><?php _e( 'words', 'custom-search' ); ?></span></td>
+							</tr>
 						</table>
-						<div class="bws_pro_version_bloc">
-							<div class="bws_pro_version_table_bloc">
-								<div class="bws_table_bg"></div>
-								<table class="form-table bws_pro_version">
-									<tr valign="top">
-										<th style="width: 190px !important;" scope="row"><?php _e( 'Enable Custom search for:', 'custom-search' ); ?></th>
-										<td width="350">
-											<img title="" src="<?php echo plugins_url( 'images/dragging-arrow.png', __FILE__ ); ?>" alt="" />
-											<label><input type="checkbox" checked="checked" name="cstmsrchpr_options[]" value="post" disabled="disabled" />&nbsp;<span>Post</span></label><br />
-											<img title="" src="<?php echo plugins_url( 'images/dragging-arrow.png', __FILE__ ); ?>" alt="" />
-											<label><input type="checkbox" checked="checked" name="cstmsrchpr_options[]" value="page" disabled="disabled" />&nbsp;<span>Page</span></label><br />
-											<span class="bws_info"><?php _e( 'When you drag post types, you affect the order of their display in the frontend on the search page.', 'custom-search' ); ?></span>
-										</td>
-									</tr>
-									<tr valign="top">
-										<th style="width: 190px !important;" scope="row"><?php _e( 'Search only by type of the current post', 'custom-search' ); ?></th>
-										<td width="350">
-											<input type="checkbox" value="1" name="by_current_post_type" disabled="disabled" /><br />
-											<span class="bws_info"><?php _e( 'This option is used when you search on a single page/post/post type.', 'custom-search' ); ?></span>	
-										</td>
-									</tr>
-								</table>
-							</div>
-							<div class="bws_pro_version_tooltip">
-								<div class="bws_info">
-									<?php _e( 'Unlock premium options by upgrading to a PRO version.', 'custom-search' ); ?>
-									<a href="http://bestwebsoft.com/products/custom-search/?k=f9558d294313c75b964f5f6fa1e5fd3c&pn=214&v=<?php echo $cstmsrch_plugin_info["Version"]; ?>&wp_v=<?php echo $wp_version; ?>" target="_blank" title="custom-search Pro"><?php _e( 'Learn More', 'custom-search' ); ?></a>
-								</div>
-								<a class="bws_button" href="http://bestwebsoft.com/products/custom-search/buy/?k=f9558d294313c75b964f5f6fa1e5fd3c&pn=214&v=<?php echo $cstmsrch_plugin_info["Version"]; ?>&wp_v=<?php echo $wp_version; ?>" target="_blank" title="Custom Search Pro">
-									<?php _e( 'Go', 'custom-search' ); ?> <strong>PRO</strong>
-								</a>
-								<div class="clear"></div>
-							</div>
+					</div>
+					<div class="bws_pro_version_tooltip">
+						<div class="bws_info">
+							<?php _e( 'Unlock premium options by upgrading to Pro version', 'custom-search' ); ?>
 						</div>
-						<p class="submit">
-							<input type="hidden" name="cstmsrch_submit" value="submit" />
-							<input type="submit" class="button-primary" value="<?php _e( 'Save Changes' , 'custom-search' ) ?>" />
-							<?php wp_nonce_field( $plugin_basename, 'cstmsrch_nonce_name' ); ?>
-						</p>					
-					</form>
-				<?php } else { ?>
-					<p><?php _e( 'No custom post type found.', 'custom-search' ); ?></p>
-				<?php }
-				bws_form_restore_default_settings( plugin_basename( __FILE__ ) );
-				bws_plugin_reviews_block( $cstmsrch_plugin_info['Name'], 'custom-search-plugin' );
-			} elseif ( 'go_pro' == $_GET['action'] ) {
+						<a class="bws_button" href="http://bestwebsoft.com/products/custom-search/?k=f9558d294313c75b964f5f6fa1e5fd3c&pn=214&v=<?php echo $cstmsrch_plugin_info["Version"]; ?>&wp_v=<?php echo $wp_version; ?>" target="_blank" title="custom-search Pro"><?php _e( 'Learn More', 'custom-search' ); ?></a>
+						<div class="clear"></div>
+					</div>
+				</div>
+			<?php } elseif ( 'go_pro' == $_GET['action'] ) {
 				bws_go_pro_tab( $cstmsrch_plugin_info, $plugin_basename, 'custom_search.php', 'custom_search_pro.php', 'custom-search-pro/custom-search-pro.php', 'custom-search', 'f9558d294313c75b964f5f6fa1e5fd3c', '214', isset( $go_pro_result['pro_plugin_is_activated'] ) );
-			} ?>
+			}
+			bws_plugin_reviews_block( $cstmsrch_plugin_info['Name'], 'custom-search-plugin' ); ?>
 		</div>
 	<?php }
 }
@@ -273,8 +319,9 @@ if ( ! function_exists ( 'cstmsrch_admin_notices' ) ) {
 		global $hook_suffix, $cstmsrch_plugin_info, $cstmsrch_options;
 		
 		if ( 'plugins.php' == $hook_suffix ) {
-			bws_plugin_banner( $cstmsrch_plugin_info, 'cstmsrch', 'custom-search', '22f95b30aa812b6190a4a5a476b6b628', '214', '//ps.w.org/custom-search-plugin/assets/icon-128x128.png' );
-
+			if ( isset( $cstmsrch_options['first_install'] ) && strtotime( '-1 week' ) > $cstmsrch_options['first_install'] )
+				bws_plugin_banner( $cstmsrch_plugin_info, 'cstmsrch', 'custom-search', '22f95b30aa812b6190a4a5a476b6b628', '214', '//ps.w.org/custom-search-plugin/assets/icon-128x128.png' );
+			bws_plugin_banner_to_settings( $cstmsrch_plugin_info, 'cstmsrch_options', 'custom-search-plugin', 'admin.php?page=custom_search.php' );
 		}
 	}
 }
@@ -282,12 +329,22 @@ if ( ! function_exists ( 'cstmsrch_admin_notices' ) ) {
 /* Function for delete options from table `wp_options` */
 if ( ! function_exists( 'delete_cstmsrch_settings' ) ) {
 	function delete_cstmsrch_settings() {
+		if ( is_multisite() ) {
+			global $wpdb;
+			/* Get all blog ids */
+			$blogids = $wpdb->get_col( "SELECT `blog_id` FROM $wpdb->blogs" );
+			foreach ( $blogids as $blog_id ) {
+				switch_to_blog( $blog_id );
+				delete_option( "cstmsrch_options" );
+			}
+			restore_current_blog();
+		}
 		delete_option( 'cstmsrch_options' );
 	}
 }
 
 register_activation_hook( __FILE__, 'register_cstmsrch_settings');
-
+add_action( 'plugins_loaded', 'cstmsrch_plugins_loaded' );
 add_action( 'admin_menu', 'add_cstmsrch_admin_menu' );
 add_action( 'init', 'cstmsrch_init' );
 add_action( 'admin_init', 'cstmsrch_admin_init' );
