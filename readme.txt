@@ -2,9 +2,9 @@
 Contributors: bestwebsoft
 Donate link: http://bestwebsoft.com/donate/
 Tags: add additional search options, additional search options, add extra search options, add custom posts to search, add custom search plugin, add custom search wp plugin, advanced search, better search, best custom search plugin, castom search, castom serach, castom serch, custom, custom content types, custom post, custom posts, custom post types, custom post types search, custom search, custom search plugin, custom serach, custom surch, custom type, cutom search, extra search options, free, free plugin, free custom search plugin, free custom search wp plugin, free extra search options, free additional search options, improved search, post, post type, posts, search, search by custom posts, simple custom search plugin, search results, type, wp plugin, wp custom search plugin, wordpress plugin, wordpress custom search plugin 
-Requires at least: 3.1
-Tested up to: 4.3.1
-Stable tag: 1.30
+Requires at least: 3.8
+Tested up to: 4.4-RC1
+Stable tag: 1.31
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -26,7 +26,7 @@ http://www.youtube.com/watch?v=qF2-pFM_ESw
 
 = Features =
 
-* Actions: Add selected custom post types to the search.
+* Add selected custom post types to the search.
 
 = Recommended Plugins =
 
@@ -81,6 +81,9 @@ Go to the Settings page and select custom types that you would like to add to th
 2. Custom Search Appearance page.
 
 == Changelog ==
+
+= V1.31 - 30.11.2015 =
+* Bugfix : The bug with plugin menu duplicating was fixed.
 
 = V1.30 - 25.09.2015 =
 * Update : We updated all functionality for wordpress 4.3.1.
@@ -200,6 +203,9 @@ Go to the Settings page and select custom types that you would like to add to th
 * NEW : Language files are added to the plugin.
 
 == Upgrade Notice ==
+
+= V1.31 =
+The bug with plugin menu duplicating was fixed.
 
 = V1.30 =
 We updated all functionality for wordpress 4.3.1.

@@ -19,10 +19,6 @@
 					$select_all.attr( 'checked', false );
 				}				
 			}
-			if ( $( this ).attr( 'type' ) != 'submit' ) {
-				$( '.updated.fade' ).css( 'display', 'none' );
-				$( '#cstmsrch_settings_notice' ).css( 'display', 'block' );
-			};
 		});
 	});
 })(jQuery);
