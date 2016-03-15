@@ -6,12 +6,12 @@ Description: Custom Search Plugin designed to search for site custom types.
 Author: BestWebSoft
 Text Domain: custom-search-plugin
 Domain Path: /languages
-Version: 1.31
+Version: 1.32
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
  
-/*  © Copyright 2015  BestWebSoft  ( http://support.bestwebsoft.com )
+/*  © Copyright 2016  BestWebSoft  ( http://support.bestwebsoft.com )
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License, version 2, as 
@@ -82,7 +82,8 @@ if ( ! function_exists( 'register_cstmsrch_settings' ) ) {
 			'plugin_option_version'		=>	$cstmsrch_plugin_info["Version"],
 			'post_types'				=>	array(),
 			'first_install'				=>	strtotime( "now" ),
-			'display_settings_notice'	=>	1
+			'display_settings_notice'	=>	1,
+			'suggest_feature_banner'	=>	1,
 		);
 
 		/* Install the option defaults */
@@ -177,11 +178,11 @@ if ( ! function_exists( 'cstmsrch_settings_page' ) ) {
 				<a class="nav-tab<?php if ( isset( $_GET['action'] ) && 'appearance' == $_GET['action'] ) echo ' nav-tab-active'; ?>" href="admin.php?page=custom_search.php&amp;action=appearance"><?php _e( 'Appearance', 'custom-search-plugin' ); ?></a>
 				<a class="nav-tab bws_go_pro_tab<?php if ( isset( $_GET['action'] ) && 'go_pro' == $_GET['action'] ) echo ' nav-tab-active'; ?>" href="admin.php?page=custom_search.php&amp;action=go_pro"><?php _e( 'Go PRO', 'custom-search-plugin' ); ?></a>
 			</h2>
-			<div class="updated fade" <?php if ( empty( $message ) ) echo "style=\"display:none\""; ?>><p><strong><?php echo $message; ?></strong></p></div>
-			<div class="error" <?php if ( "" == $error ) echo 'style="display:none"'; ?>><p><strong><?php echo $error; ?></strong></p></div>
+			<div class="updated fade below-h2" <?php if ( empty( $message ) ) echo "style=\"display:none\""; ?>><p><strong><?php echo $message; ?></strong></p></div>
+			<div class="error below-h2" <?php if ( "" == $error ) echo 'style="display:none"'; ?>><p><strong><?php echo $error; ?></strong></p></div>
 			<?php bws_show_settings_notice();
 			if ( ! empty( $hide_result['message'] ) ) { ?>
-				<div class="updated fade"><p><strong><?php echo $hide_result['message']; ?></strong></p></div>
+				<div class="updated fade below-h2"><p><strong><?php echo $hide_result['message']; ?></strong></p></div>
 			<?php }
 			if ( ! isset( $_GET['action'] ) ) {
 				if ( isset( $_POST['bws_restore_default'] ) && check_admin_referer( $plugin_basename, 'bws_settings_nonce_name' ) ) {
@@ -345,6 +346,10 @@ if ( ! function_exists ( 'cstmsrch_admin_notices' ) ) {
 				bws_plugin_banner( $cstmsrch_plugin_info, 'cstmsrch', 'custom-search', '22f95b30aa812b6190a4a5a476b6b628', '214', '//ps.w.org/custom-search-plugin/assets/icon-128x128.png' );
 			bws_plugin_banner_to_settings( $cstmsrch_plugin_info, 'cstmsrch_options', 'custom-search-plugin', 'admin.php?page=custom_search.php' );
 		}
+
+		if ( isset( $_REQUEST['page'] ) && 'custom_search.php' == $_REQUEST['page'] ) {
+			bws_plugin_suggest_feature_banner( $cstmsrch_plugin_info, 'cstmsrch_options', 'custom-search-plugin' );
+		}
 	}
 }
 
@@ -367,13 +372,18 @@ if ( ! function_exists( 'delete_cstmsrch_settings' ) ) {
 			global $wpdb;
 			/* Get all blog ids */
 			$blogids = $wpdb->get_col( "SELECT `blog_id` FROM $wpdb->blogs" );
+			$old_blog = $wpdb->blogid;
 			foreach ( $blogids as $blog_id ) {
 				switch_to_blog( $blog_id );
 				delete_option( "cstmsrch_options" );
 			}
-			restore_current_blog();
+			switch_to_blog( $old_blog );
 		}
 		delete_option( 'cstmsrch_options' );
+
+		require_once( dirname( __FILE__ ) . '/bws_menu/bws_include.php' );
+		bws_include_init( plugin_basename( __FILE__ ) );
+		bws_delete_plugin( plugin_basename( __FILE__ ) );
 	}
 }
 
