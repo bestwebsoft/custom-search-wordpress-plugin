@@ -3,7 +3,7 @@ Contributors: bestwebsoft
 Donate link: http://bestwebsoft.com/donate/
 Tags: add additional search options, additional search options, add extra search options, add custom posts to search, add custom search plugin, add custom search wp plugin, advanced search, better search, best custom search plugin, castom search, castom serach, castom serch, custom, custom content types, custom post, custom posts, custom post types, custom post types search, custom search, custom search plugin, custom serach, custom surch, custom type, cutom search, extra search options, free, free plugin, free custom search plugin, free custom search wp plugin, free extra search options, free additional search options, improved search, post, post type, posts, search, search by custom posts, simple custom search plugin, search results, type, wp plugin, wp custom search plugin, wordpress plugin, wordpress custom search plugin 
 Requires at least: 3.8
-Tested up to: 4.4.2
+Tested up to: 4.5
 Stable tag: 1.32
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -49,7 +49,7 @@ If you create your own language pack or update the existing one, you can send <a
 
 = Technical support =
 
-Dear users, our plugins are available for free download. If you have any questions or recommendations regarding the functionality of our plugins (existing options, new options, current issues), please feel free to contact us. Please note that we accept requests in English only. All messages in another languages won't be accepted.
+Dear users, our plugins are available for free download. If you have any questions or recommendations regarding the functionality of our plugins (existing options, new options, current issues), please feel free to contact us. Please note that we accept requests in English only. All messages in other languages won't be accepted.
 
 If you notice any bugs in the plugins, you can notify us about it and we'll investigate and fix the issue then. Your request should contain URL of the website, issues description and WordPress admin panel credentials.
 Moreover we can customize the plugin according to your requirements. It's a paid service (as a rule it costs $40, but the price can vary depending on the amount of the necessary changes and their complexity). Please note that we could also include this or that feature (developed for you) in the next release and share with the other users then. 
