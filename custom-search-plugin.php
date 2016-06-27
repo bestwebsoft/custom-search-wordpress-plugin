@@ -6,7 +6,7 @@ Description: Custom Search Plugin designed to search for site custom types.
 Author: BestWebSoft
 Text Domain: custom-search-plugin
 Domain Path: /languages
-Version: 1.32
+Version: 1.33
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -27,11 +27,11 @@ License: GPLv2 or later
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-/* Function are using to add on admin-panel Wordpress page 'bws_plugins' and sub-page of this plugin */
+/* Function are using to add on admin-panel Wordpress page 'bws_panel' and sub-page of this plugin */
 if ( ! function_exists( 'add_cstmsrch_admin_menu' ) ) {
 	function add_cstmsrch_admin_menu() {
 		bws_general_menu();
-		$settings = add_submenu_page( 'bws_plugins', __( 'Custom Search Settings', 'custom-search-plugin' ), 'Custom search', 'manage_options', "custom_search.php", 'cstmsrch_settings_page' );
+		$settings = add_submenu_page( 'bws_panel', __( 'Custom Search Settings', 'custom-search-plugin' ), 'Custom search', 'manage_options', "custom_search.php", 'cstmsrch_settings_page' );
 		add_action( 'load-' . $settings, 'cstmsrch_add_tabs' );
 	}
 }

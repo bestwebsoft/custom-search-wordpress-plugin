@@ -1,10 +1,10 @@
 === Custom Search by BestWebSoft ===
 Contributors: bestwebsoft
 Donate link: http://bestwebsoft.com/donate/
-Tags: add additional search options, additional search options, add extra search options, add custom posts to search, add custom search plugin, add custom search wp plugin, advanced search, better search, best custom search plugin, castom search, castom serach, castom serch, custom, custom content types, custom post, custom posts, custom post types, custom post types search, custom search, custom search plugin, custom serach, custom surch, custom type, cutom search, extra search options, free, free plugin, free custom search plugin, free custom search wp plugin, free extra search options, free additional search options, improved search, post, post type, posts, search, search by custom posts, simple custom search plugin, search results, type, wp plugin, wp custom search plugin, wordpress plugin, wordpress custom search plugin 
+Tags: additional search options, extra search options, advanced search, add additional search options, search options, custom search, custom search plugin, website search, add custom posts to search, custom posts, free additional search options, custom content types
 Requires at least: 3.8
-Tested up to: 4.5
-Stable tag: 1.32
+Tested up to: 4.5.3
+Stable tag: 1.33
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,7 +45,7 @@ There is also a premium version of the plugin <a href="http://bestwebsoft.com/pr
 * Spanish (es_ES) (thanks to <a href="mailto:mrjosefernando@gmail.com">Fernando De León</a>)
 * Ukrainian (uk)
 
-If you create your own language pack or update the existing one, you can send <a href="http://codex.wordpress.org/Translating_WordPress" target="_blank">the text in PO and MO files</a> for <a href="http://support.bestwebsoft.com" target="_blank">BestWebSoft</a> and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO files <a href="http://www.poedit.net/download.php" target="_blank">Poedit</a>.
+Some of these translations are not complete. We are constantly adding new features which should be translated. If you create your own language pack or update the existing one, you can send <a href="http://codex.wordpress.org/Translating_WordPress" target="_blank">the text in PO and MO files</a> for <a href="http://support.bestwebsoft.com/hc/en-us/requests/new" target="_blank">BestWebSoft</a> and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO files <a href="http://www.poedit.net/download.php" target="_blank">Poedit</a>.
 
 = Technical support =
 
@@ -84,6 +84,9 @@ Go to the Settings page and select custom types that you would like to add to th
 2. Custom Search Appearance page.
 
 == Changelog ==
+
+= V1.33 - 27.06.2016 =
+* Update : BWS panel section is updated.
 
 = V1.32 - 15.03.2016 =
 * NEW : The Czech language file is added.
@@ -209,6 +212,9 @@ Go to the Settings page and select custom types that you would like to add to th
 * NEW : Language files are added to the plugin.
 
 == Upgrade Notice ==
+
+= V1.33 =
+BWS panel section is updated.
 
 = V1.32 =
 The Czech language file is added.
