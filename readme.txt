@@ -3,12 +3,12 @@ Contributors: bestwebsoft
 Donate link: http://bestwebsoft.com/donate/
 Tags: additional search options, extra search options, advanced search, add additional search options, search options, custom search, custom search plugin, website search, add custom posts to search, custom posts, free additional search options, custom content types
 Requires at least: 3.8
-Tested up to: 4.5.3
-Stable tag: 1.33
+Tested up to: 4.6
+Stable tag: 1.34
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-This plugin allows searching by custom post types on your website.
+Add custom post types to WordPress website search results.
 
 == Description ==
 
@@ -59,7 +59,7 @@ We can fix some things for free for the users who provide translation of our plu
 
 1. Upload the folder `custom-search-plugin` to the directory `/wp-content/plugins/`.
 2. Activate the plugin via the 'Plugins' menu in WordPress.
-3. Plugin settings are available in "BWS Plugins"->"Custom Search".
+3. Plugin settings are available in "BWS Panel"->"Custom Search".
 
 <a href="https://docs.google.com/document/d/1fPZmLyDQxMe0wxaKN-Mbi6Aa9R8vbL6dG365oXVVeSU/edit" target="_blank">View a Step-by-step Instruction on Custom Search Installation</a>.
 
@@ -84,6 +84,9 @@ Go to the Settings page and select custom types that you would like to add to th
 2. Custom Search Appearance page.
 
 == Changelog ==
+
+= V1.34 - 09.08.2016 =
+* Update : All functionality for wordpress 4.6 was updated.
 
 = V1.33 - 27.06.2016 =
 * Update : BWS panel section is updated.
@@ -212,6 +215,9 @@ Go to the Settings page and select custom types that you would like to add to th
 * NEW : Language files are added to the plugin.
 
 == Upgrade Notice ==
+
+= V1.34 =
+* The compatibility with new WordPress version updated.
 
 = V1.33 =
 BWS panel section is updated.

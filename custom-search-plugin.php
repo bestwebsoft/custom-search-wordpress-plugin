@@ -1,12 +1,12 @@
 <?php
 /*
 Plugin Name: Custom Search by BestWebSoft
-Plugin URI: http://bestwebsoft.com/products/
-Description: Custom Search Plugin designed to search for site custom types.
+Plugin URI: http://bestwebsoft.com/products/custom-search/
+Description: Add custom post types to WordPress website search results.
 Author: BestWebSoft
 Text Domain: custom-search-plugin
 Domain Path: /languages
-Version: 1.33
+Version: 1.34
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -57,7 +57,7 @@ if ( ! function_exists ( 'cstmsrch_init' ) ) {
 		}
 
 		/* Function check if plugin is compatible with current WP version */
-		bws_wp_min_version_check( plugin_basename( __FILE__ ), $cstmsrch_plugin_info, '3.8', '3.1' );
+		bws_wp_min_version_check( plugin_basename( __FILE__ ), $cstmsrch_plugin_info, '3.8' );
 
 		/* Call register settings function */
 		if ( ! is_admin() || ( isset( $_GET['page'] ) && "custom_search.php" == $_GET['page'] ) )
@@ -68,7 +68,7 @@ if ( ! function_exists ( 'cstmsrch_init' ) ) {
 if ( ! function_exists( 'cstmsrch_admin_init' ) ) {
 	function cstmsrch_admin_init() {
 		global $bws_plugin_info, $cstmsrch_plugin_info, $cstmsrch_options;
-		if ( ! isset( $bws_plugin_info ) || empty( $bws_plugin_info ) )			
+		if ( empty( $bws_plugin_info ) )			
 			$bws_plugin_info = array( 'id' => '81', 'version' => $cstmsrch_plugin_info["Version"] );		
 	}
 }
@@ -87,10 +87,6 @@ if ( ! function_exists( 'register_cstmsrch_settings' ) ) {
 		);
 
 		/* Install the option defaults */
-		if ( false !== get_option( 'bws_custom_search' ) ) {
-			$cstmsrch_options_default = get_option( 'bws_custom_search' );
-			delete_option( 'bws_custom_search' );
-		}
 		if ( ! get_option( 'cstmsrch_options' ) )
 			add_option( 'cstmsrch_options', $cstmsrch_options_default );
 
@@ -98,12 +94,7 @@ if ( ! function_exists( 'register_cstmsrch_settings' ) ) {
 
 		/* Array merge incase this version has added new options */
 		if ( ! isset( $cstmsrch_options['plugin_option_version'] ) || $cstmsrch_options['plugin_option_version'] != $cstmsrch_plugin_info["Version"] ) {
-			if ( ! isset( $cstmsrch_options['post_types'] ) ) {
-				unset( $cstmsrch_options['plugin_option_version'] );
-				$cstmsrch_options_default['post_types'] = $cstmsrch_options;
-				$cstmsrch_options = array();
-			}
-			$cstmsrch_options_default['display_settings_notice'] = 0;
+
 			$cstmsrch_options = array_merge( $cstmsrch_options_default, $cstmsrch_options );
 			$cstmsrch_options['plugin_option_version'] = $cstmsrch_plugin_info["Version"];
 			/* show pro features */
@@ -319,9 +310,9 @@ if ( !function_exists( 'cstmsrch_links' ) ) {
 		$base = plugin_basename( __FILE__ );
 		if ( $file == $base ) {
 			if ( ! is_network_admin() )
-				$links[]	=	'<a href="admin.php?page=custom_search.php">' . __( 'Settings','custom-search-plugin' ) . '</a>';
-			$links[]	=	'<a href="http://wordpress.org/plugins/custom-search-plugin/faq/" target="_blank">' . __( 'FAQ','custom-search-plugin' ) . '</a>';
-			$links[]	=	'<a href="http://support.bestwebsoft.com">' . __( 'Support', 'custom-search-plugin' ) . '</a>';
+				$links[] = '<a href="admin.php?page=custom_search.php">' . __( 'Settings','custom-search-plugin' ) . '</a>';
+			$links[] = '<a href="http://wordpress.org/plugins/custom-search-plugin/faq/" target="_blank">' . __( 'FAQ','custom-search-plugin' ) . '</a>';
+			$links[] = '<a href="http://support.bestwebsoft.com">' . __( 'Support', 'custom-search-plugin' ) . '</a>';
 		}
 		return $links;
 	}
@@ -368,18 +359,27 @@ if ( ! function_exists( 'cstmsrch_add_tabs' ) ) {
 /* Function for delete options from table `wp_options` */
 if ( ! function_exists( 'delete_cstmsrch_settings' ) ) {
 	function delete_cstmsrch_settings() {
-		if ( function_exists( 'is_multisite' ) && is_multisite() ) {
-			global $wpdb;
-			/* Get all blog ids */
-			$blogids = $wpdb->get_col( "SELECT `blog_id` FROM $wpdb->blogs" );
-			$old_blog = $wpdb->blogid;
-			foreach ( $blogids as $blog_id ) {
-				switch_to_blog( $blog_id );
-				delete_option( "cstmsrch_options" );
+		if ( ! function_exists( 'get_plugins' ) )
+			require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+		
+		$all_plugins = get_plugins();
+
+		if ( ! array_key_exists( 'custom-search-pro/custom-search-pro.php', $all_plugins ) ) {
+
+			if ( function_exists( 'is_multisite' ) && is_multisite() ) {
+				global $wpdb;
+				/* Get all blog ids */
+				$blogids = $wpdb->get_col( "SELECT `blog_id` FROM $wpdb->blogs" );
+				$old_blog = $wpdb->blogid;
+				foreach ( $blogids as $blog_id ) {
+					switch_to_blog( $blog_id );
+					delete_option( "cstmsrch_options" );
+				}
+				switch_to_blog( $old_blog );
+			} else {
+				delete_option( 'cstmsrch_options' );
 			}
-			switch_to_blog( $old_blog );
 		}
-		delete_option( 'cstmsrch_options' );
 
 		require_once( dirname( __FILE__ ) . '/bws_menu/bws_include.php' );
 		bws_include_init( plugin_basename( __FILE__ ) );
@@ -399,5 +399,5 @@ add_filter( 'pre_get_posts', 'cstmsrch_searchfilter' );
 add_filter( 'plugin_action_links', 'cstmsrch_action_links', 10, 2 );
 /* Additional links on the plugin page */
 add_filter( 'plugin_row_meta', 'cstmsrch_links', 10, 2 );
-add_action( 'admin_notices', 'cstmsrch_admin_notices');
-register_uninstall_hook( __FILE__, 'delete_cstmsrch_settings');
+add_action( 'admin_notices', 'cstmsrch_admin_notices' );
+register_uninstall_hook( __FILE__, 'delete_cstmsrch_settings' );
