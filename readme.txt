@@ -3,7 +3,7 @@ Contributors: bestwebsoft
 Donate link: http://bestwebsoft.com/donate/
 Tags: additional search options, extra search options, advanced search, add additional search options, search options, custom search, custom search plugin, website search, add custom posts to search, custom posts, free additional search options, custom content types
 Requires at least: 3.8
-Tested up to: 4.6
+Tested up to: 4.6.1
 Stable tag: 1.34
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -12,48 +12,75 @@ Add custom post types to WordPress website search results.
 
 == Description ==
 
-Simple and useful tool for the people who want to to extend search functionality of their website but don't want to spend their time on customization. This plugin allows to add a custom post type. Great solution for the beginners as well as for more advanced users.
+With Custom Search plugin you can add custom post types to WordPress website search results. A quick and easy way to search everything within custom post types. Improve your website user experience today!
 
 http://www.youtube.com/watch?v=qF2-pFM_ESw
 
-<a href="http://www.youtube.com/watch?v=2tuQNyfXZ-I" target="_blank">Video instruction on Installation</a>
+= Free Features =
 
-<a href="http://wordpress.org/plugins/custom-search-plugin/faq/" target="_blank">FAQ</a>
+* Search by all custom post types including:
+	* [Gallery](http://bestwebsoft.com/products/gallery/?k=a7970636432b7a4dcc5ad805f87b2696)
+	* [Portfolio](http://bestwebsoft.com/products/portfolio/?k=2ac66bf272f5329cdf78ed8cb10d49b2)
+	* [Cars](http://bestwebsoft.com/products/car-rental/?k=4f3314a1fe385c140e4ff9e361b2e300)
+	* [Properties & Agents](http://bestwebsoft.com/products/realty/?k=9916846ebbdecc2ba40ce3bff4fbf9f2)
+	* [Jobs](http://bestwebsoft.com/products/job-board/)
+* Compatible with latest WordPress version
+* Incredibly simple settings for fast setup without modifying code
+* Detailed step-by-step documentations and videos
+* Multilingual and RTL ready
 
-<a href="http://support.bestwebsoft.com" target="_blank">Support</a>
+> **Pro Features**
+>
+> All features from Free version included plus:
+>
+> * Exclude from a custom search:
+> 	* Posts
+> 	* Pages
+> * Configure custom post types displaying order on the search results page 
+> * Display featured image for post types on the search results page
+> * Choose featured image size 
+> * Choose featured image align position:
+> 	* Left
+> 	* Right
+> * Searching by the post type of the current page 
+> * Change excerpt length
+> * Add custom code via plugin settings page
+> * Get answer to your question within one business day ([Support Policy](http://bestwebsoft.com/support-policy/))
+>
+> [Upgrade to Pro Now](http://bestwebsoft.com/products/custom-search/?k=b67e3e538cdb8bb841b81467655eb0f7)
 
-<a href="http://bestwebsoft.com/products/custom-search/?k=b67e3e538cdb8bb841b81467655eb0f7" target="_blank">Upgrade to Pro Version</a>
+If you have a feature suggestion or idea you'd like to see in the plugin, we'd love to hear about it! [Suggest a Feature](http://support.bestwebsoft.com/hc/en-us/requests/new)
 
-= Features =
+= Documentation & Videos =
 
-* Add selected custom post types to the search.
+* [[Doc] Installation](https://docs.google.com/document/d/1fPZmLyDQxMe0wxaKN-Mbi6Aa9R8vbL6dG365oXVVeSU/)
+* [[Doc] Purchase, Installation & Configuration](https://docs.google.com/document/d/1fudtNHNgqHq8_YZ02TtsAwoiLyMnZ-hbiWwBCMAfcTc/)
+* [[Video] Installation Instruction](https://www.youtube.com/watch?v=2tuQNyfXZ-I)
+* [[Video] Purchase, Installation, Configuration Tutorial](https://www.youtube.com/watch?v=6w7qOA9P0HY)
 
-If you have a feature, suggestion or idea you'd like to see in the plugin, we'd love to hear about it! <a href="http://support.bestwebsoft.com/hc/en-us/requests/new" target="_blank">Suggest a Feature</a>
+= Help & Support =
 
-= Recommended Plugins =
-
-The author of the Custom Search also recommends the following plugins:
-
-* <a href="http://wordpress.org/plugins/custom-fields-search/">Custom Fields Search</a> - this simple yet utterly practical plugin provides an option to add custom fields to WP search functionality. As a result, any custom field you have on your site can ultimately be shown in the search results, which will come in handy if you are an active user of this very WP functionality.
-* <a href="http://wordpress.org/plugins/updater/">Updater</a> - This plugin updates WordPress core and the plugins to the recent versions. You can also use the auto mode or manual mode for updating and set email notifications.
-There is also a premium version of the plugin <a href="http://bestwebsoft.com/products/updater-pro/?k=7b42404bbc8ad8cb8745f8704cba3c9a">Updater Pro</a> with more useful features available. It can make backup of all your files and database before updating. Also it can forbid some plugins or WordPress Core update.
+Visit our Help Center if you have any questions, our friendly Support Team is happy to help — <http://support.bestwebsoft.com/>
 
 = Translation =
 
-* Czech (cs_CZ) (thanks to <a href="mailto:info@pamadessoft.cz">PaMaDeSSoft</a>, www.pamadessoft.cz)
+* Czech (cs_CZ) (thanks to [PaMaDeSSoft](mailto:info@pamadessoft.cz), www.pamadessoft.cz)
 * Russian (ru_RU)
-* Spanish (es_ES) (thanks to <a href="mailto:mrjosefernando@gmail.com">Fernando De León</a>)
+* Spanish (es_ES) (thanks to [Fernando De León](mailto:mrjosefernando@gmail.com))
 * Ukrainian (uk)
 
-Some of these translations are not complete. We are constantly adding new features which should be translated. If you create your own language pack or update the existing one, you can send <a href="http://codex.wordpress.org/Translating_WordPress" target="_blank">the text in PO and MO files</a> for <a href="http://support.bestwebsoft.com/hc/en-us/requests/new" target="_blank">BestWebSoft</a> and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO files <a href="http://www.poedit.net/download.php" target="_blank">Poedit</a>.
+Some of these translations are not complete. We are constantly adding new features which should be translated. If you would like to create your own language pack or update the existing one, you can send [the text of PO and MO files](http://codex.wordpress.org/Translating_WordPress) to [BestWebSoft](http://support.bestwebsoft.com/hc/en-us/requests/new) and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO [files Poedit](http://www.poedit.net/download.php).
 
-= Technical support =
+= Recommended Plugins =
 
-Dear users, our plugins are available for free download. If you have any questions or recommendations regarding the functionality of our plugins (existing options, new options, current issues), please feel free to contact us. Please note that we accept requests in English only. All messages in other languages won't be accepted.
+* [Custom Fields Search](http://bestwebsoft.com/products/custom-fields-search/) - Add custom fields to WordPress website search results.
+* [Updater](http://bestwebsoft.com/products/updater/?k=7b42404bbc8ad8cb8745f8704cba3c9a) - Automatically check and update WordPress core with all installed plugins to the latest versions. Manual mode, email notifications and backups of all your files and database before updating.
 
-If you notice any bugs in the plugins, you can notify us about it and we'll investigate and fix the issue then. Your request should contain URL of the website, issues description and WordPress admin panel credentials.
-Moreover we can customize the plugin according to your requirements. It's a paid service (as a rule it costs $40, but the price can vary depending on the amount of the necessary changes and their complexity). Please note that we could also include this or that feature (developed for you) in the next release and share with the other users then. 
-We can fix some things for free for the users who provide translation of our plugin into their native language (this should be a new translation of a certain plugin, you can check available translations on the official plugin page).
+= Donate =
+
+Donations play an important role in supporting open-source projects. We greatly appreciate any donation you can make to help us continue further development of free products.
+
+[Donate Now](http://bestwebsoft.com/donate/)
 
 == Installation ==
 
@@ -61,22 +88,22 @@ We can fix some things for free for the users who provide translation of our plu
 2. Activate the plugin via the 'Plugins' menu in WordPress.
 3. Plugin settings are available in "BWS Panel"->"Custom Search".
 
-<a href="https://docs.google.com/document/d/1fPZmLyDQxMe0wxaKN-Mbi6Aa9R8vbL6dG365oXVVeSU/edit" target="_blank">View a Step-by-step Instruction on Custom Search Installation</a>.
+[View a Step-by-step Instruction on Custom Search Installation](https://docs.google.com/document/d/1fPZmLyDQxMe0wxaKN-Mbi6Aa9R8vbL6dG365oXVVeSU/)
 
 == Frequently Asked Questions ==
-
-= I have some problems with the plugin's work. What Information should I provide to receive proper support? =
-
-Please make sure that the problem hasn't been discussed yet on our forum (<a href="http://support.bestwebsoft.com" target="_blank">http://support.bestwebsoft.com</a>). If no, please provide the following data along with your problem's description:
-
-1. the link to the page where the problem occurs
-2. the name of the plugin and its version. If you are using a pro version - your order number.
-3. the version of your WordPress installation
-4. copy and paste into the message your system status report. Please read more here: <a href="https://docs.google.com/document/d/1Wi2X8RdRGXk9kMszQy1xItJrpN0ncXgioH935MaBKtc/edit" target="_blank">Instruction on System Status</a>
 
 = Usage =
 
 Go to the Settings page and select custom types that you would like to add to the search.
+
+= I have some problems with the plugin's work. What Information should I provide to receive proper support? =
+
+Please make sure that the problem hasn't been discussed yet on our forum (<http://support.bestwebsoft.com>). If no, please provide the following data along with your problem's description:
+
+1. the link to the page where the problem occurs
+2. the name of the plugin and its version. If you are using a pro version - your order number.
+3. the version of your WordPress installation
+4. copy and paste into the message your system status report. Please read more here: [Instruction on System Status](https://docs.google.com/document/d/1Wi2X8RdRGXk9kMszQy1xItJrpN0ncXgioH935MaBKtc/edit)
 
 == Screenshots ==
 
