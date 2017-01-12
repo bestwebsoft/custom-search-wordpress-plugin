@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Custom Search\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-26 15:08+0300\n"
-"PO-Revision-Date: 2015-11-26 15:08+0300\n"
+"POT-Creation-Date: 2017-01-11 15:48+0300\n"
+"PO-Revision-Date: 2017-01-11 16:33+0300\n"
 "Last-Translator: plugin@bestwebsoft.com <plugin@bestwebsoft.com>\n"
 "Language-Team: BestWebSoft <plugin@bestwebsoft.com>\n"
 "Language: uk\n"
@@ -16,128 +16,157 @@ msgstr ""
 "X-Generator: Poedit 1.5.4\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: custom-search-plugin.php:34 custom-search-plugin.php:174
+#: custom-search-plugin.php:36 custom-search-plugin.php:426
 msgid "Custom Search Settings"
 msgstr "Установки Custom Search"
 
-#: custom-search-plugin.php:148
-msgid "Settings saved"
-msgstr "Установки збережено"
-
-#: custom-search-plugin.php:163
+#: custom-search-plugin.php:337
 msgid "All plugin settings were restored."
 msgstr "Всі налаштування плагіну були відновлені."
 
-#: custom-search-plugin.php:176 custom-search-plugin.php:307
-#: custom-search-plugin.php:321
+#: custom-search-plugin.php:351
+msgid "post type"
+msgstr "тип запису"
+
+#: custom-search-plugin.php:352 custom-search-plugin.php:457
+msgid "post types"
+msgstr "типи записів"
+
+#: custom-search-plugin.php:355
+msgid "taxonomy"
+msgstr "таксономія"
+
+#: custom-search-plugin.php:356 custom-search-plugin.php:479
+msgid "taxonomies"
+msgstr "таксономії"
+
+#: custom-search-plugin.php:410
+msgid "Settings saved"
+msgstr "Установки збережено"
+
+#: custom-search-plugin.php:428 custom-search-plugin.php:606
+#: custom-search-plugin.php:620
 msgid "Settings"
 msgstr "Установки"
 
-#: custom-search-plugin.php:177
+#: custom-search-plugin.php:429
 msgid "Appearance"
 msgstr "Відображення"
 
-#: custom-search-plugin.php:178
+#: custom-search-plugin.php:430
 msgid "Go PRO"
 msgstr "Перейти на PRO версію"
 
-#: custom-search-plugin.php:194 custom-search-plugin.php:214
+#: custom-search-plugin.php:450 custom-search-plugin.php:507
 msgid "Enable Custom search for:"
-msgstr "Дозволити Кастомний пошук для:"
+msgstr "Додати до кастомного пошуку:"
 
-#: custom-search-plugin.php:200
-msgid "All"
-msgstr "Всіх"
+#: custom-search-plugin.php:470
+msgid "No custom post type found."
+msgstr "Не знайдено жодного кастомного типу записів."
 
-#: custom-search-plugin.php:210
+#: custom-search-plugin.php:490
+msgid "for"
+msgstr "для"
+
+#: custom-search-plugin.php:503
 msgid "Close"
 msgstr "Закрити"
 
-#: custom-search-plugin.php:217
-msgid "Post"
-msgstr "Записи"
-
-#: custom-search-plugin.php:219
-msgid "Page"
-msgstr "Сторiнки"
-
-#: custom-search-plugin.php:220
+#: custom-search-plugin.php:522
 msgid ""
-"When you drag post types, you affect the order of their display in the "
-"frontend on the search page."
+"When you drag post types and taxonomies, you affect the order of their "
+"display in the frontend on the search page."
 msgstr ""
-"При перетягуванні типів постів, ви впливаєте на їх відображення у фронтенді "
-"на сторінці пошуку."
+"При перетягуванні типів записів і таксономій, ви впливаєте на їх "
+"відображення у фронтенді на сторінці пошуку."
 
-#: custom-search-plugin.php:224
+#: custom-search-plugin.php:526
 msgid "Search only by type of the current post"
 msgstr "Шукати тільки по типу поточного запису"
 
-#: custom-search-plugin.php:227
+#: custom-search-plugin.php:529
 msgid "This option is used when you search on a single page/post/post type."
 msgstr ""
 "Ця опція використовується, коли Ви знаходитесь на сторінці запису/сторінки/"
-"пост типу."
+"типу запису."
 
-#: custom-search-plugin.php:234 custom-search-plugin.php:284
+#: custom-search-plugin.php:536 custom-search-plugin.php:583
 msgid "Unlock premium options by upgrading to Pro version"
 msgstr "Зробити доступними преміум-опції, перейшовши на Pro версію"
 
-#: custom-search-plugin.php:236 custom-search-plugin.php:286
+#: custom-search-plugin.php:538 custom-search-plugin.php:585
 msgid "Learn More"
 msgstr "Докладніше"
 
-#: custom-search-plugin.php:243
+#: custom-search-plugin.php:545
 msgid "Save Changes"
 msgstr "Зберегти зміни"
 
-#: custom-search-plugin.php:249
-msgid "No custom post type found."
-msgstr "Не знайдено жодного типу кастомного посту."
-
-#: custom-search-plugin.php:258
+#: custom-search-plugin.php:557
 msgid "Change displaying of post content on search pages"
 msgstr "Змінити відображення контенту записів на сторінках пошуку"
 
-#: custom-search-plugin.php:262
+#: custom-search-plugin.php:561
 msgid "Display featured image with post content"
 msgstr "Відобразити головне зображення для контенту запису"
 
-#: custom-search-plugin.php:266
+#: custom-search-plugin.php:565
 msgid "Featured image size"
 msgstr "Розмір головного зображення"
 
-#: custom-search-plugin.php:270
+#: custom-search-plugin.php:569
 msgid "Featured image align"
 msgstr "Розташування головного зображення"
 
-#: custom-search-plugin.php:272
+#: custom-search-plugin.php:571
 msgid "Left"
 msgstr "Ліворуч"
 
-#: custom-search-plugin.php:273
+#: custom-search-plugin.php:572
 msgid "Right"
 msgstr "Праворуч"
 
-#: custom-search-plugin.php:277
+#: custom-search-plugin.php:576
 msgid "Change excerpt length"
 msgstr "Змінити довжину витягу"
 
-#: custom-search-plugin.php:278
+#: custom-search-plugin.php:577
 msgid "to"
 msgstr "на"
 
-#: custom-search-plugin.php:278
+#: custom-search-plugin.php:577
 msgid "words"
 msgstr "слів"
 
-#: custom-search-plugin.php:322
+#: custom-search-plugin.php:621
 msgid "FAQ"
 msgstr "FAQ"
 
-#: custom-search-plugin.php:323
+#: custom-search-plugin.php:622
 msgid "Support"
 msgstr "Підтримка"
+
+#~ msgid "Posts"
+#~ msgstr "Записи"
+
+#~ msgid "Pages"
+#~ msgstr "Сторiнки"
+
+#~ msgid "Post types"
+#~ msgstr "Типи записів"
+
+#~ msgid "Taxonomies"
+#~ msgstr "Таксономії"
+
+#~ msgid "All"
+#~ msgstr "Всіх"
+
+#~ msgid "Tags"
+#~ msgstr "Теги"
+
+#~ msgid "Categories"
+#~ msgstr "Категорії"
 
 #~ msgid "Notice:"
 #~ msgstr "Попередження:"

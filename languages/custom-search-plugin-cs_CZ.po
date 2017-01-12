@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Custom Search\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-15 12:23+0300\n"
-"PO-Revision-Date: 2016-03-15 12:23+0300\n"
+"POT-Creation-Date: 2017-01-11 15:47+0300\n"
+"PO-Revision-Date: 2017-01-11 15:47+0300\n"
 "Last-Translator: plugin@bestwebsoft.com <plugin@bestwebsoft.com>\n"
 "Language-Team: BestWebSoft <plugin@bestwebsoft.com>\n"
 "Language: cs_CZ\n"
@@ -20,132 +20,152 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 
 # custom-search
-#: custom-search-plugin.php:34 custom-search-plugin.php:174
+#: custom-search-plugin.php:36 custom-search-plugin.php:426
 msgid "Custom Search Settings"
 msgstr "Nastavení Custom Search"
 
-# custom-search
-#: custom-search-plugin.php:148
-msgid "Settings saved"
-msgstr "Nastavení uloženo"
-
-#: custom-search-plugin.php:163
+#: custom-search-plugin.php:337
 msgid "All plugin settings were restored."
 msgstr "Výchozí nastavení pluginu bylo obnoveno."
 
+#: custom-search-plugin.php:351
+msgid "post type"
+msgstr ""
+
+#: custom-search-plugin.php:352 custom-search-plugin.php:457
+msgid "post types"
+msgstr ""
+
+#: custom-search-plugin.php:355
+msgid "taxonomy"
+msgstr ""
+
+#: custom-search-plugin.php:356 custom-search-plugin.php:479
+msgid "taxonomies"
+msgstr ""
+
 # custom-search
-#: custom-search-plugin.php:176 custom-search-plugin.php:307
-#: custom-search-plugin.php:321
+#: custom-search-plugin.php:410
+msgid "Settings saved"
+msgstr "Nastavení uloženo"
+
+# custom-search
+#: custom-search-plugin.php:428 custom-search-plugin.php:606
+#: custom-search-plugin.php:620
 msgid "Settings"
 msgstr "Nastavení"
 
-#: custom-search-plugin.php:177
+#: custom-search-plugin.php:429
 msgid "Appearance"
 msgstr "Vzhled"
 
-#: custom-search-plugin.php:178
+#: custom-search-plugin.php:430
 msgid "Go PRO"
 msgstr "Získat verzi Pro"
 
 # custom-search
-#: custom-search-plugin.php:194 custom-search-plugin.php:214
+#: custom-search-plugin.php:450 custom-search-plugin.php:507
 msgid "Enable Custom search for:"
 msgstr "Aktivovat Vlastní vyhledávání:"
 
-#: custom-search-plugin.php:200
-msgid "All"
-msgstr "Vše"
+# custom-search
+#: custom-search-plugin.php:470
+msgid "No custom post type found."
+msgstr "Žádný typ příspěvku nebyl nalezen."
 
-#: custom-search-plugin.php:210
+#: custom-search-plugin.php:490
+msgid "for"
+msgstr ""
+
+#: custom-search-plugin.php:503
 msgid "Close"
 msgstr "Zavřít"
 
-#: custom-search-plugin.php:217
-msgid "Post"
-msgstr "Příspěvek"
-
-#: custom-search-plugin.php:219
-msgid "Page"
-msgstr "Strana"
-
-#: custom-search-plugin.php:220
+#: custom-search-plugin.php:522
+#, fuzzy
 msgid ""
-"When you drag post types, you affect the order of their display in the "
-"frontend on the search page."
+"When you drag post types and taxonomies, you affect the order of their "
+"display in the frontend on the search page."
 msgstr ""
 "Při přetažení typu příspěvku, můžete ovlivnit pořadí jejich zobrazení v "
 "rozhraní na stránce vyhledávání."
 
-#: custom-search-plugin.php:224
+#: custom-search-plugin.php:526
 msgid "Search only by type of the current post"
 msgstr "Hledat pouze podle typu aktuálního příspěvku"
 
-#: custom-search-plugin.php:227
+#: custom-search-plugin.php:529
 msgid "This option is used when you search on a single page/post/post type."
 msgstr ""
 "Tato volba se používá při vyhledávání na jedné stránce / příspěvku / typu "
 "příspěvku."
 
-#: custom-search-plugin.php:234 custom-search-plugin.php:284
+#: custom-search-plugin.php:536 custom-search-plugin.php:583
 msgid "Unlock premium options by upgrading to Pro version"
 msgstr "Odemknout prémiové možnosti při aktualizaci na verzi Pro"
 
-#: custom-search-plugin.php:236 custom-search-plugin.php:286
+#: custom-search-plugin.php:538 custom-search-plugin.php:585
 msgid "Learn More"
 msgstr "Zjistit více"
 
 # custom-search
-#: custom-search-plugin.php:243
+#: custom-search-plugin.php:545
 msgid "Save Changes"
 msgstr "Uložit změny"
 
-# custom-search
-#: custom-search-plugin.php:249
-msgid "No custom post type found."
-msgstr "Žádný typ příspěvku nebyl nalezen."
-
-#: custom-search-plugin.php:258
+#: custom-search-plugin.php:557
 msgid "Change displaying of post content on search pages"
 msgstr "Změnit zobrazení obsahu příspěvku na stránce vyhledávání"
 
-#: custom-search-plugin.php:262
+#: custom-search-plugin.php:561
 msgid "Display featured image with post content"
 msgstr "Zobrazit doporučený obrázek s obsahem příspěvku"
 
-#: custom-search-plugin.php:266
+#: custom-search-plugin.php:565
 msgid "Featured image size"
 msgstr "Doporučená velikost obrázku"
 
-#: custom-search-plugin.php:270
+#: custom-search-plugin.php:569
 msgid "Featured image align"
 msgstr "Doporučené umístění obrázku"
 
-#: custom-search-plugin.php:272
+#: custom-search-plugin.php:571
 msgid "Left"
 msgstr "Vlevo"
 
-#: custom-search-plugin.php:273
+#: custom-search-plugin.php:572
 msgid "Right"
 msgstr "Vpravo"
 
-#: custom-search-plugin.php:277
+#: custom-search-plugin.php:576
 msgid "Change excerpt length"
 msgstr "Změna délky výňatku"
 
-#: custom-search-plugin.php:278
+#: custom-search-plugin.php:577
 msgid "to"
 msgstr "do"
 
-#: custom-search-plugin.php:278
+#: custom-search-plugin.php:577
 msgid "words"
 msgstr "slov"
 
 # custom-search
-#: custom-search-plugin.php:322
+#: custom-search-plugin.php:621
 msgid "FAQ"
 msgstr "Často kladené otázky"
 
 # custom-search
-#: custom-search-plugin.php:323
+#: custom-search-plugin.php:622
 msgid "Support"
 msgstr "Podpora"
+
+#, fuzzy
+#~ msgid "Posts"
+#~ msgstr "Příspěvek"
+
+#, fuzzy
+#~ msgid "Pages"
+#~ msgstr "Strana"
+
+#~ msgid "All"
+#~ msgstr "Vše"

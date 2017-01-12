@@ -3,27 +3,33 @@ Contributors: bestwebsoft
 Donate link: http://bestwebsoft.com/donate/
 Tags: additional search options, extra search options, advanced search, add additional search options, search options, custom search, custom search plugin, website search, add custom posts to search, custom posts, free additional search options, custom content types
 Requires at least: 3.8
-Tested up to: 4.6.1
-Stable tag: 1.34
+Tested up to: 4.7.1
+Stable tag: 1.35
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Add custom post types to WordPress website search results.
+Add custom post types and taxonomies to WordPress website search results.
 
 == Description ==
 
-With Custom Search plugin you can add custom post types to WordPress website search results. A quick and easy way to search everything within custom post types. Improve your website user experience today!
+Custom Search plugin adds custom post types and taxonomies to WordPress website search results. A quick and easy way to search everything within custom post types and taxonomies.
+Improve your website user experience today!
 
 http://www.youtube.com/watch?v=qF2-pFM_ESw
 
 = Free Features =
 
-* Search by all custom post types including:
-	* [Gallery](http://bestwebsoft.com/products/gallery/?k=a7970636432b7a4dcc5ad805f87b2696)
-	* [Portfolio](http://bestwebsoft.com/products/portfolio/?k=2ac66bf272f5329cdf78ed8cb10d49b2)
-	* [Cars](http://bestwebsoft.com/products/car-rental/?k=4f3314a1fe385c140e4ff9e361b2e300)
-	* [Properties & Agents](http://bestwebsoft.com/products/realty/?k=9916846ebbdecc2ba40ce3bff4fbf9f2)
-	* [Jobs](http://bestwebsoft.com/products/job-board/)
+* Search by:
+	* All custom post types including:
+		* [Galleries](http://bestwebsoft.com/products/wordpress/plugins/gallery/?k=a7970636432b7a4dcc5ad805f87b2696)
+		* [Portfolio projects](http://bestwebsoft.com/products/wordpress/plugins/portfolio/?k=2ac66bf272f5329cdf78ed8cb10d49b2)
+		* [Cars](http://bestwebsoft.com/products/wordpress/plugins/car-rental/?k=4f3314a1fe385c140e4ff9e361b2e300)
+		* [Properties & Agents](http://bestwebsoft.com/products/wordpress/plugins/realty/?k=9916846ebbdecc2ba40ce3bff4fbf9f2)
+		* [Jobs](http://bestwebsoft.com/products/wordpress/plugins/job-board/)
+	* Taxonomies: [NEW]
+		* Post tags
+		* Post categories
+		* Custom
 * Compatible with latest WordPress version
 * Incredibly simple settings for fast setup without modifying code
 * Detailed step-by-step documentations and videos
@@ -36,18 +42,18 @@ http://www.youtube.com/watch?v=qF2-pFM_ESw
 > * Exclude from a custom search:
 > 	* Posts
 > 	* Pages
-> * Configure custom post types displaying order on the search results page 
+> * Configure custom post types and taxonomies displaying order on the search results page
 > * Display featured image for post types on the search results page
-> * Choose featured image size 
+> * Choose featured image size
 > * Choose featured image align position:
 > 	* Left
 > 	* Right
-> * Searching by the post type of the current page 
+> * Search by the post type of the current page
 > * Change excerpt length
 > * Add custom code via plugin settings page
 > * Get answer to your question within one business day ([Support Policy](http://bestwebsoft.com/support-policy/))
 >
-> [Upgrade to Pro Now](http://bestwebsoft.com/products/custom-search/?k=b67e3e538cdb8bb841b81467655eb0f7)
+> [Upgrade to Pro Now](http://bestwebsoft.com/products/wordpress/plugins/custom-search/?k=b67e3e538cdb8bb841b81467655eb0f7)
 
 If you have a feature suggestion or idea you'd like to see in the plugin, we'd love to hear about it! [Suggest a Feature](http://support.bestwebsoft.com/hc/en-us/requests/new)
 
@@ -60,7 +66,7 @@ If you have a feature suggestion or idea you'd like to see in the plugin, we'd l
 
 = Help & Support =
 
-Visit our Help Center if you have any questions, our friendly Support Team is happy to help — <http://support.bestwebsoft.com/>
+Visit our Help Center if you have any questions, our friendly Support Team is happy to help - <http://support.bestwebsoft.com/>
 
 = Translation =
 
@@ -73,8 +79,8 @@ Some of these translations are not complete. We are constantly adding new featur
 
 = Recommended Plugins =
 
-* [Custom Fields Search](http://bestwebsoft.com/products/custom-fields-search/) - Add custom fields to WordPress website search results.
-* [Updater](http://bestwebsoft.com/products/updater/?k=7b42404bbc8ad8cb8745f8704cba3c9a) - Automatically check and update WordPress core with all installed plugins to the latest versions. Manual mode, email notifications and backups of all your files and database before updating.
+* [Custom Fields Search](http://bestwebsoft.com/products/wordpress/plugins/custom-fields-search/) - Add custom fields to WordPress website search results.
+* [Updater](http://bestwebsoft.com/products/wordpress/plugins/updater/?k=7b42404bbc8ad8cb8745f8704cba3c9a) - Automatically check and update WordPress core with all installed plugins to the latest versions. Manual mode, email notifications and backups of all your files and database before updating.
 
 = Donate =
 
@@ -94,7 +100,7 @@ Donations play an important role in supporting open-source projects. We greatly 
 
 = Usage =
 
-Go to the Settings page and select custom types that you would like to add to the search.
+Go to the Settings page and select custom post types and taxonomies that you would like to add to the search.
 
 = I have some problems with the plugin's work. What Information should I provide to receive proper support? =
 
@@ -111,6 +117,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<http:
 2. Custom Search Appearance page.
 
 == Changelog ==
+
+= V1.35 - 12.01.2017 =
+* NEW : Ability to search by term name has been added.
 
 = V1.34 - 09.08.2016 =
 * Update : All functionality for wordpress 4.6 was updated.
@@ -151,7 +160,7 @@ Please make sure that the problem hasn't been discussed yet on our forum (<http:
 * Bugfix : We added search variable checking to make sure it is not empty in order to avoid conflicts.
 * Update : We updated all functionality for wordpress 4.1.1.
 
-= V1.23 - 26.12.2014 = 
+= V1.23 - 26.12.2014 =
 * Update : BWS plugins section is updated.
 * Update : We updated all functionality for wordpress 4.1.
 
@@ -174,7 +183,7 @@ Please make sure that the problem hasn't been discussed yet on our forum (<http:
 * Update : Screenshots are updated.
 * Update : BWS plugins section is updated.
 * Update : We updated all functionality for wordpress 3.8.1.
-* Budfix : Problem with search results in back-end is fixed. 
+* Budfix : Problem with search results in back-end is fixed.
 
 = V1.18 - 26.12.2013 =
 * Update : BWS plugins section is updated.
@@ -203,7 +212,7 @@ Please make sure that the problem hasn't been discussed yet on our forum (<http:
 * Update : We updated all functionality for wordpress 3.5.2.
 
 = V1.12 - 24.05.2013 =
-* Bugfix : The error related to undefined variable is fixed. 
+* Bugfix : The error related to undefined variable is fixed.
 * Changed : BWS plugins section.
 
 = V1.11 - 06.05.2013 =
@@ -223,7 +232,7 @@ Please make sure that the problem hasn't been discussed yet on our forum (<http:
 * Update : We updated all functionality for wordpress 3.5.
 
 = V1.06 - 24.07.2012 =
-* Bugfix : Cross Site Request Forgery bug is fixed. 
+* Bugfix : Cross Site Request Forgery bug is fixed.
 
 = V1.05 - 10.07.2012 =
 * NEW : The Hebrew language file is added to the plugin.
@@ -233,7 +242,7 @@ Please make sure that the problem hasn't been discussed yet on our forum (<http:
 * Update : We updated all functionality for wordpress 3.4.
 
 = V1.03 - 12.03.2012 =
-* Changed : BWS plugins section. 
+* Changed : BWS plugins section.
 
 = V1.02 - 24.02.2012 =
 * Change : Code which includes styles and scripts is added to the plugin for correct SSL verification.
@@ -242,6 +251,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<http:
 * NEW : Language files are added to the plugin.
 
 == Upgrade Notice ==
+
+= V1.35 =
+* New features added.
 
 = V1.34 =
 * The compatibility with new WordPress version updated.
@@ -286,7 +298,7 @@ Security Exploit was fixed. We updated all functionality for wordpress 4.0-beta3
 We updated all functionality for wordpress 3.9.1. The Ukrainian language is updated in the plugin.
 
 = V1.20 =
-BWS plugins section is updated. We updated all functionality for wordpress 3.8.1. Plugin optimization is done. Problem with including nav_menu types to the search results is fixed. Bug with displaying of custom types of deactiveted plugins is fixed. 
+BWS plugins section is updated. We updated all functionality for wordpress 3.8.1. Plugin optimization is done. Problem with including nav_menu types to the search results is fixed. Bug with displaying of custom types of deactiveted plugins is fixed.
 
 = V1.19 =
 Screenshots are updated. BWS plugins section is updated. We updated all functionality for wordpress 3.8.1. Problem with search results in back-end is fixed.
@@ -328,7 +340,7 @@ Bugs in admin menu were fixed. We updated all functionality for wordpress 3.5.1.
 We updated all functionality for wordpress 3.5.
 
 = V1.06 =
-Cross Site Request Forgery bug was fixed. 
+Cross Site Request Forgery bug was fixed.
 
 = V1.05 =
 The Hebrew language file is added to the plugin. We updated all functionality for wordpress 3.4.1.
@@ -337,7 +349,7 @@ The Hebrew language file is added to the plugin. We updated all functionality fo
 We updated all functionality for wordpress 3.4.
 
 = V1.03 =
-BWS plugins section has been changed. 
+BWS plugins section has been changed.
 
 = V1.02 =
 Code which includes styles and scripts is added to the plugin for correct SSL verification.

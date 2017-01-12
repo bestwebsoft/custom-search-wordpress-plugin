@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Custom Search\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-26 15:07+0300\n"
-"PO-Revision-Date: 2015-11-26 15:07+0300\n"
+"POT-Creation-Date: 2017-01-11 15:48+0300\n"
+"PO-Revision-Date: 2017-01-11 16:32+0300\n"
 "Last-Translator: plugin@bestwebsoft.com <plugin@bestwebsoft.com>\n"
 "Language-Team: BestWebSoft <plugin@bestwebsoft.com>\n"
 "Language: ru_RU\n"
@@ -21,132 +21,161 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 
 # @ custom-search
-#: custom-search-plugin.php:34 custom-search-plugin.php:174
+#: custom-search-plugin.php:36 custom-search-plugin.php:426
 msgid "Custom Search Settings"
 msgstr "Настройки Custom Search"
 
-# @ custom-search
-#: custom-search-plugin.php:148
-msgid "Settings saved"
-msgstr "Настройки сохранены"
-
-#: custom-search-plugin.php:163
+#: custom-search-plugin.php:337
 msgid "All plugin settings were restored."
 msgstr "Настройки плагина были восстановлены."
 
+#: custom-search-plugin.php:351
+msgid "post type"
+msgstr "тип записи"
+
+#: custom-search-plugin.php:352 custom-search-plugin.php:457
+msgid "post types"
+msgstr "типы записи"
+
+#: custom-search-plugin.php:355
+msgid "taxonomy"
+msgstr "таксономия"
+
+#: custom-search-plugin.php:356 custom-search-plugin.php:479
+msgid "taxonomies"
+msgstr "таксономии"
+
 # @ custom-search
-#: custom-search-plugin.php:176 custom-search-plugin.php:307
-#: custom-search-plugin.php:321
+#: custom-search-plugin.php:410
+msgid "Settings saved"
+msgstr "Настройки сохранены"
+
+# @ custom-search
+#: custom-search-plugin.php:428 custom-search-plugin.php:606
+#: custom-search-plugin.php:620
 msgid "Settings"
 msgstr "Настройки"
 
-#: custom-search-plugin.php:177
+#: custom-search-plugin.php:429
 msgid "Appearance"
 msgstr "Отображение"
 
-#: custom-search-plugin.php:178
+#: custom-search-plugin.php:430
 msgid "Go PRO"
 msgstr "Перейти на PRO версию"
 
 # @ custom-search
-#: custom-search-plugin.php:194 custom-search-plugin.php:214
+#: custom-search-plugin.php:450 custom-search-plugin.php:507
 msgid "Enable Custom search for:"
-msgstr "Отображать Кастомный поиск для:"
+msgstr "Добавить в кастомный поиск:"
 
-#: custom-search-plugin.php:200
-msgid "All"
-msgstr "Всех"
+# @ custom-search
+#: custom-search-plugin.php:470
+msgid "No custom post type found."
+msgstr "Не найдено ни одного пользовательского типа записи."
 
-#: custom-search-plugin.php:210
+#: custom-search-plugin.php:490
+msgid "for"
+msgstr "для"
+
+#: custom-search-plugin.php:503
 msgid "Close"
 msgstr "Закрыть"
 
-#: custom-search-plugin.php:217
-msgid "Post"
-msgstr "Пост"
-
-#: custom-search-plugin.php:219
-msgid "Page"
-msgstr "Страница"
-
-#: custom-search-plugin.php:220
+#: custom-search-plugin.php:522
 msgid ""
-"When you drag post types, you affect the order of their display in the "
-"frontend on the search page."
+"When you drag post types and taxonomies, you affect the order of their "
+"display in the frontend on the search page."
 msgstr ""
-"При перетаскивании типов постов вы влияете на порядок их вывода во фронтенде "
-"на странице поиска."
+"При перетаскивании типов записей и таксономий вы влияете на порядок их "
+"вывода во фронтенде на странице поиска."
 
-#: custom-search-plugin.php:224
+#: custom-search-plugin.php:526
 msgid "Search only by type of the current post"
 msgstr "Искать только по типу текущей страницы"
 
-#: custom-search-plugin.php:227
+#: custom-search-plugin.php:529
 msgid "This option is used when you search on a single page/post/post type."
 msgstr ""
-"Эта опция используется, когда Вы находитесь на странице записи/страницы/пост "
-"типа."
+"Эта опция используется, когда Вы находитесь на странице записи/страницы/типа "
+"записи."
 
-#: custom-search-plugin.php:234 custom-search-plugin.php:284
+#: custom-search-plugin.php:536 custom-search-plugin.php:583
 msgid "Unlock premium options by upgrading to Pro version"
 msgstr "Активируйте премиум опции обновившись до Pro версии"
 
-#: custom-search-plugin.php:236 custom-search-plugin.php:286
+#: custom-search-plugin.php:538 custom-search-plugin.php:585
 msgid "Learn More"
 msgstr "Подробнее"
 
 # @ custom-search
-#: custom-search-plugin.php:243
+#: custom-search-plugin.php:545
 msgid "Save Changes"
 msgstr "Сохранить изменения"
 
-# @ custom-search
-#: custom-search-plugin.php:249
-msgid "No custom post type found."
-msgstr "Не найдено ни одного кастомного поста."
-
-#: custom-search-plugin.php:258
+#: custom-search-plugin.php:557
 msgid "Change displaying of post content on search pages"
 msgstr "Изменить отображение контента записи на страницах поиска"
 
-#: custom-search-plugin.php:262
+#: custom-search-plugin.php:561
 msgid "Display featured image with post content"
 msgstr "Отображать избранное изображение с контентом записи"
 
-#: custom-search-plugin.php:266
+#: custom-search-plugin.php:565
 msgid "Featured image size"
 msgstr "Размер миниатюры"
 
-#: custom-search-plugin.php:270
+#: custom-search-plugin.php:569
 msgid "Featured image align"
 msgstr "Расположение миниатюры"
 
-#: custom-search-plugin.php:272
+#: custom-search-plugin.php:571
 msgid "Left"
 msgstr "Слева"
 
-#: custom-search-plugin.php:273
+#: custom-search-plugin.php:572
 msgid "Right"
 msgstr "Справа"
 
-#: custom-search-plugin.php:277
+#: custom-search-plugin.php:576
 msgid "Change excerpt length"
 msgstr "Изменить длину цитаты"
 
-#: custom-search-plugin.php:278
+#: custom-search-plugin.php:577
 msgid "to"
 msgstr "на"
 
-#: custom-search-plugin.php:278
+#: custom-search-plugin.php:577
 msgid "words"
 msgstr "слов"
 
 # @ custom-search
-#: custom-search-plugin.php:322
+#: custom-search-plugin.php:621
 msgid "FAQ"
 msgstr "FAQ"
 
 # @ custom-search
-#: custom-search-plugin.php:323
+#: custom-search-plugin.php:622
 msgid "Support"
 msgstr "Тех.поддержка"
+
+#~ msgid "Posts"
+#~ msgstr "Записи"
+
+#~ msgid "Pages"
+#~ msgstr "Страницы"
+
+#~ msgid "Post types"
+#~ msgstr "Типы записей"
+
+#~ msgid "Taxonomies"
+#~ msgstr "Таксономии"
+
+#~ msgid "All"
+#~ msgstr "Всех"
+
+#~ msgid "Tags"
+#~ msgstr "Теги"
+
+#~ msgid "Categories"
+#~ msgstr "Категории"
