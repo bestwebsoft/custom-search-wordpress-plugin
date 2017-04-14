@@ -1,4 +1,4 @@
-<a href="http://bestwebsoft.com/products/wordpress/plugins/custom-search/" target=_blank>Custom Search WordPress Plugin</a>
+<a href="https://bestwebsoft.com/products/wordpress/plugins/custom-search/" target=_blank>Custom Search WordPress Plugin</a>
 ========================
 
 Add custom post types and taxonomies to WordPress website search results.

@@ -1,10 +1,10 @@
 === Custom Search by BestWebSoft ===
 Contributors: bestwebsoft
-Donate link: http://bestwebsoft.com/donate/
+Donate link: https://bestwebsoft.com/donate/
 Tags: additional search options, extra search options, advanced search, add additional search options, search options, custom search, custom search plugin, website search, add custom posts to search, custom posts, free additional search options, custom content types
 Requires at least: 3.8
-Tested up to: 4.7.1
-Stable tag: 1.35
+Tested up to: 4.7.3
+Stable tag: 1.36
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -15,17 +15,17 @@ Add custom post types and taxonomies to WordPress website search results.
 Custom Search plugin adds custom post types and taxonomies to WordPress website search results. A quick and easy way to search everything within custom post types and taxonomies.
 Improve your website user experience today!
 
-http://www.youtube.com/watch?v=qF2-pFM_ESw
+https://www.youtube.com/watch?v=qF2-pFM_ESw
 
 = Free Features =
 
 * Search by:
 	* All custom post types including:
-		* [Galleries](http://bestwebsoft.com/products/wordpress/plugins/gallery/?k=a7970636432b7a4dcc5ad805f87b2696)
-		* [Portfolio projects](http://bestwebsoft.com/products/wordpress/plugins/portfolio/?k=2ac66bf272f5329cdf78ed8cb10d49b2)
-		* [Cars](http://bestwebsoft.com/products/wordpress/plugins/car-rental/?k=4f3314a1fe385c140e4ff9e361b2e300)
-		* [Properties & Agents](http://bestwebsoft.com/products/wordpress/plugins/realty/?k=9916846ebbdecc2ba40ce3bff4fbf9f2)
-		* [Jobs](http://bestwebsoft.com/products/wordpress/plugins/job-board/)
+		* [Galleries](https://bestwebsoft.com/products/wordpress/plugins/gallery/?k=a7970636432b7a4dcc5ad805f87b2696)
+		* [Portfolio projects](https://bestwebsoft.com/products/wordpress/plugins/portfolio/?k=2ac66bf272f5329cdf78ed8cb10d49b2)
+		* [Cars](https://bestwebsoft.com/products/wordpress/plugins/car-rental/?k=4f3314a1fe385c140e4ff9e361b2e300)
+		* [Properties & Agents](https://bestwebsoft.com/products/wordpress/plugins/realty/?k=9916846ebbdecc2ba40ce3bff4fbf9f2)
+		* [Jobs](https://bestwebsoft.com/products/wordpress/plugins/job-board/)
 	* Taxonomies: [NEW]
 		* Post tags
 		* Post categories
@@ -51,22 +51,22 @@ http://www.youtube.com/watch?v=qF2-pFM_ESw
 > * Search by the post type of the current page
 > * Change excerpt length
 > * Add custom code via plugin settings page
-> * Get answer to your question within one business day ([Support Policy](http://bestwebsoft.com/support-policy/))
+> * Get answer to your question within one business day ([Support Policy](https://bestwebsoft.com/support-policy/))
 >
-> [Upgrade to Pro Now](http://bestwebsoft.com/products/wordpress/plugins/custom-search/?k=b67e3e538cdb8bb841b81467655eb0f7)
+> [Upgrade to Pro Now](https://bestwebsoft.com/products/wordpress/plugins/custom-search/?k=b67e3e538cdb8bb841b81467655eb0f7)
 
-If you have a feature suggestion or idea you'd like to see in the plugin, we'd love to hear about it! [Suggest a Feature](http://support.bestwebsoft.com/hc/en-us/requests/new)
+If you have a feature suggestion or idea you'd like to see in the plugin, we'd love to hear about it! [Suggest a Feature](https://support.bestwebsoft.com/hc/en-us/requests/new)
 
 = Documentation & Videos =
 
-* [[Doc] Installation](https://docs.google.com/document/d/1fPZmLyDQxMe0wxaKN-Mbi6Aa9R8vbL6dG365oXVVeSU/)
-* [[Doc] Purchase, Installation & Configuration](https://docs.google.com/document/d/1fudtNHNgqHq8_YZ02TtsAwoiLyMnZ-hbiWwBCMAfcTc/)
+* [[Doc] Installation](https://docs.google.com/document/d/1-hvn6WRvWnOqj5v5pLUk7Awyu87lq5B_dO-Tv-MC9JQ/)
+* [[Doc] Purchase](https://docs.google.com/document/d/1EUdBVvnm7IHZ6y0DNyldZypUQKpB8UVPToSc_LdOYQI/)
 * [[Video] Installation Instruction](https://www.youtube.com/watch?v=2tuQNyfXZ-I)
 * [[Video] Purchase, Installation, Configuration Tutorial](https://www.youtube.com/watch?v=6w7qOA9P0HY)
 
 = Help & Support =
 
-Visit our Help Center if you have any questions, our friendly Support Team is happy to help - <http://support.bestwebsoft.com/>
+Visit our Help Center if you have any questions, our friendly Support Team is happy to help - <https://support.bestwebsoft.com/>
 
 = Translation =
 
@@ -75,18 +75,12 @@ Visit our Help Center if you have any questions, our friendly Support Team is ha
 * Spanish (es_ES) (thanks to [Fernando De León](mailto:mrjosefernando@gmail.com))
 * Ukrainian (uk)
 
-Some of these translations are not complete. We are constantly adding new features which should be translated. If you would like to create your own language pack or update the existing one, you can send [the text of PO and MO files](http://codex.wordpress.org/Translating_WordPress) to [BestWebSoft](http://support.bestwebsoft.com/hc/en-us/requests/new) and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO [files Poedit](http://www.poedit.net/download.php).
+Some of these translations are not complete. We are constantly adding new features which should be translated. If you would like to create your own language pack or update the existing one, you can send [the text of PO and MO files](https://codex.wordpress.org/Translating_WordPress) to [BestWebSoft](https://support.bestwebsoft.com/hc/en-us/requests/new) and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO [files Poedit](https://www.poedit.net/download.php).
 
 = Recommended Plugins =
 
-* [Custom Fields Search](http://bestwebsoft.com/products/wordpress/plugins/custom-fields-search/) - Add custom fields to WordPress website search results.
-* [Updater](http://bestwebsoft.com/products/wordpress/plugins/updater/?k=7b42404bbc8ad8cb8745f8704cba3c9a) - Automatically check and update WordPress core with all installed plugins to the latest versions. Manual mode, email notifications and backups of all your files and database before updating.
-
-= Donate =
-
-Donations play an important role in supporting open-source projects. We greatly appreciate any donation you can make to help us continue further development of free products.
-
-[Donate Now](http://bestwebsoft.com/donate/)
+* [Custom Fields Search](https://bestwebsoft.com/products/wordpress/plugins/custom-fields-search/) - Add custom fields to WordPress website search results.
+* [Updater](https://bestwebsoft.com/products/wordpress/plugins/updater/?k=7b42404bbc8ad8cb8745f8704cba3c9a) - Automatically check and update WordPress core with all installed plugins to the latest versions. Manual mode, email notifications and backups of all your files and database before updating.
 
 == Installation ==
 
@@ -94,22 +88,21 @@ Donations play an important role in supporting open-source projects. We greatly 
 2. Activate the plugin via the 'Plugins' menu in WordPress.
 3. Plugin settings are available in "BWS Panel"->"Custom Search".
 
-[View a Step-by-step Instruction on Custom Search Installation](https://docs.google.com/document/d/1fPZmLyDQxMe0wxaKN-Mbi6Aa9R8vbL6dG365oXVVeSU/)
+[View a Step-by-step Instruction on Custom Search Installation](https://docs.google.com/document/d/1-hvn6WRvWnOqj5v5pLUk7Awyu87lq5B_dO-Tv-MC9JQ/)
 
 == Frequently Asked Questions ==
-
-= Usage =
+	
+= How to use Custom Search plugin? =
 
 Go to the Settings page and select custom post types and taxonomies that you would like to add to the search.
 
 = I have some problems with the plugin's work. What Information should I provide to receive proper support? =
 
-Please make sure that the problem hasn't been discussed yet on our forum (<http://support.bestwebsoft.com>). If no, please provide the following data along with your problem's description:
-
-1. the link to the page where the problem occurs
-2. the name of the plugin and its version. If you are using a pro version - your order number.
-3. the version of your WordPress installation
-4. copy and paste into the message your system status report. Please read more here: [Instruction on System Status](https://docs.google.com/document/d/1Wi2X8RdRGXk9kMszQy1xItJrpN0ncXgioH935MaBKtc/edit)
+Please make sure that the problem hasn't been discussed yet on our forum (<https://support.bestwebsoft.com>). If no, please provide the following data along with your problem's description:
+- The link to the page where the problem occurs
+- The name of the plugin and its version. If you are using a pro version - your order number.
+- The version of your WordPress installation
+- Copy and paste into the message your system status report. Please read more here: [Instruction on System Status](https://docs.google.com/document/d/1Wi2X8RdRGXk9kMszQy1xItJrpN0ncXgioH935MaBKtc/)
 
 == Screenshots ==
 
@@ -117,6 +110,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<http:
 2. Custom Search Appearance page.
 
 == Changelog ==
+
+= V1.36 - 14.04.2017 =
+* Bugfix : Multiple Cross-Site Scripting (XSS) vulnerability was fixed.
 
 = V1.35 - 12.01.2017 =
 * NEW : Ability to search by term name has been added.
@@ -251,6 +247,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<http:
 * NEW : Language files are added to the plugin.
 
 == Upgrade Notice ==
+
+= V1.36 =
+* Bugs fixed.
 
 = V1.35 =
 * New features added.

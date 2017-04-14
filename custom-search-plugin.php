@@ -1,17 +1,17 @@
 <?php
 /*
 Plugin Name: Custom Search by BestWebSoft
-Plugin URI: http://bestwebsoft.com/products/wordpress/plugins/custom-search/
+Plugin URI: https://bestwebsoft.com/products/wordpress/plugins/custom-search/
 Description: Add custom post types to WordPress website search results.
 Author: BestWebSoft
 Text Domain: custom-search-plugin
 Domain Path: /languages
-Version: 1.35
-Author URI: http://bestwebsoft.com/
+Version: 1.36
+Author URI: https://bestwebsoft.com/
 License: GPLv2 or later
 */
 
-/*  © Copyright 2017  BestWebSoft  ( http://support.bestwebsoft.com )
+/*  © Copyright 2017  BestWebSoft  ( https://support.bestwebsoft.com )
 
 	This program is free software; you can redistribute it and/or modify
 	it under the terms of the GNU General Public License, version 2, as
@@ -483,7 +483,7 @@ if ( ! function_exists( 'cstmsrch_settings_page' ) ) {
 													<label>
 														<input type="checkbox" <?php echo ( in_array( $taxonomy, $cstmsrch_taxonomies_enabled ) ? 'checked="checked"' : "" ); ?> name="cstmsrch_taxonomies[]" class="cstmsrch_cb_select" value="<?php echo $taxonomy; ?>"/>
 														<span style="text-transform: capitalize; padding-left: 5px;">
-															<?php echo "$label (" . __( 'for', 'custom-search-plugin' ) . " \"$object_type_name)\""; ?>
+															<?php echo "$label (" . __( 'for', 'custom-search-plugin' ) . " \"$object_type_name\")"; ?>
 														</span>
 													</label><br />
 												<?php } ?>
@@ -528,10 +528,7 @@ if ( ! function_exists( 'cstmsrch_settings_page' ) ) {
 									</table>
 								</div>
 								<div class="bws_pro_version_tooltip">
-									<div class="bws_info">
-										<?php _e( 'Unlock premium options by upgrading to Pro version', 'custom-search-plugin' ); ?>
-									</div>
-									<a class="bws_button" href="http://bestwebsoft.com/products/wordpress/plugins/custom-search/?k=f9558d294313c75b964f5f6fa1e5fd3c&pn=214&v=<?php echo $cstmsrch_plugin_info["Version"]; ?>&wp_v=<?php echo $wp_version; ?>" target="_blank" title="custom-search Pro"><?php _e( 'Learn More', 'custom-search-plugin' ); ?></a>
+									<a class="bws_button" href="https://bestwebsoft.com/products/wordpress/plugins/custom-search/?k=f9558d294313c75b964f5f6fa1e5fd3c&pn=214&v=<?php echo $cstmsrch_plugin_info["Version"]; ?>&wp_v=<?php echo $wp_version; ?>" target="_blank" title="custom-search Pro"><?php _e( 'Learn More', 'custom-search-plugin' ); ?></a>
 									<div class="clear"></div>
 								</div>
 							</div>
@@ -575,10 +572,7 @@ if ( ! function_exists( 'cstmsrch_settings_page' ) ) {
 						</table>
 					</div>
 					<div class="bws_pro_version_tooltip">
-						<div class="bws_info">
-							<?php _e( 'Unlock premium options by upgrading to Pro version', 'custom-search-plugin' ); ?>
-						</div>
-						<a class="bws_button" href="http://bestwebsoft.com/products/wordpress/plugins/custom-search/?k=f9558d294313c75b964f5f6fa1e5fd3c&pn=214&v=<?php echo $cstmsrch_plugin_info["Version"]; ?>&wp_v=<?php echo $wp_version; ?>" target="_blank" title="custom-search Pro"><?php _e( 'Learn More', 'custom-search-plugin' ); ?></a>
+						<a class="bws_button" href="https://bestwebsoft.com/products/wordpress/plugins/custom-search/?k=f9558d294313c75b964f5f6fa1e5fd3c&pn=214&v=<?php echo $cstmsrch_plugin_info["Version"]; ?>&wp_v=<?php echo $wp_version; ?>" target="_blank" title="custom-search Pro"><?php _e( 'Learn More', 'custom-search-plugin' ); ?></a>
 						<div class="clear"></div>
 					</div>
 				</div>
@@ -614,8 +608,8 @@ if ( !function_exists( 'cstmsrch_links' ) ) {
 		if ( $file == $base ) {
 			if ( ! is_network_admin() )
 				$links[] = '<a href="admin.php?page=custom_search.php">' . __( 'Settings','custom-search-plugin' ) . '</a>';
-			$links[] = '<a href="http://wordpress.org/plugins/custom-search-plugin/faq/" target="_blank">' . __( 'FAQ','custom-search-plugin' ) . '</a>';
-			$links[] = '<a href="http://support.bestwebsoft.com">' . __( 'Support', 'custom-search-plugin' ) . '</a>';
+			$links[] = '<a href="https://wordpress.org/plugins/custom-search-plugin/faq/" target="_blank">' . __( 'FAQ','custom-search-plugin' ) . '</a>';
+			$links[] = '<a href="https://support.bestwebsoft.com">' . __( 'Support', 'custom-search-plugin' ) . '</a>';
 		}
 		return $links;
 	}
