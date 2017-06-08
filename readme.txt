@@ -2,9 +2,9 @@
 Contributors: bestwebsoft
 Donate link: https://bestwebsoft.com/donate/
 Tags: additional search options, extra search options, advanced search, add additional search options, search options, custom search, custom search plugin, website search, add custom posts to search, custom posts, free additional search options, custom content types
-Requires at least: 3.8
-Tested up to: 4.7.3
-Stable tag: 1.36
+Requires at least: 3.9
+Tested up to: 4.8
+Stable tag: 1.37
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -80,7 +80,7 @@ Some of these translations are not complete. We are constantly adding new featur
 = Recommended Plugins =
 
 * [Custom Fields Search](https://bestwebsoft.com/products/wordpress/plugins/custom-fields-search/) - Add custom fields to WordPress website search results.
-* [Updater](https://bestwebsoft.com/products/wordpress/plugins/updater/?k=7b42404bbc8ad8cb8745f8704cba3c9a) - Automatically check and update WordPress core with all installed plugins to the latest versions. Manual mode, email notifications and backups of all your files and database before updating.
+* [Updater](https://bestwebsoft.com/products/wordpress/plugins/updater/?k=7b42404bbc8ad8cb8745f8704cba3c9a) - Automatically check and update WordPress website core with all installed plugins and themes to the latest versions
 
 == Installation ==
 
@@ -91,7 +91,7 @@ Some of these translations are not complete. We are constantly adding new featur
 [View a Step-by-step Instruction on Custom Search Installation](https://docs.google.com/document/d/1-hvn6WRvWnOqj5v5pLUk7Awyu87lq5B_dO-Tv-MC9JQ/)
 
 == Frequently Asked Questions ==
-	
+
 = How to use Custom Search plugin? =
 
 Go to the Settings page and select custom post types and taxonomies that you would like to add to the search.
@@ -110,6 +110,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 2. Custom Search Appearance page.
 
 == Changelog ==
+
+= V1.37 - 08.08.2017 =
+* Update : We updated all functionality for wordpress 4.8.
 
 = V1.36 - 14.04.2017 =
 * Bugfix : Multiple Cross-Site Scripting (XSS) vulnerability was fixed.
@@ -247,6 +250,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 * NEW : Language files are added to the plugin.
 
 == Upgrade Notice ==
+
+= V1.37 =
+* The compatibility with new WordPress version updated.
 
 = V1.36 =
 * Bugs fixed.

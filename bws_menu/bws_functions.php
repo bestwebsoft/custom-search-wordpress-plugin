@@ -90,7 +90,7 @@ if ( ! function_exists( 'bws_plugin_reviews_block' ) ) {
 			<div class="bws-plugin-reviews-rate">
 				<?php _e( 'Like the plugin?', 'bestwebsoft' ); ?>
 				<a href="http://wordpress.org/support/view/plugin-reviews/<?php echo $plugin_slug; ?>?filter=5" target="_blank" title="<?php echo $plugin_name; ?> reviews">
-					<?php _e( 'Rate it', 'bestwebsoft' ); ?> 
+					<?php _e( 'Rate it', 'bestwebsoft' ); ?>
 					<span class="dashicons dashicons-star-filled"></span>
 					<span class="dashicons dashicons-star-filled"></span>
 					<span class="dashicons dashicons-star-filled"></span>
@@ -259,8 +259,8 @@ if ( ! function_exists( 'bws_admin_notices' ) ) {
 		*/
 		if ( ! empty( $bstwbsftwppdtplgns_options['deprecated_function'] ) ) { ?>
 			<div class="update-nag">
-				<strong><?php _e( 'Deprecated function(-s) is used on the site here:', 'bestwebsoft' ); ?></strong>  
-				<?php $i = 1; 
+				<strong><?php _e( 'Deprecated function(-s) is used on the site here:', 'bestwebsoft' ); ?></strong>
+				<?php $i = 1;
 				foreach ( $bstwbsftwppdtplgns_options['deprecated_function'] as $function_name => $attr ) {
 					if ( 1 != $i )
 						echo ' ,';
@@ -273,8 +273,8 @@ if ( ! function_exists( 'bws_admin_notices' ) ) {
 					$i++;
 				} ?>.
 				<br/>
-				<?php _e( 'This function(-s) will be removed over time. Please update the product(-s).', 'bestwebsoft' ); ?>				
-			</div>				
+				<?php _e( 'This function(-s) will be removed over time. Please update the product(-s).', 'bestwebsoft' ); ?>
+			</div>
 			<?php if ( is_multisite() )
 				update_site_option( 'bstwbsftwppdtplgns_options', $bstwbsftwppdtplgns_options );
 			else
@@ -388,7 +388,7 @@ if ( ! function_exists ( 'bws_plugin_banner_timeout' ) ) {
 
 if ( ! function_exists( 'bws_plugin_banner_to_settings' ) ) {
 	function bws_plugin_banner_to_settings( $plugin_info, $plugin_options_name, $banner_url_or_slug, $settings_url, $post_type_url = false ) {
-		global $wp_version, $bws_plugin_banner_to_settings;
+		global $bws_plugin_banner_to_settings;
 
 		$is_network_admin = is_network_admin();
 
@@ -422,8 +422,6 @@ if ( ! function_exists( 'bws_plugin_banner_to_settings' ) ) {
 
 if ( ! function_exists( 'bws_plugin_suggest_feature_banner' ) ) {
 	function bws_plugin_suggest_feature_banner( $plugin_info, $plugin_options_name, $banner_url_or_slug ) {
-		global $wp_version;
-
 		$is_network_admin = is_network_admin();
 
 		$plugin_options = $is_network_admin ? get_site_option( $plugin_options_name ) : get_option( $plugin_options_name );
@@ -683,9 +681,6 @@ if ( ! class_exists( 'BWS_admin_tooltip' ) ) {
 		private $tooltip_args;
 
 		public function __construct( $tooltip_args ) {
-			global $wp_version;
-			if ( 3.3 > $wp_version )
-				return;
 			/* Default arguments */
 			$tooltip_args_default = array(
 				'tooltip_id'	=> false,
@@ -804,9 +799,7 @@ if ( ! function_exists ( 'bws_form_restore_default_confirm' ) ) {
 /* shortcode */
 if ( ! function_exists( 'bws_add_editor_buttons' ) ) {
 	function bws_add_editor_buttons() {
-		global $bws_shortcode_list, $wp_version;
-		if ( $wp_version < '3.3' )
-			return;
+		global $bws_shortcode_list;
 		if ( ! empty( $bws_shortcode_list ) && current_user_can( 'edit_posts' ) && current_user_can( 'edit_pages' ) ) {
 			add_filter( 'mce_external_plugins', 'bws_add_buttons' );
 			add_filter( 'mce_buttons', 'bws_register_buttons' );
@@ -832,8 +825,6 @@ if ( ! function_exists( 'bws_register_buttons' ) ) {
 if ( ! function_exists( 'bws_shortcode_media_button_popup' ) ) {
 	function bws_shortcode_media_button_popup() {
 		global $bws_shortcode_list, $wp_version;
-		if ( $wp_version < '3.3' )
-			return;
 
 		if ( ! empty( $bws_shortcode_list ) ) { ?>
 			<div id="bws_shortcode_popup" style="display:none;">
@@ -886,7 +877,7 @@ if ( ! function_exists( 'bws_shortcode_media_button_popup' ) ) {
 	}
 }
 
-/** 
+/**
  * output shortcode in a special block
  * @since 1.9.8
  */
@@ -896,7 +887,7 @@ if ( ! function_exists( 'bws_shortcode_output' ) ) {
 	<?php }
 }
 
-/** 
+/**
  * output tooltip
  * @since 1.9.8
  */

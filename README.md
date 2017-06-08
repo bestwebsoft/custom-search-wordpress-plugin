@@ -78,5 +78,5 @@ Improve your website user experience today!</p>
 <h4>Recommended Plugins</h4>
 <ul>
 <li><a href="https://bestwebsoft.com/products/wordpress/plugins/custom-fields-search/" rel="nofollow">Custom Fields Search</a> &#8211; Add custom fields to WordPress website search results.</li>
-<li><a href="https://bestwebsoft.com/products/wordpress/plugins/updater/?k=7b42404bbc8ad8cb8745f8704cba3c9a" rel="nofollow">Updater</a> &#8211; Automatically check and update WordPress core with all installed plugins to the latest versions. Manual mode, email notifications and backups of all your files and database before updating.</li>
+<li><a href="https://bestwebsoft.com/products/wordpress/plugins/updater/?k=7b42404bbc8ad8cb8745f8704cba3c9a" rel="nofollow">Updater</a> &#8211; Automatically check and update WordPress website core with all installed plugins and themes to the latest versions</li>
 </ul>

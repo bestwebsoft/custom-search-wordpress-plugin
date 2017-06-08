@@ -6,7 +6,7 @@ Description: Add custom post types to WordPress website search results.
 Author: BestWebSoft
 Text Domain: custom-search-plugin
 Domain Path: /languages
-Version: 1.36
+Version: 1.37
 Author URI: https://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -26,8 +26,6 @@ License: GPLv2 or later
 	along with this program; if not, write to the Free Software
 	Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
-
-require_once( dirname( __FILE__ ) . '/includes/deprecated.php' );
 
 /* Function are using to add on admin-panel Wordpress page 'bws_panel' and sub-page of this plugin */
 if ( ! function_exists( 'add_cstmsrch_admin_menu' ) ) {
@@ -59,7 +57,7 @@ if ( ! function_exists ( 'cstmsrch_init' ) ) {
 		}
 
 		/* Function check if plugin is compatible with current WP version */
-		bws_wp_min_version_check( plugin_basename( __FILE__ ), $cstmsrch_plugin_info, '3.8' );
+		bws_wp_min_version_check( plugin_basename( __FILE__ ), $cstmsrch_plugin_info, '3.9' );
 	}
 }
 
@@ -95,17 +93,6 @@ if ( ! function_exists( 'register_cstmsrch_settings' ) ) {
 
 		/* Array merge incase this version has added new options */
 		if ( ! isset( $cstmsrch_options['plugin_option_version'] ) || $cstmsrch_options['plugin_option_version'] != $cstmsrch_plugin_info['Version'] ) {
-			/**
-			 * @deprecated
-			 * @since 1.35
-			 * @todo remove after 01.06.2017
-			 */
-			if ( isset( $cstmsrch_options['plugin_option_version'] ) && version_compare( $cstmsrch_options['plugin_option_version'], '1.35', '<' ) ) {
-				if ( function_exists( 'cstmsrch_update_old_options' ) ) {
-					cstmsrch_update_old_options();
-				}
-			}
-			/* @todo end */
 
 			foreach ( $cstmsrch_options_default as $key => $value ) {
 				if (
@@ -618,8 +605,10 @@ if ( !function_exists( 'cstmsrch_links' ) ) {
 if ( ! function_exists( 'cstmsrch_admin_js' ) ) {
 	function cstmsrch_admin_js() {
 		global $cstmsrch_plugin_info;
-		if ( isset( $_REQUEST['page'] ) && 'custom_search.php' == $_REQUEST['page'] )
+		if ( isset( $_REQUEST['page'] ) && 'custom_search.php' == $_REQUEST['page'] ) {
 			wp_enqueue_script( 'cstmsrch_script', plugins_url( 'js/script.js', __FILE__ ), array(), $cstmsrch_plugin_info['Version'] );
+			bws_enqueue_settings_scripts();
+		}
 		if ( isset( $_GET['action'] ) && 'custom_code' == $_GET['action'] )
 				bws_plugins_include_codemirror();
 	}
@@ -680,14 +669,6 @@ if ( ! function_exists( 'delete_cstmsrch_settings' ) ) {
 				delete_option( 'cstmsrch_options' );
 			}
 		}
-
-		/**
-		 * @since 1.35
-		 * @todo remove after 01.06.2017
-		 */
-		if ( function_exists( 'cstmsrch_clear_uninstall_plugins_array' ) )
-			cstmsrch_clear_uninstall_plugins_array();
-		/* deprecated end */
 
 		require_once( dirname( __FILE__ ) . '/bws_menu/bws_include.php' );
 		bws_include_init( plugin_basename( __FILE__ ) );
