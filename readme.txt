@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: https://bestwebsoft.com/donate/
 Tags: additional search options, extra search options, advanced search, add additional search options, search options, custom search, custom search plugin, website search, add custom posts to search, custom posts, free additional search options, custom content types
 Requires at least: 3.9
-Tested up to: 4.8
-Stable tag: 1.37
+Tested up to: 4.8.2
+Stable tag: 1.38
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -26,7 +26,7 @@ https://www.youtube.com/watch?v=qF2-pFM_ESw
 		* [Cars](https://bestwebsoft.com/products/wordpress/plugins/car-rental/?k=4f3314a1fe385c140e4ff9e361b2e300)
 		* [Properties & Agents](https://bestwebsoft.com/products/wordpress/plugins/realty/?k=9916846ebbdecc2ba40ce3bff4fbf9f2)
 		* [Jobs](https://bestwebsoft.com/products/wordpress/plugins/job-board/)
-	* Taxonomies: [NEW]
+	* Taxonomies:
 		* Post tags
 		* Post categories
 		* Custom
@@ -110,6 +110,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 2. Custom Search Appearance page.
 
 == Changelog ==
+
+= V1.38 - 25.10.2017 =
+* Update : Code that is used to connect filters is added only on frontend.
 
 = V1.37 - 08.08.2017 =
 * Update : We updated all functionality for wordpress 4.8.
@@ -250,6 +253,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 * NEW : Language files are added to the plugin.
 
 == Upgrade Notice ==
+
+= V1.38 =
+* Functionality improved.
 
 = V1.37 =
 * The compatibility with new WordPress version updated.

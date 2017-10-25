@@ -6,7 +6,7 @@ Description: Add custom post types to WordPress website search results.
 Author: BestWebSoft
 Text Domain: custom-search-plugin
 Domain Path: /languages
-Version: 1.37
+Version: 1.38
 Author URI: https://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -50,6 +50,15 @@ if ( ! function_exists ( 'cstmsrch_init' ) ) {
 		require_once( dirname( __FILE__ ) . '/bws_menu/bws_include.php' );
 		bws_include_init( plugin_basename( __FILE__ ) );
 
+		$is_admin = ( is_admin() && ! ( defined( 'DOING_AJAX' ) && ! isset( $_REQUEST['pagenow'] ) ) );
+
+		if ( ! $is_admin ) {
+			add_filter( 'pre_get_posts', 'cstmsrch_searchfilter' );
+			add_filter( 'posts_join', 'cstmsrch_posts_join' );
+			add_filter( 'posts_groupby', 'cstmsrch_posts_groupby' );
+			add_filter( 'posts_where','cstmsrch_posts_where_tax' );
+		}
+
 		if ( empty( $cstmsrch_plugin_info ) ) {
 			if ( ! function_exists( 'get_plugin_data' ) )
 				require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
@@ -64,6 +73,7 @@ if ( ! function_exists ( 'cstmsrch_init' ) ) {
 if ( ! function_exists( 'cstmsrch_admin_init' ) ) {
 	function cstmsrch_admin_init() {
 		global $bws_plugin_info, $cstmsrch_plugin_info, $cstmsrch_options;
+
 		if ( empty( $bws_plugin_info ) )
 			$bws_plugin_info = array( 'id' => '81', 'version' => $cstmsrch_plugin_info['Version'] );
 	}
@@ -72,7 +82,9 @@ if ( ! function_exists( 'cstmsrch_admin_init' ) ) {
 /* Function create column in table wp_options for option of this plugin. If this column exists - save value in variable. */
 if ( ! function_exists( 'register_cstmsrch_settings' ) ) {
 	function register_cstmsrch_settings() {
-		global $cstmsrch_options, $bws_plugin_info, $cstmsrch_plugin_info, $cstmsrch_options_default;
+		global $cstmsrch_options, $bws_plugin_info, $cstmsrch_plugin_info, $cstmsrch_options_default, $cstmsrch_is_registered;
+
+		$cstmsrch_is_registered = true;
 
 		$cstmsrch_options_default = array(
 			'plugin_option_version'		=>	$cstmsrch_plugin_info['Version'],
@@ -682,11 +694,6 @@ add_action( 'admin_menu', 'add_cstmsrch_admin_menu' );
 add_action( 'init', 'cstmsrch_init' );
 add_action( 'admin_init', 'cstmsrch_admin_init' );
 add_action( 'admin_enqueue_scripts', 'cstmsrch_admin_js' );
-
-add_filter( 'pre_get_posts', 'cstmsrch_searchfilter' );
-add_filter( 'posts_join', 'cstmsrch_posts_join' );
-add_filter( 'posts_groupby', 'cstmsrch_posts_groupby' );
-add_filter( 'posts_where','cstmsrch_posts_where_tax' );
 
 /* Adds "Settings" link to the plugin action page */
 add_filter( 'plugin_action_links', 'cstmsrch_action_links', 10, 2 );

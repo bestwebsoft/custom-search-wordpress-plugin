@@ -17,7 +17,7 @@ Improve your website user experience today!</p>
 <li><a href="https://bestwebsoft.com/products/wordpress/plugins/job-board/" rel="nofollow">Jobs</a></li>
 </ul>
 </li>
-<li>Taxonomies: [NEW]
+<li>Taxonomies:
 <ul>
 <li>Post tags</li>
 <li>Post categories</li>
