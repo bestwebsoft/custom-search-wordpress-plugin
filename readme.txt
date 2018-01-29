@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: https://bestwebsoft.com/donate/
 Tags: additional search options, extra search options, advanced search, add additional search options, search options, custom search, custom search plugin, website search, add custom posts to search, custom posts, free additional search options, custom content types
 Requires at least: 3.9
-Tested up to: 4.8.2
-Stable tag: 1.38
+Tested up to: 4.9.1
+Stable tag: 1.39
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -86,7 +86,7 @@ Some of these translations are not complete. We are constantly adding new featur
 
 1. Upload the folder `custom-search-plugin` to the directory `/wp-content/plugins/`.
 2. Activate the plugin via the 'Plugins' menu in WordPress.
-3. Plugin settings are available in "BWS Panel"->"Custom Search".
+3. Plugin settings are available in "Custom Search"->"Settings".
 
 [View a Step-by-step Instruction on Custom Search Installation](https://docs.google.com/document/d/1-hvn6WRvWnOqj5v5pLUk7Awyu87lq5B_dO-Tv-MC9JQ/)
 
@@ -110,6 +110,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 2. Custom Search Appearance page.
 
 == Changelog ==
+
+= V1.39 - 29.01.2018 =
+* Update : The plugin settings page has been changed.
 
 = V1.38 - 25.10.2017 =
 * Update : Code that is used to connect filters is added only on frontend.
@@ -253,6 +256,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 * NEW : Language files are added to the plugin.
 
 == Upgrade Notice ==
+
+= V1.39 =
+* The plugin settings page has been changed.
 
 = V1.38 =
 * Functionality improved.

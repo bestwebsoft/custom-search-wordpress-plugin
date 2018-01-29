@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Custom Search\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-11 15:47+0300\n"
-"PO-Revision-Date: 2017-01-11 15:47+0300\n"
+"POT-Creation-Date: 2018-01-02 15:26+0200\n"
+"PO-Revision-Date: 2018-01-02 15:26+0200\n"
 "Last-Translator: plugin@bestwebsoft.com <plugin@bestwebsoft.com>\n"
 "Language-Team: BestWebSoft <plugin@bestwebsoft.com>\n"
 "Language: cs_CZ\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.8.7.1\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
 "_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
@@ -20,144 +20,183 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 
 # custom-search
-#: custom-search-plugin.php:36 custom-search-plugin.php:426
+#: custom-search-plugin.php:35 custom-search-plugin.php:37
+#: custom-search-plugin.php:286 includes/class-cstmsrch-settings.php:133
 msgid "Custom Search Settings"
 msgstr "Nastavení Custom Search"
 
-#: custom-search-plugin.php:337
-msgid "All plugin settings were restored."
-msgstr "Výchozí nastavení pluginu bylo obnoveno."
-
-#: custom-search-plugin.php:351
-msgid "post type"
-msgstr ""
-
-#: custom-search-plugin.php:352 custom-search-plugin.php:457
-msgid "post types"
-msgstr ""
-
-#: custom-search-plugin.php:355
-msgid "taxonomy"
-msgstr ""
-
-#: custom-search-plugin.php:356 custom-search-plugin.php:479
-msgid "taxonomies"
-msgstr ""
-
 # custom-search
-#: custom-search-plugin.php:410
-msgid "Settings saved"
-msgstr "Nastavení uloženo"
-
-# custom-search
-#: custom-search-plugin.php:428 custom-search-plugin.php:606
-#: custom-search-plugin.php:620
+#: custom-search-plugin.php:37 custom-search-plugin.php:301
+#: custom-search-plugin.php:315 includes/class-cstmsrch-settings.php:24
 msgid "Settings"
 msgstr "Nastavení"
 
-#: custom-search-plugin.php:429
-msgid "Appearance"
-msgstr "Vzhled"
-
-#: custom-search-plugin.php:430
-msgid "Go PRO"
-msgstr "Získat verzi Pro"
-
-# custom-search
-#: custom-search-plugin.php:450 custom-search-plugin.php:507
-msgid "Enable Custom search for:"
-msgstr "Aktivovat Vlastní vyhledávání:"
-
-# custom-search
-#: custom-search-plugin.php:470
-msgid "No custom post type found."
-msgstr "Žádný typ příspěvku nebyl nalezen."
-
-#: custom-search-plugin.php:490
-msgid "for"
+#: custom-search-plugin.php:43
+msgid "Upgrade to Pro"
 msgstr ""
 
-#: custom-search-plugin.php:503
-msgid "Close"
-msgstr "Zavřít"
-
-#: custom-search-plugin.php:522
-#, fuzzy
-msgid ""
-"When you drag post types and taxonomies, you affect the order of their "
-"display in the frontend on the search page."
-msgstr ""
-"Při přetažení typu příspěvku, můžete ovlivnit pořadí jejich zobrazení v "
-"rozhraní na stránce vyhledávání."
-
-#: custom-search-plugin.php:526
-msgid "Search only by type of the current post"
-msgstr "Hledat pouze podle typu aktuálního příspěvku"
-
-#: custom-search-plugin.php:529
-msgid "This option is used when you search on a single page/post/post type."
-msgstr ""
-"Tato volba se používá při vyhledávání na jedné stránce / příspěvku / typu "
-"příspěvku."
-
-#: custom-search-plugin.php:536 custom-search-plugin.php:583
-msgid "Unlock premium options by upgrading to Pro version"
-msgstr "Odemknout prémiové možnosti při aktualizaci na verzi Pro"
-
-#: custom-search-plugin.php:538 custom-search-plugin.php:585
-msgid "Learn More"
-msgstr "Zjistit více"
-
 # custom-search
-#: custom-search-plugin.php:545
-msgid "Save Changes"
-msgstr "Uložit změny"
-
-#: custom-search-plugin.php:557
-msgid "Change displaying of post content on search pages"
-msgstr "Změnit zobrazení obsahu příspěvku na stránce vyhledávání"
-
-#: custom-search-plugin.php:561
-msgid "Display featured image with post content"
-msgstr "Zobrazit doporučený obrázek s obsahem příspěvku"
-
-#: custom-search-plugin.php:565
-msgid "Featured image size"
-msgstr "Doporučená velikost obrázku"
-
-#: custom-search-plugin.php:569
-msgid "Featured image align"
-msgstr "Doporučené umístění obrázku"
-
-#: custom-search-plugin.php:571
-msgid "Left"
-msgstr "Vlevo"
-
-#: custom-search-plugin.php:572
-msgid "Right"
-msgstr "Vpravo"
-
-#: custom-search-plugin.php:576
-msgid "Change excerpt length"
-msgstr "Změna délky výňatku"
-
-#: custom-search-plugin.php:577
-msgid "to"
-msgstr "do"
-
-#: custom-search-plugin.php:577
-msgid "words"
-msgstr "slov"
-
-# custom-search
-#: custom-search-plugin.php:621
+#: custom-search-plugin.php:317
 msgid "FAQ"
 msgstr "Často kladené otázky"
 
 # custom-search
-#: custom-search-plugin.php:622
+#: custom-search-plugin.php:318
 msgid "Support"
 msgstr "Podpora"
+
+#: includes/class-cstmsrch-settings.php:25
+msgid "Appearance"
+msgstr "Vzhled"
+
+#: includes/class-cstmsrch-settings.php:26
+msgid "Misc"
+msgstr ""
+
+#: includes/class-cstmsrch-settings.php:27
+msgid "Custom Code"
+msgstr ""
+
+#: includes/class-cstmsrch-settings.php:28
+msgid "License Key"
+msgstr ""
+
+# custom-search
+#: includes/class-cstmsrch-settings.php:119
+msgid "Settings saved"
+msgstr "Nastavení uloženo"
+
+#: includes/class-cstmsrch-settings.php:138
+#: includes/class-cstmsrch-settings.php:194
+msgid "Enable Custom Search for"
+msgstr ""
+
+#: includes/class-cstmsrch-settings.php:146
+msgid "Post Types"
+msgstr ""
+
+# custom-search
+#: includes/class-cstmsrch-settings.php:159
+msgid "No custom post type found."
+msgstr "Žádný typ příspěvku nebyl nalezen."
+
+#: includes/class-cstmsrch-settings.php:168
+msgid "Taxonomies"
+msgstr ""
+
+#: includes/class-cstmsrch-settings.php:178
+msgid "for"
+msgstr ""
+
+#: includes/class-cstmsrch-settings.php:190
+#: includes/class-cstmsrch-settings.php:235
+msgid "Close"
+msgstr "Zavřít"
+
+#: includes/class-cstmsrch-settings.php:209
+msgid ""
+"When you drag post types and taxonomies, you affect the order of their "
+"displaying in the frontend on the search page."
+msgstr ""
+
+#: includes/class-cstmsrch-settings.php:213
+msgid "Search Only by Type of the Current Post"
+msgstr ""
+
+#: includes/class-cstmsrch-settings.php:217
+msgid "Only current page post type will be used for the search."
+msgstr ""
+
+#: includes/class-cstmsrch-settings.php:230
+msgid "Appearance Settings"
+msgstr ""
+
+#: includes/class-cstmsrch-settings.php:239
+msgid "Change Displaying of Post Content on Search Pages"
+msgstr ""
+
+#: includes/class-cstmsrch-settings.php:243
+msgid "Display Featured Image with Post Content"
+msgstr ""
+
+#: includes/class-cstmsrch-settings.php:247
+msgid "Featured Image Size"
+msgstr ""
+
+#: includes/class-cstmsrch-settings.php:251
+msgid "Featured Image Align"
+msgstr ""
+
+#: includes/class-cstmsrch-settings.php:254
+msgid "Left"
+msgstr "Vlevo"
+
+#: includes/class-cstmsrch-settings.php:255
+msgid "Right"
+msgstr "Vpravo"
+
+#: includes/class-cstmsrch-settings.php:260
+msgid "Change Excerpt Length"
+msgstr ""
+
+#: includes/class-cstmsrch-settings.php:262
+msgid "to"
+msgstr "do"
+
+#: includes/class-cstmsrch-settings.php:262
+msgid "words"
+msgstr "slov"
+
+#~ msgid "This option is used when you search on a single page/post/post type."
+#~ msgstr ""
+#~ "Tato volba se používá při vyhledávání na jedné stránce / příspěvku / typu "
+#~ "příspěvku."
+
+# custom-search
+#~ msgid "Enable Custom search for:"
+#~ msgstr "Aktivovat Vlastní vyhledávání:"
+
+#, fuzzy
+#~ msgid ""
+#~ "When you drag post types and taxonomies, you affect the order of their "
+#~ "display in the frontend on the search page."
+#~ msgstr ""
+#~ "Při přetažení typu příspěvku, můžete ovlivnit pořadí jejich zobrazení v "
+#~ "rozhraní na stránce vyhledávání."
+
+#~ msgid "Search only by type of the current post"
+#~ msgstr "Hledat pouze podle typu aktuálního příspěvku"
+
+#~ msgid "Change displaying of post content on search pages"
+#~ msgstr "Změnit zobrazení obsahu příspěvku na stránce vyhledávání"
+
+#~ msgid "Display featured image with post content"
+#~ msgstr "Zobrazit doporučený obrázek s obsahem příspěvku"
+
+#~ msgid "Featured image size"
+#~ msgstr "Doporučená velikost obrázku"
+
+#~ msgid "Featured image align"
+#~ msgstr "Doporučené umístění obrázku"
+
+#~ msgid "Change excerpt length"
+#~ msgstr "Změna délky výňatku"
+
+#~ msgid "All plugin settings were restored."
+#~ msgstr "Výchozí nastavení pluginu bylo obnoveno."
+
+#~ msgid "Go PRO"
+#~ msgstr "Získat verzi Pro"
+
+#~ msgid "Unlock premium options by upgrading to Pro version"
+#~ msgstr "Odemknout prémiové možnosti při aktualizaci na verzi Pro"
+
+#~ msgid "Learn More"
+#~ msgstr "Zjistit více"
+
+# custom-search
+#~ msgid "Save Changes"
+#~ msgstr "Uložit změny"
 
 #, fuzzy
 #~ msgid "Posts"

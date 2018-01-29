@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Custom Search\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-11 15:48+0300\n"
-"PO-Revision-Date: 2017-01-11 16:33+0300\n"
+"POT-Creation-Date: 2018-01-02 15:25+0200\n"
+"PO-Revision-Date: 2018-01-02 15:26+0200\n"
 "Last-Translator: plugin@bestwebsoft.com <plugin@bestwebsoft.com>\n"
 "Language-Team: BestWebSoft <plugin@bestwebsoft.com>\n"
 "Language: uk\n"
@@ -13,139 +13,194 @@ msgstr ""
 "X-Poedit-KeywordsList: __;_e\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.8.7.1\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: custom-search-plugin.php:36 custom-search-plugin.php:426
+#: custom-search-plugin.php:35 custom-search-plugin.php:37
+#: custom-search-plugin.php:286 includes/class-cstmsrch-settings.php:133
 msgid "Custom Search Settings"
-msgstr "Установки Custom Search"
+msgstr "Налаштування Custom Search"
 
-#: custom-search-plugin.php:337
-msgid "All plugin settings were restored."
-msgstr "Всі налаштування плагіну були відновлені."
-
-#: custom-search-plugin.php:351
-msgid "post type"
-msgstr "тип запису"
-
-#: custom-search-plugin.php:352 custom-search-plugin.php:457
-msgid "post types"
-msgstr "типи записів"
-
-#: custom-search-plugin.php:355
-msgid "taxonomy"
-msgstr "таксономія"
-
-#: custom-search-plugin.php:356 custom-search-plugin.php:479
-msgid "taxonomies"
-msgstr "таксономії"
-
-#: custom-search-plugin.php:410
-msgid "Settings saved"
-msgstr "Установки збережено"
-
-#: custom-search-plugin.php:428 custom-search-plugin.php:606
-#: custom-search-plugin.php:620
+#: custom-search-plugin.php:37 custom-search-plugin.php:301
+#: custom-search-plugin.php:315 includes/class-cstmsrch-settings.php:24
 msgid "Settings"
-msgstr "Установки"
+msgstr "Налаштування"
 
-#: custom-search-plugin.php:429
-msgid "Appearance"
-msgstr "Відображення"
+#: custom-search-plugin.php:43
+msgid "Upgrade to Pro"
+msgstr "Оновити до Pro"
 
-#: custom-search-plugin.php:430
-msgid "Go PRO"
-msgstr "Перейти на PRO версію"
-
-#: custom-search-plugin.php:450 custom-search-plugin.php:507
-msgid "Enable Custom search for:"
-msgstr "Додати до кастомного пошуку:"
-
-#: custom-search-plugin.php:470
-msgid "No custom post type found."
-msgstr "Не знайдено жодного кастомного типу записів."
-
-#: custom-search-plugin.php:490
-msgid "for"
-msgstr "для"
-
-#: custom-search-plugin.php:503
-msgid "Close"
-msgstr "Закрити"
-
-#: custom-search-plugin.php:522
-msgid ""
-"When you drag post types and taxonomies, you affect the order of their "
-"display in the frontend on the search page."
-msgstr ""
-"При перетягуванні типів записів і таксономій, ви впливаєте на їх "
-"відображення у фронтенді на сторінці пошуку."
-
-#: custom-search-plugin.php:526
-msgid "Search only by type of the current post"
-msgstr "Шукати тільки по типу поточного запису"
-
-#: custom-search-plugin.php:529
-msgid "This option is used when you search on a single page/post/post type."
-msgstr ""
-"Ця опція використовується, коли Ви знаходитесь на сторінці запису/сторінки/"
-"типу запису."
-
-#: custom-search-plugin.php:536 custom-search-plugin.php:583
-msgid "Unlock premium options by upgrading to Pro version"
-msgstr "Зробити доступними преміум-опції, перейшовши на Pro версію"
-
-#: custom-search-plugin.php:538 custom-search-plugin.php:585
-msgid "Learn More"
-msgstr "Докладніше"
-
-#: custom-search-plugin.php:545
-msgid "Save Changes"
-msgstr "Зберегти зміни"
-
-#: custom-search-plugin.php:557
-msgid "Change displaying of post content on search pages"
-msgstr "Змінити відображення контенту записів на сторінках пошуку"
-
-#: custom-search-plugin.php:561
-msgid "Display featured image with post content"
-msgstr "Відобразити головне зображення для контенту запису"
-
-#: custom-search-plugin.php:565
-msgid "Featured image size"
-msgstr "Розмір головного зображення"
-
-#: custom-search-plugin.php:569
-msgid "Featured image align"
-msgstr "Розташування головного зображення"
-
-#: custom-search-plugin.php:571
-msgid "Left"
-msgstr "Ліворуч"
-
-#: custom-search-plugin.php:572
-msgid "Right"
-msgstr "Праворуч"
-
-#: custom-search-plugin.php:576
-msgid "Change excerpt length"
-msgstr "Змінити довжину витягу"
-
-#: custom-search-plugin.php:577
-msgid "to"
-msgstr "на"
-
-#: custom-search-plugin.php:577
-msgid "words"
-msgstr "слів"
-
-#: custom-search-plugin.php:621
+#: custom-search-plugin.php:317
 msgid "FAQ"
 msgstr "FAQ"
 
-#: custom-search-plugin.php:622
+#: custom-search-plugin.php:318
 msgid "Support"
 msgstr "Підтримка"
+
+#: includes/class-cstmsrch-settings.php:25
+msgid "Appearance"
+msgstr "Відображення"
+
+#: includes/class-cstmsrch-settings.php:26
+msgid "Misc"
+msgstr "Різне"
+
+#: includes/class-cstmsrch-settings.php:27
+msgid "Custom Code"
+msgstr "Користувацький код"
+
+#: includes/class-cstmsrch-settings.php:28
+msgid "License Key"
+msgstr "Ліцензійний ключ"
+
+#: includes/class-cstmsrch-settings.php:119
+msgid "Settings saved"
+msgstr "Налаштування збережені"
+
+#: includes/class-cstmsrch-settings.php:138
+#: includes/class-cstmsrch-settings.php:194
+msgid "Enable Custom Search for"
+msgstr "Додати в користувацький пошук"
+
+#: includes/class-cstmsrch-settings.php:146
+msgid "Post Types"
+msgstr "Типи записів"
+
+#: includes/class-cstmsrch-settings.php:159
+msgid "No custom post type found."
+msgstr "Не знайдено жодного кастомного типу записів."
+
+#: includes/class-cstmsrch-settings.php:168
+msgid "Taxonomies"
+msgstr "Таксономії"
+
+#: includes/class-cstmsrch-settings.php:178
+msgid "for"
+msgstr "для"
+
+#: includes/class-cstmsrch-settings.php:190
+#: includes/class-cstmsrch-settings.php:235
+msgid "Close"
+msgstr "Закрити"
+
+#: includes/class-cstmsrch-settings.php:209
+msgid ""
+"When you drag post types and taxonomies, you affect the order of their "
+"displaying in the frontend on the search page."
+msgstr ""
+"При перетягуванні типів записів або таксономій ви впливаєте на порядок їх "
+"виведення у фронтенді на сторінці пошуку."
+
+#: includes/class-cstmsrch-settings.php:213
+msgid "Search Only by Type of the Current Post"
+msgstr "Шукати тільки по типу поточного запису"
+
+#: includes/class-cstmsrch-settings.php:217
+msgid "Only current page post type will be used for the search."
+msgstr ""
+"Ця опція дозволяє здійснювати пошук тільки по тому типу запису, на сторінці "
+"якого ви перебуваєте."
+
+#: includes/class-cstmsrch-settings.php:230
+msgid "Appearance Settings"
+msgstr "Налаштування відображення"
+
+#: includes/class-cstmsrch-settings.php:239
+msgid "Change Displaying of Post Content on Search Pages"
+msgstr "Змінити відображення вмісту запису на сторінках пошуку"
+
+#: includes/class-cstmsrch-settings.php:243
+msgid "Display Featured Image with Post Content"
+msgstr "Відображати мініатюру з вмістом запису"
+
+#: includes/class-cstmsrch-settings.php:247
+msgid "Featured Image Size"
+msgstr "Розмір мініатюри"
+
+#: includes/class-cstmsrch-settings.php:251
+msgid "Featured Image Align"
+msgstr "Положення мініатюри"
+
+#: includes/class-cstmsrch-settings.php:254
+msgid "Left"
+msgstr "Ліворуч"
+
+#: includes/class-cstmsrch-settings.php:255
+msgid "Right"
+msgstr "Праворуч"
+
+#: includes/class-cstmsrch-settings.php:260
+msgid "Change Excerpt Length"
+msgstr "Змінити довжину цитати"
+
+#: includes/class-cstmsrch-settings.php:262
+msgid "to"
+msgstr "на"
+
+#: includes/class-cstmsrch-settings.php:262
+msgid "words"
+msgstr "слів"
+
+#~ msgid "This option is used when you search on a single page/post/post type."
+#~ msgstr ""
+#~ "Ця опція використовується, коли Ви знаходитесь на сторінці запису/"
+#~ "сторінки/типу запису."
+
+#~ msgid "Enable Custom search for:"
+#~ msgstr "Додати до кастомного пошуку:"
+
+#~ msgid ""
+#~ "When you drag post types and taxonomies, you affect the order of their "
+#~ "display in the frontend on the search page."
+#~ msgstr ""
+#~ "При перетягуванні типів записів і таксономій, ви впливаєте на їх "
+#~ "відображення у фронтенді на сторінці пошуку."
+
+#~ msgid "Search only by type of the current post"
+#~ msgstr "Шукати тільки по типу поточного запису"
+
+#~ msgid "Change displaying of post content on search pages"
+#~ msgstr "Змінити відображення контенту записів на сторінках пошуку"
+
+#~ msgid "Display featured image with post content"
+#~ msgstr "Відобразити головне зображення для контенту запису"
+
+#~ msgid "Featured image size"
+#~ msgstr "Розмір головного зображення"
+
+#~ msgid "Featured image align"
+#~ msgstr "Розташування головного зображення"
+
+#~ msgid "Change excerpt length"
+#~ msgstr "Змінити довжину витягу"
+
+#~ msgid "All plugin settings were restored."
+#~ msgstr "Всі налаштування плагіну були відновлені."
+
+#~ msgid "post type"
+#~ msgstr "тип запису"
+
+#~ msgid "post types"
+#~ msgstr "типи записів"
+
+#~ msgid "taxonomy"
+#~ msgstr "таксономія"
+
+#~ msgid "taxonomies"
+#~ msgstr "таксономії"
+
+#~ msgid "Go PRO"
+#~ msgstr "Перейти на PRO версію"
+
+#~ msgid "Unlock premium options by upgrading to Pro version"
+#~ msgstr "Зробити доступними преміум-опції, перейшовши на Pro версію"
+
+#~ msgid "Learn More"
+#~ msgstr "Докладніше"
+
+#~ msgid "Save Changes"
+#~ msgstr "Зберегти зміни"
 
 #~ msgid "Posts"
 #~ msgstr "Записи"
@@ -155,9 +210,6 @@ msgstr "Підтримка"
 
 #~ msgid "Post types"
 #~ msgstr "Типи записів"
-
-#~ msgid "Taxonomies"
-#~ msgstr "Таксономії"
 
 #~ msgid "All"
 #~ msgstr "Всіх"

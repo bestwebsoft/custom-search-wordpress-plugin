@@ -1,0 +1,7 @@
+/*
+ * menu sidebar
+ */
+#toplevel_page_custom_search .wp-menu-image:before {
+	content: "\e908";
+	font-family: 'bwsicons' !important;
+}

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Custom Search\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-11 15:47+0300\n"
-"PO-Revision-Date: 2017-01-11 15:48+0300\n"
+"POT-Creation-Date: 2018-01-02 15:26+0200\n"
+"PO-Revision-Date: 2018-01-02 15:26+0200\n"
 "Last-Translator: plugin@bestwebsoft.com <plugin@bestwebsoft.com>\n"
 "Language-Team: Fernando De Le&oacute;n <mrjosefernando@gmail.com>\n"
 "Language: he_IL\n"
@@ -15,141 +15,142 @@ msgstr ""
 "X-Poedit-KeywordsList: __;_e\n"
 "X-Poedit-Basepath: ..\n"
 "X-Textdomain-Support: yes\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.8.7.1\n"
 "X-Poedit-SearchPath-0: .\n"
 
 # @ custom-search
-#: custom-search-plugin.php:36 custom-search-plugin.php:426
+#: custom-search-plugin.php:35 custom-search-plugin.php:37
+#: custom-search-plugin.php:286 includes/class-cstmsrch-settings.php:133
 msgid "Custom Search Settings"
 msgstr "Configuraci&oacute;n de B&uacute;squeda personalizada"
 
-#: custom-search-plugin.php:337
-msgid "All plugin settings were restored."
-msgstr ""
-
-#: custom-search-plugin.php:351
-msgid "post type"
-msgstr ""
-
-#: custom-search-plugin.php:352 custom-search-plugin.php:457
-msgid "post types"
-msgstr ""
-
-#: custom-search-plugin.php:355
-msgid "taxonomy"
-msgstr ""
-
-#: custom-search-plugin.php:356 custom-search-plugin.php:479
-msgid "taxonomies"
-msgstr ""
-
 # @ captcha
-#: custom-search-plugin.php:410
-msgid "Settings saved"
-msgstr "Configuraci&oacute;n"
-
-# @ captcha
-#: custom-search-plugin.php:428 custom-search-plugin.php:606
-#: custom-search-plugin.php:620
+#: custom-search-plugin.php:37 custom-search-plugin.php:301
+#: custom-search-plugin.php:315 includes/class-cstmsrch-settings.php:24
 msgid "Settings"
 msgstr "Configuraci&oacute;n"
 
-#: custom-search-plugin.php:429
-msgid "Appearance"
+#: custom-search-plugin.php:43
+msgid "Upgrade to Pro"
 msgstr ""
 
-#: custom-search-plugin.php:430
-msgid "Go PRO"
-msgstr ""
-
-# @ custom-search
-#: custom-search-plugin.php:450 custom-search-plugin.php:507
-msgid "Enable Custom search for:"
-msgstr "Activar la b&uacute;squeda personalizada en:"
-
-# @ custom-search
-#: custom-search-plugin.php:470
-msgid "No custom post type found."
-msgstr "No ha producido ning&uacute;n tipo de mensaje personalizado."
-
-#: custom-search-plugin.php:490
-msgid "for"
-msgstr ""
-
-#: custom-search-plugin.php:503
-msgid "Close"
-msgstr ""
-
-#: custom-search-plugin.php:522
-msgid ""
-"When you drag post types and taxonomies, you affect the order of their "
-"display in the frontend on the search page."
-msgstr ""
-
-#: custom-search-plugin.php:526
-msgid "Search only by type of the current post"
-msgstr ""
-
-#: custom-search-plugin.php:529
-msgid "This option is used when you search on a single page/post/post type."
-msgstr ""
-
-#: custom-search-plugin.php:536 custom-search-plugin.php:583
-msgid "Unlock premium options by upgrading to Pro version"
-msgstr ""
-
-#: custom-search-plugin.php:538 custom-search-plugin.php:585
-msgid "Learn More"
-msgstr ""
-
-# @ default
-#: custom-search-plugin.php:545
-msgid "Save Changes"
-msgstr "Guardar Cambios"
-
-#: custom-search-plugin.php:557
-msgid "Change displaying of post content on search pages"
-msgstr ""
-
-#: custom-search-plugin.php:561
-msgid "Display featured image with post content"
-msgstr ""
-
-#: custom-search-plugin.php:565
-msgid "Featured image size"
-msgstr ""
-
-#: custom-search-plugin.php:569
-msgid "Featured image align"
-msgstr ""
-
-#: custom-search-plugin.php:571
-msgid "Left"
-msgstr ""
-
-#: custom-search-plugin.php:572
-msgid "Right"
-msgstr ""
-
-#: custom-search-plugin.php:576
-msgid "Change excerpt length"
-msgstr ""
-
-#: custom-search-plugin.php:577
-msgid "to"
-msgstr ""
-
-#: custom-search-plugin.php:577
-msgid "words"
-msgstr ""
-
-#: custom-search-plugin.php:621
+#: custom-search-plugin.php:317
 msgid "FAQ"
 msgstr ""
 
-#: custom-search-plugin.php:622
+#: custom-search-plugin.php:318
 msgid "Support"
 msgstr ""
+
+#: includes/class-cstmsrch-settings.php:25
+msgid "Appearance"
+msgstr ""
+
+#: includes/class-cstmsrch-settings.php:26
+msgid "Misc"
+msgstr ""
+
+#: includes/class-cstmsrch-settings.php:27
+msgid "Custom Code"
+msgstr ""
+
+#: includes/class-cstmsrch-settings.php:28
+msgid "License Key"
+msgstr ""
+
+# @ captcha
+#: includes/class-cstmsrch-settings.php:119
+msgid "Settings saved"
+msgstr "Configuraci&oacute;n"
+
+#: includes/class-cstmsrch-settings.php:138
+#: includes/class-cstmsrch-settings.php:194
+msgid "Enable Custom Search for"
+msgstr ""
+
+#: includes/class-cstmsrch-settings.php:146
+msgid "Post Types"
+msgstr ""
+
+# @ custom-search
+#: includes/class-cstmsrch-settings.php:159
+msgid "No custom post type found."
+msgstr "No ha producido ning&uacute;n tipo de mensaje personalizado."
+
+#: includes/class-cstmsrch-settings.php:168
+msgid "Taxonomies"
+msgstr ""
+
+#: includes/class-cstmsrch-settings.php:178
+msgid "for"
+msgstr ""
+
+#: includes/class-cstmsrch-settings.php:190
+#: includes/class-cstmsrch-settings.php:235
+msgid "Close"
+msgstr ""
+
+#: includes/class-cstmsrch-settings.php:209
+msgid ""
+"When you drag post types and taxonomies, you affect the order of their "
+"displaying in the frontend on the search page."
+msgstr ""
+
+#: includes/class-cstmsrch-settings.php:213
+msgid "Search Only by Type of the Current Post"
+msgstr ""
+
+#: includes/class-cstmsrch-settings.php:217
+msgid "Only current page post type will be used for the search."
+msgstr ""
+
+#: includes/class-cstmsrch-settings.php:230
+msgid "Appearance Settings"
+msgstr ""
+
+#: includes/class-cstmsrch-settings.php:239
+msgid "Change Displaying of Post Content on Search Pages"
+msgstr ""
+
+#: includes/class-cstmsrch-settings.php:243
+msgid "Display Featured Image with Post Content"
+msgstr ""
+
+#: includes/class-cstmsrch-settings.php:247
+msgid "Featured Image Size"
+msgstr ""
+
+#: includes/class-cstmsrch-settings.php:251
+msgid "Featured Image Align"
+msgstr ""
+
+#: includes/class-cstmsrch-settings.php:254
+msgid "Left"
+msgstr ""
+
+#: includes/class-cstmsrch-settings.php:255
+msgid "Right"
+msgstr ""
+
+#: includes/class-cstmsrch-settings.php:260
+msgid "Change Excerpt Length"
+msgstr ""
+
+#: includes/class-cstmsrch-settings.php:262
+msgid "to"
+msgstr ""
+
+#: includes/class-cstmsrch-settings.php:262
+msgid "words"
+msgstr ""
+
+# @ custom-search
+#~ msgid "Enable Custom search for:"
+#~ msgstr "Activar la b&uacute;squeda personalizada en:"
+
+# @ default
+#~ msgid "Save Changes"
+#~ msgstr "Guardar Cambios"
 
 # @ custom-search
 #~ msgid "Custom search"
