@@ -40,7 +40,7 @@ if ( ! class_exists( 'Cstmsrch_Settings_Tabs' ) ) {
 				'pro_page'				=> 'admin.php?page=custom_search_pro.php',
 				'bws_license_plugin'	=> 'custom-search-pro/custom-search-pro.php',
 				'link_key'				=> 'f9558d294313c75b964f5f6fa1e5fd3c',
-				'link_pn'				=> '214'
+				'link_pn'				=> '81'
 			) );
 
 			$this->all_plugins = get_plugins();
@@ -54,7 +54,6 @@ if ( ! class_exists( 'Cstmsrch_Settings_Tabs' ) ) {
 
 			$this->post_types_custom_keys = ( ! empty( $this->search_objects_custom ) ) ? array_combine( array_keys( $this->search_objects_custom['post_type'] ), array_keys( $this->search_objects_custom['post_type'] ) ) : array();
 			unset( $this->post_types_custom_keys['post'], $this->post_types_custom_keys['page'] );
-
 
 			$this->post_types_custom = ( ! empty( $this->post_types_custom_keys ) ) ? array_combine( $this->post_types_custom_keys, $this->post_types_custom_keys ) : array();
 
@@ -76,6 +75,7 @@ if ( ! class_exists( 'Cstmsrch_Settings_Tabs' ) ) {
 		 * @return array    The action results
 		 */
 		public function save_options() {
+			global $cstmsrch_plugin_info;
 			$post_types_global= get_post_types( array( 'public' => true ), 'names' );
 			unset( $post_types_global['attachment'] );
 			$this->cstmsrch_post_types_enabled = array( 'post', 'page' );
@@ -98,7 +98,7 @@ if ( ! class_exists( 'Cstmsrch_Settings_Tabs' ) ) {
 			$output_order = array();
 			foreach ( $post_types_global as $post_type ) {
 				$enabled = ( in_array( $post_type, $this->cstmsrch_post_types_enabled ) ) ? 1 : 0;
-				$output_order[] = array(
+				$output_order[ 'post_type_' . $post_type ] = array(
 					'name'		=> $post_type,
 					'type'		=> 'post_type',
 					'enabled'	=> $enabled
@@ -106,13 +106,16 @@ if ( ! class_exists( 'Cstmsrch_Settings_Tabs' ) ) {
 			}
 			foreach ( $this->taxonomies_global as $taxonomy ) {
 				$enabled = ( in_array( $taxonomy, $this->cstmsrch_taxonomies_enabled ) ) ? 1 : 0;
-				$output_order[] = array(
+				$output_order[ 'taxonomy_' . $taxonomy ] = array(
 					'name'		=> $taxonomy,
 					'type'		=> 'taxonomy',
 					'enabled'	=> $enabled
 				);
 			}
 			$this->options['output_order'] = $output_order;
+			$this->options['fields'] = isset( $_REQUEST['cstmsrch_fields_array'] ) ? $_REQUEST['cstmsrch_fields_array'] : array();
+			$this->options['plugin_option_version'] = $cstmsrch_plugin_info["Version"];
+			$this->options['show_hidden_fields'] = isset( $_REQUEST['cstmsrch_show_hidden_fields'] ) ? 1 : 0;
 
 			update_option( 'cstmsrch_options', $this->options );
 
@@ -123,6 +126,8 @@ if ( ! class_exists( 'Cstmsrch_Settings_Tabs' ) ) {
 		}
 
 		public function tab_settings() {
+			global $wpdb;
+			$install_plugins = get_plugins();
 			$post_types_select_all = $taxonomies_select_all = '';
 			if ( count( $this->post_types_custom ) == count( $this->cstmsrch_post_types_enabled ) - 2 ) {
 				$post_types_select_all = 'checked="checked"';
@@ -133,10 +138,19 @@ if ( ! class_exists( 'Cstmsrch_Settings_Tabs' ) ) {
 			<h3 class="bws_tab_label"><?php _e( 'Custom Search Settings', 'custom-search-plugin' ); ?></h3>
 			<?php $this->help_phrase(); ?>
 			<hr>
-			<table class="form-table" id="cstmsrch_settings_form">
+			<?php if ( empty( $this->options['show_hidden_fields'] ) ) {
+				$meta_key_custom_posts	=	$wpdb->get_col( "SELECT DISTINCT(meta_key) FROM " . $wpdb->postmeta . " JOIN " . $wpdb->posts . " ON " . $wpdb->posts . ".id = " . $wpdb->postmeta . ".post_id WHERE " . $wpdb->posts . ".post_type NOT IN ('revision', 'page', 'post', 'attachment', 'nav_menu_item') AND meta_key NOT LIKE '\_%'" );
+				$meta_key_result		=	$wpdb->get_col( "SELECT DISTINCT(meta_key) FROM " . $wpdb->postmeta . " WHERE `meta_key` NOT LIKE '\_%'" );
+				/* select all user's meta_key from table `wp_postmeta` */
+			} else {
+				$meta_key_custom_posts	=	$wpdb->get_col( "SELECT DISTINCT(meta_key) FROM " . $wpdb->postmeta . " JOIN " . $wpdb->posts . " ON " . $wpdb->posts . ".id = " . $wpdb->postmeta . ".post_id WHERE " . $wpdb->posts . ".post_type NOT IN ('revision', 'page', 'post', 'attachment', 'nav_menu_item')" );
+				$meta_key_result		=	$wpdb->get_col( "SELECT DISTINCT(meta_key) FROM " . $wpdb->postmeta );
+				/* select all meta_key from table `wp_postmeta` */
+			} ?>
+			<table class="form-table cstmsrch-form-table" id="cstmsrch_settings_form">
 				<tr valign="top">
-					<th scope="row"><?php _e( 'Enable Custom Search for', 'custom-search-plugin' ); ?>:</th>
-					<td>
+					<th scope="row"><?php _e( 'Enable Custom Search for', 'custom-search-plugin' ); ?></th>
+					<td class="cstmsrch_names">
 						<div id="cstmsrch-post-types-settings" class="cstmsrch-checkbox-section">
 							<?php if ( 0 < count( $this->post_types_custom ) ) { ?>
 								<fieldset>
@@ -183,6 +197,54 @@ if ( ! class_exists( 'Cstmsrch_Settings_Tabs' ) ) {
 						</div><!-- #cstmsrch-taxonomies-settings -->
 					</td>
 				</tr>
+				<tr valign="top">
+					<th scope="row"><?php _e( 'Show Hidden Fields', 'custom-search-plugin' ); ?></th>
+					<td>
+						<input type="checkbox" <?php checked( $this->options['show_hidden_fields'] ); ?> name="cstmsrch_show_hidden_fields" value="1" />
+					</td>
+				</tr>
+				<tr valign="top">
+					<?php if ( 0 < count( $meta_key_result ) ) { ?>
+						<th scope="row"><?php _e( 'Enable Search for the Custom Field', 'custom-search-plugin' ); ?></th>
+						<?php if ( is_plugin_active( 'custom-search-pro/custom-search-pro.php' ) || is_plugin_active( 'custom-search-plugin/custom-search-plugin.php' ) ) { ?>
+							<td class="cstmsrch_names">
+								<fieldset>
+									<div id="cstmsrch_div_select_all" style="display:none;"><label ><input id="cstmsrch_select_all" type="checkbox" /><span style="text-transform: capitalize; padding-left: 5px;"><strong><?php _e( 'All', 'custom-search-plugin' ); ?></strong></span></label></div>
+									<?php foreach ( $meta_key_result as $value ) { ?>
+										<label><input type="checkbox" <?php if ( in_array( $value, $this->options['fields'] ) ) echo 'checked="checked"'; ?> name="cstmsrch_fields_array[]" value="<?php echo $value; ?>" /><span class="cstmsrch_value_of_metakey"><?php echo $value; ?></span></label><br />
+									<?php } ?>
+								</fieldset>
+							</td>
+						<?php } else {
+							$i = 1; ?>
+							<td>
+								<fieldset>
+									<div id="cstmsrch_div_select_all" style="display:none;"><label ><input id="cstmsrch_select_all" type="checkbox" /><span style="text-transform: capitalize; padding-left: 5px;"><strong><?php _e( 'All', 'custom-search-plugin' ); ?></strong></span></label></div>
+									<?php foreach ( $meta_key_result as $value ) {
+										if ( false !== in_array( $value, $meta_key_custom_posts ) ) {
+											$list_custom_key[ $i ] = $value;
+											$i++;
+										} else { ?>
+											<label><input type="checkbox" <?php if ( in_array( $value, $this->options['fields'] ) ) echo 'checked="checked"'; ?> name="cstmsrch_fields_array[]" value="<?php echo $value; ?>" /><span class="cstmsrch_value_of_metakey"><?php echo $value; ?></span></label><br />
+										<?php }
+									}
+									echo "<br />";
+									if ( isset( $list_custom_key ) ) {
+										foreach ( $list_custom_key as $value ) {
+											$post_type_of_mkey = $wpdb->get_col( "SELECT DISTINCT(post_type) FROM " . $wpdb->posts . " JOIN " . $wpdb->postmeta . " ON " . $wpdb->posts . ".id = " . $wpdb->postmeta . ".post_id WHERE " . $wpdb->postmeta . ".meta_key LIKE ('" . $value . "')" ); ?>
+											<label><input type="checkbox" disabled="disabled" name="cstmsrch_fields_array[]" value="<?php echo $value; ?>" />
+											<span class="cstmsrch_disable_key">
+												<?php echo $value . " (" . $post_type_of_mkey[0] . " " . __( 'custom post type', 'custom-search-plugin' ); ?>)
+											</span></label><br />
+										<?php }
+									} ?>
+								</fieldset>
+							</td>
+						<?php }
+					} else { ?>
+						<th scope="row" colspan="2"><?php _e( 'Custom fields not found.', 'custom-search-plugin' ); ?></th><td></td>
+					<?php } ?>
+				</tr>
 			</table>
 			<?php if ( ! $this->hide_pro_tabs ) { ?>
 				<div class="bws_pro_version_bloc">
@@ -191,7 +253,7 @@ if ( ! class_exists( 'Cstmsrch_Settings_Tabs' ) ) {
 						<div class="bws_table_bg"></div>
 						<table class="form-table bws_pro_version">
 							<tr valign="top">
-								<th scope="row"><?php _e( 'Enable Custom Search for', 'custom-search-plugin' ); ?>:</th>
+								<th scope="row"><?php _e( 'Enable Custom Search for', 'custom-search-plugin' ); ?></th>
 								<td>
 									<?php $objects = array(
 										$this->search_objects_custom['post_type']['post'],

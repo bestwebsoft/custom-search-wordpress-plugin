@@ -5,3 +5,6 @@
 	content: "\e908";
 	font-family: 'bwsicons' !important;
 }
+.cstmsrch_names {
+	word-break: break-all;
+}

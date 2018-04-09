@@ -3,16 +3,16 @@ Contributors: bestwebsoft
 Donate link: https://bestwebsoft.com/donate/
 Tags: additional search options, extra search options, advanced search, add additional search options, search options, custom search, custom search plugin, website search, add custom posts to search, custom posts, free additional search options, custom content types
 Requires at least: 3.9
-Tested up to: 4.9.1
-Stable tag: 1.39
+Tested up to: 4.9.5
+Stable tag: 1.40
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Add custom post types and taxonomies to WordPress website search results.
+Add custom post types, taxonomies, and custom fields to WordPress website search results.
 
 == Description ==
 
-Custom Search plugin adds custom post types and taxonomies to WordPress website search results. A quick and easy way to search everything within custom post types and taxonomies.
+Custom Search plugin adds custom post types, taxonomies, and custom fields to WordPress website search results. A quick and easy way to search everything within custom post types, custom fields, and taxonomies.
 Improve your website user experience today!
 
 https://www.youtube.com/watch?v=qF2-pFM_ESw
@@ -29,7 +29,8 @@ https://www.youtube.com/watch?v=qF2-pFM_ESw
 	* Taxonomies:
 		* Post tags
 		* Post categories
-		* Custom
+		* Custom taxonomies [NEW]
+		* Custom fields [NEW]
 * Compatible with latest WordPress version
 * Incredibly simple settings for fast setup without modifying code
 * Detailed step-by-step documentations and videos
@@ -79,8 +80,7 @@ Some of these translations are not complete. We are constantly adding new featur
 
 = Recommended Plugins =
 
-* [Custom Fields Search](https://bestwebsoft.com/products/wordpress/plugins/custom-fields-search/) - Add custom fields to WordPress website search results.
-* [Updater](https://bestwebsoft.com/products/wordpress/plugins/updater/?k=7b42404bbc8ad8cb8745f8704cba3c9a) - Automatically check and update WordPress website core with all installed plugins and themes to the latest versions
+* [Updater](https://bestwebsoft.com/products/wordpress/plugins/updater/?k=7b42404bbc8ad8cb8745f8704cba3c9a) - Automatically check and update WordPress website core with all installed plugins and themes to the latest versions.
 
 == Installation ==
 
@@ -94,7 +94,7 @@ Some of these translations are not complete. We are constantly adding new featur
 
 = How to use Custom Search plugin? =
 
-Go to the Settings page and select custom post types and taxonomies that you would like to add to the search.
+Go to the Settings page and select post types and taxonomies that you would like to add to the search. For editing the display order of search results, move the elements of the list in the necessary order.
 
 = I have some problems with the plugin's work. What Information should I provide to receive proper support? =
 
@@ -110,6 +110,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 2. Custom Search Appearance page.
 
 == Changelog ==
+
+= V1.40 - 09.04.2018 =
+* NEW : Ability to search by custom fields has been added.
 
 = V1.39 - 29.01.2018 =
 * Update : The plugin settings page has been changed.
@@ -134,9 +137,11 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 
 = V1.32 - 15.03.2016 =
 * NEW : The Czech language file is added.
+* Pro : Ability to add custom styles.
 
 = V1.31 - 30.11.2015 =
 * Bugfix : The bug with plugin menu duplicating was fixed.
+* Pro : Drag&drop functionality on mobile was fixed.
 
 = V1.30 - 25.09.2015 =
 * Update : We updated all functionality for wordpress 4.3.1.
@@ -256,6 +261,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 * NEW : Language files are added to the plugin.
 
 == Upgrade Notice ==
+
+= V1.40 =
+* New features added.
 
 = V1.39 =
 * The plugin settings page has been changed.

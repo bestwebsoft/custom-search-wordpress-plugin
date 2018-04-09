@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Custom Search\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-02 15:25+0200\n"
-"PO-Revision-Date: 2018-01-02 15:26+0200\n"
+"POT-Creation-Date: 2018-04-09 08:39+0300\n"
+"PO-Revision-Date: 2018-04-09 08:41+0300\n"
 "Last-Translator: plugin@bestwebsoft.com <plugin@bestwebsoft.com>\n"
 "Language-Team: BestWebSoft <plugin@bestwebsoft.com>\n"
 "Language: ru_RU\n"
@@ -21,12 +21,12 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 
 #: custom-search-plugin.php:35 custom-search-plugin.php:37
-#: custom-search-plugin.php:286 includes/class-cstmsrch-settings.php:133
+#: custom-search-plugin.php:417 includes/class-cstmsrch-settings.php:138
 msgid "Custom Search Settings"
 msgstr "Настройки Custom Search"
 
-#: custom-search-plugin.php:37 custom-search-plugin.php:301
-#: custom-search-plugin.php:315 includes/class-cstmsrch-settings.php:24
+#: custom-search-plugin.php:37 custom-search-plugin.php:432
+#: custom-search-plugin.php:446 includes/class-cstmsrch-settings.php:24
 msgid "Settings"
 msgstr "Настройки"
 
@@ -34,11 +34,11 @@ msgstr "Настройки"
 msgid "Upgrade to Pro"
 msgstr "Обновить до Pro"
 
-#: custom-search-plugin.php:317
+#: custom-search-plugin.php:448
 msgid "FAQ"
 msgstr "FAQ"
 
-#: custom-search-plugin.php:318
+#: custom-search-plugin.php:449
 msgid "Support"
 msgstr "Тех.поддержка"
 
@@ -58,37 +58,74 @@ msgstr "Пользовательский код"
 msgid "License Key"
 msgstr "Лицензионный ключ"
 
-#: includes/class-cstmsrch-settings.php:119
+#: includes/class-cstmsrch-settings.php:122
 msgid "Settings saved"
 msgstr "Настройки сохранены"
 
-#: includes/class-cstmsrch-settings.php:138
-#: includes/class-cstmsrch-settings.php:194
+#: includes/class-cstmsrch-settings.php:152
+#: includes/class-cstmsrch-settings.php:261
 msgid "Enable Custom Search for"
 msgstr "Добавить в пользовательский поиск"
 
-#: includes/class-cstmsrch-settings.php:146
+#: includes/class-cstmsrch-settings.php:160
 msgid "Post Types"
 msgstr "Типы записей"
 
-#: includes/class-cstmsrch-settings.php:159
+#: includes/class-cstmsrch-settings.php:173
 msgid "No custom post type found."
 msgstr "Не найдено ни одного пользовательского типа записи."
 
-#: includes/class-cstmsrch-settings.php:168
+#: includes/class-cstmsrch-settings.php:182
 msgid "Taxonomies"
 msgstr "Таксономии"
 
-#: includes/class-cstmsrch-settings.php:178
+#: includes/class-cstmsrch-settings.php:192
 msgid "for"
 msgstr "для"
 
-#: includes/class-cstmsrch-settings.php:190
-#: includes/class-cstmsrch-settings.php:235
+#: includes/class-cstmsrch-settings.php:201
+msgid "Show Hidden Fields"
+msgstr "Отображать скрытые поля"
+
+#: includes/class-cstmsrch-settings.php:208
+msgid "Enable Search for the Custom Field"
+msgstr "Отображать поиск по пользовательским полям для"
+
+#: includes/class-cstmsrch-settings.php:212
+#: includes/class-cstmsrch-settings.php:222
+msgid "All"
+msgstr "Всех"
+
+#: includes/class-cstmsrch-settings.php:237
+msgid "custom post type"
+msgstr "кастомный тип записей"
+
+#: includes/class-cstmsrch-settings.php:241
+msgid "You need to"
+msgstr "Вам нужно"
+
+#: includes/class-cstmsrch-settings.php:241
+msgid "activate plugin"
+msgstr "активировать плагин"
+
+#: includes/class-cstmsrch-settings.php:243
+msgid ""
+"If the type of the post is not default - you need to install and activate "
+"the plugin"
+msgstr ""
+"Если тип записи не стандартный - вам необходимо установить и активировать "
+"плагин"
+
+#: includes/class-cstmsrch-settings.php:250
+msgid "Custom fields not found."
+msgstr "Кастомные поля не найдены."
+
+#: includes/class-cstmsrch-settings.php:257
+#: includes/class-cstmsrch-settings.php:302
 msgid "Close"
 msgstr "Закрыть"
 
-#: includes/class-cstmsrch-settings.php:209
+#: includes/class-cstmsrch-settings.php:276
 msgid ""
 "When you drag post types and taxonomies, you affect the order of their "
 "displaying in the frontend on the search page."
@@ -96,55 +133,61 @@ msgstr ""
 "При перетаскивании типов записей и таксономий вы влияете на порядок их "
 "вывода во фронтенде на странице поиска."
 
-#: includes/class-cstmsrch-settings.php:213
+#: includes/class-cstmsrch-settings.php:280
 msgid "Search Only by Type of the Current Post"
 msgstr "Искать только по типу текущей записи"
 
-#: includes/class-cstmsrch-settings.php:217
+#: includes/class-cstmsrch-settings.php:284
 msgid "Only current page post type will be used for the search."
 msgstr ""
 "Эта опция позволяет осуществлять поиск только по тому типу записи, на "
 "странице которого вы находитесь."
 
-#: includes/class-cstmsrch-settings.php:230
+#: includes/class-cstmsrch-settings.php:297
 msgid "Appearance Settings"
 msgstr "Настройки отображения"
 
-#: includes/class-cstmsrch-settings.php:239
+#: includes/class-cstmsrch-settings.php:306
 msgid "Change Displaying of Post Content on Search Pages"
 msgstr "Изменить отображение содержимого записи на страницах поиска"
 
-#: includes/class-cstmsrch-settings.php:243
+#: includes/class-cstmsrch-settings.php:310
 msgid "Display Featured Image with Post Content"
 msgstr "Отображать миниатюру с содержимым записи"
 
-#: includes/class-cstmsrch-settings.php:247
+#: includes/class-cstmsrch-settings.php:314
 msgid "Featured Image Size"
 msgstr "Размер миниатюры"
 
-#: includes/class-cstmsrch-settings.php:251
+#: includes/class-cstmsrch-settings.php:318
 msgid "Featured Image Align"
 msgstr "Расположение миниатюры"
 
-#: includes/class-cstmsrch-settings.php:254
+#: includes/class-cstmsrch-settings.php:321
 msgid "Left"
 msgstr "Слева"
 
-#: includes/class-cstmsrch-settings.php:255
+#: includes/class-cstmsrch-settings.php:322
 msgid "Right"
 msgstr "Справа"
 
-#: includes/class-cstmsrch-settings.php:260
+#: includes/class-cstmsrch-settings.php:327
 msgid "Change Excerpt Length"
 msgstr "Изменить длину цитаты"
 
-#: includes/class-cstmsrch-settings.php:262
+#: includes/class-cstmsrch-settings.php:329
 msgid "to"
 msgstr "до"
 
-#: includes/class-cstmsrch-settings.php:262
+#: includes/class-cstmsrch-settings.php:329
 msgid "words"
 msgstr "слов"
+
+#~ msgid "Enable search for the custom field:"
+#~ msgstr "Отображать поиск по кастомным полям для:"
+
+#~ msgid "Show hidden fields"
+#~ msgstr "Отображать скрытые поля"
 
 #~ msgid "This option is used when you search on a single page/post/post type."
 #~ msgstr ""
@@ -230,9 +273,6 @@ msgstr "слов"
 
 #~ msgid "Post types"
 #~ msgstr "Типы записей"
-
-#~ msgid "All"
-#~ msgstr "Всех"
 
 #~ msgid "Tags"
 #~ msgstr "Теги"

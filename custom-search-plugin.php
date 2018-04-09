@@ -6,7 +6,7 @@ Description: Add custom post types to WordPress website search results.
 Author: BestWebSoft
 Text Domain: custom-search-plugin
 Domain Path: /languages
-Version: 1.39
+Version: 1.40
 Author URI: https://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -42,7 +42,7 @@ if ( ! function_exists( 'add_cstmsrch_admin_menu' ) ) {
 			$submenu['custom_search.php'][] = array(
 				'<span style="color:#d86463"> ' . __( 'Upgrade to Pro', 'custom-search-plugin' ) . '</span>',
 				'manage_options',
-				'https://bestwebsoft.com/products/wordpress/plugins/custom-search/?k=f9558d294313c75b964f5f6fa1e5fd3c&pn=214&v=' . $cstmsrch_plugin_info["Version"] . '&wp_v=' . $wp_version );
+				'https://bestwebsoft.com/products/wordpress/plugins/custom-search/?k=f9558d294313c75b964f5f6fa1e5fd3cc&pn=81&v=' . $cstmsrch_plugin_info["Version"] . '&wp_v=' . $wp_version );
 		}
 		add_action( 'load-' . $settings, 'cstmsrch_add_tabs' );
 	}
@@ -101,22 +101,86 @@ if ( ! function_exists( 'cstmsrch_default_options' ) ) {
 		$cstmsrch_options_default = array(
 			'plugin_option_version'		=> $cstmsrch_plugin_info['Version'],
 			'output_order'				=> array(
-											array( 'name' => 'post', 'type' => 'post_type', 'enabled' => 1 ),
-											array( 'name' => 'page', 'type' => 'post_type', 'enabled' => 1 ),
+											'post_type_post' => array( 'name' => 'post', 'type' => 'post_type', 'enabled' => 1 ),
+											'post_type_page' => array( 'name' => 'page', 'type' => 'post_type', 'enabled' => 1 ),
 										),
 			'first_install'				=> strtotime( "now" ),
 			'display_settings_notice'	=> 1,
 			'suggest_feature_banner'	=> 1,
+			'fields' 					=> array(),
+			'show_hidden_fields'		=> 0,
 		);
 
 		return $cstmsrch_options_default;
 	}
 }
 
+/**
+ * Update plugin options
+ * if custom post types was added or deleted
+ * @return void
+ */
+if ( ! function_exists( 'cstmsrch_update_option' ) ) {
+	function cstmsrch_update_option( $options, $option_changed = false ) {
+		global $cstmsrch_options, $taxonomies_global;
+
+		/* get custom post types */
+		$post_types_global = get_post_types( array( 'public' => true ), 'names' );
+		$taxonomies_global = get_taxonomies( array( 'public' => true ), 'names' );
+		unset( $post_types_global['attachment'] );
+		unset( $taxonomies_global['post_format'] );
+		$order_items_keys = array();
+		/* unsetting non-existent post types/taxonomies */
+		foreach ( $options['output_order'] as $key => $item ) {
+			if (
+				empty( $item['name'] ) || /* removing wrong items */
+				! ( in_array( $item['name'], $post_types_global ) || in_array( $item['name'], $taxonomies_global ) ) || /* removing outdated items */
+				in_array( $item['name'], $order_items_keys ) /* removing duplicating items */
+			) {
+				$option_changed = true;
+				unset( $options['output_order'][ $key ] );
+			} else {
+				if ( ! isset( $item['enabled'] ) ) $options['output_order'][ $key ]['enabled'] = 0;
+				$order_items_keys[ $item['name'] ] = $item['name'];
+			}
+		}
+
+		/* adding new post types/taxonomies to order list */
+		foreach ( $post_types_global as $key => $post_type ) {
+			if ( ! in_array( $post_type, $order_items_keys ) ) {
+				$options['output_order'][] = array (
+					'name'		=> $post_type,
+					'type'		=> 'post_type',
+					'enabled'	=> 0
+				);
+				$option_changed = true;
+			}
+		}
+		foreach ( $taxonomies_global as $taxonomy => $taxonomy_object ) {
+			if ( ! in_array( $taxonomy, $order_items_keys ) ) {
+				$options['output_order'][] = array (
+					'name'		=> $taxonomy,
+					'type'		=> 'taxonomy',
+					'enabled'	=> 0
+				);
+				$option_changed = true;
+			}
+		}
+
+		if ( $option_changed ) {
+			$options['output_order'] = array_values( $options['output_order'] );
+			$cstmsrch_options = $options;
+			update_option( 'cstmsrch_options', $cstmsrch_options );
+			cstmsrch_search_objects();
+		}
+		return $options;
+	}
+}
+
 /* Function create column in table wp_options for option of this plugin. If this column exists - save value in variable. */
 if ( ! function_exists( 'register_cstmsrch_settings' ) ) {
 	function register_cstmsrch_settings() {
-		global $cstmsrch_options, $bws_plugin_info, $cstmsrch_plugin_info, $cstmsrch_is_registered;
+		global $cstmsrch_options, $bws_plugin_info, $cstmsrch_plugin_info, $cstmsrch_is_registered, $taxonomies_global;
 
 		$cstmsrch_is_registered = true;
 		$cstmsrch_options_default = cstmsrch_default_options();
@@ -130,11 +194,67 @@ if ( ! function_exists( 'register_cstmsrch_settings' ) ) {
 		/* Array merge incase this version has added new options */
 		if ( ! isset( $cstmsrch_options['plugin_option_version'] ) || $cstmsrch_options['plugin_option_version'] != $cstmsrch_plugin_info['Version'] ) {
 
+			$cstmfldssrch_options = get_option( 'cstmfldssrch_options' );
+
+			if ( $cstmfldssrch_options ) {
+				if ( ! isset( $cstmsrch_options['fields'] ) && ! empty( $cstmfldssrch_options['fields'] ) ) {
+					$cstmsrch_options['fields'] = $cstmfldssrch_options['fields'];
+				}
+				if ( ! isset( $cstmsrch_options['show_hidden_fields'] ) && ! empty( $cstmfldssrch_options['show_hidden_fields'] ) ) {
+					$cstmsrch_options['show_hidden_fields'] = $cstmfldssrch_options['show_hidden_fields'];
+				}
+			}
+
+			$post_types_global= get_post_types( array( 'public' => true ), 'names' );
+			unset( $post_types_global['attachment'] );
+			$cstmsrch_post_types_enabled = array( 'post', 'page' );
+
+			if ( ! empty( $_REQUEST['cstmsrch_post_types'] ) && is_array( $_REQUEST['cstmsrch_post_types'] ) ) {
+				foreach ( $_REQUEST['cstmsrch_post_types'] as $post_type ) {
+					if ( in_array( $post_type, $post_types_custom ) ) {
+						$cstmsrch_post_types_enabled[] = $post_type;
+					}
+				}
+			}
+			$cstmsrch_taxonomies_enabled = array();
+			if ( ! empty( $_REQUEST['cstmsrch_taxonomies'] ) && is_array( $_REQUEST['cstmsrch_taxonomies'] ) ) {
+				foreach ( $_REQUEST['cstmsrch_taxonomies'] as $taxonomy ) {
+					if ( in_array( $taxonomy, $taxonomies_global ) ) {
+						$cstmsrch_taxonomies_enabled[] = $taxonomy;
+					}
+				}
+			}
+
+			$output_order = array();
+			foreach ( $post_types_global as $post_type ) {
+				$enabled = ( in_array( $post_type, $cstmsrch_post_types_enabled ) ) ? 1 : 0;
+				$output_order[ 'post_type_' . $post_type ] = array(
+					'name'		=> $post_type,
+					'type'		=> 'post_type',
+					'enabled'	=> $enabled
+				);
+			}
+			if ( isset( $taxonomies_global ) && is_array( $taxonomies_global ) ) {
+				foreach ( $taxonomies_global as $taxonomy ) {
+				$enabled = ( in_array( $taxonomy, $cstmsrch_taxonomies_enabled ) ) ? 1 : 0;
+				$output_order[ 'taxonomy_' . $taxonomy ] = array(
+					'name'		=> $taxonomy,
+					'type'		=> 'taxonomy',
+					'enabled'	=> $enabled
+				);
+				}
+			}
+
 			foreach ( $cstmsrch_options_default as $key => $value ) {
 				if (
 					! isset( $cstmsrch_options[ $key ] ) ||
 					( isset( $cstmsrch_options[ $key ] ) && is_array( $cstmsrch_options_default[ $key ] ) && ! is_array( $cstmsrch_options[ $key ] ) )
 				) {
+					if ( ! isset( $cstmsrch_options['fields'] ) ) {
+						$cstmsrch_options_array = $cstmsrch_options;
+						unset( $cstmsrch_options_array['plugin_option_version'] );
+						$cstmsrch_options = array( 'fields' => $cstmsrch_options_array );
+					}
 					$cstmsrch_options[ $key ] = $cstmsrch_options_default[ $key ];
 				} else {
 					if ( is_array( $cstmsrch_options_default[ $key ] ) ) {
@@ -150,9 +270,11 @@ if ( ! function_exists( 'register_cstmsrch_settings' ) ) {
 			$cstmsrch_options['plugin_option_version'] = $cstmsrch_plugin_info['Version'];
 			/* show pro features */
 			$cstmsrch_options['hide_premium_options'] = array();
-			update_option( 'cstmsrch_options', $cstmsrch_options );
+			$cstmsrch_options = cstmsrch_update_option( $cstmsrch_options, true );
 			cstmsrch_plugin_activate();
 		}
+
+
 		cstmsrch_search_objects();
 	}
 }
@@ -162,6 +284,13 @@ if ( ! function_exists( 'register_cstmsrch_settings' ) ) {
  */
 if ( ! function_exists( 'cstmsrch_plugin_activate' ) ) {
 	function cstmsrch_plugin_activate() {
+
+		$all_plugins = get_plugins();
+
+		if ( array_key_exists( 'custom-fields-search/custom-fields-search.php', $all_plugins ) ) {
+			 deactivate_plugins( 'custom-fields-search/custom-fields-search.php' );
+		}
+
 		if ( is_multisite() ) {
 			switch_to_blog( 1 );
 			register_uninstall_hook( __FILE__, 'delete_cstmsrch_settings' );
@@ -401,6 +530,99 @@ if ( ! function_exists( 'delete_cstmsrch_settings' ) ) {
 	}
 }
 
+/* Function exclude records that contain duplicate data in selected fields */
+if ( ! function_exists( 'cstmsrch_distinct' ) ) {
+	function cstmsrch_distinct( $distinct ) {
+		global $wp_query, $cstmsrch_options;
+		if ( ! empty( $wp_query->query_vars['s'] ) && ! empty( $cstmsrch_options['fields'] ) && is_search() ) {
+			$distinct .= "DISTINCT";
+		}
+		return $distinct;
+	}
+}
+
+/* Function join table `wp_posts` with `wp_postmeta` */
+if ( ! function_exists( 'cstmsrch_join' ) ) {
+	function cstmsrch_join( $join ) {
+		global $wp_query, $wpdb, $cstmsrch_options;
+		if ( ! empty( $wp_query->query_vars['s'] ) && ! empty( $cstmsrch_options['fields'] ) && is_search() ) {
+			$join .= "JOIN " . $wpdb->postmeta . " ON " . $wpdb->posts . ".ID = " . $wpdb->postmeta . ".post_id ";
+		}
+		return $join;
+	}
+}
+
+/* Function adds in request keyword search on custom fields, and list of meta_key, which user has selected */
+if( ! function_exists( 'cstmsrch_request' ) ) {
+	function cstmsrch_request( $where ) {
+		global $wp_query, $wpdb, $cstmsrch_options;
+		if ( method_exists($wpdb,'remove_placeholder_escape') ) {
+			$where = $wpdb->remove_placeholder_escape( $where );
+		}
+		$pos = strrpos( $where, '%' );
+		if ( false !== $pos && ! empty( $wp_query->query_vars['s'] ) && ! empty( $cstmsrch_options['fields'] ) && is_search() ) {
+			$end_pos_where = 5 + $pos; /* find position of the end of the request with check the type and status of the post */
+			$end_of_where_request = substr( $where, $end_pos_where ); /* save check the type and status of the post in variable */
+			/* Exclude for gallery and gallery pro from search - dont show attachment with keywords */
+			$flag_gllr_image = array();
+			if ( in_array( 'gllr_image_text', $cstmsrch_options['fields'] ) || in_array( 'gllr_image_alt_tag', $cstmsrch_options['fields'] ) ||
+				in_array( 'gllr_link_url', $cstmsrch_options['fields'] ) || in_array( 'gllr_image_description', $cstmsrch_options['fields'] ) ||
+				in_array( 'gllr_lightbox_button_url', $cstmsrch_options['fields'] ) ) {
+				foreach ( $cstmsrch_options['fields'] as $key => $value ) {
+					if ( 'gllr_image_text' == $value || 'gllr_link_url' == $value || 'gllr_image_alt_tag' == $value ||
+					 'gllr_lightbox_button_url' == $value || 'gllr_image_description' == $value ) {
+						unset( $cstmsrch_options['fields'][ $key ] );
+						$flag_gllr_image[] = $value;
+					}
+				}
+			}
+
+			$user_request = esc_sql( trim( $wp_query->query_vars['s'] ) );
+			$user_request_arr = preg_split( "/[\s,]+/", $user_request ); /* The user's regular expressions are used to separate array for the desired keywords */
+
+			if ( ! empty( $cstmsrch_options['fields'] ) ) {
+				$cusfields_sql_request = "'" . implode( "', '", $cstmsrch_options['fields'] ) . "'"; /* forming a string with the list of meta_key, which user has selected */
+				$where .= " OR (" . $wpdb->postmeta . ".meta_key IN (" . $cusfields_sql_request . ") "; /* Modify the request */
+				foreach ( $user_request_arr as $value ) {
+					$where .= "AND " . $wpdb->postmeta . ".meta_value LIKE '%" . $value . "%' ";
+				}
+				$where .= $end_of_where_request . ") ";
+			}
+
+			/* This code special for gallery plugin */
+			if ( ! empty( $flag_gllr_image ) ) {
+				foreach ( $flag_gllr_image as $flag_gllr_image_key => $flag_gllr_image_value ) {
+
+					$where_new_end = '';
+					/* save search keywords */
+					foreach ( $user_request_arr as $value ) {
+						$where_new_end .= "AND " . $wpdb->postmeta . ".meta_value LIKE '%" . $value . "%' ";
+					}
+					/* search posts-attachments */
+					$id_attachment_arr = $wpdb->get_col( "SELECT " . $wpdb->posts . ".id FROM " . $wpdb->postmeta . " JOIN " . $wpdb->posts . " ON " . $wpdb->posts . ".id = " . $wpdb->postmeta . ".post_id WHERE " . $wpdb->postmeta . ".meta_key = '" . $flag_gllr_image_value . "' " . $where_new_end );
+					/* if posts-attachments exists - search gallery post ID */
+					if ( ! empty( $id_attachment_arr ) ) {
+						$array_id_gallery = array();
+						foreach ( $id_attachment_arr as $value ) {
+							$id_gallery = $wpdb->get_col( "SELECT DISTINCT(" . $wpdb->posts . ".post_parent) FROM " . $wpdb->posts . " WHERE " . $wpdb->posts . ".ID = " . $value );
+							if ( ! in_array( $id_gallery[0],$array_id_gallery ) ) {
+								$array_id_gallery[] = $id_gallery[0];
+							}
+						}
+					}
+					/* if gallery post ID exists - show on page */
+					if ( ! empty( $array_id_gallery ) ) {
+						foreach ( $array_id_gallery as $value ) {
+							$where .= " OR " . $wpdb->posts . ".ID = " . $value;
+						}
+					}
+				}
+			}
+		}
+		return $where;
+	}
+}
+
 register_activation_hook( __FILE__, 'cstmsrch_plugin_activate');
 add_action( 'plugins_loaded', 'cstmsrch_plugins_loaded' );
 add_action( 'admin_menu', 'add_cstmsrch_admin_menu' );
@@ -413,3 +635,7 @@ add_filter( 'plugin_action_links', 'cstmsrch_action_links', 10, 2 );
 /* Additional links on the plugin page */
 add_filter( 'plugin_row_meta', 'cstmsrch_links', 10, 2 );
 add_action( 'admin_notices', 'cstmsrch_admin_notices' );
+
+add_filter( 'posts_distinct', 'cstmsrch_distinct' );
+add_filter( 'posts_join', 'cstmsrch_join' );
+add_filter( 'posts_where', 'cstmsrch_request' );

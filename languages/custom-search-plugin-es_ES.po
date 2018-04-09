@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Custom Search\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-02 15:26+0200\n"
-"PO-Revision-Date: 2018-01-02 15:26+0200\n"
+"POT-Creation-Date: 2018-04-09 08:41+0300\n"
+"PO-Revision-Date: 2018-04-09 08:41+0300\n"
 "Last-Translator: plugin@bestwebsoft.com <plugin@bestwebsoft.com>\n"
 "Language-Team: Fernando De Le&oacute;n <mrjosefernando@gmail.com>\n"
 "Language: he_IL\n"
@@ -18,15 +18,13 @@ msgstr ""
 "X-Generator: Poedit 1.8.7.1\n"
 "X-Poedit-SearchPath-0: .\n"
 
-# @ custom-search
 #: custom-search-plugin.php:35 custom-search-plugin.php:37
-#: custom-search-plugin.php:286 includes/class-cstmsrch-settings.php:133
+#: custom-search-plugin.php:417 includes/class-cstmsrch-settings.php:138
 msgid "Custom Search Settings"
 msgstr "Configuraci&oacute;n de B&uacute;squeda personalizada"
 
-# @ captcha
-#: custom-search-plugin.php:37 custom-search-plugin.php:301
-#: custom-search-plugin.php:315 includes/class-cstmsrch-settings.php:24
+#: custom-search-plugin.php:37 custom-search-plugin.php:432
+#: custom-search-plugin.php:446 includes/class-cstmsrch-settings.php:24
 msgid "Settings"
 msgstr "Configuraci&oacute;n"
 
@@ -34,11 +32,11 @@ msgstr "Configuraci&oacute;n"
 msgid "Upgrade to Pro"
 msgstr ""
 
-#: custom-search-plugin.php:317
+#: custom-search-plugin.php:448
 msgid "FAQ"
 msgstr ""
 
-#: custom-search-plugin.php:318
+#: custom-search-plugin.php:449
 msgid "Support"
 msgstr ""
 
@@ -58,89 +56,122 @@ msgstr ""
 msgid "License Key"
 msgstr ""
 
-# @ captcha
-#: includes/class-cstmsrch-settings.php:119
+#: includes/class-cstmsrch-settings.php:122
 msgid "Settings saved"
 msgstr "Configuraci&oacute;n"
 
-#: includes/class-cstmsrch-settings.php:138
-#: includes/class-cstmsrch-settings.php:194
+#: includes/class-cstmsrch-settings.php:152
+#: includes/class-cstmsrch-settings.php:261
 msgid "Enable Custom Search for"
 msgstr ""
 
-#: includes/class-cstmsrch-settings.php:146
+#: includes/class-cstmsrch-settings.php:160
 msgid "Post Types"
 msgstr ""
 
-# @ custom-search
-#: includes/class-cstmsrch-settings.php:159
+#: includes/class-cstmsrch-settings.php:173
 msgid "No custom post type found."
 msgstr "No ha producido ning&uacute;n tipo de mensaje personalizado."
 
-#: includes/class-cstmsrch-settings.php:168
+#: includes/class-cstmsrch-settings.php:182
 msgid "Taxonomies"
 msgstr ""
 
-#: includes/class-cstmsrch-settings.php:178
+#: includes/class-cstmsrch-settings.php:192
 msgid "for"
 msgstr ""
 
-#: includes/class-cstmsrch-settings.php:190
-#: includes/class-cstmsrch-settings.php:235
+#: includes/class-cstmsrch-settings.php:201
+msgid "Show Hidden Fields"
+msgstr ""
+
+#: includes/class-cstmsrch-settings.php:208
+msgid "Enable Search for the Custom Field"
+msgstr ""
+
+#: includes/class-cstmsrch-settings.php:212
+#: includes/class-cstmsrch-settings.php:222
+msgid "All"
+msgstr ""
+
+#: includes/class-cstmsrch-settings.php:237
+msgid "custom post type"
+msgstr ""
+
+#: includes/class-cstmsrch-settings.php:241
+msgid "You need to"
+msgstr ""
+
+#: includes/class-cstmsrch-settings.php:241
+msgid "activate plugin"
+msgstr ""
+
+#: includes/class-cstmsrch-settings.php:243
+msgid ""
+"If the type of the post is not default - you need to install and activate "
+"the plugin"
+msgstr ""
+
+#: includes/class-cstmsrch-settings.php:250
+msgid "Custom fields not found."
+msgstr ""
+
+#: includes/class-cstmsrch-settings.php:257
+#: includes/class-cstmsrch-settings.php:302
 msgid "Close"
 msgstr ""
 
-#: includes/class-cstmsrch-settings.php:209
+#: includes/class-cstmsrch-settings.php:276
 msgid ""
 "When you drag post types and taxonomies, you affect the order of their "
 "displaying in the frontend on the search page."
 msgstr ""
 
-#: includes/class-cstmsrch-settings.php:213
+#: includes/class-cstmsrch-settings.php:280
 msgid "Search Only by Type of the Current Post"
 msgstr ""
 
-#: includes/class-cstmsrch-settings.php:217
+#: includes/class-cstmsrch-settings.php:284
 msgid "Only current page post type will be used for the search."
 msgstr ""
 
-#: includes/class-cstmsrch-settings.php:230
+#: includes/class-cstmsrch-settings.php:297
 msgid "Appearance Settings"
 msgstr ""
 
-#: includes/class-cstmsrch-settings.php:239
+#: includes/class-cstmsrch-settings.php:306
 msgid "Change Displaying of Post Content on Search Pages"
 msgstr ""
 
-#: includes/class-cstmsrch-settings.php:243
+#: includes/class-cstmsrch-settings.php:310
 msgid "Display Featured Image with Post Content"
 msgstr ""
 
-#: includes/class-cstmsrch-settings.php:247
+#: includes/class-cstmsrch-settings.php:314
 msgid "Featured Image Size"
 msgstr ""
 
-#: includes/class-cstmsrch-settings.php:251
+#: includes/class-cstmsrch-settings.php:318
 msgid "Featured Image Align"
 msgstr ""
 
-#: includes/class-cstmsrch-settings.php:254
+#: includes/class-cstmsrch-settings.php:321
 msgid "Left"
 msgstr ""
 
-#: includes/class-cstmsrch-settings.php:255
+#: includes/class-cstmsrch-settings.php:322
 msgid "Right"
 msgstr ""
 
-#: includes/class-cstmsrch-settings.php:260
+#: includes/class-cstmsrch-settings.php:327
 msgid "Change Excerpt Length"
 msgstr ""
 
-#: includes/class-cstmsrch-settings.php:262
+#: includes/class-cstmsrch-settings.php:329
 msgid "to"
 msgstr ""
 
-#: includes/class-cstmsrch-settings.php:262
+#: includes/class-cstmsrch-settings.php:329
 msgid "words"
 msgstr ""
 
