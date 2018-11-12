@@ -6,12 +6,12 @@ Description: Add custom post types to WordPress website search results.
 Author: BestWebSoft
 Text Domain: custom-search-plugin
 Domain Path: /languages
-Version: 1.40
+Version: 1.41
 Author URI: https://bestwebsoft.com/
 License: GPLv2 or later
 */
 
-/*  © Copyright 2017  BestWebSoft  ( https://support.bestwebsoft.com )
+/*  © Copyright 2018  BestWebSoft  ( https://support.bestwebsoft.com )
 
 	This program is free software; you can redistribute it and/or modify
 	it under the terms of the GNU General Public License, version 2, as
@@ -416,6 +416,11 @@ if ( ! function_exists( 'cstmsrch_settings_page' ) ) {
 		$page = new Cstmsrch_Settings_Tabs( plugin_basename( __FILE__ ) ); ?>
 		<div class="wrap">
 			<h1><?php _e( 'Custom Search Settings', 'custom-search-plugin' ); ?></h1>
+            <noscript>
+                <div class="error below-h2">
+                    <p><strong><?php _e( 'WARNING', 'custom-search-plugin' ); ?>:</strong> <?php _e( 'The plugin works correctly only if JavaScript is enabled.', 'custom-search-plugin' ); ?></p>
+                </div>
+            </noscript>
 			<?php $page->display_content(); ?>
 		</div>
 	<?php }

@@ -22,6 +22,7 @@ if ( ! class_exists( 'Cstmsrch_Settings_Tabs' ) ) {
 
 			$tabs = array(
 				'settings'		=> array( 'label' => __( 'Settings', 'custom-search-plugin' ) ),
+				'display'		=> array( 'label' => __( 'Display', 'custom-search-plugin' ), 'is_pro' => 1 ),
 				'appearance'	=> array( 'label' => __( 'Appearance', 'custom-search-plugin' ), 'is_pro' => 1 ),
 				'misc'			=> array( 'label' => __( 'Misc', 'custom-search-plugin' ) ),
 				'custom_code'	=> array( 'label' => __( 'Custom Code', 'custom-search-plugin' ) ),
@@ -287,6 +288,21 @@ if ( ! class_exists( 'Cstmsrch_Settings_Tabs' ) ) {
 				</div>
 			<?php }
 		}
+
+		public function tab_display() { ?>
+            <h3 class="bws_tab_label"><?php _e( 'Display Settings', 'custom-search-plugin' ); ?></h3>
+			<?php $this->help_phrase(); ?>
+            <hr>
+            <div class="bws_pro_version_bloc">
+                <div class="bws_pro_version_table_bloc">
+                    <button type="submit" name="bws_hide_premium_options" class="notice-dismiss bws_hide_premium_options" title="<?php _e( 'Close', 'custom-search-plugin' ); ?>"></button>
+                    <div class="bws_table_bg"></div>
+                    
+                    <img style="max-width: 100%;" src="<?php echo plugins_url( 'images/pro_screen_1.png', dirname( __FILE__ ) ); ?>" alt="<?php _e( "Example of site pages' tree", 'custom-search-plugin' ); ?>" title="<?php _e( "Example of site pages' tree", 'custom-search-plugin' ); ?>" />
+                </div>
+				<?php $this->bws_pro_block_links(); ?>
+            </div>
+        <?php }
 
 		public function tab_appearance() { ?>
 			<h3 class="bws_tab_label"><?php _e( 'Appearance Settings', 'custom-search-plugin' ); ?></h3>

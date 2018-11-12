@@ -21,10 +21,10 @@ Improve your website user experience today!</p>
 <ul>
 <li>Post tags</li>
 <li>Post categories</li>
-<li>Custom taxonomies [NEW]</li>
-<li>Custom fields [NEW]</li>
+<li>Custom taxonomies</li>
 </ul>
 </li>
+<li>Custom fields</li>
 </ul>
 </li>
 <li>Compatible with latest WordPress version</li>
@@ -36,12 +36,7 @@ Improve your website user experience today!</p>
 <p><strong>Pro Features</strong></p>
 <p>All features from Free version included plus:</p>
 <ul>
-<li>Exclude from a custom search:
-<ul>
-<li>Posts</li>
-<li>Pages</li>
-</ul>
-</li>
+<li>Disable custom search for certain pages and/or post types [NEW]</li>
 <li>Configure custom post types and taxonomies displaying order on the search results page</li>
 <li>Display featured image for post types on the search results page</li>
 <li>Choose featured image size</li>

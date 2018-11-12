@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Custom Search\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-09 08:40+0300\n"
-"PO-Revision-Date: 2018-04-09 08:44+0300\n"
+"POT-Creation-Date: 2018-11-09 14:14+0200\n"
+"PO-Revision-Date: 2018-11-09 14:16+0200\n"
 "Last-Translator: plugin@bestwebsoft.com <plugin@bestwebsoft.com>\n"
 "Language-Team: BestWebSoft <plugin@bestwebsoft.com>\n"
 "Language: uk\n"
@@ -17,12 +17,12 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 
 #: custom-search-plugin.php:35 custom-search-plugin.php:37
-#: custom-search-plugin.php:417 includes/class-cstmsrch-settings.php:138
+#: custom-search-plugin.php:418 includes/class-cstmsrch-settings.php:139
 msgid "Custom Search Settings"
 msgstr "Налаштування Custom Search"
 
-#: custom-search-plugin.php:37 custom-search-plugin.php:432
-#: custom-search-plugin.php:446 includes/class-cstmsrch-settings.php:24
+#: custom-search-plugin.php:37 custom-search-plugin.php:438
+#: custom-search-plugin.php:452 includes/class-cstmsrch-settings.php:24
 msgid "Settings"
 msgstr "Налаштування"
 
@@ -30,153 +30,157 @@ msgstr "Налаштування"
 msgid "Upgrade to Pro"
 msgstr "Оновити до Pro"
 
-#: custom-search-plugin.php:448
+#: custom-search-plugin.php:421
+msgid "WARNING"
+msgstr "УВАГА"
+
+#: custom-search-plugin.php:421
+msgid "The plugin works correctly only if JavaScript is enabled."
+msgstr "Плагін працює коректно тільки при включеному JavaScript."
+
+#: custom-search-plugin.php:454
 msgid "FAQ"
 msgstr "FAQ"
 
-#: custom-search-plugin.php:449
+#: custom-search-plugin.php:455
 msgid "Support"
 msgstr "Підтримка"
 
 #: includes/class-cstmsrch-settings.php:25
+msgid "Display"
+msgstr "Вивід"
+
+#: includes/class-cstmsrch-settings.php:26
 msgid "Appearance"
 msgstr "Відображення"
 
-#: includes/class-cstmsrch-settings.php:26
+#: includes/class-cstmsrch-settings.php:27
 msgid "Misc"
 msgstr "Різне"
 
-#: includes/class-cstmsrch-settings.php:27
+#: includes/class-cstmsrch-settings.php:28
 msgid "Custom Code"
 msgstr "Користувацький код"
 
-#: includes/class-cstmsrch-settings.php:28
+#: includes/class-cstmsrch-settings.php:29
 msgid "License Key"
 msgstr "Ліцензійний ключ"
 
-#: includes/class-cstmsrch-settings.php:122
+#: includes/class-cstmsrch-settings.php:123
 msgid "Settings saved"
 msgstr "Налаштування збережені"
 
-#: includes/class-cstmsrch-settings.php:152
-#: includes/class-cstmsrch-settings.php:261
+#: includes/class-cstmsrch-settings.php:153
 msgid "Enable Custom Search for"
 msgstr "Додати в користувацький пошук"
 
-#: includes/class-cstmsrch-settings.php:160
+#: includes/class-cstmsrch-settings.php:161
 msgid "Post Types"
 msgstr "Типи записів"
 
-#: includes/class-cstmsrch-settings.php:173
+#: includes/class-cstmsrch-settings.php:174
 msgid "No custom post type found."
 msgstr "Не знайдено жодного кастомного типу записів."
 
-#: includes/class-cstmsrch-settings.php:182
+#: includes/class-cstmsrch-settings.php:183
 msgid "Taxonomies"
 msgstr "Таксономії"
 
-#: includes/class-cstmsrch-settings.php:192
+#: includes/class-cstmsrch-settings.php:193
 msgid "for"
 msgstr "для"
 
-#: includes/class-cstmsrch-settings.php:201
+#: includes/class-cstmsrch-settings.php:202
 msgid "Show Hidden Fields"
 msgstr "Відображати приховані поля"
 
-#: includes/class-cstmsrch-settings.php:208
+#: includes/class-cstmsrch-settings.php:209
 msgid "Enable Search for the Custom Field"
 msgstr "Відображати пошук по користувацьким полям для"
 
-#: includes/class-cstmsrch-settings.php:212
-#: includes/class-cstmsrch-settings.php:222
+#: includes/class-cstmsrch-settings.php:213
+#: includes/class-cstmsrch-settings.php:223
 msgid "All"
 msgstr "Всіх"
 
-#: includes/class-cstmsrch-settings.php:237
+#: includes/class-cstmsrch-settings.php:238
 msgid "custom post type"
 msgstr "користувацький тип записів"
 
-#: includes/class-cstmsrch-settings.php:241
-msgid "You need to"
-msgstr "Вам потрібно"
-
-#: includes/class-cstmsrch-settings.php:241
-msgid "activate plugin"
-msgstr "активувати плагін"
-
-#: includes/class-cstmsrch-settings.php:243
-msgid ""
-"If the type of the post is not default - you need to install and activate "
-"the plugin"
-msgstr ""
-"Якщо тип запису не стандартний - вам необхідно встановити і активувати плагін"
-
-#: includes/class-cstmsrch-settings.php:250
+#: includes/class-cstmsrch-settings.php:246
 msgid "Custom fields not found."
 msgstr "Користувацькi поля не знайдені."
 
-#: includes/class-cstmsrch-settings.php:257
-#: includes/class-cstmsrch-settings.php:302
+#: includes/class-cstmsrch-settings.php:254
+msgid "Display Settings"
+msgstr "Налаштування виводу"
+
+#: includes/class-cstmsrch-settings.php:259
+#: includes/class-cstmsrch-settings.php:274
 msgid "Close"
 msgstr "Закрити"
 
-#: includes/class-cstmsrch-settings.php:276
-msgid ""
-"When you drag post types and taxonomies, you affect the order of their "
-"displaying in the frontend on the search page."
+#: includes/class-cstmsrch-settings.php:262
+msgid "Example of site pages' tree"
 msgstr ""
-"При перетягуванні типів записів або таксономій ви впливаєте на порядок їх "
-"виведення у фронтенді на сторінці пошуку."
 
-#: includes/class-cstmsrch-settings.php:280
-msgid "Search Only by Type of the Current Post"
-msgstr "Шукати тільки по типу поточного запису"
-
-#: includes/class-cstmsrch-settings.php:284
-msgid "Only current page post type will be used for the search."
-msgstr ""
-"Ця опція дозволяє здійснювати пошук тільки по тому типу запису, на сторінці "
-"якого ви перебуваєте."
-
-#: includes/class-cstmsrch-settings.php:297
+#: includes/class-cstmsrch-settings.php:269
 msgid "Appearance Settings"
 msgstr "Налаштування відображення"
 
-#: includes/class-cstmsrch-settings.php:306
+#: includes/class-cstmsrch-settings.php:278
 msgid "Change Displaying of Post Content on Search Pages"
 msgstr "Змінити відображення вмісту запису на сторінках пошуку"
 
-#: includes/class-cstmsrch-settings.php:310
+#: includes/class-cstmsrch-settings.php:282
 msgid "Display Featured Image with Post Content"
 msgstr "Відображати мініатюру з вмістом запису"
 
-#: includes/class-cstmsrch-settings.php:314
+#: includes/class-cstmsrch-settings.php:286
 msgid "Featured Image Size"
 msgstr "Розмір мініатюри"
 
-#: includes/class-cstmsrch-settings.php:318
+#: includes/class-cstmsrch-settings.php:290
 msgid "Featured Image Align"
 msgstr "Положення мініатюри"
 
-#: includes/class-cstmsrch-settings.php:321
+#: includes/class-cstmsrch-settings.php:293
 msgid "Left"
 msgstr "Ліворуч"
 
-#: includes/class-cstmsrch-settings.php:322
+#: includes/class-cstmsrch-settings.php:294
 msgid "Right"
 msgstr "Праворуч"
 
-#: includes/class-cstmsrch-settings.php:327
+#: includes/class-cstmsrch-settings.php:299
 msgid "Change Excerpt Length"
 msgstr "Змінити довжину цитати"
 
-#: includes/class-cstmsrch-settings.php:329
+#: includes/class-cstmsrch-settings.php:301
 msgid "to"
 msgstr "на"
 
-#: includes/class-cstmsrch-settings.php:329
+#: includes/class-cstmsrch-settings.php:301
 msgid "words"
 msgstr "слів"
+
+#~ msgid "When you drag post types and taxonomies, you affect the order of their displaying in the frontend on the search page."
+#~ msgstr "При перетягуванні типів записів або таксономій ви впливаєте на порядок їх виведення у фронтенді на сторінці пошуку."
+
+#~ msgid "Search Only by Type of the Current Post"
+#~ msgstr "Шукати тільки по типу поточного запису"
+
+#~ msgid "Only current page post type will be used for the search."
+#~ msgstr "Ця опція дозволяє здійснювати пошук тільки по тому типу запису, на сторінці якого ви перебуваєте."
+
+#~ msgid "You need to"
+#~ msgstr "Вам потрібно"
+
+#~ msgid "activate plugin"
+#~ msgstr "активувати плагін"
+
+#~ msgid "If the type of the post is not default - you need to install and activate the plugin"
+#~ msgstr "Якщо тип запису не стандартний - вам необхідно встановити і активувати плагін"
 
 #~ msgid "Enable search for the custom field:"
 #~ msgstr "Відображати пошук по користувацьким полям для:"
@@ -185,19 +189,13 @@ msgstr "слів"
 #~ msgstr "Відображати приховані поля"
 
 #~ msgid "This option is used when you search on a single page/post/post type."
-#~ msgstr ""
-#~ "Ця опція використовується, коли Ви знаходитесь на сторінці запису/"
-#~ "сторінки/типу запису."
+#~ msgstr "Ця опція використовується, коли Ви знаходитесь на сторінці запису/сторінки/типу запису."
 
 #~ msgid "Enable Custom search for:"
 #~ msgstr "Додати до кастомного пошуку:"
 
-#~ msgid ""
-#~ "When you drag post types and taxonomies, you affect the order of their "
-#~ "display in the frontend on the search page."
-#~ msgstr ""
-#~ "При перетягуванні типів записів і таксономій, ви впливаєте на їх "
-#~ "відображення у фронтенді на сторінці пошуку."
+#~ msgid "When you drag post types and taxonomies, you affect the order of their display in the frontend on the search page."
+#~ msgstr "При перетягуванні типів записів і таксономій, ви впливаєте на їх відображення у фронтенді на сторінці пошуку."
 
 #~ msgid "Search only by type of the current post"
 #~ msgstr "Шукати тільки по типу поточного запису"
@@ -262,12 +260,8 @@ msgstr "слів"
 #~ msgid "Notice:"
 #~ msgstr "Попередження:"
 
-#~ msgid ""
-#~ "The plugin's settings have been changed. In order to save them please "
-#~ "don't forget to click the 'Save Changes' button."
-#~ msgstr ""
-#~ "Налаштування плагіну було змінено. Щоб зберегти їх, не забудьте натиснути "
-#~ "кнопку \"Зберегти зміни\"."
+#~ msgid "The plugin's settings have been changed. In order to save them please don't forget to click the 'Save Changes' button."
+#~ msgstr "Налаштування плагіну було змінено. Щоб зберегти їх, не забудьте натиснути кнопку \"Зберегти зміни\"."
 
 #~ msgid "Unlock premium options by upgrading to PRO version"
 #~ msgstr "Зробити доступними преміум-опції, перейшовши на PRO версію"

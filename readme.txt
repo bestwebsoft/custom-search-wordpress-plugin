@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: https://bestwebsoft.com/donate/
 Tags: additional search options, extra search options, advanced search, add additional search options, search options, custom search, custom search plugin, website search, add custom posts to search, custom posts, free additional search options, custom content types
 Requires at least: 3.9
-Tested up to: 4.9.5
-Stable tag: 1.40
+Tested up to: 4.9.8
+Stable tag: 1.41
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -29,8 +29,8 @@ https://www.youtube.com/watch?v=qF2-pFM_ESw
 	* Taxonomies:
 		* Post tags
 		* Post categories
-		* Custom taxonomies [NEW]
-		* Custom fields [NEW]
+		* Custom taxonomies
+	* Custom fields
 * Compatible with latest WordPress version
 * Incredibly simple settings for fast setup without modifying code
 * Detailed step-by-step documentations and videos
@@ -40,9 +40,7 @@ https://www.youtube.com/watch?v=qF2-pFM_ESw
 >
 > All features from Free version included plus:
 >
-> * Exclude from a custom search:
-> 	* Posts
-> 	* Pages
+> * Disable custom search for certain pages and/or post types [NEW]
 > * Configure custom post types and taxonomies displaying order on the search results page
 > * Display featured image for post types on the search results page
 > * Choose featured image size
@@ -108,8 +106,13 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 
 1. Custom Search Settings page.
 2. Custom Search Appearance page.
+3. Custom Search Display page.
 
 == Changelog ==
+
+= V1.41 - 12.11.2018 =
+* Update : The plugin settings page has been changed.
+* Pro : Abilty to disable search option for certain pages and/or post types has been added.
 
 = V1.40 - 09.04.2018 =
 * NEW : Ability to search by custom fields has been added.
@@ -261,6 +264,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 * NEW : Language files are added to the plugin.
 
 == Upgrade Notice ==
+
+= V1.41 =
+* Appearance improved
 
 = V1.40 =
 * New features added.

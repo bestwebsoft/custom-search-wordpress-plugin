@@ -184,12 +184,12 @@ $bws_plugins = array(
 		'purchase' 		=> 'https://bestwebsoft.com/products/wordpress/plugins/bws-google-maps/buy/?k=117c3f9fc17f2c83ef430a8a9dc06f56&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
 		'pro_settings' 	=> 'admin.php?page=bws-google-maps-pro.php'
 	),
-	'google-sitemap-plugin/google-sitemap-plugin.php' => array(
+	'google-google-sitemap-plugin/google-google-sitemap-plugin.php' => array(
 		'category'		=> array( 'seo', 'recommended' ),
 		'name'			=> 'Google Sitemap',
 		'description'	=> __( 'Generate and add XML sitemap to WordPress website. Help search engines index your blog.', 'bestwebsoft' ),
 		'link'			=> 'https://bestwebsoft.com/products/wordpress/plugins/google-sitemap/?k=5202b2f5ce2cf85daee5e5f79a51d806&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
-		'settings'		=> 'admin.php?page=google-sitemap-plugin.php',
+		'settings'		=> 'admin.php?page=google-google-sitemap-plugin.php',
 		'pro_version'	=> 'google-sitemap-pro/google-sitemap-pro.php',
 		'purchase'		=> 'https://bestwebsoft.com/products/wordpress/plugins/google-sitemap/buy/?k=7ea384a5cc36cb4c22741caa20dcd56d&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
 		'pro_settings'	=> 'admin.php?page=google-sitemap-pro.php'
