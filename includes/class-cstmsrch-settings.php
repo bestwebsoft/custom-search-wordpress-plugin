@@ -117,6 +117,7 @@ if ( ! class_exists( 'Cstmsrch_Settings_Tabs' ) ) {
 			$this->options['fields'] = isset( $_REQUEST['cstmsrch_fields_array'] ) ? $_REQUEST['cstmsrch_fields_array'] : array();
 			$this->options['plugin_option_version'] = $cstmsrch_plugin_info["Version"];
 			$this->options['show_hidden_fields'] = isset( $_REQUEST['cstmsrch_show_hidden_fields'] ) ? 1 : 0;
+			$this->options['show_tabs_post_type'] = $_REQUEST['cstmsrch_show_tabs_post_type'];
 
 			update_option( 'cstmsrch_options', $this->options );
 
@@ -196,6 +197,15 @@ if ( ! class_exists( 'Cstmsrch_Settings_Tabs' ) ) {
 								</fieldset>
 							<?php } ?>
 						</div><!-- #cstmsrch-taxonomies-settings -->
+					</td>
+				</tr>
+				<tr valign="top">
+					<th scope="row"><?php _e( 'Results Display', 'custom-search-plugin' ); ?></th>
+					<td>
+						<fieldset>
+							<label><input type="radio" name="cstmsrch_show_tabs_post_type" value="0" <?php if ( $this->options['show_tabs_post_type'] == '0' ) echo 'checked="checked"';?>/><?php _e( 'Default', 'custom-search-plugin' ); ?></label><br />
+							<label><input type="radio" name="cstmsrch_show_tabs_post_type" value="1" <?php if ( $this->options['show_tabs_post_type'] == '1' ) echo 'checked="checked"';?>/><?php _e( 'Tabs', 'custom-search-plugin' ); ?></label><br />
+						</fieldset>
 					</td>
 				</tr>
 				<tr valign="top">

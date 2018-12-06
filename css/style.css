@@ -10,3 +10,12 @@
 .cstmsrch_not_custom_post {
 	margin-top: 5px;
 }
+.cstmsrch-submit-type{
+    text-align: center;
+}
+.cstmsrch-submit-type input[type="submit"] {
+    display: inline-block;
+ 	padding-top: 4px;
+ 	padding-bottom: 4px;
+ 	margin: 1px;
+}

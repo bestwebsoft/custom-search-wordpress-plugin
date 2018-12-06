@@ -4,7 +4,7 @@ Donate link: https://bestwebsoft.com/donate/
 Tags: additional search options, extra search options, advanced search, add additional search options, search options, custom search, custom search plugin, website search, add custom posts to search, custom posts, free additional search options, custom content types
 Requires at least: 3.9
 Tested up to: 4.9.8
-Stable tag: 1.41
+Stable tag: 1.42
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -31,6 +31,9 @@ https://www.youtube.com/watch?v=qF2-pFM_ESw
 		* Post categories
 		* Custom taxonomies
 	* Custom fields
+* Change search results displaying:[NEW]
+	* List (default)[NEW]
+	* Tabs[NEW]
 * Compatible with latest WordPress version
 * Incredibly simple settings for fast setup without modifying code
 * Detailed step-by-step documentations and videos
@@ -40,7 +43,7 @@ https://www.youtube.com/watch?v=qF2-pFM_ESw
 >
 > All features from Free version included plus:
 >
-> * Disable custom search for certain pages and/or post types [NEW]
+> * Disable custom search for certain pages and/or post types
 > * Configure custom post types and taxonomies displaying order on the search results page
 > * Display featured image for post types on the search results page
 > * Choose featured image size
@@ -109,6 +112,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 3. Custom Search Display page.
 
 == Changelog ==
+
+= V1.42 - 06.12.2018 =
+* NEW : Ability to change search results displaying has been added.
 
 = V1.41 - 12.11.2018 =
 * Update : The plugin settings page has been changed.
@@ -264,6 +270,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 * NEW : Language files are added to the plugin.
 
 == Upgrade Notice ==
+
+= V1.42 =
+* New features added.
 
 = V1.41 =
 * Appearance improved

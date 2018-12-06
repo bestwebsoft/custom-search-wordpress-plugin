@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Custom Search\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-09 14:14+0200\n"
-"PO-Revision-Date: 2018-11-09 14:16+0200\n"
+"POT-Creation-Date: 2018-11-26 11:41+0200\n"
+"PO-Revision-Date: 2018-11-26 11:56+0200\n"
 "Last-Translator: plugin@bestwebsoft.com <plugin@bestwebsoft.com>\n"
 "Language-Team: BestWebSoft <plugin@bestwebsoft.com>\n"
 "Language: uk\n"
@@ -13,38 +13,1570 @@ msgstr ""
 "X-Poedit-KeywordsList: __;_e\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 1.8.7.1\n"
+"X-Generator: Poedit 2.0.6\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: custom-search-plugin.php:35 custom-search-plugin.php:37
-#: custom-search-plugin.php:418 includes/class-cstmsrch-settings.php:139
-msgid "Custom Search Settings"
-msgstr "Налаштування Custom Search"
+#: bws_menu/bws_functions.php:73 bws_menu/bws_functions.php:191
+msgid "requires"
+msgstr ""
 
-#: custom-search-plugin.php:37 custom-search-plugin.php:438
-#: custom-search-plugin.php:452 includes/class-cstmsrch-settings.php:24
+#: bws_menu/bws_functions.php:75
+msgid ""
+"or higher, that is why it has been deactivated! Please upgrade WordPress and "
+"try again."
+msgstr ""
+
+#: bws_menu/bws_functions.php:76
+msgid "Back to the WordPress"
+msgstr ""
+
+#: bws_menu/bws_functions.php:78
+msgid "Plugins page"
+msgstr ""
+
+#: bws_menu/bws_functions.php:92
+#, fuzzy
+#| msgid "activate plugin"
+msgid "Like the plugin?"
+msgstr "активувати плагін"
+
+#: bws_menu/bws_functions.php:93
+#, php-format
+msgid "%s reviews"
+msgstr ""
+
+#: bws_menu/bws_functions.php:94
+msgid "Rate it"
+msgstr ""
+
+#: bws_menu/bws_functions.php:103
+msgid "Need help?"
+msgstr ""
+
+#: bws_menu/bws_functions.php:104 bws_menu/bws_functions.php:917
+#: bws_menu/class-bws-settings.php:1058
+msgid "Visit Help Center"
+msgstr ""
+
+#: bws_menu/bws_functions.php:107
+msgid "Want to support the plugin?"
+msgstr ""
+
+#: bws_menu/bws_functions.php:108 bws_menu/bws_menu.php:560
+msgid "Donate"
+msgstr ""
+
+#: bws_menu/bws_functions.php:128
+msgid "WARNING: Illegal use notification"
+msgstr ""
+
+#: bws_menu/bws_functions.php:128
+msgid ""
+"You can use one license of the Pro plugin for one domain only. Please check "
+"and edit your license or domain if necessary using your personal Client "
+"Area. We strongly recommend you to solve the problem within 24 hours, "
+"otherwise the Pro plugin will be deactivated."
+msgstr ""
+
+#: bws_menu/bws_functions.php:128 bws_menu/bws_functions.php:341
+#: bws_menu/bws_menu.php:631 bws_menu/class-bws-settings.php:144
+msgid "Learn More"
+msgstr "Докладніше"
+
+#: bws_menu/bws_functions.php:145
+msgid ""
+"Notice: Your Pro Trial license has expired. To continue using the plugin, "
+"you should buy a Pro license"
+msgstr ""
+
+#: bws_menu/bws_functions.php:147
+msgid ""
+"Your license has expired. To continue getting top-priority support and "
+"plugin updates, you should extend it."
+msgstr ""
+
+#: bws_menu/bws_functions.php:147 bws_menu/bws_functions.php:389
+#: bws_menu/deprecated.php:586
+#, fuzzy
+#| msgid "Learn More"
+msgid "Learn more"
+msgstr "Докладніше"
+
+#: bws_menu/bws_functions.php:165
+#, php-format
+msgid "Notice: You are using the Pro Trial license of %s plugin."
+msgstr ""
+
+#: bws_menu/bws_functions.php:167
+msgid "Notice: You are using the Pro Trial license of plugin."
+msgstr ""
+
+#: bws_menu/bws_functions.php:170
+msgid "The Pro Trial license will expire on"
+msgstr ""
+
+#: bws_menu/bws_functions.php:193
+msgid ""
+"or higher! We do not guarantee that our plugin will work correctly. Please "
+"upgrade to WordPress latest version."
+msgstr ""
+
+#: bws_menu/bws_functions.php:208
+#, php-format
+msgid "Thank you for installing %s plugin!"
+msgstr ""
+
+#: bws_menu/bws_functions.php:210
+msgid "Let's get started"
+msgstr ""
+
+#: bws_menu/bws_functions.php:211 bws_menu/bws_functions.php:244
+#: bws_menu/bws_menu.php:564 bws_menu/bws_menu.php:566
+#: custom-search-plugin.php:38 custom-search-plugin.php:548
+#: custom-search-plugin.php:562 includes/class-cstmsrch-settings.php:24
 msgid "Settings"
 msgstr "Налаштування"
 
-#: custom-search-plugin.php:43
-msgid "Upgrade to Pro"
-msgstr "Оновити до Pro"
+#: bws_menu/bws_functions.php:213 bws_menu/bws_menu.php:326
+#: bws_menu/class-bws-settings.php:747 bws_menu/class-bws-settings.php:1060
+#: bws_menu/class-bws-settings.php:1070 bws_menu/deprecated.php:697
+#, fuzzy
+#| msgid "for"
+msgid "or"
+msgstr "для"
 
-#: custom-search-plugin.php:421
-msgid "WARNING"
-msgstr "УВАГА"
+#: bws_menu/bws_functions.php:214 bws_menu/bws_functions.php:246
+msgid "Add New"
+msgstr ""
 
-#: custom-search-plugin.php:421
-msgid "The plugin works correctly only if JavaScript is enabled."
-msgstr "Плагін працює коректно тільки при включеному JavaScript."
+#: bws_menu/bws_functions.php:218 bws_menu/bws_functions.php:228
+#: bws_menu/bws_functions.php:332 bws_menu/bws_functions.php:385
+#: bws_menu/bws_functions.php:487
+msgid "Close notice"
+msgstr ""
 
-#: custom-search-plugin.php:454
+#: bws_menu/bws_functions.php:233
+msgid "Thank you for installing plugins by BestWebSoft!"
+msgstr ""
+
+#: bws_menu/bws_functions.php:235
+msgid "More Details"
+msgstr ""
+
+#: bws_menu/bws_functions.php:236
+msgid "Less Details"
+msgstr ""
+
+#: bws_menu/bws_functions.php:264
+msgid "Deprecated function(-s) is used on the site here:"
+msgstr ""
+
+#: bws_menu/bws_functions.php:278
+msgid ""
+"This function(-s) will be removed over time. Please update the product(-s)."
+msgstr ""
+
+#: bws_menu/bws_functions.php:337
+msgid "It’s time to upgrade your"
+msgstr ""
+
+#: bws_menu/bws_functions.php:337 includes/class-cstmsrch-settings.php:350
+msgid "to"
+msgstr "на"
+
+#: bws_menu/bws_functions.php:337
+msgid "version!"
+msgstr ""
+
+#: bws_menu/bws_functions.php:338
+msgid "Extend standard plugin functionality with new great options."
+msgstr ""
+
+#: bws_menu/bws_functions.php:389
+#, php-format
+msgid ""
+"Your license key for %s expires on %s and you won't be granted TOP-PRIORITY "
+"SUPPORT or UPDATES."
+msgstr ""
+
+#: bws_menu/bws_functions.php:482
+#, php-format
+msgid "Thank you for choosing %s plugin!"
+msgstr ""
+
+#: bws_menu/bws_functions.php:483
+msgid ""
+"If you have a feature, suggestion or idea you'd like to see in the plugin, "
+"we'd love to hear about it!"
+msgstr ""
+
+#: bws_menu/bws_functions.php:484
+msgid "Suggest a Feature"
+msgstr ""
+
+#: bws_menu/bws_functions.php:500 bws_menu/class-bws-settings.php:540
+#: bws_menu/class-bws-settings.php:543 bws_menu/class-bws-settings.php:595
+#: bws_menu/class-bws-settings.php:598
+#, fuzzy
+#| msgid "Notice:"
+msgid "Notice"
+msgstr "Попередження:"
+
+#: bws_menu/bws_functions.php:500
+#, fuzzy
+#| msgid "All plugin settings were restored."
+msgid "The plugin's settings have been changed."
+msgstr "Всі налаштування плагіну були відновлені."
+
+#: bws_menu/bws_functions.php:501 bws_menu/class-bws-settings.php:183
+#: bws_menu/class-bws-settings.php:203 bws_menu/deprecated.php:642
+msgid "Save Changes"
+msgstr "Зберегти зміни"
+
+#: bws_menu/bws_functions.php:515
+msgid ""
+"You can always look at premium options by checking the \"Pro Options\" in "
+"the \"Misc\" tab."
+msgstr ""
+
+#: bws_menu/bws_functions.php:673
+msgid "Add shortcode"
+msgstr ""
+
+#: bws_menu/bws_functions.php:673
+msgid "Add BestWebSoft plugins' shortcodes using this button."
+msgstr ""
+
+#: bws_menu/bws_functions.php:729 includes/class-cstmsrch-settings.php:263
+#: includes/class-cstmsrch-settings.php:308
+#: includes/class-cstmsrch-settings.php:323
+msgid "Close"
+msgstr "Закрити"
+
+#: bws_menu/bws_functions.php:821
+msgid "Are you sure you want to restore default settings?"
+msgstr ""
+
+#: bws_menu/bws_functions.php:824
+msgid "Yes, restore all settings"
+msgstr ""
+
+#: bws_menu/bws_functions.php:825
+msgid "No, go back to the settings page"
+msgstr ""
+
+#: bws_menu/bws_functions.php:867
+msgid "Plugin"
+msgstr ""
+
+#: bws_menu/bws_functions.php:876
+#, fuzzy
+#| msgid "Settings"
+msgid "Shortcode settings"
+msgstr "Налаштування"
+
+#: bws_menu/bws_functions.php:881
+msgid "The shortcode will be inserted"
+msgstr ""
+
+#: bws_menu/bws_functions.php:922 custom-search-plugin.php:564
 msgid "FAQ"
 msgstr "FAQ"
 
-#: custom-search-plugin.php:455
+#: bws_menu/bws_functions.php:928
+msgid "For more information:"
+msgstr ""
+
+#: bws_menu/bws_functions.php:929
+msgid "Documentation"
+msgstr ""
+
+#: bws_menu/bws_functions.php:930
+msgid "Video Instructions"
+msgstr ""
+
+#: bws_menu/bws_functions.php:931
+msgid "Submit a Request"
+msgstr ""
+
+#: bws_menu/bws_menu.php:101 bws_menu/class-bws-settings.php:792
+#: bws_menu/deprecated.php:323
+#, fuzzy
+#| msgid "License Key"
+msgid "Wrong license key"
+msgstr "Ліцензійний ключ"
+
+#: bws_menu/bws_menu.php:122 bws_menu/class-bws-settings.php:818
+#: bws_menu/class-bws-settings.php:885 bws_menu/class-bws-settings.php:921
+#: bws_menu/deprecated.php:133 bws_menu/deprecated.php:199
+#: bws_menu/deprecated.php:353
+msgid ""
+"Something went wrong. Please try again later. If the error appears again, "
+"please contact us"
+msgstr ""
+
+#: bws_menu/bws_menu.php:122 bws_menu/class-bws-settings.php:818
+#: bws_menu/class-bws-settings.php:885 bws_menu/class-bws-settings.php:921
+#: bws_menu/deprecated.php:133 bws_menu/deprecated.php:199
+#: bws_menu/deprecated.php:353
+msgid "We are sorry for inconvenience."
+msgstr ""
+
+#: bws_menu/bws_menu.php:128 bws_menu/class-bws-settings.php:824
+#: bws_menu/class-bws-settings.php:927 bws_menu/deprecated.php:139
+#: bws_menu/deprecated.php:359
+#, fuzzy
+#| msgid "License Key"
+msgid "Wrong license key."
+msgstr "Ліцензійний ключ"
+
+#: bws_menu/bws_menu.php:130
+msgid ""
+"This license key is bound to another site. Change it via personal Client "
+"Area."
+msgstr ""
+
+#: bws_menu/bws_menu.php:130
+msgid "Log in"
+msgstr ""
+
+#: bws_menu/bws_menu.php:132 bws_menu/bws_menu.php:332
+#: bws_menu/deprecated.php:261
+msgid "Unfortunately, you have exceeded the number of available tries per day."
+msgstr ""
+
+#: bws_menu/bws_menu.php:134 bws_menu/deprecated.php:365
+#, php-format
+msgid ""
+"Unfortunately, Your license has expired. To continue getting top-priority "
+"support and plugin updates, you should extend it in your %s"
+msgstr ""
+
+#: bws_menu/bws_menu.php:136 bws_menu/class-bws-settings.php:935
+#: bws_menu/deprecated.php:367
+msgid ""
+"Unfortunately, the Pro licence was already installed to this domain. The Pro "
+"Trial license can be installed only once."
+msgstr ""
+
+#: bws_menu/bws_menu.php:142 bws_menu/class-bws-settings.php:839
+#: bws_menu/deprecated.php:153
+msgid "The license key is valid."
+msgstr ""
+
+#: bws_menu/bws_menu.php:144 bws_menu/class-bws-settings.php:842
+#: bws_menu/deprecated.php:156
+msgid "Your license will expire on"
+msgstr ""
+
+#: bws_menu/bws_menu.php:146
+msgid "Congratulations! Pro Membership license is activated successfully."
+msgstr ""
+
+#: bws_menu/bws_menu.php:153 bws_menu/class-bws-settings.php:1007
+#: bws_menu/deprecated.php:436
+msgid ""
+"Something went wrong. Try again later or upload the plugin manually. We are "
+"sorry for inconvenience."
+msgstr ""
+
+#: bws_menu/bws_menu.php:163
+msgid "Please enter your license key."
+msgstr ""
+
+#: bws_menu/bws_menu.php:174
+msgid "Not set"
+msgstr ""
+
+#: bws_menu/bws_menu.php:176
+msgid "On"
+msgstr ""
+
+#: bws_menu/bws_menu.php:176
+msgid "Off"
+msgstr ""
+
+#: bws_menu/bws_menu.php:177 bws_menu/bws_menu.php:178
+#: bws_menu/bws_menu.php:179 bws_menu/bws_menu.php:180
+#: bws_menu/bws_menu.php:181 bws_menu/bws_menu.php:182
+#: bws_menu/bws_menu.php:191
+msgid "N/A"
+msgstr ""
+
+#: bws_menu/bws_menu.php:182
+msgid " Mb"
+msgstr ""
+
+#: bws_menu/bws_menu.php:183 bws_menu/bws_menu.php:184
+#: bws_menu/bws_menu.php:185 bws_menu/bws_menu.php:189
+msgid "Yes"
+msgstr ""
+
+#: bws_menu/bws_menu.php:183 bws_menu/bws_menu.php:184
+#: bws_menu/bws_menu.php:185 bws_menu/bws_menu.php:189
+msgid "No"
+msgstr ""
+
+#: bws_menu/bws_menu.php:196
+msgid "WordPress Environment"
+msgstr ""
+
+#: bws_menu/bws_menu.php:198
+msgid "Home URL"
+msgstr ""
+
+#: bws_menu/bws_menu.php:199
+msgid "Website URL"
+msgstr ""
+
+#: bws_menu/bws_menu.php:200
+msgid "WP Version"
+msgstr ""
+
+#: bws_menu/bws_menu.php:201
+msgid "WP Multisite"
+msgstr ""
+
+#: bws_menu/bws_menu.php:202
+msgid "WP Memory Limit"
+msgstr ""
+
+#: bws_menu/bws_menu.php:203
+msgid "Active Theme"
+msgstr ""
+
+#: bws_menu/bws_menu.php:203 bws_menu/bws_menu.php:248
+#: bws_menu/bws_menu.php:251
+#, php-format
+msgid "by %s"
+msgstr ""
+
+#: bws_menu/bws_menu.php:207
+msgid "Server Environment"
+msgstr ""
+
+#: bws_menu/bws_menu.php:209
+msgid "Operating System"
+msgstr ""
+
+#: bws_menu/bws_menu.php:210
+msgid "Server"
+msgstr ""
+
+#: bws_menu/bws_menu.php:211
+msgid "PHP Version"
+msgstr ""
+
+#: bws_menu/bws_menu.php:212
+msgid "PHP Allow URL fopen"
+msgstr ""
+
+#: bws_menu/bws_menu.php:213
+msgid "PHP Memory Limit"
+msgstr ""
+
+#: bws_menu/bws_menu.php:214
+msgid "Memory Usage"
+msgstr ""
+
+#: bws_menu/bws_menu.php:215
+msgid "PHP Max Upload Size"
+msgstr ""
+
+#: bws_menu/bws_menu.php:216
+msgid "PHP Max Post Size"
+msgstr ""
+
+#: bws_menu/bws_menu.php:217
+msgid "PHP Max Script Execute Time"
+msgstr ""
+
+#: bws_menu/bws_menu.php:218
+msgid "PHP Exif support"
+msgstr ""
+
+#: bws_menu/bws_menu.php:219
+msgid "PHP IPTC support"
+msgstr ""
+
+#: bws_menu/bws_menu.php:220
+msgid "PHP XML support"
+msgstr ""
+
+#: bws_menu/bws_menu.php:226
+msgid "Database"
+msgstr ""
+
+#: bws_menu/bws_menu.php:228
+msgid "WP DB version"
+msgstr ""
+
+#: bws_menu/bws_menu.php:229
+msgid "MySQL version"
+msgstr ""
+
+#: bws_menu/bws_menu.php:230
+msgid "SQL Mode"
+msgstr ""
+
+#: bws_menu/bws_menu.php:234
+#, fuzzy
+#| msgid "activate plugin"
+msgid "Active Plugins"
+msgstr "активувати плагін"
+
+#: bws_menu/bws_menu.php:239
+#, fuzzy
+#| msgid "activate plugin"
+msgid "Inactive Plugins"
+msgstr "активувати плагін"
+
+#: bws_menu/bws_menu.php:260
+msgid "Please enter a valid email address."
+msgstr ""
+
+#: bws_menu/bws_menu.php:262
+#, php-format
+msgid "Email with system info is sent to %s."
+msgstr ""
+
+#: bws_menu/bws_menu.php:266
+msgid "Thank you for contacting us."
+msgstr ""
+
+#: bws_menu/bws_menu.php:289
+msgid "Sorry, email message could not be delivered."
+msgstr ""
+
+#: bws_menu/bws_menu.php:305 bws_menu/bws_menu.php:309
+#: bws_menu/bws_menu.php:358 bws_menu/deprecated.php:91
+msgid "Plugins"
+msgstr ""
+
+#: bws_menu/bws_menu.php:306 bws_menu/bws_menu.php:310
+#: bws_menu/bws_menu.php:618 bws_menu/deprecated.php:92
+msgid "Themes"
+msgstr ""
+
+#: bws_menu/bws_menu.php:307 bws_menu/bws_menu.php:311
+#: bws_menu/bws_menu.php:648
+msgid "System status"
+msgstr ""
+
+#: bws_menu/bws_menu.php:315 custom-search-plugin.php:565
 msgid "Support"
 msgstr "Підтримка"
+
+#: bws_menu/bws_menu.php:316
+msgid "Manage purchased licenses & subscriptions"
+msgstr ""
+
+#: bws_menu/bws_menu.php:324
+#, php-format
+msgid "Get Access to %s+ Premium Plugins"
+msgstr ""
+
+#: bws_menu/bws_menu.php:326
+msgid "Subscribe to Pro Membership"
+msgstr ""
+
+#: bws_menu/bws_menu.php:334 bws_menu/bws_menu.php:345
+#: bws_menu/class-bws-settings.php:760 bws_menu/deprecated.php:227
+#, fuzzy
+#| msgid "License Key"
+msgid "Check license key"
+msgstr "Ліцензійний ключ"
+
+#: bws_menu/bws_menu.php:337
+msgid "Enter your license key"
+msgstr ""
+
+#: bws_menu/bws_menu.php:343 bws_menu/bws_menu.php:570
+#: bws_menu/bws_menu.php:579 bws_menu/class-bws-settings.php:739
+#: bws_menu/deprecated.php:259 bws_menu/deprecated.php:267
+#: bws_menu/deprecated.php:631 bws_menu/deprecated.php:703
+#: bws_menu/deprecated.php:712
+#, fuzzy
+#| msgid "activate plugin"
+msgid "Activate"
+msgstr "активувати плагін"
+
+#: bws_menu/bws_menu.php:359
+msgid "Upload Plugin"
+msgstr ""
+
+#: bws_menu/bws_menu.php:363
+#, php-format
+msgid ""
+"The plugin generated %d characters of <strong>unexpected output</strong> "
+"during activation. If you notice &#8220;headers already sent&#8221; "
+"messages, problems with syndication feeds or other issues, try deactivating "
+"or removing this plugin."
+msgstr ""
+
+#: bws_menu/bws_menu.php:365
+msgid ""
+"Plugin could not be activated because it triggered a <strong>fatal error</"
+"strong>."
+msgstr ""
+
+#: bws_menu/bws_menu.php:368
+msgid "Plugin <strong>activated</strong>."
+msgstr ""
+
+#: bws_menu/bws_menu.php:375
+msgid "Installing Plugin"
+msgstr ""
+
+#: bws_menu/bws_menu.php:381
+msgid "Downloading install package from"
+msgstr ""
+
+#: bws_menu/bws_menu.php:398 bws_menu/bws_menu.php:429
+#: bws_menu/bws_menu.php:440 bws_menu/deprecated.php:388
+#: bws_menu/deprecated.php:410 bws_menu/deprecated.php:432
+msgid "Failed to download the zip archive. Please, upload the plugin manually"
+msgstr ""
+
+#: bws_menu/bws_menu.php:406
+msgid "Unpacking the package"
+msgstr ""
+
+#: bws_menu/bws_menu.php:411 bws_menu/bws_menu.php:419
+#, fuzzy
+#| msgid "activate plugin"
+msgid "Installing the plugin"
+msgstr "активувати плагін"
+
+#: bws_menu/bws_menu.php:415 bws_menu/deprecated.php:400
+msgid "Failed to open the zip archive. Please, upload the plugin manually"
+msgstr ""
+
+#: bws_menu/bws_menu.php:422 bws_menu/deprecated.php:406
+msgid ""
+"Your server does not support either ZipArchive or Phar. Please, upload the "
+"plugin manually"
+msgstr ""
+
+#: bws_menu/bws_menu.php:425
+#, php-format
+msgid "The plugin %s is successfully installed."
+msgstr ""
+
+#: bws_menu/bws_menu.php:432 bws_menu/deprecated.php:413
+msgid "UploadDir is not writable. Please, upload the plugin manually"
+msgstr ""
+
+#: bws_menu/bws_menu.php:437
+#, fuzzy
+#| msgid "activate plugin"
+msgid "Activate Plugin"
+msgstr "активувати плагін"
+
+#: bws_menu/bws_menu.php:437 bws_menu/bws_menu.php:443
+msgid "Return to BestWebSoft Panel"
+msgstr ""
+
+#: bws_menu/bws_menu.php:451 bws_menu/bws_menu.php:471
+#: bws_menu/bws_menu.php:600 includes/class-cstmsrch-settings.php:223
+#: includes/class-cstmsrch-settings.php:233
+msgid "All"
+msgstr "Всіх"
+
+#: bws_menu/bws_menu.php:454 bws_menu/bws_menu.php:637
+msgid "Installed"
+msgstr ""
+
+#: bws_menu/bws_menu.php:457
+msgid "Not Installed"
+msgstr ""
+
+#: bws_menu/bws_menu.php:464
+msgid "Filter results"
+msgstr ""
+
+#: bws_menu/bws_menu.php:467 bws_menu/bws_menu.php:596
+#, fuzzy
+#| msgid "Categories"
+msgid "Category"
+msgstr "Категорії"
+
+#: bws_menu/bws_menu.php:531
+msgid "Not installed"
+msgstr ""
+
+#: bws_menu/bws_menu.php:535
+msgid "Renew to get updates"
+msgstr ""
+
+#: bws_menu/bws_menu.php:538
+#, php-format
+msgid "Update to v %s"
+msgstr ""
+
+#: bws_menu/bws_menu.php:550 bws_menu/bws_menu.php:573
+#: bws_menu/bws_menu.php:582
+msgid "Install Now"
+msgstr ""
+
+#: bws_menu/bws_menu.php:556 bws_menu/class-bws-settings.php:157
+#: bws_menu/class-bws-settings.php:1067 custom-search-plugin.php:45
+msgid "Upgrade to Pro"
+msgstr "Оновити до Pro"
+
+#: bws_menu/bws_menu.php:570 bws_menu/bws_menu.php:579
+#, fuzzy
+#| msgid "activate plugin"
+msgid "Activate this plugin"
+msgstr "активувати плагін"
+
+#: bws_menu/bws_menu.php:582
+msgid "Install this plugin"
+msgstr ""
+
+#: bws_menu/bws_menu.php:591
+msgid "Nothing found. Try another criteria."
+msgstr ""
+
+#: bws_menu/bws_menu.php:628
+#, php-format
+msgid "By %s"
+msgstr ""
+
+#: bws_menu/bws_menu.php:635
+msgid "Already Installed"
+msgstr ""
+
+#: bws_menu/bws_menu.php:645
+msgid "Browse More WordPress Themes"
+msgstr ""
+
+#: bws_menu/bws_menu.php:654
+#, fuzzy
+#| msgid "Support"
+msgid "Send to support"
+msgstr "Підтримка"
+
+#: bws_menu/bws_menu.php:661
+msgid "Send to custom email &#187;"
+msgstr ""
+
+#: bws_menu/class-bws-settings.php:136
+msgid "Information"
+msgstr ""
+
+#: bws_menu/class-bws-settings.php:144
+msgid "Inactive"
+msgstr ""
+
+#: bws_menu/class-bws-settings.php:152
+msgid "Expired"
+msgstr ""
+
+#: bws_menu/class-bws-settings.php:155
+#, php-format
+msgid "%s day(-s) left"
+msgstr ""
+
+#: bws_menu/class-bws-settings.php:161
+#, php-format
+msgid "Expired on %s"
+msgstr ""
+
+#: bws_menu/class-bws-settings.php:161
+msgid "Renew Now"
+msgstr ""
+
+#: bws_menu/class-bws-settings.php:163
+msgid "Active"
+msgstr ""
+
+#: bws_menu/class-bws-settings.php:168
+#, fuzzy
+#| msgid "License Key"
+msgid "License"
+msgstr "Ліцензійний ключ"
+
+#: bws_menu/class-bws-settings.php:171
+msgid "Status"
+msgstr ""
+
+#: bws_menu/class-bws-settings.php:175
+msgid "Version"
+msgstr ""
+
+#: bws_menu/class-bws-settings.php:285
+msgid "All plugin settings were restored."
+msgstr "Всі налаштування плагіну були відновлені."
+
+#: bws_menu/class-bws-settings.php:423 includes/class-cstmsrch-settings.php:28
+msgid "Custom Code"
+msgstr "Користувацький код"
+
+#: bws_menu/class-bws-settings.php:427 bws_menu/deprecated.php:498
+msgid "You do not have sufficient permissions to edit plugins for this site."
+msgstr ""
+
+#: bws_menu/class-bws-settings.php:432 bws_menu/deprecated.php:620
+msgid "These styles will be added to the header on all pages of your site."
+msgstr ""
+
+#: bws_menu/class-bws-settings.php:435 bws_menu/deprecated.php:622
+#, php-format
+msgid ""
+"This PHP code will be hooked to the %s action and will be printed on front "
+"end only."
+msgstr ""
+
+#: bws_menu/class-bws-settings.php:438
+msgid "These code will be added to the header on all pages of your site."
+msgstr ""
+
+#: bws_menu/class-bws-settings.php:446 bws_menu/deprecated.php:646
+#, php-format
+msgid ""
+"You need to make this files writable before you can save your changes. See "
+"%s the Codex %s for more information."
+msgstr ""
+
+#: bws_menu/class-bws-settings.php:456 bws_menu/deprecated.php:628
+msgid "Browsing"
+msgstr ""
+
+#: bws_menu/class-bws-settings.php:461
+#, php-format
+msgid "Activate custom %s code."
+msgstr ""
+
+#: bws_menu/class-bws-settings.php:469 bws_menu/deprecated.php:635
+#, fuzzy, php-format
+#| msgid "Learn More"
+msgid "Learn more about %s"
+msgstr "Докладніше"
+
+#: bws_menu/class-bws-settings.php:531
+#, fuzzy
+#| msgid "Display Settings"
+msgid "Miscellaneous Settings"
+msgstr "Налаштування виводу"
+
+#: bws_menu/class-bws-settings.php:540 bws_menu/class-bws-settings.php:595
+#, php-format
+msgid ""
+"It is prohibited to change %s settings on this site in the %s network "
+"settings."
+msgstr ""
+
+#: bws_menu/class-bws-settings.php:543 bws_menu/class-bws-settings.php:598
+#, php-format
+msgid ""
+"It is prohibited to view %s settings on this site in the %s network settings."
+msgstr ""
+
+#: bws_menu/class-bws-settings.php:552
+msgid "Pro Options"
+msgstr ""
+
+#: bws_menu/class-bws-settings.php:556
+msgid "Enable to display plugin Pro options."
+msgstr ""
+
+#: bws_menu/class-bws-settings.php:562
+msgid "Track Usage"
+msgstr ""
+
+#: bws_menu/class-bws-settings.php:566
+msgid ""
+"Enable to allow tracking plugin usage anonymously in order to make it better."
+msgstr ""
+
+#: bws_menu/class-bws-settings.php:571
+#, fuzzy
+#| msgid "Display Settings"
+msgid "Default Settings"
+msgstr "Налаштування виводу"
+
+#: bws_menu/class-bws-settings.php:573
+#, fuzzy
+#| msgid "Appearance Settings"
+msgid "Restore Settings"
+msgstr "Налаштування відображення"
+
+#: bws_menu/class-bws-settings.php:574
+msgid "This will restore plugin settings to defaults."
+msgstr ""
+
+#: bws_menu/class-bws-settings.php:586
+msgid "Import / Export"
+msgstr ""
+
+#: bws_menu/class-bws-settings.php:702 bws_menu/class-bws-settings.php:735
+#: bws_menu/class-bws-settings.php:757 includes/class-cstmsrch-settings.php:29
+msgid "License Key"
+msgstr "Ліцензійний ключ"
+
+#: bws_menu/class-bws-settings.php:725
+msgid "Congratulations! Pro license is activated successfully."
+msgstr ""
+
+#: bws_menu/class-bws-settings.php:726
+#, php-format
+msgid "You will be automatically redirected to the %s in %s seconds."
+msgstr ""
+
+#: bws_menu/class-bws-settings.php:726
+#, fuzzy
+#| msgid "Settings saved"
+msgid "Settings page"
+msgstr "Налаштування збережені"
+
+#: bws_menu/class-bws-settings.php:741
+#, php-format
+msgid "Enter your license key to activate %s and get premium plugin features."
+msgstr ""
+
+#: bws_menu/class-bws-settings.php:744 bws_menu/class-bws-settings.php:931
+#: bws_menu/deprecated.php:363 bws_menu/deprecated.php:706
+msgid ""
+"Unfortunately, you have exceeded the number of available tries per day. "
+"Please, upload the plugin manually."
+msgstr ""
+
+#: bws_menu/class-bws-settings.php:747 bws_menu/deprecated.php:697
+#, php-format
+msgid "Start Your Free %s-Day Trial Now"
+msgstr ""
+
+#: bws_menu/class-bws-settings.php:762
+msgid ""
+"If necessary, you can check if the license key is correct or reenter it in "
+"the field below."
+msgstr ""
+
+#: bws_menu/class-bws-settings.php:767
+#, fuzzy
+#| msgid "Appearance Settings"
+msgid "Manage License Settings"
+msgstr "Налаштування відображення"
+
+#: bws_menu/class-bws-settings.php:769
+msgid "Login to Client Area"
+msgstr ""
+
+#: bws_menu/class-bws-settings.php:771
+msgid ""
+"Manage active licenses, download BWS products, and view your payment history "
+"using BestWebSoft Client Area."
+msgstr ""
+
+#: bws_menu/class-bws-settings.php:826 bws_menu/class-bws-settings.php:929
+#: bws_menu/deprecated.php:141 bws_menu/deprecated.php:361
+msgid "This license key is bound to another site."
+msgstr ""
+
+#: bws_menu/class-bws-settings.php:828 bws_menu/deprecated.php:143
+msgid ""
+"This license key is valid, but Your license has expired. If you want to "
+"update our plugin in future, you should extend the license."
+msgstr ""
+
+#: bws_menu/class-bws-settings.php:830 bws_menu/deprecated.php:145
+msgid "Unfortunately, you have exceeded the number of available tries."
+msgstr ""
+
+#: bws_menu/class-bws-settings.php:832 bws_menu/deprecated.php:147
+msgid ""
+"Unfortunately, the Pro Trial licence was already installed to this domain. "
+"The Pro Trial license can be installed only once."
+msgstr ""
+
+#: bws_menu/class-bws-settings.php:837 bws_menu/deprecated.php:151
+msgid "The Pro Trial license key is valid."
+msgstr ""
+
+#: bws_menu/class-bws-settings.php:845 bws_menu/deprecated.php:159
+#: bws_menu/deprecated.php:246
+#, php-format
+msgid ""
+"In order to continue using the plugin it is necessary to buy a %s license."
+msgstr ""
+
+#: bws_menu/class-bws-settings.php:933
+#, php-format
+msgid ""
+"Unfortunately, Your license has expired. To continue getting top-priority "
+"support and plugin updates, you should extend it in your %s."
+msgstr ""
+
+#: bws_menu/class-bws-settings.php:959 bws_menu/class-bws-settings.php:981
+#: bws_menu/class-bws-settings.php:1003
+msgid "Failed to download the zip archive. Please, upload the plugin manually."
+msgstr ""
+
+#: bws_menu/class-bws-settings.php:971
+msgid "Failed to open the zip archive. Please, upload the plugin manually."
+msgstr ""
+
+#: bws_menu/class-bws-settings.php:977
+msgid ""
+"Your server does not support either ZipArchive or Phar. Please, upload the "
+"plugin manually."
+msgstr ""
+
+#: bws_menu/class-bws-settings.php:984
+msgid "UploadDir is not writable. Please, upload the plugin manually."
+msgstr ""
+
+#: bws_menu/class-bws-settings.php:1042 bws_menu/deprecated.php:464
+msgid "Please, enter Your license key"
+msgstr ""
+
+#: bws_menu/class-bws-settings.php:1054
+msgid "Need Help?"
+msgstr ""
+
+#: bws_menu/class-bws-settings.php:1056
+msgid "Read the Instruction"
+msgstr ""
+
+#: bws_menu/class-bws-settings.php:1060
+msgid "Watch the Video"
+msgstr ""
+
+#: bws_menu/class-bws-settings.php:1071
+msgid "Start Your Free Trial"
+msgstr ""
+
+#: bws_menu/deactivation-form.php:27
+msgid "Need help? We are ready to answer your questions."
+msgstr ""
+
+#: bws_menu/deactivation-form.php:27
+#, fuzzy
+#| msgid "Support"
+msgid "Contact Support"
+msgstr "Підтримка"
+
+#: bws_menu/deactivation-form.php:32
+msgid "The plugin is not working"
+msgstr ""
+
+#: bws_menu/deactivation-form.php:34
+msgid "Kindly share what didn't work so we can fix it in future updates..."
+msgstr ""
+
+#: bws_menu/deactivation-form.php:38
+msgid "The plugin didn't work as expected"
+msgstr ""
+
+#: bws_menu/deactivation-form.php:40
+msgid "What did you expect?"
+msgstr ""
+
+#: bws_menu/deactivation-form.php:44
+msgid "The plugin suddenly stopped working"
+msgstr ""
+
+#: bws_menu/deactivation-form.php:51
+msgid "The plugin broke my site"
+msgstr ""
+
+#: bws_menu/deactivation-form.php:58
+msgid "I couldn't understand how to get it work"
+msgstr ""
+
+#: bws_menu/deactivation-form.php:65
+msgid "I found a better plugin"
+msgstr ""
+
+#: bws_menu/deactivation-form.php:67
+msgid "What's the plugin name?"
+msgstr ""
+
+#: bws_menu/deactivation-form.php:71
+msgid "The plugin is great, but I need specific feature that you don't support"
+msgstr ""
+
+#: bws_menu/deactivation-form.php:73
+msgid "What feature?"
+msgstr ""
+
+#: bws_menu/deactivation-form.php:77
+msgid "I no longer need the plugin"
+msgstr ""
+
+#: bws_menu/deactivation-form.php:83
+msgid "It's a temporary deactivation, I'm just debugging an issue"
+msgstr ""
+
+#: bws_menu/deactivation-form.php:89
+msgid "Other"
+msgstr ""
+
+#: bws_menu/deactivation-form.php:123
+msgid "Quick Feedback"
+msgstr ""
+
+#: bws_menu/deactivation-form.php:124
+msgid "If you have a moment, please let us know why you are deactivating"
+msgstr ""
+
+#: bws_menu/deactivation-form.php:127
+msgid "Send website data and allow to contact me back"
+msgstr ""
+
+#: bws_menu/deactivation-form.php:132
+msgid "Cancel"
+msgstr ""
+
+#: bws_menu/deactivation-form.php:233
+msgid "Processing"
+msgstr ""
+
+#: bws_menu/deactivation-form.php:262
+msgid "Submit & Deactivate"
+msgstr ""
+
+#: bws_menu/deactivation-form.php:277
+msgid "Please tell us the reason so we can improve it."
+msgstr ""
+
+#: bws_menu/deactivation-form.php:345
+#, fuzzy
+#| msgid "activate plugin"
+msgid "Deactivate"
+msgstr "активувати плагін"
+
+#: bws_menu/deprecated.php:93
+msgid "System Status"
+msgstr ""
+
+#: bws_menu/deprecated.php:204
+msgid "Please, enter your license key"
+msgstr ""
+
+#: bws_menu/deprecated.php:223
+msgid ""
+"If necessary, you can check if the license key is correct or reenter it in "
+"the field below. You can find your license key on your personal page - "
+"Client Area - on our website"
+msgstr ""
+
+#: bws_menu/deprecated.php:223
+msgid ""
+"(your username is the email address specified during the purchase). If "
+"necessary, please submit \"Lost your password?\" request."
+msgstr ""
+
+#: bws_menu/deprecated.php:246
+msgid "After that, you can activate it by entering your license key."
+msgstr ""
+
+#: bws_menu/deprecated.php:249 bws_menu/deprecated.php:691
+msgid "License key can be found in the"
+msgstr ""
+
+#: bws_menu/deprecated.php:251 bws_menu/deprecated.php:693
+msgid "(your username is the email address specified during the purchase)."
+msgstr ""
+
+#: bws_menu/deprecated.php:279
+msgid ""
+"Congratulations! The Pro license of the plugin is activated successfully."
+msgstr ""
+
+#: bws_menu/deprecated.php:281 bws_menu/deprecated.php:672
+msgid "Please, go to"
+msgstr ""
+
+#: bws_menu/deprecated.php:281 bws_menu/deprecated.php:672
+#, fuzzy
+#| msgid "Settings saved"
+msgid "the setting page"
+msgstr "Налаштування збережені"
+
+#: bws_menu/deprecated.php:282 bws_menu/deprecated.php:673
+msgid "You will be redirected automatically in 5 seconds."
+msgstr ""
+
+#: bws_menu/deprecated.php:316
+msgid "Check premium options on the plugin settings page!"
+msgstr ""
+
+#: bws_menu/deprecated.php:479
+#, fuzzy
+#| msgid "All plugin settings were restored."
+msgid "Restore all plugin settings to defaults"
+msgstr "Всі налаштування плагіну були відновлені."
+
+#: bws_menu/deprecated.php:481
+#, fuzzy
+#| msgid "Custom Search Settings"
+msgid "Restore settings"
+msgstr "Налаштування Custom Search"
+
+#: bws_menu/deprecated.php:550 bws_menu/deprecated.php:577
+#, php-format
+msgid "File %s edited successfully."
+msgstr ""
+
+#: bws_menu/deprecated.php:552 bws_menu/deprecated.php:579
+msgid "Not enough permissions to create or update the file"
+msgstr ""
+
+#: bws_menu/deprecated.php:582
+msgid "Not enough permissions to create the file"
+msgstr ""
+
+#: bws_menu/deprecated.php:626
+msgid "Editing"
+msgstr ""
+
+#: bws_menu/deprecated.php:670
+msgid ""
+"Congratulations! Pro version of the plugin is  installed and activated "
+"successfully."
+msgstr ""
+
+#: bws_menu/deprecated.php:680
+msgid "Show Pro features"
+msgstr ""
+
+#: bws_menu/deprecated.php:687
+msgid "Enter your license key to install and activate"
+msgstr ""
+
+#: bws_menu/deprecated.php:689
+msgid "version of the plugin."
+msgstr ""
+
+#: bws_menu/product_list.php:7
+msgid "Admin Tools"
+msgstr ""
+
+#: bws_menu/product_list.php:8
+msgid "Content"
+msgstr ""
+
+#: bws_menu/product_list.php:9
+msgid "eCommerce"
+msgstr ""
+
+#: bws_menu/product_list.php:10
+msgid "Marketing"
+msgstr ""
+
+#: bws_menu/product_list.php:11
+msgid "Navigation"
+msgstr ""
+
+#: bws_menu/product_list.php:12
+msgid "Recommended"
+msgstr ""
+
+#: bws_menu/product_list.php:13
+msgid "Security"
+msgstr ""
+
+#: bws_menu/product_list.php:14
+msgid "SEO"
+msgstr ""
+
+#: bws_menu/product_list.php:15
+msgid "SMM"
+msgstr ""
+
+#: bws_menu/product_list.php:22
+msgid "Best secure captcha plugin to protect your WordPress forms."
+msgstr ""
+
+#: bws_menu/product_list.php:32
+msgid "Create your personal car rental/booking and reservation website."
+msgstr ""
+
+#: bws_menu/product_list.php:42
+msgid ""
+"Allow customers to reach you using secure contact form plugin any website "
+"must have."
+msgstr ""
+
+#: bws_menu/product_list.php:52
+msgid "Add unlimited number of contact forms to WordPress website."
+msgstr ""
+
+#: bws_menu/product_list.php:62
+msgid "Save and manage Contact Form messages. Never lose important data."
+msgstr ""
+
+#: bws_menu/product_list.php:72
+msgid "Add unlimited custom pages to WordPress admin dashboard."
+msgstr ""
+
+#: bws_menu/product_list.php:79
+msgid "Add custom fields to WordPress website search results."
+msgstr ""
+
+#: bws_menu/product_list.php:86
+msgid ""
+"Add custom post types and taxonomies to WordPress website search results."
+msgstr ""
+
+#: bws_menu/product_list.php:96
+msgid "Add PayPal and 2CO donate buttons to receive charity payments."
+msgstr ""
+
+#: bws_menu/product_list.php:103
+msgid ""
+"Get latest error log messages to diagnose website problems. Define and fix "
+"issues faster."
+msgstr ""
+
+#: bws_menu/product_list.php:110
+msgid ""
+"Add Facebook Follow, Like, and Share buttons to WordPress posts, pages, and "
+"widgets."
+msgstr ""
+
+#: bws_menu/product_list.php:120
+msgid ""
+"Add beautiful galleries, albums & images to your WordPress website in a few "
+"clicks."
+msgstr ""
+
+#: bws_menu/product_list.php:130
+msgid ""
+"Add Google +1, Share, Follow, Hangout buttons and profile badge to WordPress "
+"posts, pages and widgets."
+msgstr ""
+
+#: bws_menu/product_list.php:140
+msgid ""
+"Stronger security solution which protects your WordPress website from hacks "
+"and unauthorized login attempts."
+msgstr ""
+
+#: bws_menu/product_list.php:150
+msgid ""
+"Add Adsense ads to WordPress website pages, posts, custom posts, search "
+"results, categories, tags, and widgets."
+msgstr ""
+
+#: bws_menu/product_list.php:160
+msgid "Add Google Analytics code to WordPress website and track basic stats."
+msgstr ""
+
+#: bws_menu/product_list.php:170
+msgid ""
+"Protect WordPress website forms from spam entries with Google Captcha "
+"(reCaptcha)."
+msgstr ""
+
+#: bws_menu/product_list.php:180
+msgid "Add customized Google maps to WordPress posts, pages and widgets."
+msgstr ""
+
+#: bws_menu/product_list.php:190
+msgid ""
+"Generate and add XML sitemap to WordPress website. Help search engines index "
+"your blog."
+msgstr ""
+
+#: bws_menu/product_list.php:200
+msgid ""
+"Replace external WordPress website links with Google shortlinks and track "
+"click stats."
+msgstr ""
+
+#: bws_menu/product_list.php:207
+msgid ""
+"Protect WordPress website – allow and deny access for certain IP addresses, "
+"hostnames, etc."
+msgstr ""
+
+#: bws_menu/product_list.php:217
+msgid ""
+"Create your personal job board and listing WordPress website. Search jobs, "
+"submit CV/resumes, choose candidates."
+msgstr ""
+
+#: bws_menu/product_list.php:224
+msgid ""
+"Protect WordPress website against brute force attacks. Limit rate of login "
+"attempts."
+msgstr ""
+
+#: bws_menu/product_list.php:234
+msgid ""
+"Add LinkedIn Share and Follow buttons to WordPress posts, pages and widgets. "
+"5 plugins included – profile, insider, etc."
+msgstr ""
+
+#: bws_menu/product_list.php:244
+msgid ""
+"Translate WordPress website content to other languages manually. Create "
+"multilingual pages, posts, widgets, menus, etc."
+msgstr ""
+
+#: bws_menu/product_list.php:254
+msgid ""
+"Add customizable pagination to WordPress website. Split long content to "
+"multiple pages for better navigation."
+msgstr ""
+
+#: bws_menu/product_list.php:264
+msgid ""
+"Generate PDF files and print WordPress posts/pages. Customize document "
+"header/footer styles and appearance."
+msgstr ""
+
+#: bws_menu/product_list.php:274
+msgid ""
+"Add Pinterest Follow, Pin It buttons and profile widgets (Pin, Board, "
+"Profile) to WordPress posts, pages and widgets."
+msgstr ""
+
+#: bws_menu/product_list.php:284
+msgid ""
+"Create your personal portfolio WordPress website. Manage and showcase past "
+"projects to get more clients."
+msgstr ""
+
+#: bws_menu/product_list.php:294
+msgid "Export WordPress posts to CSV file format easily. Configure data order."
+msgstr ""
+
+#: bws_menu/product_list.php:301
+msgid ""
+"Add extra fields to default WordPress user profile. The easiest way to "
+"create and manage additional custom values."
+msgstr ""
+
+#: bws_menu/product_list.php:308
+msgid ""
+"Add and display HTML advertisement banner on WordPress website. Customize "
+"bar styles and appearance."
+msgstr ""
+
+#: bws_menu/product_list.php:318
+msgid ""
+"Add customizable quotes and tips blocks to WordPress posts, pages and "
+"widgets."
+msgstr ""
+
+#: bws_menu/product_list.php:325
+msgid ""
+"Add rating plugin to your WordPress website to receive feedback from your "
+"customers."
+msgstr ""
+
+#: bws_menu/product_list.php:332
+msgid ""
+"Create your personal real estate WordPress website. Sell, rent and buy "
+"properties. Add, search and browse listings easily."
+msgstr ""
+
+#: bws_menu/product_list.php:342
+msgid ""
+"Add related, featured, latest, and popular posts to your WordPress website. "
+"Connect your blog readers with a relevant content."
+msgstr ""
+
+#: bws_menu/product_list.php:349
+msgid ""
+"Send bulk email messages to WordPress users. Custom templates, advanced "
+"settings and detailed reports."
+msgstr ""
+
+#: bws_menu/product_list.php:359
+msgid ""
+"The best responsive slider plugin for your WordPress website. Create "
+"beautifully animated slides just in a few clicks."
+msgstr ""
+
+#: bws_menu/product_list.php:366
+msgid ""
+"Configure SMTP server to receive email messages from WordPress to Gmail, "
+"Yahoo, Hotmail and other services."
+msgstr ""
+
+#: bws_menu/product_list.php:373
+msgid ""
+"Add social media buttons and widgets to WordPress posts, pages and widgets. "
+"FB, Twitter, G+1, Pinterest, LinkedIn."
+msgstr ""
+
+#: bws_menu/product_list.php:383
+msgid ""
+"Add social media login, registration, and commenting to your WordPress "
+"website."
+msgstr ""
+
+#: bws_menu/product_list.php:390
+msgid ""
+"Add email newsletter sign up form to WordPress posts, pages and widgets. "
+"Collect data and subscribe your users."
+msgstr ""
+
+#: bws_menu/product_list.php:400
+msgid ""
+"Add testimonials and feedbacks from your customers to WordPress website "
+"posts, pages, and widgets."
+msgstr ""
+
+#: bws_menu/product_list.php:407
+msgid ""
+"Best timesheet plugin for WordPress. Track employee time, streamline "
+"attendance and generate reports."
+msgstr ""
+
+#: bws_menu/product_list.php:417
+msgid ""
+"Add Twitter Follow, Tweet, Hashtag, and Mention buttons to WordPress posts "
+"and pages."
+msgstr ""
+
+#: bws_menu/product_list.php:427
+msgid ""
+"Automatically check and update WordPress website core with all installed "
+"plugins and themes to the latest versions."
+msgstr ""
+
+#: bws_menu/product_list.php:437
+msgid ""
+"Powerful user role management plugin for WordPress website. Create, edit, "
+"copy, and delete user roles."
+msgstr ""
+
+#: bws_menu/product_list.php:447
+msgid ""
+"Display live count of online visitors who are currently browsing your "
+"WordPress website."
+msgstr ""
+
+#: bws_menu/product_list.php:457
+msgid ""
+"Backup and export Zendesk Help Center content automatically to your "
+"WordPress website database."
+msgstr ""
+
+#: custom-search-plugin.php:36 custom-search-plugin.php:38
+#: custom-search-plugin.php:528 includes/class-cstmsrch-settings.php:140
+msgid "Custom Search Settings"
+msgstr "Налаштування Custom Search"
+
+#: custom-search-plugin.php:136
+#, fuzzy
+#| msgid "All"
+msgid "all"
+msgstr "Всіх"
+
+#: custom-search-plugin.php:531
+msgid "WARNING"
+msgstr "УВАГА"
+
+#: custom-search-plugin.php:531
+msgid "The plugin works correctly only if JavaScript is enabled."
+msgstr "Плагін працює коректно тільки при включеному JavaScript."
 
 #: includes/class-cstmsrch-settings.php:25
 msgid "Display"
@@ -58,129 +1590,130 @@ msgstr "Відображення"
 msgid "Misc"
 msgstr "Різне"
 
-#: includes/class-cstmsrch-settings.php:28
-msgid "Custom Code"
-msgstr "Користувацький код"
-
-#: includes/class-cstmsrch-settings.php:29
-msgid "License Key"
-msgstr "Ліцензійний ключ"
-
-#: includes/class-cstmsrch-settings.php:123
+#: includes/class-cstmsrch-settings.php:124
 msgid "Settings saved"
 msgstr "Налаштування збережені"
 
-#: includes/class-cstmsrch-settings.php:153
+#: includes/class-cstmsrch-settings.php:154
+#: includes/class-cstmsrch-settings.php:267
 msgid "Enable Custom Search for"
 msgstr "Додати в користувацький пошук"
 
-#: includes/class-cstmsrch-settings.php:161
+#: includes/class-cstmsrch-settings.php:162
 msgid "Post Types"
 msgstr "Типи записів"
 
-#: includes/class-cstmsrch-settings.php:174
+#: includes/class-cstmsrch-settings.php:175
 msgid "No custom post type found."
 msgstr "Не знайдено жодного кастомного типу записів."
 
-#: includes/class-cstmsrch-settings.php:183
+#: includes/class-cstmsrch-settings.php:184
 msgid "Taxonomies"
 msgstr "Таксономії"
 
-#: includes/class-cstmsrch-settings.php:193
+#: includes/class-cstmsrch-settings.php:194
 msgid "for"
 msgstr "для"
 
-#: includes/class-cstmsrch-settings.php:202
+#: includes/class-cstmsrch-settings.php:203
+msgid "Results Display"
+msgstr "Відображення результатів"
+
+#: includes/class-cstmsrch-settings.php:206
+msgid "Default"
+msgstr "За замовчуванням"
+
+#: includes/class-cstmsrch-settings.php:207
+msgid "Tabs"
+msgstr "Вкладки"
+
+#: includes/class-cstmsrch-settings.php:212
 msgid "Show Hidden Fields"
 msgstr "Відображати приховані поля"
 
-#: includes/class-cstmsrch-settings.php:209
+#: includes/class-cstmsrch-settings.php:219
 msgid "Enable Search for the Custom Field"
 msgstr "Відображати пошук по користувацьким полям для"
 
-#: includes/class-cstmsrch-settings.php:213
-#: includes/class-cstmsrch-settings.php:223
-msgid "All"
-msgstr "Всіх"
-
-#: includes/class-cstmsrch-settings.php:238
+#: includes/class-cstmsrch-settings.php:248
 msgid "custom post type"
 msgstr "користувацький тип записів"
 
-#: includes/class-cstmsrch-settings.php:246
+#: includes/class-cstmsrch-settings.php:256
 msgid "Custom fields not found."
 msgstr "Користувацькi поля не знайдені."
 
-#: includes/class-cstmsrch-settings.php:254
+#: includes/class-cstmsrch-settings.php:282
+msgid ""
+"When you drag post types and taxonomies, you affect the order of their "
+"displaying in the frontend on the search page."
+msgstr ""
+"При перетягуванні типів записів або таксономій ви впливаєте на порядок їх "
+"виведення у фронтенді на сторінці пошуку."
+
+#: includes/class-cstmsrch-settings.php:286
+msgid "Search Only by Type of the Current Post"
+msgstr "Шукати тільки по типу поточного запису"
+
+#: includes/class-cstmsrch-settings.php:290
+msgid "Only current page post type will be used for the search."
+msgstr ""
+"Ця опція дозволяє здійснювати пошук тільки по тому типу запису, на сторінці "
+"якого ви перебуваєте."
+
+#: includes/class-cstmsrch-settings.php:303
 msgid "Display Settings"
 msgstr "Налаштування виводу"
 
-#: includes/class-cstmsrch-settings.php:259
-#: includes/class-cstmsrch-settings.php:274
-msgid "Close"
-msgstr "Закрити"
-
-#: includes/class-cstmsrch-settings.php:262
+#: includes/class-cstmsrch-settings.php:311
 msgid "Example of site pages' tree"
 msgstr ""
 
-#: includes/class-cstmsrch-settings.php:269
+#: includes/class-cstmsrch-settings.php:318
 msgid "Appearance Settings"
 msgstr "Налаштування відображення"
 
-#: includes/class-cstmsrch-settings.php:278
+#: includes/class-cstmsrch-settings.php:327
 msgid "Change Displaying of Post Content on Search Pages"
 msgstr "Змінити відображення вмісту запису на сторінках пошуку"
 
-#: includes/class-cstmsrch-settings.php:282
+#: includes/class-cstmsrch-settings.php:331
 msgid "Display Featured Image with Post Content"
 msgstr "Відображати мініатюру з вмістом запису"
 
-#: includes/class-cstmsrch-settings.php:286
+#: includes/class-cstmsrch-settings.php:335
 msgid "Featured Image Size"
 msgstr "Розмір мініатюри"
 
-#: includes/class-cstmsrch-settings.php:290
+#: includes/class-cstmsrch-settings.php:339
 msgid "Featured Image Align"
 msgstr "Положення мініатюри"
 
-#: includes/class-cstmsrch-settings.php:293
+#: includes/class-cstmsrch-settings.php:342
 msgid "Left"
 msgstr "Ліворуч"
 
-#: includes/class-cstmsrch-settings.php:294
+#: includes/class-cstmsrch-settings.php:343
 msgid "Right"
 msgstr "Праворуч"
 
-#: includes/class-cstmsrch-settings.php:299
+#: includes/class-cstmsrch-settings.php:348
 msgid "Change Excerpt Length"
 msgstr "Змінити довжину цитати"
 
-#: includes/class-cstmsrch-settings.php:301
-msgid "to"
-msgstr "на"
-
-#: includes/class-cstmsrch-settings.php:301
+#: includes/class-cstmsrch-settings.php:350
 msgid "words"
 msgstr "слів"
-
-#~ msgid "When you drag post types and taxonomies, you affect the order of their displaying in the frontend on the search page."
-#~ msgstr "При перетягуванні типів записів або таксономій ви впливаєте на порядок їх виведення у фронтенді на сторінці пошуку."
-
-#~ msgid "Search Only by Type of the Current Post"
-#~ msgstr "Шукати тільки по типу поточного запису"
-
-#~ msgid "Only current page post type will be used for the search."
-#~ msgstr "Ця опція дозволяє здійснювати пошук тільки по тому типу запису, на сторінці якого ви перебуваєте."
 
 #~ msgid "You need to"
 #~ msgstr "Вам потрібно"
 
-#~ msgid "activate plugin"
-#~ msgstr "активувати плагін"
-
-#~ msgid "If the type of the post is not default - you need to install and activate the plugin"
-#~ msgstr "Якщо тип запису не стандартний - вам необхідно встановити і активувати плагін"
+#~ msgid ""
+#~ "If the type of the post is not default - you need to install and activate "
+#~ "the plugin"
+#~ msgstr ""
+#~ "Якщо тип запису не стандартний - вам необхідно встановити і активувати "
+#~ "плагін"
 
 #~ msgid "Enable search for the custom field:"
 #~ msgstr "Відображати пошук по користувацьким полям для:"
@@ -189,13 +1722,19 @@ msgstr "слів"
 #~ msgstr "Відображати приховані поля"
 
 #~ msgid "This option is used when you search on a single page/post/post type."
-#~ msgstr "Ця опція використовується, коли Ви знаходитесь на сторінці запису/сторінки/типу запису."
+#~ msgstr ""
+#~ "Ця опція використовується, коли Ви знаходитесь на сторінці запису/"
+#~ "сторінки/типу запису."
 
 #~ msgid "Enable Custom search for:"
 #~ msgstr "Додати до кастомного пошуку:"
 
-#~ msgid "When you drag post types and taxonomies, you affect the order of their display in the frontend on the search page."
-#~ msgstr "При перетягуванні типів записів і таксономій, ви впливаєте на їх відображення у фронтенді на сторінці пошуку."
+#~ msgid ""
+#~ "When you drag post types and taxonomies, you affect the order of their "
+#~ "display in the frontend on the search page."
+#~ msgstr ""
+#~ "При перетягуванні типів записів і таксономій, ви впливаєте на їх "
+#~ "відображення у фронтенді на сторінці пошуку."
 
 #~ msgid "Search only by type of the current post"
 #~ msgstr "Шукати тільки по типу поточного запису"
@@ -215,9 +1754,6 @@ msgstr "слів"
 #~ msgid "Change excerpt length"
 #~ msgstr "Змінити довжину витягу"
 
-#~ msgid "All plugin settings were restored."
-#~ msgstr "Всі налаштування плагіну були відновлені."
-
 #~ msgid "post type"
 #~ msgstr "тип запису"
 
@@ -236,12 +1772,6 @@ msgstr "слів"
 #~ msgid "Unlock premium options by upgrading to Pro version"
 #~ msgstr "Зробити доступними преміум-опції, перейшовши на Pro версію"
 
-#~ msgid "Learn More"
-#~ msgstr "Докладніше"
-
-#~ msgid "Save Changes"
-#~ msgstr "Зберегти зміни"
-
 #~ msgid "Posts"
 #~ msgstr "Записи"
 
@@ -254,14 +1784,12 @@ msgstr "слів"
 #~ msgid "Tags"
 #~ msgstr "Теги"
 
-#~ msgid "Categories"
-#~ msgstr "Категорії"
-
-#~ msgid "Notice:"
-#~ msgstr "Попередження:"
-
-#~ msgid "The plugin's settings have been changed. In order to save them please don't forget to click the 'Save Changes' button."
-#~ msgstr "Налаштування плагіну було змінено. Щоб зберегти їх, не забудьте натиснути кнопку \"Зберегти зміни\"."
+#~ msgid ""
+#~ "The plugin's settings have been changed. In order to save them please "
+#~ "don't forget to click the 'Save Changes' button."
+#~ msgstr ""
+#~ "Налаштування плагіну було змінено. Щоб зберегти їх, не забудьте натиснути "
+#~ "кнопку \"Зберегти зміни\"."
 
 #~ msgid "Unlock premium options by upgrading to PRO version"
 #~ msgstr "Зробити доступними преміум-опції, перейшовши на PRO версію"

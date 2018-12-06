@@ -6,7 +6,7 @@ Description: Add custom post types to WordPress website search results.
 Author: BestWebSoft
 Text Domain: custom-search-plugin
 Domain Path: /languages
-Version: 1.41
+Version: 1.42
 Author URI: https://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -32,11 +32,13 @@ if ( ! function_exists( 'add_cstmsrch_admin_menu' ) ) {
 	function add_cstmsrch_admin_menu() {
 		global $submenu, $wp_version, $cstmsrch_plugin_info;
 
-		$settings = add_menu_page( __( 'Custom Search Settings', 'custom-search-plugin' ), 'Custom Search', 'manage_options', 'custom_search.php', 'cstmsrch_settings_page', 'none' );
+		if ( ! is_plugin_active( 'custom-search-pro/custom-search-pro.php' ) ) {
+			$settings = add_menu_page( __( 'Custom Search Settings', 'custom-search-plugin' ), 'Custom Search', 'manage_options', 'custom_search.php', 'cstmsrch_settings_page', 'none' );
 
-		add_submenu_page( 'custom_search.php', __( 'Custom Search Settings', 'custom-search-plugin' ), __( 'Settings', 'custom-search-plugin'), 'manage_options', 'custom_search.php', 'cstmsrch_settings_page' );
+			add_submenu_page( 'custom_search.php', __( 'Custom Search Settings', 'custom-search-plugin' ), __( 'Settings', 'custom-search-plugin'), 'manage_options', 'custom_search.php', 'cstmsrch_settings_page' );
 
-		add_submenu_page( 'custom_search.php', 'BWS Panel', 'BWS Panel', 'manage_options', 'cstmsrch-bws-panel', 'bws_add_menu_render' );
+			add_submenu_page( 'custom_search.php', 'BWS Panel', 'BWS Panel', 'manage_options', 'cstmsrch-bws-panel', 'bws_add_menu_render' );
+		}
 
 		if ( isset( $submenu['custom_search.php'] ) ) {
 			$submenu['custom_search.php'][] = array(
@@ -109,6 +111,7 @@ if ( ! function_exists( 'cstmsrch_default_options' ) ) {
 			'suggest_feature_banner'	=> 1,
 			'fields' 					=> array(),
 			'show_hidden_fields'		=> 0,
+			'show_tabs_post_type'		=> 0,
 		);
 
 		return $cstmsrch_options_default;
@@ -120,6 +123,69 @@ if ( ! function_exists( 'cstmsrch_default_options' ) ) {
  * if custom post types was added or deleted
  * @return void
  */
+
+if ( ! function_exists( 'cstmsrch_add_menu_search_header' ) ) {
+	function cstmsrch_add_menu_search_header() {
+			global $cstmsrch_options, $wpdb, $cstmsrch_post_types_enabled, $wp_query, $cstmsrch_taxonomies_enabled;
+			
+			$search = get_search_query();		
+			if ( $cstmsrch_options['show_tabs_post_type'] == 1 && $search && is_search()) {
+				$post_type = $wpdb->get_results( "SELECT DISTINCT `post_type` FROM $wpdb->posts " );
+				$i = 1;
+				$form = '<form action="'. esc_url( home_url( '/?s=' . get_search_query()  ) ).'" method="get" class="cstmsrch-submit-type">';
+				$form .= '<input type="submit" name="cstmsrch_submit_all_type" value="'. __( "all", "custom-search-pro" ) .'"/>';
+				if ( ! empty($cstmsrch_taxonomies_enabled)){
+					foreach ( $cstmsrch_taxonomies_enabled as $taxonomy ) {
+						$taxonomies[] = "'" . esc_sql( $taxonomy ) . "'";
+					}
+					if ( ! empty( $taxonomies ) ) {
+						$taxonomies = implode( ',', $taxonomies );
+					}
+					$taxonomies_value = " AND tt.taxonomy IN ( ". $taxonomies ." )";
+				}else{
+					$taxonomies_value = "";
+				}
+				$cusfields_sql_request = "'" . implode( "', '", $cstmsrch_options['fields'] ) . "'";
+					
+				$form .= '<input type="hidden" name="s" value="'. $search .'"/>';
+				
+				remove_filter( 'pre_get_posts', 'cstmsrch_searchfilter' );
+
+				$sql =  "SELECT wp_posts.`post_type` FROM wp_posts JOIN wp_postmeta ON wp_posts.ID = wp_postmeta.post_id  LEFT JOIN wp_term_relationships tr ON wp_posts.ID = tr.object_id LEFT JOIN wp_term_taxonomy tt ON tt.term_taxonomy_id=tr.term_taxonomy_id LEFT JOIN wp_terms t ON t.term_id = tt.term_id  WHERE ( 1=1 ";
+				$search_trim = explode( ' ', $search);
+				foreach ($search_trim as $value) {
+					$sql .= "AND ((wp_posts.post_title LIKE '%". $value ."%') OR (wp_posts.post_excerpt LIKE '%". $value ."%') OR (wp_posts.post_content LIKE '%". $value ."%'))";
+				}
+				$sql .=")  AND (wp_posts.post_status = 'publish' OR wp_posts.post_status = 'private') OR ( wp_postmeta.meta_key IN ( ". $cusfields_sql_request ." ) ";
+				foreach ($search_trim as $value) {
+					$sql .= "AND wp_postmeta.meta_value LIKE '%". $value ."%' ";
+				}
+				$sql .="AND (wp_posts.post_status = 'publish' OR wp_posts.post_status = 'private') )  OR ( t.name LIKE '%". $search ."%'". $taxonomies_value." AND wp_posts.post_status = 'publish' ) GROUP BY wp_posts.post_type";
+				  
+				$post_type = $wpdb->get_results( $sql, ARRAY_A );
+				foreach ( $post_type as $post_type_value ) {
+					foreach ( $post_type_value  as $value) {
+						if ( in_array( $value, $cstmsrch_post_types_enabled)) { 
+							$form .= '<input type="submit" name="cstmsrch_submit_post_type" value="'. $value .'"/>';
+						}
+					}
+					
+				}
+				$form .='</form>';
+				echo $form;	
+			}
+	}
+}
+
+if ( ! function_exists( 'cstmsrch_scripts' ) ) {
+	function cstmsrch_scripts() {
+		if ( ! is_admin() ) {
+			wp_enqueue_style( 'cstmsrch_stylesheet', plugins_url( 'css/style.css', __FILE__ ) );
+			wp_enqueue_script( 'cstmsrch_script', plugins_url( 'js/script.js', __FILE__ ), array( 'jquery', 'jquery-ui-sortable' ) );
+		}
+	}
+}
+
 if ( ! function_exists( 'cstmsrch_update_option' ) ) {
 	function cstmsrch_update_option( $options, $option_changed = false ) {
 		global $cstmsrch_options, $taxonomies_global;
@@ -331,17 +397,43 @@ if ( ! function_exists( 'cstmsrch_search_objects' ) ) {
  */
 if ( ! function_exists( 'cstmsrch_searchfilter' ) ) {
 	function cstmsrch_searchfilter( $query ) {
-		global $cstmsrch_is_registered, $cstmsrch_post_types_enabled;
-
-		if ( empty( $cstmsrch_is_registered ) ) {
+		global $cstmsrch_post_types_enabled, $cstmsrch_is_registered, $wpdb;
+		
+		
+		if ( ! $cstmsrch_is_registered ) {
 			register_cstmsrch_settings();
 		}
-		if ( $query->is_search && ! empty( $query->query['s'] ) && ! is_admin() && ! empty( $cstmsrch_post_types_enabled ) ) {
-			$query->set( 'post_type', $cstmsrch_post_types_enabled );
+		
+		if ( is_search() && ! is_admin() && ! empty( $cstmsrch_post_types_enabled ) ) {
+			$post_type = $wpdb->get_results( "SELECT DISTINCT `post_type` FROM $wpdb->posts " );
+			$i = 1;
+			foreach ($post_type as $key => $obj_type) {
+				$array_type_post =  (array) $obj_type;
+				foreach ($array_type_post as $array_type) {
+				 	$type[$i] = $array_type;
+				}
+				$i++;
+			}
+			if ( empty( $_REQUEST['cstmsrch_submit_all_type'] ) ){
+				if ( ! empty( $_REQUEST['cstmsrch_submit_post_type'] )){
+					foreach ($type as  $value) {
+						if($value == $_REQUEST['cstmsrch_submit_post_type'] ){
+							$query->set( 'post_type', $value );
+						}
+					} 
+				}else {
+					$query->set( 'post_type', $cstmsrch_post_types_enabled );
+				}		
+			}else{
+				$query->set( 'post_type', $cstmsrch_post_types_enabled );
+			}
+			$query->set( 'ignore_sticky_posts', true );
 		}
+
 		return $query;
 	}
 }
+
 
 /**
  * Changing SQL-join query for adding taxonomies to search query
@@ -363,23 +455,41 @@ if ( ! function_exists( 'cstmsrch_posts_where_tax' ) ) {
 	function cstmsrch_posts_where_tax( $where ) {
 		if ( is_search() ) {
 			global $cstmsrch_is_registered, $wpdb, $cstmsrch_post_types_enabled, $cstmsrch_taxonomies_enabled;
-
 			if ( ! $cstmsrch_is_registered ) {
 				register_cstmsrch_settings();
 			}
-
 			$taxonomies = array();
 			$where_post_types = $where_tax = "";
+			if ( isset( $_REQUEST['cstmsrch_submit_post_type'] ) ) {
+				$name_post = $_REQUEST['cstmsrch_submit_post_type'];
+				$taxonomy_objects = get_object_taxonomies( $name_post, 'objects' );
+				foreach ($taxonomy_objects as $key => $value) {
+					if( in_array( esc_sql( $key ), $cstmsrch_taxonomies_enabled ) ){ 
+							$taxonomies [] = "'" . esc_sql( $key ) . "'";
+						}
+					
+				}
+				if ( ! empty( $taxonomies ) ) {
+					if ( ! empty( $taxonomies ) ) {
+						$taxonomies = implode( ',', $taxonomies );
+						$where_tax = " t.name LIKE '%" . esc_sql( get_search_query() ) . "%' AND tt.taxonomy IN ( $taxonomies ) AND";
 
-			foreach ( $cstmsrch_taxonomies_enabled as $taxonomy ) {
-				$taxonomies[] = "'" . esc_sql( $taxonomy ) . "'";
-			}
-			if ( ! empty( $_REQUEST['cstmsrch_post_type'] ) && in_array( $_REQUEST['cstmsrch_post_type'], $cstmsrch_post_types_enabled ) ) {
-				$where_post_types = " {$wpdb->posts}.post_type = '" . esc_sql( $_REQUEST['cstmsrch_post_type'] ) . "' AND";
-			}
-			if ( ! empty( $taxonomies ) ) {
-				$taxonomies = implode( ',', $taxonomies );
-				$where_tax = " t.name LIKE '%" . esc_sql( get_search_query() ) . "%' AND tt.taxonomy IN ($taxonomies) AND";
+					}
+				}
+				if ( ! empty( $_REQUEST['cstmsrch_submit_post_type'] ) && ( $_REQUEST['cstmsrch_submit_post_type'] == $cstmsrch_post_types_enabled || in_array( $_REQUEST['cstmsrch_submit_post_type'], $cstmsrch_post_types_enabled ) ) ) {
+					$where_post_types = " {$wpdb->posts}.post_type = '" . esc_sql( $_REQUEST['cstmsrch_submit_post_type'] ) . "' AND";
+				}
+			}else{
+				foreach ( $cstmsrch_taxonomies_enabled as $taxonomy ) {
+					$taxonomies[] = "'" . esc_sql( $taxonomy ) . "'";
+				}
+				if ( ! empty( $taxonomies ) ) {
+					$taxonomies = implode( ',', $taxonomies );
+					$where_tax = " t.name LIKE '%" . esc_sql( get_search_query() ) . "%' AND tt.taxonomy IN ( $taxonomies ) AND";
+				}
+				if ( ! empty( $_REQUEST['cstmsrch_post_type'] ) && ( $_REQUEST['cstmsrch_post_type'] == $cstmsrch_post_types_enabled || in_array( $_REQUEST['cstmsrch_post_type'], $cstmsrch_post_types_enabled ) ) ) {
+					$where_post_types = " {$wpdb->posts}.post_type = '" . esc_sql( $_REQUEST['cstmsrch_post_type'] ) . "' AND";
+				}
 			}
 			if ( ! empty( $where_tax ) ) {
 				$where .= " OR ( $where_post_types $where_tax {$wpdb->posts}.post_status = 'publish' )";
@@ -634,6 +744,9 @@ add_action( 'admin_menu', 'add_cstmsrch_admin_menu' );
 add_action( 'init', 'cstmsrch_init' );
 add_action( 'admin_init', 'cstmsrch_admin_init' );
 add_action( 'admin_enqueue_scripts', 'cstmsrch_admin_js' );
+add_action( 'loop_start', 'cstmsrch_add_menu_search_header' );
+add_action( 'wp_enqueue_scripts', 'cstmsrch_scripts' );
+
 
 /* Adds "Settings" link to the plugin action page */
 add_filter( 'plugin_action_links', 'cstmsrch_action_links', 10, 2 );

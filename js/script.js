@@ -1,5 +1,6 @@
 ( function( $ ) {
 	$( document ).ready( function() {
+		$('#main>.cstmsrch-submit-type').detach().prependTo('#content');
 		$( 'input[name="cstmsrch_change_excerpt"]' ).bind( "change click select", function() {
 			$( 'input[name="cstmsrch_change_excerpt"]' ).bind( "change click select", function() {
 				if( $( this ).is( ':checked' ) )

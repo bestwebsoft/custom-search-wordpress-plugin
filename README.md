@@ -27,6 +27,12 @@ Improve your website user experience today!</p>
 <li>Custom fields</li>
 </ul>
 </li>
+<li>Change search results displaying:[NEW]
+<ul>
+<li>List (default)[NEW]</li>
+<li>Tabs[NEW]</li>
+</ul>
+</li>
 <li>Compatible with latest WordPress version</li>
 <li>Incredibly simple settings for fast setup without modifying code</li>
 <li>Detailed step-by-step documentations and videos</li>
@@ -36,7 +42,7 @@ Improve your website user experience today!</p>
 <p><strong>Pro Features</strong></p>
 <p>All features from Free version included plus:</p>
 <ul>
-<li>Disable custom search for certain pages and/or post types [NEW]</li>
+<li>Disable custom search for certain pages and/or post types</li>
 <li>Configure custom post types and taxonomies displaying order on the search results page</li>
 <li>Display featured image for post types on the search results page</li>
 <li>Choose featured image size</li>
