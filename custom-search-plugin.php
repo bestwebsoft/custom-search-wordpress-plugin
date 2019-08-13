@@ -6,12 +6,12 @@ Description: Add custom post types to WordPress website search results.
 Author: BestWebSoft
 Text Domain: custom-search-plugin
 Domain Path: /languages
-Version: 1.42
+Version: 1.43
 Author URI: https://bestwebsoft.com/
 License: GPLv2 or later
 */
 
-/*  © Copyright 2018  BestWebSoft  ( https://support.bestwebsoft.com )
+/*  © Copyright 2019  BestWebSoft  ( https://support.bestwebsoft.com )
 
 	This program is free software; you can redistribute it and/or modify
 	it under the terms of the GNU General Public License, version 2, as
@@ -70,6 +70,10 @@ if ( ! function_exists ( 'cstmsrch_init' ) ) {
 			add_filter( 'posts_join', 'cstmsrch_posts_join' );
 			add_filter( 'posts_groupby', 'cstmsrch_posts_groupby' );
 			add_filter( 'posts_where','cstmsrch_posts_where_tax' );
+
+			if ( is_plugin_active( 'multilanguage-pro/multilanguage-pro.php' ) || is_plugin_active( 'multilanguage/multilanguage.php' ) ) {
+				add_filter( 'posts_clauses', 'cstmsrch_multilanguage_tax' );
+			}
 		}
 
 		if ( empty( $cstmsrch_plugin_info ) ) {
@@ -404,7 +408,7 @@ if ( ! function_exists( 'cstmsrch_searchfilter' ) ) {
 			register_cstmsrch_settings();
 		}
 		
-		if ( is_search() && ! is_admin() && ! empty( $cstmsrch_post_types_enabled ) ) {
+		if ( is_search() && ! is_admin() && ! empty( $cstmsrch_post_types_enabled ) && $query->is_main_query() ) {
 			$post_type = $wpdb->get_results( "SELECT DISTINCT `post_type` FROM $wpdb->posts " );
 			$i = 1;
 			foreach ($post_type as $key => $obj_type) {
@@ -496,6 +500,35 @@ if ( ! function_exists( 'cstmsrch_posts_where_tax' ) ) {
 			}
 		}
 		return $where;
+	}
+}
+
+if ( ! function_exists( 'cstmsrch_multilanguage_tax' ) ) {
+	function cstmsrch_multilanguage_tax( $clauses ) {
+
+		if ( is_search() ) {
+			global $wpdb, $cstmsrch_taxonomies_enabled;
+			
+			if ( isset( $_REQUEST['cstmsrch_submit_post_type'] ) ) {
+				$taxonomy_objects = get_object_taxonomies( $_REQUEST['cstmsrch_submit_post_type'], 'objects' );
+				foreach ( $taxonomy_objects as $key => $value ) {
+					$taxonomies[] = "'" . esc_sql( $key ) . "'";		
+				}
+			} else {
+				foreach ( $cstmsrch_taxonomies_enabled as $taxonomy ) {					
+						$taxonomies[] = "'" . esc_sql( $taxonomy ) . "'";			
+				}
+			}
+			if ( ! empty( $taxonomies ) ) {
+				$taxonomies = implode( ',', $taxonomies );
+				$clauses['join'] .= " LEFT JOIN " . $wpdb->prefix . "mltlngg_terms_translate multi_t ON multi_t.term_ID = t.term_id";
+				$clauses['where'] .= " OR ( multi_t.name LIKE '%" . esc_sql( get_search_query() ) . "%'";
+				$clauses['where'] .= " AND tt.taxonomy IN ( " . $taxonomies . " )";
+				$clauses['where'] .= " AND " . $wpdb->posts . ".post_status = 'publish' )";
+			}
+		}
+	
+		return $clauses;
 	}
 }
 
@@ -624,7 +657,7 @@ if ( ! function_exists( 'delete_cstmsrch_settings' ) ) {
 		$all_plugins = get_plugins();
 
 		if ( ! array_key_exists( 'custom-search-pro/custom-search-pro.php', $all_plugins ) ) {
-
+			
 			if ( is_multisite() ) {
 				global $wpdb;
 				/* Get all blog ids */

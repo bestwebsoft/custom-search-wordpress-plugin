@@ -27,12 +27,13 @@ Improve your website user experience today!</p>
 <li>Custom fields</li>
 </ul>
 </li>
-<li>Change search results displaying:[NEW]
+<li>Change search results displaying:
 <ul>
-<li>List (default)[NEW]</li>
-<li>Tabs[NEW]</li>
+<li>List (default)</li>
+<li>Tabs</li>
 </ul>
 </li>
+<li>Search by post types translated using Multilanguage plugin [NEW]</li>
 <li>Compatible with latest WordPress version</li>
 <li>Incredibly simple settings for fast setup without modifying code</li>
 <li>Detailed step-by-step documentations and videos</li>
