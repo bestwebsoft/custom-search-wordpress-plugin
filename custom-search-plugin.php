@@ -6,7 +6,7 @@ Description: Add custom post types to WordPress website search results.
 Author: BestWebSoft
 Text Domain: custom-search-plugin
 Domain Path: /languages
-Version: 1.43
+Version: 1.44
 Author URI: https://bestwebsoft.com/
 License: GPLv2 or later
 */
