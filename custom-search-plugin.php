@@ -6,7 +6,7 @@ Description: Add custom post types to WordPress website search results.
 Author: BestWebSoft
 Text Domain: custom-search-plugin
 Domain Path: /languages
-Version: 1.44
+Version: 1.45
 Author URI: https://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -38,6 +38,8 @@ if ( ! function_exists( 'add_cstmsrch_admin_menu' ) ) {
 			add_submenu_page( 'custom_search.php', __( 'Custom Search Settings', 'custom-search-plugin' ), __( 'Settings', 'custom-search-plugin'), 'manage_options', 'custom_search.php', 'cstmsrch_settings_page' );
 
 			add_submenu_page( 'custom_search.php', 'BWS Panel', 'BWS Panel', 'manage_options', 'cstmsrch-bws-panel', 'bws_add_menu_render' );
+
+			add_action( 'load-' . $settings, 'cstmsrch_add_tabs' );
 		}
 
 		if ( isset( $submenu['custom_search.php'] ) ) {
@@ -46,7 +48,6 @@ if ( ! function_exists( 'add_cstmsrch_admin_menu' ) ) {
 				'manage_options',
 				'https://bestwebsoft.com/products/wordpress/plugins/custom-search/?k=f9558d294313c75b964f5f6fa1e5fd3cc&pn=81&v=' . $cstmsrch_plugin_info["Version"] . '&wp_v=' . $wp_version );
 		}
-		add_action( 'load-' . $settings, 'cstmsrch_add_tabs' );
 	}
 }
 
@@ -131,7 +132,7 @@ if ( ! function_exists( 'cstmsrch_default_options' ) ) {
 if ( ! function_exists( 'cstmsrch_add_menu_search_header' ) ) {
 	function cstmsrch_add_menu_search_header() {
 			global $cstmsrch_options, $wpdb, $cstmsrch_post_types_enabled, $wp_query, $cstmsrch_taxonomies_enabled;
-			
+
 			$search = get_search_query();		
 			if ( $cstmsrch_options['show_tabs_post_type'] == 1 && $search && is_search()) {
 				$post_type = $wpdb->get_results( "SELECT DISTINCT `post_type` FROM $wpdb->posts " );
@@ -155,18 +156,19 @@ if ( ! function_exists( 'cstmsrch_add_menu_search_header' ) ) {
 				
 				remove_filter( 'pre_get_posts', 'cstmsrch_searchfilter' );
 
-				$sql =  "SELECT wp_posts.`post_type` FROM wp_posts JOIN wp_postmeta ON wp_posts.ID = wp_postmeta.post_id  LEFT JOIN wp_term_relationships tr ON wp_posts.ID = tr.object_id LEFT JOIN wp_term_taxonomy tt ON tt.term_taxonomy_id=tr.term_taxonomy_id LEFT JOIN wp_terms t ON t.term_id = tt.term_id  WHERE ( 1=1 ";
+				$sql =  "SELECT {$wpdb->posts}.`post_type` FROM {$wpdb->posts} JOIN {$wpdb->postmeta} ON {$wpdb->posts}.ID = {$wpdb->postmeta}.post_id  LEFT JOIN {$wpdb->term_relationships} tr ON {$wpdb->posts}.ID = tr.object_id LEFT JOIN {$wpdb->term_taxonomy} tt ON tt.term_taxonomy_id=tr.term_taxonomy_id LEFT JOIN {$wpdb->terms} t ON t.term_id = tt.term_id  WHERE ( 1=1 ";
 				$search_trim = explode( ' ', $search);
 				foreach ($search_trim as $value) {
-					$sql .= "AND ((wp_posts.post_title LIKE '%". $value ."%') OR (wp_posts.post_excerpt LIKE '%". $value ."%') OR (wp_posts.post_content LIKE '%". $value ."%'))";
+					$sql .= "AND (({$wpdb->posts}.post_title LIKE '%". $value ."%') OR ({$wpdb->posts}.post_excerpt LIKE '%". $value ."%') OR ({$wpdb->posts}.post_content LIKE '%". $value ."%'))";
 				}
-				$sql .=")  AND (wp_posts.post_status = 'publish' OR wp_posts.post_status = 'private') OR ( wp_postmeta.meta_key IN ( ". $cusfields_sql_request ." ) ";
+				$sql .=")  AND ({$wpdb->posts}.post_status = 'publish' OR {$wpdb->posts}.post_status = 'private') OR ( {$wpdb->postmeta}.meta_key IN ( ". $cusfields_sql_request ." ) ";
 				foreach ($search_trim as $value) {
-					$sql .= "AND wp_postmeta.meta_value LIKE '%". $value ."%' ";
+					$sql .= "AND {$wpdb->postmeta}.meta_value LIKE '%". $value ."%' ";
 				}
-				$sql .="AND (wp_posts.post_status = 'publish' OR wp_posts.post_status = 'private') )  OR ( t.name LIKE '%". $search ."%'". $taxonomies_value." AND wp_posts.post_status = 'publish' ) GROUP BY wp_posts.post_type";
+				$sql .="AND ({$wpdb->posts}.post_status = 'publish' OR {$wpdb->posts}.post_status = 'private') )  OR ( t.name LIKE '%". $search ."%'". $taxonomies_value." AND {$wpdb->posts}.post_status = 'publish' ) GROUP BY {$wpdb->posts}.post_type";
 				  
 				$post_type = $wpdb->get_results( $sql, ARRAY_A );
+				
 				foreach ( $post_type as $post_type_value ) {
 					foreach ( $post_type_value  as $value) {
 						if ( in_array( $value, $cstmsrch_post_types_enabled)) { 
@@ -516,7 +518,7 @@ if ( ! function_exists( 'cstmsrch_multilanguage_tax' ) ) {
 				}
 			} else {
 				foreach ( $cstmsrch_taxonomies_enabled as $taxonomy ) {					
-						$taxonomies[] = "'" . esc_sql( $taxonomy ) . "'";			
+					$taxonomies[] = "'" . esc_sql( $taxonomy ) . "'";			
 				}
 			}
 			if ( ! empty( $taxonomies ) ) {
@@ -689,7 +691,7 @@ if ( ! function_exists( 'cstmsrch_distinct' ) ) {
 	}
 }
 
-/* Function join table `wp_posts` with `wp_postmeta` */
+/* Function join table `{$wpdb->posts}` with `{$wpdb->postmeta}` */
 if ( ! function_exists( 'cstmsrch_join' ) ) {
 	function cstmsrch_join( $join ) {
 		global $wp_query, $wpdb, $cstmsrch_options;

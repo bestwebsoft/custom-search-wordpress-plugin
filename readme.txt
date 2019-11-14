@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: https://bestwebsoft.com/donate/
 Tags: additional search options, extra search options, advanced search, add additional search options, search options, custom search, custom search plugin, website search, add custom posts to search, custom posts, free additional search options, custom content types
 Requires at least: 3.9
-Tested up to: 5.2.2
-Stable tag: 1.44
+Tested up to: 5.3
+Stable tag: 1.45
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -114,6 +114,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 4. Search results displayed by tabs.
 
 == Changelog ==
+
+= V1.45 - 14.11.2019 =
+* Bugfix : The bug with wrong table prefix has been fixed.
 
 = V1.44 - 04.09.2019 =
 * Update: The deactivation feedback has been changed. Misleading buttons have been removed.
@@ -279,6 +282,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 * NEW : Language files are added to the plugin.
 
 == Upgrade Notice ==
+
+= V1.45 =
+* Bugs fixed.
 
 = V1.44 =
 * Usability improved.
