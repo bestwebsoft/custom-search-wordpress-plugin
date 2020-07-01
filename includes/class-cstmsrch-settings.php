@@ -3,11 +3,10 @@
  * Displays the content on the plugin settings page
  */
 
-require_once( dirname( dirname( __FILE__ ) ) . '/bws_menu/class-bws-settings.php' );
 
 if ( ! class_exists( 'Cstmsrch_Settings_Tabs' ) ) {
 	class Cstmsrch_Settings_Tabs extends Bws_Settings_Tabs {
-		public $search_objects_custom, $post_types_custom_keys,$post_types_custom,$taxonomies_keys, $taxonomies_global;
+		public $search_objects_custom, $post_types_custom_keys, $post_types_custom, $taxonomies_keys, $taxonomies_global;
 		/**
 		 * Constructor.
 		 *
@@ -22,8 +21,8 @@ if ( ! class_exists( 'Cstmsrch_Settings_Tabs' ) ) {
 
 			$tabs = array(
 				'settings'		=> array( 'label' => __( 'Settings', 'custom-search-plugin' ) ),
-				'display'		=> array( 'label' => __( 'Display', 'custom-search-plugin' ), 'is_pro' => 1 ),
-				'appearance'	=> array( 'label' => __( 'Appearance', 'custom-search-plugin' ), 'is_pro' => 1 ),
+				'display'		=> array( 'label' => __( 'Data', 'custom-search-plugin' ), 'is_pro' => 1 ),
+				'appearance'	=> array( 'label' => __( 'Search Results', 'custom-search-plugin' ), 'is_pro' => 1 ),
 				'misc'			=> array( 'label' => __( 'Misc', 'custom-search-plugin' ) ),
 				'custom_code'	=> array( 'label' => __( 'Custom Code', 'custom-search-plugin' ) ),
 				'license'		=> array( 'label' => __( 'License Key', 'custom-search-plugin' ) )
@@ -38,8 +37,6 @@ if ( ! class_exists( 'Cstmsrch_Settings_Tabs' ) ) {
 				'is_network_options'	=> is_network_admin(),
 				'tabs'					=> $tabs,
 				'wp_slug'				=> 'custom-search',
-				'pro_page'				=> 'admin.php?page=custom_search_pro.php',
-				'bws_license_plugin'	=> 'custom-search-pro/custom-search-pro.php',
 				'link_key'				=> 'f9558d294313c75b964f5f6fa1e5fd3c',
 				'link_pn'				=> '81'
 			) );
@@ -76,8 +73,8 @@ if ( ! class_exists( 'Cstmsrch_Settings_Tabs' ) ) {
 		 * @return array    The action results
 		 */
 		public function save_options() {
-			global $cstmsrch_plugin_info;
-			$post_types_global= get_post_types( array( 'public' => true ), 'names' );
+			$message = $notice = $error = '';
+			$post_types_global = get_post_types( array( 'public' => true ), 'names' );
 			unset( $post_types_global['attachment'] );
 			$this->cstmsrch_post_types_enabled = array( 'post', 'page' );
 			if ( ! empty( $_REQUEST['cstmsrch_post_types'] ) && is_array( $_REQUEST['cstmsrch_post_types'] ) ) {
@@ -114,10 +111,10 @@ if ( ! class_exists( 'Cstmsrch_Settings_Tabs' ) ) {
 				);
 			}
 			$this->options['output_order'] = $output_order;
-			$this->options['fields'] = isset( $_REQUEST['cstmsrch_fields_array'] ) ? $_REQUEST['cstmsrch_fields_array'] : array();
-			$this->options['plugin_option_version'] = $cstmsrch_plugin_info["Version"];
+            $this->options['fields'] = isset( $_REQUEST['cstmsrch_fields_array'] ) ? $_REQUEST['cstmsrch_fields_array'] : array();
+            $this->options['fields'] = array_map( 'esc_attr', $this->options['fields'] );
 			$this->options['show_hidden_fields'] = isset( $_REQUEST['cstmsrch_show_hidden_fields'] ) ? 1 : 0;
-			$this->options['show_tabs_post_type'] = $_REQUEST['cstmsrch_show_tabs_post_type'];
+			$this->options['show_tabs_post_type'] = isset( $_REQUEST['cstmsrch_show_tabs_post_type'] ) ? 1 : 0;
 
 			update_option( 'cstmsrch_options', $this->options );
 
@@ -151,7 +148,7 @@ if ( ! class_exists( 'Cstmsrch_Settings_Tabs' ) ) {
 			} ?>
 			<table class="form-table cstmsrch-form-table" id="cstmsrch_settings_form">
 				<tr valign="top">
-					<th scope="row"><?php _e( 'Enable Custom Search for', 'custom-search-plugin' ); ?></th>
+					<th scope="row"><?php _e( 'Display Order', 'custom-search-plugin' ); ?></th>
 					<td class="cstmsrch_names">
 						<div id="cstmsrch-post-types-settings" class="cstmsrch-checkbox-section">
 							<?php if ( 0 < count( $this->post_types_custom ) ) { ?>
@@ -199,19 +196,53 @@ if ( ! class_exists( 'Cstmsrch_Settings_Tabs' ) ) {
 						</div><!-- #cstmsrch-taxonomies-settings -->
 					</td>
 				</tr>
+            </table>
+            <?php if ( ! $this->hide_pro_tabs ) { ?>
+            <div class="bws_pro_version_bloc">
+                <div class="bws_pro_version_table_bloc">
+                    <button type="submit" name="bws_hide_premium_options" class="notice-dismiss bws_hide_premium_options" title="<?php _e( 'Close', 'custom-search-plugin' ); ?>"></button>
+                    <div class="bws_table_bg"></div>
+                    <table class="form-table bws_pro_version">
+                        <tr valign="top">
+                            <th scope="row"><?php _e( '', 'custom-search-plugin' ); ?></th>
+                            <td>
+                                <?php $objects = array(
+                                    $this->search_objects_custom['post_type']['post'],
+                                    $this->search_objects_custom['post_type']['page']
+                                ); ?>
+                                <fieldset>
+                                    <?php foreach ( $objects as $current_object ) { ?>
+                                        <img title="" src="<?php echo plugins_url( 'custom-search-plugin/images/dragging-arrow.png' ); ?>" alt="" />
+                                        <label>
+                                            <input type="checkbox" checked="checked" disabled="disabled" />
+                                            <span><?php echo $current_object->labels->name; ?></span>
+                                        </label><br />
+                                    <?php } ?>
+                                </fieldset>
+                                <span class="bws_info"><?php _e( 'When you drag post types and taxonomies, you affect the order of their displaying in the frontend on the search page.', 'custom-search-plugin' ); ?></span>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <th scope="row"><?php _e( 'Current Post Type Search', 'custom-search-plugin' ); ?></th>
+                            <td>
+                                <fieldset>
+                                    <label><input type="checkbox" disabled="disabled" />
+                                        <span class="bws_info"><?php _e( 'Enable to search current page post type only.', 'custom-search-plugin' ); ?></span>
+                                    </label><br />
+                                </fieldset>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <?php $this->bws_pro_block_links(); ?>
+            </div>
+            <?php } ?>
+            <table class="form-table cstmsrch-form-table" id="cstmsrch_settings_form">
 				<tr valign="top">
-					<th scope="row"><?php _e( 'Results Display', 'custom-search-plugin' ); ?></th>
-					<td>
-						<fieldset>
-							<label><input type="radio" name="cstmsrch_show_tabs_post_type" value="0" <?php if ( $this->options['show_tabs_post_type'] == '0' ) echo 'checked="checked"';?>/><?php _e( 'Default', 'custom-search-plugin' ); ?></label><br />
-							<label><input type="radio" name="cstmsrch_show_tabs_post_type" value="1" <?php if ( $this->options['show_tabs_post_type'] == '1' ) echo 'checked="checked"';?>/><?php _e( 'Tabs', 'custom-search-plugin' ); ?></label><br />
-						</fieldset>
-					</td>
-				</tr>
-				<tr valign="top">
-					<th scope="row"><?php _e( 'Show Hidden Fields', 'custom-search-plugin' ); ?></th>
+					<th scope="row"><?php _e( 'Hidden Fields', 'custom-search-plugin' ); ?></th>
 					<td>
 						<input type="checkbox" <?php checked( $this->options['show_hidden_fields'] ); ?> name="cstmsrch_show_hidden_fields" value="1" />
+						<span class="bws_info"><?php _e( 'Enable to show hidden fields.', 'custom-search-plugin' ); ?></span>
 					</td>
 				</tr>
 				<tr valign="top">
@@ -257,50 +288,10 @@ if ( ! class_exists( 'Cstmsrch_Settings_Tabs' ) ) {
 					<?php } ?>
 				</tr>
 			</table>
-			<?php if ( ! $this->hide_pro_tabs ) { ?>
-				<div class="bws_pro_version_bloc">
-					<div class="bws_pro_version_table_bloc">
-						<button type="submit" name="bws_hide_premium_options" class="notice-dismiss bws_hide_premium_options" title="<?php _e( 'Close', 'custom-search-plugin' ); ?>"></button>
-						<div class="bws_table_bg"></div>
-						<table class="form-table bws_pro_version">
-							<tr valign="top">
-								<th scope="row"><?php _e( 'Enable Custom Search for', 'custom-search-plugin' ); ?></th>
-								<td>
-									<?php $objects = array(
-										$this->search_objects_custom['post_type']['post'],
-										$this->search_objects_custom['post_type']['page']
-										); ?>
-									<fieldset>
-										<?php foreach ( $objects as $current_object ) { ?>
-											<img title="" src="<?php echo plugins_url( 'custom-search-plugin/images/dragging-arrow.png' ); ?>" alt="" />
-											<label>
-												<input type="checkbox" checked="checked" disabled="disabled" />
-												<span><?php echo $current_object->labels->name; ?></span>
-											</label><br />
-										<?php } ?>
-									</fieldset>
-									<span class="bws_info"><?php _e( 'When you drag post types and taxonomies, you affect the order of their displaying in the frontend on the search page.', 'custom-search-plugin' ); ?></span>
-								</td>
-							</tr>
-							<tr valign="top">
-								<th scope="row"><?php _e( 'Search Only by Type of the Current Post', 'custom-search-plugin' ); ?></th>
-								<td>
-									<fieldset>
-										<label><input type="checkbox" disabled="disabled" />
-											<span class="bws_info"><?php _e( 'Only current page post type will be used for the search.', 'custom-search-plugin' ); ?></span>
-										</label><br />
-									</fieldset>
-								</td>
-							</tr>
-						</table>
-					</div>
-					<?php $this->bws_pro_block_links(); ?>
-				</div>
-			<?php }
-		}
+		<?php }
 
 		public function tab_display() { ?>
-            <h3 class="bws_tab_label"><?php _e( 'Display Settings', 'custom-search-plugin' ); ?></h3>
+            <h3 class="bws_tab_label"><?php _e( 'Data Settings', 'custom-search-plugin' ); ?></h3>
 			<?php $this->help_phrase(); ?>
             <hr>
             <div class="bws_pro_version_bloc">
@@ -315,7 +306,7 @@ if ( ! class_exists( 'Cstmsrch_Settings_Tabs' ) ) {
         <?php }
 
 		public function tab_appearance() { ?>
-			<h3 class="bws_tab_label"><?php _e( 'Appearance Settings', 'custom-search-plugin' ); ?></h3>
+			<h3 class="bws_tab_label"><?php _e( 'Search Results Settings', 'custom-search-plugin' ); ?></h3>
 			<?php $this->help_phrase(); ?>
 			<hr>
 			<div class="bws_pro_version_bloc" style="margin: 10px 0;">
@@ -323,13 +314,18 @@ if ( ! class_exists( 'Cstmsrch_Settings_Tabs' ) ) {
 					<button type="submit" name="bws_hide_premium_options" class="notice-dismiss bws_hide_premium_options" title="<?php _e( 'Close', 'custom-search-plugin' ); ?>"></button>
 					<div class="bws_table_bg"></div>
 					<table class="form-table bws_pro_version">
-						<tr>
-							<th scope="row"><?php _e( 'Change Displaying of Post Content on Search Pages', 'custom-search-plugin' ); ?></th>
-							<td><input type="checkbox" checked="checked" disabled="disabled" /></td>
+						<tr valign="top">
+							<th scope="row"><?php _e( 'Search Results Display', 'custom-search-plugin' ); ?></th>
+							<td>
+								<fieldset>
+									<label><input type="radio" checked="checked" disabled="disabled" /><?php _e( 'Default', 'custom-search-plugin' ); ?></label><br />
+									<label><input type="radio" disabled="disabled" /><?php _e( 'Tabs', 'custom-search-plugin' ); ?></label><br />
+								</fieldset>
+							</td>
 						</tr>
 						<tr>
-							<th scope="row"><?php _e( 'Display Featured Image with Post Content', 'custom-search-plugin' ); ?></th>
-							<td><input type="checkbox" checked="checked" disabled="disabled" /></td>
+							<th scope="row"><?php _e( 'Featured Image', 'custom-search-plugin' ); ?></th>
+							<td><input type="checkbox" checked="checked" disabled="disabled" /><span class="bws_info"><?php _e( 'Enable to display a featured image.', 'custom-search-plugin' ); ?></span></td>
 						</tr>
 						<tr>
 							<th scope="row"><?php _e( 'Featured Image Size', 'custom-search-plugin' ); ?></th>
@@ -345,9 +341,9 @@ if ( ! class_exists( 'Cstmsrch_Settings_Tabs' ) ) {
 							</td>
 						</tr>
 						<tr>
-							<th scope="row"><?php _e( 'Change Excerpt Length', 'custom-search-plugin' ); ?></th>
+							<th scope="row"><?php _e( 'Excerpt Length', 'custom-search-plugin' ); ?></th>
 							<td>
-								<input type="checkbox" checked="checked" disabled="disabled" />&nbsp;<?php _e( 'to', 'custom-search-plugin' ); ?>&nbsp;<input class="small-text" type="number" value="10" disabled="disabled" />&nbsp;<span><?php _e( 'words', 'custom-search-plugin' ); ?></span>
+								<?php _e( 'to', 'custom-search-plugin' ); ?>&nbsp;<input class="small-text" type="number" value="10" disabled="disabled" />&nbsp;<span><?php _e( 'words', 'custom-search-plugin' ); ?></span>
 							</td>
 						</tr>
 					</table>

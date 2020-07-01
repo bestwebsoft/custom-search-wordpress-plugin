@@ -6,12 +6,12 @@ Description: Add custom post types to WordPress website search results.
 Author: BestWebSoft
 Text Domain: custom-search-plugin
 Domain Path: /languages
-Version: 1.45
+Version: 1.46
 Author URI: https://bestwebsoft.com/
 License: GPLv2 or later
 */
 
-/*  © Copyright 2019  BestWebSoft  ( https://support.bestwebsoft.com )
+/*  © Copyright 2020  BestWebSoft  ( https://support.bestwebsoft.com )
 
 	This program is free software; you can redistribute it and/or modify
 	it under the terms of the GNU General Public License, version 2, as
@@ -70,7 +70,7 @@ if ( ! function_exists ( 'cstmsrch_init' ) ) {
 			add_filter( 'pre_get_posts', 'cstmsrch_searchfilter' );
 			add_filter( 'posts_join', 'cstmsrch_posts_join' );
 			add_filter( 'posts_groupby', 'cstmsrch_posts_groupby' );
-			add_filter( 'posts_where','cstmsrch_posts_where_tax' );
+			add_filter( 'posts_where', 'cstmsrch_posts_where_tax' );
 
 			if ( is_plugin_active( 'multilanguage-pro/multilanguage-pro.php' ) || is_plugin_active( 'multilanguage/multilanguage.php' ) ) {
 				add_filter( 'posts_clauses', 'cstmsrch_multilanguage_tax' );
@@ -88,16 +88,23 @@ if ( ! function_exists ( 'cstmsrch_init' ) ) {
 			register_cstmsrch_settings();
 		}
 		/* Function check if plugin is compatible with current WP version */
-		bws_wp_min_version_check( plugin_basename( __FILE__ ), $cstmsrch_plugin_info, '3.9' );
+		bws_wp_min_version_check( plugin_basename( __FILE__ ), $cstmsrch_plugin_info, '4.5' );
 	}
 }
 
 if ( ! function_exists( 'cstmsrch_admin_init' ) ) {
 	function cstmsrch_admin_init() {
-		global $bws_plugin_info, $cstmsrch_plugin_info;
+		global $bws_plugin_info, $cstmsrch_plugin_info, $pagenow, $cstmsrch_options;
 		if ( empty( $bws_plugin_info ) ) {
 			$bws_plugin_info = array( 'id' => '81', 'version' => $cstmsrch_plugin_info['Version'] );
 		}
+		if ( 'plugins.php' == $pagenow ) {
+			/* Install the option defaults */
+			if ( function_exists( 'bws_plugin_banner_go_pro' ) ) {
+				register_cstmsrch_settings();
+				bws_plugin_banner_go_pro( $cstmsrch_options, $cstmsrch_plugin_info, 'cstmsrch', 'custom-search-plugin', '22f95b30aa812b6190a4a5a476b6b628', '214', 'custom-search-plugin' );
+			}
+		}		
 	}
 }
 
@@ -134,35 +141,35 @@ if ( ! function_exists( 'cstmsrch_add_menu_search_header' ) ) {
 			global $cstmsrch_options, $wpdb, $cstmsrch_post_types_enabled, $wp_query, $cstmsrch_taxonomies_enabled;
 
 			$search = get_search_query();		
-			if ( $cstmsrch_options['show_tabs_post_type'] == 1 && $search && is_search()) {
+			if ( ( $cstmsrch_options['show_tabs_post_type'] ) == 1 && $search && is_search()) {
 				$post_type = $wpdb->get_results( "SELECT DISTINCT `post_type` FROM $wpdb->posts " );
 				$i = 1;
-				$form = '<form action="'. esc_url( home_url( '/?s=' . get_search_query()  ) ).'" method="get" class="cstmsrch-submit-type">';
-				$form .= '<input type="submit" name="cstmsrch_submit_all_type" value="'. __( "all", "custom-search-pro" ) .'"/>';
-				if ( ! empty($cstmsrch_taxonomies_enabled)){
+				$form = '<form action="'. esc_url( home_url( '/?s=' . get_search_query()  ) ) . '" method="get" class="cstmsrch-submit-type">';
+				$form .= '<input type="submit" name="cstmsrch_submit_all_type" value="' . __( "all", "custom-search-pro" ) . '"/>';
+				if ( ! empty( $cstmsrch_taxonomies_enabled ) ){
 					foreach ( $cstmsrch_taxonomies_enabled as $taxonomy ) {
 						$taxonomies[] = "'" . esc_sql( $taxonomy ) . "'";
 					}
 					if ( ! empty( $taxonomies ) ) {
 						$taxonomies = implode( ',', $taxonomies );
 					}
-					$taxonomies_value = " AND tt.taxonomy IN ( ". $taxonomies ." )";
+					$taxonomies_value = " AND tt.taxonomy IN ( " . $taxonomies . " )";
 				}else{
 					$taxonomies_value = "";
 				}
 				$cusfields_sql_request = "'" . implode( "', '", $cstmsrch_options['fields'] ) . "'";
 					
-				$form .= '<input type="hidden" name="s" value="'. $search .'"/>';
+				$form .= '<input type="hidden" name="s" value="' . $search . '"/>';
 				
 				remove_filter( 'pre_get_posts', 'cstmsrch_searchfilter' );
 
 				$sql =  "SELECT {$wpdb->posts}.`post_type` FROM {$wpdb->posts} JOIN {$wpdb->postmeta} ON {$wpdb->posts}.ID = {$wpdb->postmeta}.post_id  LEFT JOIN {$wpdb->term_relationships} tr ON {$wpdb->posts}.ID = tr.object_id LEFT JOIN {$wpdb->term_taxonomy} tt ON tt.term_taxonomy_id=tr.term_taxonomy_id LEFT JOIN {$wpdb->terms} t ON t.term_id = tt.term_id  WHERE ( 1=1 ";
-				$search_trim = explode( ' ', $search);
-				foreach ($search_trim as $value) {
+				$search_trim = explode( ' ', $search );
+				foreach ( $search_trim as $value ) {
 					$sql .= "AND (({$wpdb->posts}.post_title LIKE '%". $value ."%') OR ({$wpdb->posts}.post_excerpt LIKE '%". $value ."%') OR ({$wpdb->posts}.post_content LIKE '%". $value ."%'))";
 				}
 				$sql .=")  AND ({$wpdb->posts}.post_status = 'publish' OR {$wpdb->posts}.post_status = 'private') OR ( {$wpdb->postmeta}.meta_key IN ( ". $cusfields_sql_request ." ) ";
-				foreach ($search_trim as $value) {
+				foreach ( $search_trim as $value ) {
 					$sql .= "AND {$wpdb->postmeta}.meta_value LIKE '%". $value ."%' ";
 				}
 				$sql .="AND ({$wpdb->posts}.post_status = 'publish' OR {$wpdb->posts}.post_status = 'private') )  OR ( t.name LIKE '%". $search ."%'". $taxonomies_value." AND {$wpdb->posts}.post_status = 'publish' ) GROUP BY {$wpdb->posts}.post_type";
@@ -170,14 +177,14 @@ if ( ! function_exists( 'cstmsrch_add_menu_search_header' ) ) {
 				$post_type = $wpdb->get_results( $sql, ARRAY_A );
 				
 				foreach ( $post_type as $post_type_value ) {
-					foreach ( $post_type_value  as $value) {
-						if ( in_array( $value, $cstmsrch_post_types_enabled)) { 
-							$form .= '<input type="submit" name="cstmsrch_submit_post_type" value="'. $value .'"/>';
+					foreach ( $post_type_value  as $value ) {
+						if ( in_array( $value, $cstmsrch_post_types_enabled ) ) {
+							$form .= '<input type="submit" name="cstmsrch_submit_post_type" value="' . $value . '"/>';
 						}
 					}
 					
 				}
-				$form .='</form>';
+				$form .= '</form>';
 				echo $form;	
 			}
 	}
@@ -421,9 +428,9 @@ if ( ! function_exists( 'cstmsrch_searchfilter' ) ) {
 				$i++;
 			}
 			if ( empty( $_REQUEST['cstmsrch_submit_all_type'] ) ){
-				if ( ! empty( $_REQUEST['cstmsrch_submit_post_type'] )){
-					foreach ($type as  $value) {
-						if($value == $_REQUEST['cstmsrch_submit_post_type'] ){
+				if ( ! empty( $_REQUEST['cstmsrch_submit_post_type'] ) ){
+					foreach( $type as  $value ) {
+						if( $value == $_REQUEST['cstmsrch_submit_post_type'] ){
 							$query->set( 'post_type', $value );
 						}
 					} 
@@ -469,9 +476,9 @@ if ( ! function_exists( 'cstmsrch_posts_where_tax' ) ) {
 			if ( isset( $_REQUEST['cstmsrch_submit_post_type'] ) ) {
 				$name_post = $_REQUEST['cstmsrch_submit_post_type'];
 				$taxonomy_objects = get_object_taxonomies( $name_post, 'objects' );
-				foreach ($taxonomy_objects as $key => $value) {
-					if( in_array( esc_sql( $key ), $cstmsrch_taxonomies_enabled ) ){ 
-							$taxonomies [] = "'" . esc_sql( $key ) . "'";
+				foreach ( $taxonomy_objects as $key => $value ) {
+					if( in_array( esc_sql( $key ), $cstmsrch_taxonomies_enabled ) ) {
+							$taxonomies[] = "'" . esc_sql( $key ) . "'";
 						}
 					
 				}
@@ -554,9 +561,11 @@ if ( ! function_exists( 'cstmsrch_posts_groupby' ) ) {
 	}
 }
 
-/* Display settings page */
+/* Data settings page */
 if ( ! function_exists( 'cstmsrch_settings_page' ) ) {
 	function cstmsrch_settings_page() {
+		if ( ! class_exists( 'Bws_Settings_Tabs' ) )
+    		require_once( dirname( __FILE__ ) . '/bws_menu/class-bws-settings.php' );
 		require_once( dirname( __FILE__ ) . '/includes/class-cstmsrch-settings.php' );
 		$page = new Cstmsrch_Settings_Tabs( plugin_basename( __FILE__ ) ); ?>
 		<div class="wrap">
@@ -572,7 +581,7 @@ if ( ! function_exists( 'cstmsrch_settings_page' ) ) {
 }
 
 /* Positioning in the page. End. */
-if ( !function_exists( 'cstmsrch_action_links' ) ) {
+if ( ! function_exists( 'cstmsrch_action_links' ) ) {
 	function cstmsrch_action_links( $links, $file ) {
 		if ( ! is_network_admin() ) {
 			/* Static so we don't call plugin_basename on every plugin row. */
@@ -589,7 +598,7 @@ if ( !function_exists( 'cstmsrch_action_links' ) ) {
 } /* End function cstmsrch_action_links */
 
 /* Function are using to create link 'settings' on admin page. */
-if ( !function_exists( 'cstmsrch_links' ) ) {
+if ( ! function_exists( 'cstmsrch_links' ) ) {
 	function cstmsrch_links( $links, $file ) {
 		$base = plugin_basename( __FILE__ );
 		if ( $file == $base ) {
@@ -618,16 +627,10 @@ if ( ! function_exists( 'cstmsrch_admin_js' ) ) {
 
 if ( ! function_exists ( 'cstmsrch_admin_notices' ) ) {
 	function cstmsrch_admin_notices() {
-		global $hook_suffix, $cstmsrch_plugin_info, $cstmsrch_options;
+		global $hook_suffix, $cstmsrch_plugin_info;
 
 		if ( 'plugins.php' == $hook_suffix ) {
 			/* Get options from the database */
-			if ( ! $cstmsrch_options ) {
-				$cstmsrch_options = get_option( 'cstmsrch_options' );
-			}
-			if ( isset( $cstmsrch_options['first_install'] ) && strtotime( '-1 week' ) > $cstmsrch_options['first_install'] ) {
-				bws_plugin_banner( $cstmsrch_plugin_info, 'cstmsrch', 'custom-search', '22f95b30aa812b6190a4a5a476b6b628', '214', '//ps.w.org/custom-search-plugin/assets/icon-128x128.png' );
-			}
 			bws_plugin_banner_to_settings( $cstmsrch_plugin_info, 'cstmsrch_options', 'custom-search-plugin', 'admin.php?page=custom_search.php' );
 		}
 
@@ -706,7 +709,7 @@ if ( ! function_exists( 'cstmsrch_join' ) ) {
 if( ! function_exists( 'cstmsrch_request' ) ) {
 	function cstmsrch_request( $where ) {
 		global $wp_query, $wpdb, $cstmsrch_options;
-		if ( method_exists($wpdb,'remove_placeholder_escape') ) {
+		if ( method_exists( $wpdb,'remove_placeholder_escape' ) ) {
 			$where = $wpdb->remove_placeholder_escape( $where );
 		}
 		$pos = strrpos( $where, '%' );
@@ -773,7 +776,7 @@ if( ! function_exists( 'cstmsrch_request' ) ) {
 	}
 }
 
-register_activation_hook( __FILE__, 'cstmsrch_plugin_activate');
+register_activation_hook( __FILE__, 'cstmsrch_plugin_activate' );
 add_action( 'plugins_loaded', 'cstmsrch_plugins_loaded' );
 add_action( 'admin_menu', 'add_cstmsrch_admin_menu' );
 add_action( 'init', 'cstmsrch_init' );

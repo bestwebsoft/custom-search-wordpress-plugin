@@ -2,9 +2,9 @@
 Contributors: bestwebsoft
 Donate link: https://bestwebsoft.com/donate/
 Tags: additional search options, extra search options, advanced search, add additional search options, search options, custom search, custom search plugin, website search, add custom posts to search, custom posts, free additional search options, custom content types
-Requires at least: 3.9
-Tested up to: 5.3
-Stable tag: 1.45
+Requires at least: 4.5
+Tested up to: 5.4.2
+Stable tag: 1.46
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -34,7 +34,7 @@ https://www.youtube.com/watch?v=qF2-pFM_ESw
 * Change search results displaying:
 	* List (default)
 	* Tabs
-* Search by post types translated using Multilanguage plugin [NEW]
+* Search by post types translated using [Multilanguage plugin](https://bestwebsoft.com/products/wordpress/plugins/multilanguage/?k=99a0f5dc1e3172bd92208dd2e7886806)
 * Compatible with latest WordPress version
 * Incredibly simple settings for fast setup without modifying code
 * Detailed step-by-step documentations and videos
@@ -114,6 +114,11 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 4. Search results displayed by tabs.
 
 == Changelog ==
+
+= V1.46 - 30.06.2020 =
+* Update : All functionality was updated for WordPress 5.4.2.
+* Update : BWS Panel section was updated.
+* Update : Settings page was updated.
 
 = V1.45 - 14.11.2019 =
 * Bugfix : The bug with wrong table prefix has been fixed.
@@ -282,6 +287,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 * NEW : Language files are added to the plugin.
 
 == Upgrade Notice ==
+
+= V1.46 =
+* Appearance improved
 
 = V1.45 =
 * Bugs fixed.
