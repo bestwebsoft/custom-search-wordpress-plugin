@@ -7,7 +7,7 @@
 				checkboxes_total	= checkboxes.size(),
 				checkboxes_selected	= checkboxes.filter(':checked').size();
 			if ( checkboxes_total == checkboxes_selected ) {
-				select_all.attr( 'checked', true );
+				select_all.prop( 'checked', true );
 			}
 		});
 		$( '.cstmsrch-form-table input' ).bind( 'change click select', function() {
@@ -17,15 +17,15 @@
 				checkboxes_selected_size	= checkboxes.filter( ':checked' ).size();
 			if ( $( this ).attr( 'id' ) == select_all.attr( 'id' ) ) {
 				if ( select_all.is( ':checked' ) ) {
-					checkboxes.attr( 'checked', true );
+					checkboxes.prop( 'checked', true );
 				} else {
-					checkboxes.attr( 'checked', false );
+					checkboxes.prop( 'checked', false );
 				}
 			} else {
 				if ( checkboxes_size == checkboxes_selected_size ) {
-					select_all.attr( 'checked', true );
+					select_all.prop( 'checked', true );
 				} else {
-					select_all.attr( 'checked', false );
+					select_all.prop( 'checked', false );
 				}
 			}
 		} );

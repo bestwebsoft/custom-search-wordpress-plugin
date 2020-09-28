@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Custom Search\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-25 11:23+0200\n"
-"PO-Revision-Date: 2020-03-25 11:32+0200\n"
+"POT-Creation-Date: 2020-09-01 17:59+0300\n"
+"PO-Revision-Date: 2020-09-01 18:01+0300\n"
 "Last-Translator: plugin@bestwebsoft.com <plugin@bestwebsoft.com>\n"
 "Language-Team: BestWebSoft <plugin@bestwebsoft.com>\n"
 "Language: uk\n"
@@ -18,7 +18,7 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: bws_menu\n"
 
 #: custom-search-plugin.php:36 custom-search-plugin.php:38
-#: custom-search-plugin.php:572 includes/class-cstmsrch-settings.php:140
+#: custom-search-plugin.php:572 includes/class-cstmsrch-settings.php:138
 msgid "Custom Search Settings"
 msgstr "Налаштування Custom Search"
 
@@ -51,6 +51,16 @@ msgstr "FAQ"
 msgid "Support"
 msgstr "Підтримка"
 
+#: custom-search-plugin.php:786
+msgid "Site search"
+msgstr "Пошук по сайту"
+
+#: custom-search-plugin.php:787
+#, fuzzy
+#| msgid "Search Results"
+msgid "Search"
+msgstr "Результати пошуку"
+
 #: includes/class-cstmsrch-settings.php:24
 msgid "Data"
 msgstr "Данні"
@@ -71,65 +81,37 @@ msgstr "Користувацький код"
 msgid "License Key"
 msgstr "Ліцензійний ключ"
 
-#: includes/class-cstmsrch-settings.php:124
+#: includes/class-cstmsrch-settings.php:122
 msgid "Settings saved"
 msgstr "Налаштування збережені"
 
-#: includes/class-cstmsrch-settings.php:154
-#: includes/class-cstmsrch-settings.php:260
-#: includes/class-cstmsrch-settings.php:320
+#: includes/class-cstmsrch-settings.php:152
 msgid "Display Order"
 msgstr "Вивід"
 
-#: includes/class-cstmsrch-settings.php:162
+#: includes/class-cstmsrch-settings.php:160
 msgid "Post Types"
 msgstr "Типи записів"
 
-#: includes/class-cstmsrch-settings.php:175
+#: includes/class-cstmsrch-settings.php:173
 msgid "No custom post type found."
 msgstr "Не знайдено жодного кастомного типу записів."
 
-#: includes/class-cstmsrch-settings.php:184
+#: includes/class-cstmsrch-settings.php:182
 msgid "Taxonomies"
 msgstr "Таксономії"
 
-#: includes/class-cstmsrch-settings.php:194
-#: includes/class-cstmsrch-settings.php:330
+#: includes/class-cstmsrch-settings.php:192
 msgid "for"
 msgstr "для"
 
 #: includes/class-cstmsrch-settings.php:204
-msgid "Hidden Fields"
-msgstr "Відображати приховані поля"
-
-#: includes/class-cstmsrch-settings.php:207
-msgid "Enable to show hidden fields."
-msgstr "Можливість відображати приховані поля."
-
-#: includes/class-cstmsrch-settings.php:212
-msgid "Enable Search for the Custom Field"
-msgstr "Відображати пошук по користувацьким полям"
-
-#: includes/class-cstmsrch-settings.php:216
-#: includes/class-cstmsrch-settings.php:226
-msgid "All"
-msgstr "Всіх"
-
-#: includes/class-cstmsrch-settings.php:241
-msgid "custom post type"
-msgstr "користувацький тип записів"
-
-#: includes/class-cstmsrch-settings.php:249
-msgid "Custom fields not found."
-msgstr "Користувацькi поля не знайдені."
-
-#: includes/class-cstmsrch-settings.php:256
-#: includes/class-cstmsrch-settings.php:301
-#: includes/class-cstmsrch-settings.php:316
+#: includes/class-cstmsrch-settings.php:300
+#: includes/class-cstmsrch-settings.php:315
 msgid "Close"
 msgstr "Закрити"
 
-#: includes/class-cstmsrch-settings.php:275
+#: includes/class-cstmsrch-settings.php:223
 msgid ""
 "When you drag post types and taxonomies, you affect the order of their "
 "displaying in the frontend on the search page."
@@ -137,73 +119,111 @@ msgstr ""
 "При перетягуванні типів записів або таксономій ви впливаєте на порядок їх "
 "виведення у фронтенді на сторінці пошуку."
 
-#: includes/class-cstmsrch-settings.php:279
+#: includes/class-cstmsrch-settings.php:227
 msgid "Current Post Type Search"
 msgstr "Поточний пошук за типом публікації"
 
-#: includes/class-cstmsrch-settings.php:283
+#: includes/class-cstmsrch-settings.php:231
 msgid "Enable to search current page post type only."
 msgstr "Можливість поточного пошуку за типом публікації."
 
-#: includes/class-cstmsrch-settings.php:296
+#: includes/class-cstmsrch-settings.php:243
+msgid "Hidden Fields"
+msgstr "Відображати приховані поля"
+
+#: includes/class-cstmsrch-settings.php:246
+msgid "Enable to show hidden fields."
+msgstr "Можливість відображати приховані поля."
+
+#: includes/class-cstmsrch-settings.php:251
+msgid "Enable Search for the Custom Field"
+msgstr "Відображати пошук по користувацьким полям"
+
+#: includes/class-cstmsrch-settings.php:255
+#: includes/class-cstmsrch-settings.php:265
+msgid "All"
+msgstr "Всіх"
+
+#: includes/class-cstmsrch-settings.php:280
+msgid "custom post type"
+msgstr "користувацький тип записів"
+
+#: includes/class-cstmsrch-settings.php:288
+msgid "Custom fields not found."
+msgstr "Користувацькi поля не знайдені."
+
+#: includes/class-cstmsrch-settings.php:295
 msgid "Data Settings"
 msgstr "Налаштування виводу"
 
-#: includes/class-cstmsrch-settings.php:304
+#: includes/class-cstmsrch-settings.php:303
 msgid "Example of site pages' tree"
 msgstr "Приклад дерева страниць"
 
-#: includes/class-cstmsrch-settings.php:311
+#: includes/class-cstmsrch-settings.php:310
 msgid "Search Results Settings"
 msgstr "Налаштування пошукових результатів"
 
-#: includes/class-cstmsrch-settings.php:338
+#: includes/class-cstmsrch-settings.php:319
 msgid "Search Results Display"
 msgstr "Відображення налаштування пошукових результатів"
 
-#: includes/class-cstmsrch-settings.php:341
+#: includes/class-cstmsrch-settings.php:322
 msgid "Default"
 msgstr "За замовчуванням"
 
-#: includes/class-cstmsrch-settings.php:342
+#: includes/class-cstmsrch-settings.php:323
 msgid "Tabs"
 msgstr "Вкладки"
 
-#: includes/class-cstmsrch-settings.php:347
+#: includes/class-cstmsrch-settings.php:328
 msgid "Featured Image"
 msgstr "Мініатюра"
 
-#: includes/class-cstmsrch-settings.php:348
+#: includes/class-cstmsrch-settings.php:329
 msgid "Enable to display a featured image."
 msgstr "Можливість відображати мініатюру."
 
-#: includes/class-cstmsrch-settings.php:351
+#: includes/class-cstmsrch-settings.php:332
 msgid "Featured Image Size"
 msgstr "Розмір мініатюри"
 
-#: includes/class-cstmsrch-settings.php:355
+#: includes/class-cstmsrch-settings.php:336
 msgid "Featured Image Align"
 msgstr "Положення мініатюри"
 
-#: includes/class-cstmsrch-settings.php:358
+#: includes/class-cstmsrch-settings.php:339
 msgid "Left"
 msgstr "Ліворуч"
 
-#: includes/class-cstmsrch-settings.php:359
+#: includes/class-cstmsrch-settings.php:340
 msgid "Right"
 msgstr "Праворуч"
 
-#: includes/class-cstmsrch-settings.php:364
+#: includes/class-cstmsrch-settings.php:345
 msgid "Excerpt Length"
 msgstr "Довжина витягу"
 
-#: includes/class-cstmsrch-settings.php:366
+#: includes/class-cstmsrch-settings.php:347
 msgid "to"
 msgstr "на"
 
-#: includes/class-cstmsrch-settings.php:366
+#: includes/class-cstmsrch-settings.php:347
 msgid "words"
 msgstr "слів"
+
+#: includes/class-cstmsrch-settings.php:378
+#, fuzzy
+#| msgid "Custom Search Settings"
+msgid "Custom Search Shortcode"
+msgstr "Налаштування Custom Search"
+
+#: includes/class-cstmsrch-settings.php:381
+msgid ""
+"Add the \"Search\" to your pages or posts using the following shortcode:"
+msgstr ""
+"Додайте \"Пошук\" на свої сторінках чи дописах  використовуючи такий "
+"короткий код:"
 
 #, fuzzy
 #~| msgid "activate plugin"

@@ -6,7 +6,7 @@ Description: Add custom post types to WordPress website search results.
 Author: BestWebSoft
 Text Domain: custom-search-plugin
 Domain Path: /languages
-Version: 1.46
+Version: 1.47
 Author URI: https://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -140,12 +140,10 @@ if ( ! function_exists( 'cstmsrch_add_menu_search_header' ) ) {
 	function cstmsrch_add_menu_search_header() {
 			global $cstmsrch_options, $wpdb, $cstmsrch_post_types_enabled, $wp_query, $cstmsrch_taxonomies_enabled;
 
-			$search = get_search_query();		
+			$search = get_search_query();
 			if ( ( $cstmsrch_options['show_tabs_post_type'] ) == 1 && $search && is_search()) {
-				$post_type = $wpdb->get_results( "SELECT DISTINCT `post_type` FROM $wpdb->posts " );
-				$i = 1;
 				$form = '<form action="'. esc_url( home_url( '/?s=' . get_search_query()  ) ) . '" method="get" class="cstmsrch-submit-type">';
-				$form .= '<input type="submit" name="cstmsrch_submit_all_type" value="' . __( "all", "custom-search-pro" ) . '"/>';
+				$form .= '<input type="submit" name="cstmsrch_submit_all_type" value="' . __( "all", "custom-search" ) . '"/>';
 				if ( ! empty( $cstmsrch_taxonomies_enabled ) ){
 					foreach ( $cstmsrch_taxonomies_enabled as $taxonomy ) {
 						$taxonomies[] = "'" . esc_sql( $taxonomy ) . "'";
@@ -776,6 +774,29 @@ if( ! function_exists( 'cstmsrch_request' ) ) {
 	}
 }
 
+/* add a class with theme name */
+if ( ! function_exists ( 'cstmsrch_theme_body_classes' ) ) {
+	function cstmsrch_theme_body_classes( $classes ) {
+		if ( function_exists( 'wp_get_theme' ) ) {
+			$current_theme = wp_get_theme();
+			$classes[] = 'cstmsrch_' . basename( $current_theme->get( 'ThemeURI' ) );
+		}
+		return $classes;
+	}
+}
+
+/* Function shows the shortcode */
+ if ( ! function_exists( 'cstmsrch_search_shortcode' ) ) {
+	function cstmsrch_search_shortcode() {
+		return '<div class="cstmsrch-search ">
+					<form class="search-form" action="'. esc_url( home_url( '/?s=' . get_search_query()  ) ) . '" method="get" >
+				    	<input class="search-form-2" type="search" name="s" placeholder="' . __( "Site search", "custom-search" ) . '"> 
+				    	<input class="search-submit" type="submit" name="cstmsrch_submit_all_type" value="' . __( "Search", "custom-search" ) . '"/>
+					</form>
+				</div>';
+	}
+}
+
 register_activation_hook( __FILE__, 'cstmsrch_plugin_activate' );
 add_action( 'plugins_loaded', 'cstmsrch_plugins_loaded' );
 add_action( 'admin_menu', 'add_cstmsrch_admin_menu' );
@@ -785,6 +806,7 @@ add_action( 'admin_enqueue_scripts', 'cstmsrch_admin_js' );
 add_action( 'loop_start', 'cstmsrch_add_menu_search_header' );
 add_action( 'wp_enqueue_scripts', 'cstmsrch_scripts' );
 
+add_shortcode( 'cstmsrch_search', 'cstmsrch_search_shortcode' );
 
 /* Adds "Settings" link to the plugin action page */
 add_filter( 'plugin_action_links', 'cstmsrch_action_links', 10, 2 );
@@ -795,3 +817,5 @@ add_action( 'admin_notices', 'cstmsrch_admin_notices' );
 add_filter( 'posts_distinct', 'cstmsrch_distinct' );
 add_filter( 'posts_join', 'cstmsrch_join' );
 add_filter( 'posts_where', 'cstmsrch_request' );
+/* add theme name as class to body tag */
+add_filter( 'body_class', 'cstmsrch_theme_body_classes' );

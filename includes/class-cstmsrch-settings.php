@@ -6,7 +6,7 @@
 
 if ( ! class_exists( 'Cstmsrch_Settings_Tabs' ) ) {
 	class Cstmsrch_Settings_Tabs extends Bws_Settings_Tabs {
-		public $search_objects_custom, $post_types_custom_keys, $post_types_custom, $taxonomies_keys, $taxonomies_global;
+		public $search_objects_custom, $post_types_custom_keys, $post_types_custom, $taxonomies_keys, $taxonomies_global, $cstmsrch_post_types_enabled, $cstmsrch_taxonomies_enabled;
 		/**
 		 * Constructor.
 		 *
@@ -36,7 +36,7 @@ if ( ! class_exists( 'Cstmsrch_Settings_Tabs' ) ) {
 				'options'				=> $cstmsrch_options,
 				'is_network_options'	=> is_network_admin(),
 				'tabs'					=> $tabs,
-				'wp_slug'				=> 'custom-search',
+				'wp_slug'				=> 'custom-search-plugin',
 				'link_key'				=> 'f9558d294313c75b964f5f6fa1e5fd3c',
 				'link_pn'				=> '81'
 			) );
@@ -63,6 +63,7 @@ if ( ! class_exists( 'Cstmsrch_Settings_Tabs' ) ) {
 			$this->taxonomies_global = array_combine( $this->taxonomies_keys, $this->taxonomies_keys );
 
 			add_action( get_parent_class( $this ) . '_additional_restore_options', array( $this, 'additional_restore_options' ) );
+			add_action( get_parent_class( $this ) . '_display_metabox', array( $this, 'display_metabox' ) );
 
 		}
 
@@ -204,7 +205,7 @@ if ( ! class_exists( 'Cstmsrch_Settings_Tabs' ) ) {
                     <div class="bws_table_bg"></div>
                     <table class="form-table bws_pro_version">
                         <tr valign="top">
-                            <th scope="row"><?php _e( '', 'custom-search-plugin' ); ?></th>
+                            <th scope="row"></th>
                             <td>
                                 <?php $objects = array(
                                     $this->search_objects_custom['post_type']['post'],
@@ -370,5 +371,17 @@ if ( ! class_exists( 'Cstmsrch_Settings_Tabs' ) ) {
 			}
 			return $options;
 		}
+
+		public function display_metabox() { ?>
+            <div class="postbox">
+                <h3 class="hndle">
+                    <?php _e( 'Custom Search Shortcode', 'custom-search-plugin' ); ?>
+                </h3>
+                     <div class="inside">
+                        <?php _e( 'Add the "Search" to your pages or posts using the following shortcode:', 'custom-search-plugin' ); ?>
+                        <?php bws_shortcode_output( "[cstmsrch_search]" ); ?>
+                    </div>
+            </div>
+        <?php }
 	}
 }

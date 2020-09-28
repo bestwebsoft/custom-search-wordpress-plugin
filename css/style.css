@@ -19,3 +19,15 @@
  	padding-bottom: 4px;
  	margin: 1px;
 }
+.cstmsrch_twentytwenty .cstmsrch-search input[type="submit"]{
+	margin:  0 10px 0 10px;
+}
+.cstmsrch_twentyfifteen .cstmsrch-search input[type="search"]{
+	width: 50%;
+}
+.cstmsrch_twentyfifteen .cstmsrch-search input[type="submit"]{
+	display: none;
+}
+.cstmsrch_twentysixteen .cstmsrch-search input[type="submit"]{
+	width: auto;
+}

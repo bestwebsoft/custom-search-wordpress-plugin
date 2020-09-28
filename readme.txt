@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: https://bestwebsoft.com/donate/
 Tags: additional search options, extra search options, advanced search, add additional search options, search options, custom search, custom search plugin, website search, add custom posts to search, custom posts, free additional search options, custom content types
 Requires at least: 4.5
-Tested up to: 5.4.2
-Stable tag: 1.46
+Tested up to: 5.5.1
+Stable tag: 1.47
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -114,6 +114,11 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 4. Search results displayed by tabs.
 
 == Changelog ==
+
+= V1.47 - 28.09.2020 =
+* NEW : The "[cstmsrch_search]" shortcode is added.
+* Update : BWS Panel section was updated.
+* Bugfix : The bug with the display visible pictures has been fixed.
 
 = V1.46 - 30.06.2020 =
 * Update : All functionality was updated for WordPress 5.4.2.
@@ -287,6 +292,10 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 * NEW : Language files are added to the plugin.
 
 == Upgrade Notice ==
+
+= V1.47 =
+* Functionality improved.
+* Bugs fixed.
 
 = V1.46 =
 * Appearance improved
