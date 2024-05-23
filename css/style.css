@@ -31,3 +31,6 @@
 .cstmsrch_twentysixteen .cstmsrch-search input[type="submit"]{
 	width: auto;
 }
+.vacancy .cstmsrch_thumbnail_left img {
+	display: block !important;
+}

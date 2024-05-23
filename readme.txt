@@ -1,10 +1,10 @@
-=== Custom Search by BestWebSoft ===
+=== Custom Search by BestWebSoft - Advanced WordPress Search Bar Plugin ===
 Contributors: bestwebsoft
 Donate link: https://bestwebsoft.com/donate/
 Tags: additional search options, extra search options, advanced search, add additional search options, search options, custom search, custom search plugin, website search, add custom posts to search, custom posts, free additional search options, custom content types
-Requires at least: 4.5
-Tested up to: 5.5.1
-Stable tag: 1.47
+Requires at least: 5.6
+Tested up to: 6.5
+Stable tag: 1.50
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -14,6 +14,8 @@ Add custom post types, taxonomies, and custom fields to WordPress website search
 
 Custom Search plugin adds custom post types, taxonomies, and custom fields to WordPress website search results. A quick and easy way to search everything within custom post types, custom fields, and taxonomies.
 Improve your website user experience today!
+
+[View Demo](https://bestwebsoft.com/demo-custom-search-plugin/?ref=readme)
 
 https://www.youtube.com/watch?v=qF2-pFM_ESw
 
@@ -62,8 +64,9 @@ If you have a feature suggestion or idea you'd like to see in the plugin, we'd l
 
 = Documentation & Videos =
 
-* [[Doc] Installation](https://docs.google.com/document/d/1-hvn6WRvWnOqj5v5pLUk7Awyu87lq5B_dO-Tv-MC9JQ/)
-* [[Doc] Purchase](https://docs.google.com/document/d/1EUdBVvnm7IHZ6y0DNyldZypUQKpB8UVPToSc_LdOYQI/)
+* [[Doc] User Guide](https://bestwebsoft.com/documentation/custom-search/custom-search-user-guide/)
+* [[Doc] Installation](https://bestwebsoft.com/documentation/how-to-install-a-wordpress-product/how-to-install-a-wordpress-plugin/)
+* [[Doc] Purchase](https://bestwebsoft.com/documentation/how-to-purchase-a-wordpress-plugin/how-to-purchase-wordpress-plugin-from-bestwebsoft/)
 * [[Video] Installation Instruction](https://www.youtube.com/watch?v=2tuQNyfXZ-I)
 * [[Video] Purchase, Installation, Configuration Tutorial](https://www.youtube.com/watch?v=6w7qOA9P0HY)
 
@@ -114,6 +117,20 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 4. Search results displayed by tabs.
 
 == Changelog ==
+
+= V1.50 - 23.05.2024 =
+* Bugfix : Small bugs fixed.
+* Update : All functionality was updated for WordPress 6.5.
+
+= V1.49 - 06.10.2023 =
+* Update : Settings page was updated.
+* Update : BWS Panel section was updated.
+* Update : All functionality was updated for WordPress 6.3.
+
+= V1.48 - 26.08.2021 =
+* PRO : Settings page was updated.
+* Update : BWS Panel section was updated.
+* Update : All functionality was updated for WordPress 5.8.
 
 = V1.47 - 28.09.2020 =
 * NEW : The "[cstmsrch_search]" shortcode is added.
@@ -292,6 +309,16 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 * NEW : Language files are added to the plugin.
 
 == Upgrade Notice ==
+
+= V1.50 =
+* The compatibility with new WordPress version updated.
+
+= V1.49 =
+* Functionality improved.
+* Bugs fixed.
+
+= V1.48 =
+* The compatibility with new WordPress version updated.
 
 = V1.47 =
 * Functionality improved.

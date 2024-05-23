@@ -2,28 +2,28 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Custom Search\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-01 17:57+0300\n"
-"PO-Revision-Date: 2020-09-01 17:58+0300\n"
+"POT-Creation-Date: 2024-05-15 16:56+0300\n"
+"PO-Revision-Date: 2024-05-15 16:57+0300\n"
 "Last-Translator: plugin@bestwebsoft.com <plugin@bestwebsoft.com>\n"
 "Language-Team: BestWebSoft <plugin@bestwebsoft.com>\n"
 "Language: ru_RU\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-KeywordsList: __;_e;ecs_html_e;ecs_html__;esc_attr_e;esc_attr__\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 2.3\n"
+"X-Generator: Poedit 3.4.3\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: bws_menu\n"
 
 #: custom-search-plugin.php:36 custom-search-plugin.php:38
-#: custom-search-plugin.php:572 includes/class-cstmsrch-settings.php:138
+#: custom-search-plugin.php:570 includes/class-cstmsrch-settings.php:138
 msgid "Custom Search Settings"
 msgstr "Настройки Custom Search"
 
-#: custom-search-plugin.php:38 custom-search-plugin.php:592
-#: custom-search-plugin.php:606 includes/class-cstmsrch-settings.php:23
+#: custom-search-plugin.php:38 custom-search-plugin.php:590
+#: custom-search-plugin.php:604 includes/class-cstmsrch-settings.php:23
 msgid "Settings"
 msgstr "Настройки"
 
@@ -31,31 +31,31 @@ msgstr "Настройки"
 msgid "Upgrade to Pro"
 msgstr "Обновить до Pro"
 
-#: custom-search-plugin.php:148
+#: custom-search-plugin.php:146
 msgid "all"
 msgstr "все"
 
-#: custom-search-plugin.php:575
+#: custom-search-plugin.php:573
 msgid "WARNING"
 msgstr "ВНИМАНИЕ"
 
-#: custom-search-plugin.php:575
+#: custom-search-plugin.php:573
 msgid "The plugin works correctly only if JavaScript is enabled."
 msgstr "Плагин работает корректно только при включенном JavaScript."
 
-#: custom-search-plugin.php:608
+#: custom-search-plugin.php:606
 msgid "FAQ"
 msgstr "FAQ"
 
-#: custom-search-plugin.php:609
+#: custom-search-plugin.php:607
 msgid "Support"
 msgstr "Тех.поддержка"
 
-#: custom-search-plugin.php:786
+#: custom-search-plugin.php:793
 msgid "Site search"
 msgstr "Поиск по сайту"
 
-#: custom-search-plugin.php:787
+#: custom-search-plugin.php:794
 msgid "Search"
 msgstr "Поиск"
 
@@ -84,8 +84,8 @@ msgid "Settings saved"
 msgstr "Настройки сохранены"
 
 #: includes/class-cstmsrch-settings.php:152
-msgid "Display Order"
-msgstr "Вывод"
+msgid "Enable Search by"
+msgstr "Включить поиск по"
 
 #: includes/class-cstmsrch-settings.php:160
 msgid "Post Types"
@@ -104,8 +104,8 @@ msgid "for"
 msgstr "для"
 
 #: includes/class-cstmsrch-settings.php:204
-#: includes/class-cstmsrch-settings.php:300
-#: includes/class-cstmsrch-settings.php:315
+#: includes/class-cstmsrch-settings.php:301
+#: includes/class-cstmsrch-settings.php:329
 msgid "Close"
 msgstr "Закрыть"
 
@@ -154,73 +154,74 @@ msgstr "Кастомные поля не найдены."
 msgid "Data Settings"
 msgstr "Настройки данных"
 
-#: includes/class-cstmsrch-settings.php:303
+#: includes/class-cstmsrch-settings.php:304
 msgid "Example of site pages' tree"
 msgstr "Пример дерева сайта"
 
-#: includes/class-cstmsrch-settings.php:310
+#: includes/class-cstmsrch-settings.php:312
 msgid "Search Results Settings"
 msgstr "Настройки поисковых результатов"
 
-#: includes/class-cstmsrch-settings.php:319
+#: includes/class-cstmsrch-settings.php:317
 msgid "Search Results Display"
 msgstr "Отображение поисковых результатов"
 
-#: includes/class-cstmsrch-settings.php:322
+#: includes/class-cstmsrch-settings.php:320
 msgid "Default"
 msgstr "По умолчанию"
 
-#: includes/class-cstmsrch-settings.php:323
+#: includes/class-cstmsrch-settings.php:321
 msgid "Tabs"
 msgstr "Вкладки"
 
-#: includes/class-cstmsrch-settings.php:328
+#: includes/class-cstmsrch-settings.php:333
 msgid "Featured Image"
 msgstr "Миниатюра"
 
-#: includes/class-cstmsrch-settings.php:329
+#: includes/class-cstmsrch-settings.php:334
 msgid "Enable to display a featured image."
 msgstr "Включить миниатюру."
 
-#: includes/class-cstmsrch-settings.php:332
+#: includes/class-cstmsrch-settings.php:337
 msgid "Featured Image Size"
 msgstr "Размер миниатюры"
 
-#: includes/class-cstmsrch-settings.php:336
+#: includes/class-cstmsrch-settings.php:341
 msgid "Featured Image Align"
 msgstr "Расположение миниатюры"
 
-#: includes/class-cstmsrch-settings.php:339
+#: includes/class-cstmsrch-settings.php:344
 msgid "Left"
 msgstr "Слева"
 
-#: includes/class-cstmsrch-settings.php:340
+#: includes/class-cstmsrch-settings.php:345
 msgid "Right"
 msgstr "Справа"
 
-#: includes/class-cstmsrch-settings.php:345
+#: includes/class-cstmsrch-settings.php:350
 msgid "Excerpt Length"
 msgstr "Длина цитаты"
 
-#: includes/class-cstmsrch-settings.php:347
+#: includes/class-cstmsrch-settings.php:352
 msgid "to"
 msgstr "до"
 
-#: includes/class-cstmsrch-settings.php:347
+#: includes/class-cstmsrch-settings.php:352
 msgid "words"
 msgstr "слов"
 
-#: includes/class-cstmsrch-settings.php:378
-#, fuzzy
-#| msgid "Custom Search Settings"
+#: includes/class-cstmsrch-settings.php:384
 msgid "Custom Search Shortcode"
-msgstr "Настройки Custom Search"
+msgstr "Custom Search шорткод"
 
-#: includes/class-cstmsrch-settings.php:381
+#: includes/class-cstmsrch-settings.php:387
 msgid ""
 "Add the \"Search\" to your pages or posts using the following shortcode:"
 msgstr ""
 "Добавьте «Поиск» на свои страницы или записи, используя следующий шорткод:"
+
+#~ msgid "Display Order"
+#~ msgstr "Вывод"
 
 #, fuzzy
 #~| msgid "activate plugin"
@@ -369,9 +370,6 @@ msgstr ""
 
 #~ msgid "Appearance"
 #~ msgstr "Отображение"
-
-#~ msgid "Enable Custom Search for"
-#~ msgstr "Добавить в пользовательский поиск"
 
 #~ msgid "Search Only by Type of the Current Post"
 #~ msgstr "Искать только по типу текущей записи"

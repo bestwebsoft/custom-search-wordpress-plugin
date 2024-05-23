@@ -1,0 +1,432 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Custom Search\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-05-15 16:56+0300\n"
+"PO-Revision-Date: 2024-05-15 16:58+0300\n"
+"Last-Translator: \n"
+"Language-Team: BestWebSoft <plugin@bestwebsoft.com>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e;ecs_html_e;ecs_html__;esc_attr_e;esc_attr__\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Poedit 3.4.3\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: bws_menu\n"
+
+#: custom-search-plugin.php:36 custom-search-plugin.php:38
+#: custom-search-plugin.php:570 includes/class-cstmsrch-settings.php:138
+msgid "Custom Search Settings"
+msgstr "Benutzerdefinierte Sucheinstellungen"
+
+#: custom-search-plugin.php:38 custom-search-plugin.php:590
+#: custom-search-plugin.php:604 includes/class-cstmsrch-settings.php:23
+msgid "Settings"
+msgstr "Einstellungen"
+
+#: custom-search-plugin.php:47
+msgid "Upgrade to Pro"
+msgstr "Upgrade auf die Pro-Version"
+
+#: custom-search-plugin.php:146
+msgid "all"
+msgstr "alle"
+
+#: custom-search-plugin.php:573
+msgid "WARNING"
+msgstr "WARNUNG"
+
+#: custom-search-plugin.php:573
+msgid "The plugin works correctly only if JavaScript is enabled."
+msgstr "Das Plugin funktioniert nur korrekt, wenn JavaScript aktiviert ist."
+
+#: custom-search-plugin.php:606
+msgid "FAQ"
+msgstr "FAQ"
+
+#: custom-search-plugin.php:607
+msgid "Support"
+msgstr "Support"
+
+#: custom-search-plugin.php:793
+msgid "Site search"
+msgstr "Websitesuche"
+
+#: custom-search-plugin.php:794
+msgid "Search"
+msgstr "Suche"
+
+#: includes/class-cstmsrch-settings.php:24
+msgid "Data"
+msgstr "Daten"
+
+#: includes/class-cstmsrch-settings.php:25
+msgid "Search Results"
+msgstr "Suchergebnisse"
+
+#: includes/class-cstmsrch-settings.php:26
+msgid "Misc"
+msgstr "Verschiedenes"
+
+#: includes/class-cstmsrch-settings.php:27
+msgid "Custom Code"
+msgstr "Benutzerdefinierter Code"
+
+#: includes/class-cstmsrch-settings.php:28
+msgid "License Key"
+msgstr "Lizenzschlüssel"
+
+#: includes/class-cstmsrch-settings.php:122
+msgid "Settings saved"
+msgstr "Einstellungen gespeichert"
+
+#: includes/class-cstmsrch-settings.php:152
+msgid "Enable Search by"
+msgstr "Aktivieren Sie die Suche nach"
+
+#: includes/class-cstmsrch-settings.php:160
+msgid "Post Types"
+msgstr "Beitragstypen"
+
+#: includes/class-cstmsrch-settings.php:173
+msgid "No custom post type found."
+msgstr "Kein benutzerdefinierter Beitragstyp gefunden."
+
+#: includes/class-cstmsrch-settings.php:182
+msgid "Taxonomies"
+msgstr "Taxonomien"
+
+#: includes/class-cstmsrch-settings.php:192
+msgid "for"
+msgstr "für"
+
+#: includes/class-cstmsrch-settings.php:204
+#: includes/class-cstmsrch-settings.php:301
+#: includes/class-cstmsrch-settings.php:329
+msgid "Close"
+msgstr "Schließen"
+
+#: includes/class-cstmsrch-settings.php:223
+msgid ""
+"When you drag post types and taxonomies, you affect the order of their "
+"displaying in the frontend on the search page."
+msgstr ""
+"Wenn Sie Beitragstypen und Taxonomien ziehen, beeinflussen Sie die "
+"Reihenfolge, in der sie im Frontend auf der Suchseite angezeigt werden."
+
+#: includes/class-cstmsrch-settings.php:227
+msgid "Current Post Type Search"
+msgstr "Aktueller Beitragstyp Suche"
+
+#: includes/class-cstmsrch-settings.php:231
+msgid "Enable to search current page post type only."
+msgstr ""
+"Aktivieren Sie diese Option, um nur den Beitragstyp der aktuellen Seite zu "
+"durchsuchen."
+
+#: includes/class-cstmsrch-settings.php:243
+msgid "Hidden Fields"
+msgstr "Versteckte Felder"
+
+#: includes/class-cstmsrch-settings.php:246
+msgid "Enable to show hidden fields."
+msgstr "Aktivieren Sie diese Option, um versteckte Felder anzuzeigen."
+
+#: includes/class-cstmsrch-settings.php:251
+msgid "Enable Search for the Custom Field"
+msgstr "Aktivieren Sie die Suche für das benutzerdefinierte Feld"
+
+#: includes/class-cstmsrch-settings.php:255
+#: includes/class-cstmsrch-settings.php:265
+msgid "All"
+msgstr "Alle"
+
+#: includes/class-cstmsrch-settings.php:280
+msgid "custom post type"
+msgstr "benutzerdefinierter Beitragstyp"
+
+#: includes/class-cstmsrch-settings.php:288
+msgid "Custom fields not found."
+msgstr "Benutzerdefinierte Felder nicht gefunden."
+
+#: includes/class-cstmsrch-settings.php:295
+msgid "Data Settings"
+msgstr "Dateneinstellungen"
+
+#: includes/class-cstmsrch-settings.php:304
+msgid "Example of site pages' tree"
+msgstr "Beispiel der Websiten-Struktur"
+
+#: includes/class-cstmsrch-settings.php:312
+msgid "Search Results Settings"
+msgstr "Einstellungen Suchergebnisse"
+
+#: includes/class-cstmsrch-settings.php:317
+msgid "Search Results Display"
+msgstr "Anzeige der Suchergebnisse"
+
+#: includes/class-cstmsrch-settings.php:320
+msgid "Default"
+msgstr "Standard"
+
+#: includes/class-cstmsrch-settings.php:321
+msgid "Tabs"
+msgstr "Tabs"
+
+#: includes/class-cstmsrch-settings.php:333
+msgid "Featured Image"
+msgstr "Beitragsbild"
+
+#: includes/class-cstmsrch-settings.php:334
+msgid "Enable to display a featured image."
+msgstr "Aktivieren Sie diese Option, um ein Featured Image anzuzeigen."
+
+#: includes/class-cstmsrch-settings.php:337
+msgid "Featured Image Size"
+msgstr "Größe des Beitragbildes"
+
+#: includes/class-cstmsrch-settings.php:341
+msgid "Featured Image Align"
+msgstr "Ausgewähltes Bild ausrichten"
+
+#: includes/class-cstmsrch-settings.php:344
+msgid "Left"
+msgstr "Links"
+
+#: includes/class-cstmsrch-settings.php:345
+msgid "Right"
+msgstr "Rechts"
+
+#: includes/class-cstmsrch-settings.php:350
+msgid "Excerpt Length"
+msgstr "Auszugslänge"
+
+#: includes/class-cstmsrch-settings.php:352
+msgid "to"
+msgstr "bis"
+
+#: includes/class-cstmsrch-settings.php:352
+msgid "words"
+msgstr "Worte"
+
+#: includes/class-cstmsrch-settings.php:384
+msgid "Custom Search Shortcode"
+msgstr "Benutzerdefinierter Suchkurzcode"
+
+#: includes/class-cstmsrch-settings.php:387
+msgid ""
+"Add the \"Search\" to your pages or posts using the following shortcode:"
+msgstr ""
+"Fügen Sie die \"Suche\" mit dem folgenden Shortcode zu Ihren Seiten oder "
+"Beiträgen hinzu:"
+
+msgid "Display Order"
+msgstr "Вывод"
+
+msgid "Like the plugin?"
+msgstr "Gefällt Ihnen das Plugin?"
+
+msgid "Learn More"
+msgstr "Подробнее"
+
+msgid "Learn more"
+msgstr "Mehr erfahren"
+
+msgid "or"
+msgstr "oder"
+
+msgid "The plugin's settings have been changed."
+msgstr "Die Einstellungen des Plugins wurden geändert."
+
+# @ custom-search
+msgid "Save Changes"
+msgstr "Сохранить изменения"
+
+msgid "Shortcode settings"
+msgstr "Shortcode Einstellungen"
+
+msgid "Wrong license key"
+msgstr "Falscher Lizenzschlüssel"
+
+msgid "Wrong license key."
+msgstr "Falscher Lizenzschlüssel."
+
+msgid "Active Plugins"
+msgstr "Aktive Plugins"
+
+msgid "Inactive Plugins"
+msgstr "Inaktive Plugins"
+
+msgid "Check license key"
+msgstr "Lizenzschlüssel überprüfen"
+
+msgid "Activate"
+msgstr "Aktivieren Sie"
+
+msgid "Installing the plugin"
+msgstr "Der Plugin wird installiert"
+
+msgid "Activate Plugin"
+msgstr "Plugin aktivieren"
+
+msgid "Category"
+msgstr "Kategorie"
+
+msgid "Activate this plugin"
+msgstr "Aktivieren Sie dieses Plugin"
+
+msgid "Send to support"
+msgstr "Senden zur Unterstützung"
+
+msgid "License"
+msgstr "Lizenz"
+
+msgid "All plugin settings were restored."
+msgstr "Настройки плагина были восстановлены."
+
+msgid "Learn more about %s"
+msgstr "Erfahre mehr über %s"
+
+msgid "Miscellaneous Settings"
+msgstr "Verschiedene Einstellungen"
+
+msgid "Restore Settings"
+msgstr "Einstellungen zurücksetzen"
+
+msgid "Settings page"
+msgstr "Einstellungen-Seite"
+
+msgid "Manage License Settings"
+msgstr "Lizenzeinstellungen verwalten"
+
+msgid "Contact Support"
+msgstr "Support kontaktieren"
+
+msgid "Deactivate"
+msgstr "Deaktivieren"
+
+msgid "the setting page"
+msgstr "die Einstellungsseite"
+
+msgid "Restore all plugin settings to defaults"
+msgstr "Alle Plugin-Einstellungen auf die Standardwerte zurücksetzen"
+
+msgid "Restore settings"
+msgstr "Einstellungen wiederherstellen"
+
+msgid "Appearance"
+msgstr "Отображение"
+
+msgid "Search Only by Type of the Current Post"
+msgstr "Искать только по типу текущей записи"
+
+msgid "Only current page post type will be used for the search."
+msgstr ""
+"Эта опция позволяет осуществлять поиск только по тому типу записи, на "
+"странице которого вы находитесь."
+
+msgid "Display Settings"
+msgstr "Настройки вывода"
+
+msgid "Appearance Settings"
+msgstr "Настройки отображения"
+
+msgid "Change Displaying of Post Content on Search Pages"
+msgstr "Изменить отображение содержимого записи на страницах поиска"
+
+msgid "Display Featured Image with Post Content"
+msgstr "Отображать миниатюру с содержимым записи"
+
+msgid "You need to"
+msgstr "Вам нужно"
+
+msgid ""
+"If the type of the post is not default - you need to install and activate "
+"the plugin"
+msgstr ""
+"Если тип записи не стандартный - вам необходимо установить и активировать "
+"плагин"
+
+msgid "Enable search for the custom field:"
+msgstr "Отображать поиск по кастомным полям для:"
+
+msgid "This option is used when you search on a single page/post/post type."
+msgstr ""
+"Эта опция используется, когда Вы находитесь на странице записи/страницы/типа "
+"записи."
+
+msgid ""
+"When you drag post types and taxonomies, you affect the order of their "
+"display in the frontend on the search page."
+msgstr ""
+"При перетаскивании типов записей и таксономий вы влияете на порядок их "
+"вывода во фронтенде на странице поиска."
+
+msgid "Search only by Type of the Current Post"
+msgstr "Искать только по типу текущей страницы"
+
+msgid "Search only by type of the current post"
+msgstr "Искать только по типу текущей страницы"
+
+msgid "Change Excerpt length"
+msgstr "Изменить длину цитаты"
+
+msgid "Change excerpt length"
+msgstr "Изменить длину цитаты"
+
+msgid "Featured image Size"
+msgstr "Размер миниатюры"
+
+msgid "Featured image Align"
+msgstr "Положение миниатюры"
+
+msgid "Display featured image with post content"
+msgstr "Отображать миниатюру с контентом поста"
+
+msgid "Change displaying of post content on search pages"
+msgstr "Изменить отображение контента записи на страницах поиска"
+
+msgid "Enable Custom Search for:"
+msgstr "Добавить в кастомный поиск:"
+
+msgid "Enable Custom search for:"
+msgstr "Добавить в кастомный поиск:"
+
+msgid "Featured image align"
+msgstr "Расположение миниатюры"
+
+msgid "Featured image size"
+msgstr "Размер миниатюры"
+
+msgid "post type"
+msgstr "тип записи"
+
+msgid "post types"
+msgstr "типы записи"
+
+msgid "taxonomy"
+msgstr "таксономия"
+
+msgid "taxonomies"
+msgstr "таксономии"
+
+msgid "Go PRO"
+msgstr "Перейти на PRO версию"
+
+msgid "Unlock premium options by upgrading to Pro version"
+msgstr "Активируйте премиум опции обновившись до Pro версии"
+
+msgid "Posts"
+msgstr "Записи"
+
+msgid "Pages"
+msgstr "Страницы"
+
+msgid "Post types"
+msgstr "Типы записей"
+
+msgid "Tags"
+msgstr "Теги"

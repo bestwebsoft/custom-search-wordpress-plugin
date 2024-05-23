@@ -1,0 +1,435 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Custom Search\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-05-15 16:56+0300\n"
+"PO-Revision-Date: 2024-05-15 17:01+0300\n"
+"Last-Translator: \n"
+"Language-Team: BestWebSoft <plugin@bestwebsoft.com>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e;ecs_html_e;ecs_html__;esc_attr_e;esc_attr__\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Poedit 3.4.3\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: bws_menu\n"
+
+#: custom-search-plugin.php:36 custom-search-plugin.php:38
+#: custom-search-plugin.php:570 includes/class-cstmsrch-settings.php:138
+msgid "Custom Search Settings"
+msgstr "Paramètres « Recherche personnalisée »"
+
+#: custom-search-plugin.php:38 custom-search-plugin.php:590
+#: custom-search-plugin.php:604 includes/class-cstmsrch-settings.php:23
+msgid "Settings"
+msgstr "Réglages"
+
+#: custom-search-plugin.php:47
+msgid "Upgrade to Pro"
+msgstr "Passer à la version Pro"
+
+#: custom-search-plugin.php:146
+msgid "all"
+msgstr "tout"
+
+#: custom-search-plugin.php:573
+msgid "WARNING"
+msgstr "AVERTISSEMENT"
+
+#: custom-search-plugin.php:573
+msgid "The plugin works correctly only if JavaScript is enabled."
+msgstr "Le plugin ne fonctionne correctement que si JavaScript est activé."
+
+#: custom-search-plugin.php:606
+msgid "FAQ"
+msgstr "FAQ"
+
+#: custom-search-plugin.php:607
+msgid "Support"
+msgstr "Support"
+
+#: custom-search-plugin.php:793
+msgid "Site search"
+msgstr "Rechercher sur le site"
+
+#: custom-search-plugin.php:794
+msgid "Search"
+msgstr "Rechercher"
+
+#: includes/class-cstmsrch-settings.php:24
+msgid "Data"
+msgstr "Données"
+
+#: includes/class-cstmsrch-settings.php:25
+msgid "Search Results"
+msgstr "Résultats de la recherche"
+
+#: includes/class-cstmsrch-settings.php:26
+msgid "Misc"
+msgstr "Divers"
+
+#: includes/class-cstmsrch-settings.php:27
+msgid "Custom Code"
+msgstr "Code personnalisé"
+
+#: includes/class-cstmsrch-settings.php:28
+msgid "License Key"
+msgstr "Clé de licence"
+
+#: includes/class-cstmsrch-settings.php:122
+msgid "Settings saved"
+msgstr "Paramètres sauvegardés"
+
+#: includes/class-cstmsrch-settings.php:152
+msgid "Enable Search by"
+msgstr "Activer la recherche par"
+
+#: includes/class-cstmsrch-settings.php:160
+msgid "Post Types"
+msgstr "Types d’article"
+
+#: includes/class-cstmsrch-settings.php:173
+msgid "No custom post type found."
+msgstr "Aucun type d'article personnalisé n'a été trouvé."
+
+#: includes/class-cstmsrch-settings.php:182
+msgid "Taxonomies"
+msgstr "Taxonomies"
+
+#: includes/class-cstmsrch-settings.php:192
+msgid "for"
+msgstr "pour"
+
+#: includes/class-cstmsrch-settings.php:204
+#: includes/class-cstmsrch-settings.php:301
+#: includes/class-cstmsrch-settings.php:329
+msgid "Close"
+msgstr "Fermer"
+
+#: includes/class-cstmsrch-settings.php:223
+msgid ""
+"When you drag post types and taxonomies, you affect the order of their "
+"displaying in the frontend on the search page."
+msgstr ""
+"Lorsque vous déplacez des types d'articles et des taxonomies, vous "
+"modifiez l'ordre dans lequel ils s'affichent dans le frontend sur la page "
+"de recherche."
+
+#: includes/class-cstmsrch-settings.php:227
+msgid "Current Post Type Search"
+msgstr "Recherche du type de message actuel"
+
+#: includes/class-cstmsrch-settings.php:231
+msgid "Enable to search current page post type only."
+msgstr ""
+"Permet de rechercher uniquement le type de message de la page actuelle."
+
+#: includes/class-cstmsrch-settings.php:243
+msgid "Hidden Fields"
+msgstr "Champs cachés"
+
+#: includes/class-cstmsrch-settings.php:246
+msgid "Enable to show hidden fields."
+msgstr "Activer pour afficher les champs cachés."
+
+#: includes/class-cstmsrch-settings.php:251
+msgid "Enable Search for the Custom Field"
+msgstr "Activer la recherche pour le champ personnalisé"
+
+#: includes/class-cstmsrch-settings.php:255
+#: includes/class-cstmsrch-settings.php:265
+msgid "All"
+msgstr "Tout"
+
+#: includes/class-cstmsrch-settings.php:280
+msgid "custom post type"
+msgstr "contenu personnalisé"
+
+#: includes/class-cstmsrch-settings.php:288
+msgid "Custom fields not found."
+msgstr "Les champs personnalisés ne sont pas trouvés."
+
+#: includes/class-cstmsrch-settings.php:295
+msgid "Data Settings"
+msgstr "Paramètres de données"
+
+#: includes/class-cstmsrch-settings.php:304
+msgid "Example of site pages' tree"
+msgstr "Exemple d'arborescence des pages du site"
+
+#: includes/class-cstmsrch-settings.php:312
+msgid "Search Results Settings"
+msgstr "Paramètres des résultats de la recherche"
+
+#: includes/class-cstmsrch-settings.php:317
+msgid "Search Results Display"
+msgstr "Affichage des résultats de la recherche"
+
+#: includes/class-cstmsrch-settings.php:320
+msgid "Default"
+msgstr "Par défaut"
+
+#: includes/class-cstmsrch-settings.php:321
+msgid "Tabs"
+msgstr "Onglets"
+
+#: includes/class-cstmsrch-settings.php:333
+msgid "Featured Image"
+msgstr "Image à la une"
+
+#: includes/class-cstmsrch-settings.php:334
+msgid "Enable to display a featured image."
+msgstr "Activez l'affichage d'une image vedette."
+
+#: includes/class-cstmsrch-settings.php:337
+msgid "Featured Image Size"
+msgstr "Taille de l’image mise en avant"
+
+#: includes/class-cstmsrch-settings.php:341
+msgid "Featured Image Align"
+msgstr "Alignement de l'image vedette"
+
+#: includes/class-cstmsrch-settings.php:344
+msgid "Left"
+msgstr "Gauche"
+
+#: includes/class-cstmsrch-settings.php:345
+msgid "Right"
+msgstr "Droite"
+
+#: includes/class-cstmsrch-settings.php:350
+msgid "Excerpt Length"
+msgstr "Longueur de l'extrait"
+
+#: includes/class-cstmsrch-settings.php:352
+msgid "to"
+msgstr "à"
+
+#: includes/class-cstmsrch-settings.php:352
+msgid "words"
+msgstr "mots"
+
+#: includes/class-cstmsrch-settings.php:384
+msgid "Custom Search Shortcode"
+msgstr "Shortcode de recherche personnalisé"
+
+#: includes/class-cstmsrch-settings.php:387
+msgid ""
+"Add the \"Search\" to your pages or posts using the following shortcode:"
+msgstr ""
+"Ajoutez la \"Recherche\" à vos pages ou posts en utilisant le shortcode "
+"suivant :"
+
+msgid "Display Order"
+msgstr "Ordre d'affichage"
+
+msgid "Like the plugin?"
+msgstr "Vous aimez le plugin?"
+
+msgid "Learn More"
+msgstr "En savoir plus"
+
+msgid "Learn more"
+msgstr "En savoir plus"
+
+msgid "or"
+msgstr "ou"
+
+msgid "The plugin's settings have been changed."
+msgstr "Les réglages de l’extension ont été modifiés."
+
+# @ custom-search
+msgid "Save Changes"
+msgstr "Sauvegarder les changements"
+
+msgid "Shortcode settings"
+msgstr "Paramètres de Shortcode"
+
+msgid "Wrong license key"
+msgstr "Mauvaise clé de licence"
+
+msgid "Wrong license key."
+msgstr "Mauvaise clé de licence."
+
+msgid "Active Plugins"
+msgstr "Extensions actives"
+
+msgid "Inactive Plugins"
+msgstr "Extension Inactive"
+
+msgid "Check license key"
+msgstr "Clé de licence"
+
+msgid "Activate"
+msgstr "Activer"
+
+msgid "Installing the plugin"
+msgstr "Installation du plugin"
+
+msgid "Activate Plugin"
+msgstr "Activer le plugin"
+
+msgid "Category"
+msgstr "Catégorie"
+
+msgid "Activate this plugin"
+msgstr "Activer cette extension"
+
+msgid "Send to support"
+msgstr "Envoyer au support"
+
+msgid "License"
+msgstr "Licence"
+
+msgid "All plugin settings were restored."
+msgstr "Tous les paramètres du plugin ont été restaurés."
+
+msgid "Learn more about %s"
+msgstr "En savoir plus sur %s"
+
+msgid "Miscellaneous Settings"
+msgstr "Paramètres divers"
+
+msgid "Restore Settings"
+msgstr "Restaurer les réglages"
+
+msgid "Settings page"
+msgstr "Page des réglages"
+
+msgid "Manage License Settings"
+msgstr "Gérer les réglages de licence"
+
+msgid "Contact Support"
+msgstr "Contacter le support"
+
+msgid "Deactivate"
+msgstr "Désactiver"
+
+msgid "the setting page"
+msgstr "la page de réglage"
+
+msgid "Restore all plugin settings to defaults"
+msgstr "Restaurer tous les réglages de l’extension par défaut"
+
+msgid "Restore settings"
+msgstr "Restaurer les paramètres"
+
+msgid "Appearance"
+msgstr "Apparence"
+
+msgid "Search Only by Type of the Current Post"
+msgstr "Recherche uniquement par type de message"
+
+msgid "Only current page post type will be used for the search."
+msgstr ""
+"Seul le type de message de la page actuelle sera utilisé pour la "
+"recherche."
+
+msgid "Display Settings"
+msgstr "Paramètres d'affichage"
+
+msgid "Appearance Settings"
+msgstr "Paramètres d'apparence"
+
+msgid "Change Displaying of Post Content on Search Pages"
+msgstr ""
+"Modifier l'affichage du contenu des articles sur les pages de recherche"
+
+msgid "Display Featured Image with Post Content"
+msgstr "Afficher l'image vedette avec le contenu de l'article"
+
+msgid "You need to"
+msgstr "Vous devez"
+
+msgid ""
+"If the type of the post is not default - you need to install and activate "
+"the plugin"
+msgstr ""
+"Si le type de l'article n'est pas celui par défaut, vous devez installer "
+"et activer le plugin"
+
+msgid "Enable search for the custom field:"
+msgstr "Activez la recherche pour le champ personnalisé :"
+
+msgid "This option is used when you search on a single page/post/post type."
+msgstr ""
+"Cette option est utilisée lorsque vous effectuez une recherche sur une "
+"seule page/un seul message/un seul type de message."
+
+msgid ""
+"When you drag post types and taxonomies, you affect the order of their "
+"display in the frontend on the search page."
+msgstr ""
+"Lorsque vous déplacez des types d'articles et des taxonomies, vous "
+"modifiez l'ordre dans lequel ils sont affichés dans le frontend sur la "
+"page de recherche."
+
+msgid "Search only by Type of the Current Post"
+msgstr "Recherche uniquement par type de poste"
+
+msgid "Search only by type of the current post"
+msgstr "Recherche uniquement par type de message"
+
+msgid "Change Excerpt length"
+msgstr "Modifier la longueur de l'extrait"
+
+msgid "Change excerpt length"
+msgstr "Modifier la longueur de l’extrait"
+
+msgid "Featured image Size"
+msgstr "Image en vedette Taille"
+
+msgid "Featured image Align"
+msgstr "Image en vedette Aligner"
+
+msgid "Display featured image with post content"
+msgstr "Afficher l'image vedette avec le contenu de l'article"
+
+msgid "Change displaying of post content on search pages"
+msgstr ""
+"Modifier l'affichage du contenu des articles sur les pages de recherche"
+
+msgid "Enable Custom Search for:"
+msgstr "Activer la recherche personnalisée pour :"
+
+msgid "Enable Custom search for:"
+msgstr "Activer la recherche personnalisée pour :"
+
+msgid "Featured image align"
+msgstr "Aligner l'image en vedette"
+
+msgid "Featured image size"
+msgstr "Taille de l’image de préférence"
+
+msgid "post type"
+msgstr "type d'Article"
+
+msgid "post types"
+msgstr "types de publication"
+
+msgid "taxonomy"
+msgstr "taxonomie"
+
+msgid "taxonomies"
+msgstr "taxinomies"
+
+msgid "Go PRO"
+msgstr "Passer à la version pro"
+
+msgid "Unlock premium options by upgrading to Pro version"
+msgstr "Débloquez les options premium en passant à la version Pro"
+
+msgid "Posts"
+msgstr "Articles"
+
+msgid "Pages"
+msgstr "Pages"
+
+msgid "Post types"
+msgstr "Modifier cet article"
+
+msgid "Tags"
+msgstr "Étiquettes"
